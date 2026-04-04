@@ -1,13 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <!-- White background -->
-  <rect width="32" height="32" fill="#ffffff"/>
-  <!-- MS four squares, 2x2 grid, centred, with 2px gap -->
-  <!-- Top-left: Red -->
-  <rect x="4"  y="4"  width="11" height="11" fill="#F25022"/>
-  <!-- Top-right: Blue -->
-  <rect x="17" y="4"  width="11" height="11" fill="#0078D4"/>
-  <!-- Bottom-left: Green -->
-  <rect x="4"  y="17" width="11" height="11" fill="#7FBA00"/>
-  <!-- Bottom-right: Yellow -->
-  <rect x="17" y="17" width="11" height="11" fill="#FFB900"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <rect width="100" height="100" fill="white"/>
+  <!-- cut_ratio=0.22, so cut_depth = width * 0.22 -->
+  <!-- Security: x=5, w=20, cut=4.4≈4 -->
+  <polygon points="5,90  21,90  21,72  25,68  25,90" fill="none"/>
+  <polygon points="5,68  21,68  25,72  25,90  5,90" fill="#0F4C81"/>
+  <!-- Identity: x=30, w=17, cut=3.7≈4 -->
+  <polygon points="30,56  43,56  47,60  47,90  30,90" fill="#D83B01"/>
+  <!-- Data: x=52, w=17, cut=4 -->
+  <polygon points="52,44  65,44  69,48  69,90  52,90" fill="#2F6B00"/>
+  <!-- AI: x=74, w=14, cut=3 -->
+  <polygon points="74,28  85,28  88,31  88,90  74,90" fill="#F2A900"/>
 </svg>
