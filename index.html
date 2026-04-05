@@ -197,6 +197,144 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
 }
 .wa-float:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(37,211,102,.45);}
 .wa-float svg{width:20px;height:20px;flex-shrink:0;}
+  .nav-hamburger{display:none;}
+
+/* ── RESPONSIVE / MOBILE ── */
+@media (max-width: 768px) {
+
+  /* NAV */
+  nav{
+    padding:0 1.25rem;
+    flex-wrap:wrap;
+    position:relative;
+  }
+  .logo{padding:.9rem 0;}
+  .nav-links{display:none;width:100%;flex-direction:column;border-top:1px solid var(--border);}
+  .nav-links.nav-open{display:flex;}
+  .nav-links a{border-left:none;border-bottom:1px solid var(--border);padding:1rem 0;}
+  .nav-hamburger{
+    display:block;
+    background:none;border:none;
+    font-size:1.4rem;cursor:pointer;
+    padding:.5rem;color:var(--ink);
+    margin-left:auto;
+  }
+  .nav-cta{
+    font-size:.75rem;
+    padding:1rem 1.25rem;
+    border-left:none;
+    border-top:2px solid var(--ink);
+    width:100%;
+    text-align:center;
+    display:block;
+    order:3;
+  }
+
+  /* HERO */
+  .hero{padding:0;}
+  .hero-top{
+    grid-template-columns:1fr;
+    border-bottom:2px solid var(--ink);
+  }
+  .hero-text{
+    padding:5rem 1.5rem 2rem;
+    border-right:none;
+    border-bottom:2px solid var(--ink);
+  }
+  .hero-headline{font-size:clamp(2.4rem,10vw,3.8rem);}
+  .hero-body{font-size:.95rem;max-width:100%;}
+  .hero-ctas{flex-direction:column;gap:.75rem;}
+  .btn-solid,.btn-outline{
+    display:block;text-align:center;
+    border-left:2px solid var(--ink);
+  }
+
+  /* Hero pillar graphic — simplify on mobile */
+  .hero-quad{
+    padding:2rem 1.5rem !important;
+    border-left:none !important;
+    border-top:2px solid var(--ink);
+  }
+
+  /* FOUR STRIPE */
+  .four-stripe{height:5px;}
+
+  /* SERVICES */
+  .services{padding:3rem 1.5rem;}
+  .svc-row{
+    grid-template-columns:2.5rem 1fr;
+    gap:1rem;
+  }
+  .svc-row > div:nth-child(3){ /* desc */
+    grid-column:2;
+  }
+  .svc-bar-wrap{
+    grid-column:2;
+    justify-content:flex-start;
+  }
+
+  /* HEALTH CHECK */
+  .health-check{padding:2.5rem 1.5rem;}
+  .hc-inner{grid-template-columns:1fr;}
+
+  /* APPROACH */
+  .approach{grid-template-columns:1fr;}
+  .ap-left{
+    padding:3rem 1.5rem;
+    border-right:none;
+    border-bottom:2px solid var(--ink);
+  }
+  .ap-right{padding:3rem 1.5rem;}
+
+  /* CASES */
+  .cases{padding:3rem 1.5rem;}
+  .cases-grid{grid-template-columns:1fr;}
+  .case-card{border-right:none;border-bottom:2px solid var(--ink);}
+  .case-card:last-child{border-bottom:none;}
+
+  /* CREDENTIALS */
+  .certs{padding:3rem 1.5rem;}
+  .cert-cloud{gap:.5rem;}
+  .cert{font-size:.58rem;}
+
+  /* CTA */
+  .cta{grid-template-columns:1fr;}
+  .cta-blue{padding:3rem 1.5rem;}
+  .cta-form-panel{padding:2.5rem 1.5rem;}
+
+  /* FOOTER */
+  footer{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:1.25rem;
+    padding:1.5rem;
+  }
+  .f-links{flex-wrap:wrap;gap:1rem;}
+
+  /* WHATSAPP BUTTON */
+  .wa-float{
+    bottom:1rem;right:1rem;
+    font-size:.75rem;
+    padding:.6rem 1rem .6rem .75rem;
+  }
+
+  /* SECTION HEADINGS */
+  .sec-title{font-size:clamp(1.8rem,7vw,2.8rem);}
+  .ap-title{font-size:clamp(1.6rem,6vw,2.4rem);}
+  .cta-title{font-size:clamp(2rem,8vw,3rem);}
+
+  /* GENERAL PADDING */
+  .sec-label{margin-bottom:.5rem;}
+}
+
+@media (max-width: 480px) {
+  .hero-headline{font-size:2.2rem;}
+  .hero-text{padding:4.5rem 1.25rem 2rem;}
+  .services,.certs,.cases,.cta-blue,.cta-form-panel,
+  .health-check,.ap-left,.ap-right{padding-left:1.25rem;padding-right:1.25rem;}
+  footer{padding:1.25rem;}
+  .svc-name{font-size:1rem;}
+}
 </style>
 </head>
 <body>
@@ -218,6 +356,7 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
     <li><a href="#contact">Contact</a></li>
   </ul>
   <a href="#contact" class="nav-cta">Book a Microsoft 365 Security Review</a>
+  <button class="nav-hamburger" onclick="this.closest('nav').querySelector('.nav-links').classList.toggle('nav-open')" aria-label="Menu">&#9776;</button>
 </nav>
 
 <section class="hero" id="home">
