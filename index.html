@@ -36,7 +36,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .lsq.tr{top:0;left:13px;}
 .lsq.bl{top:12px;left:0;}
 .lsq.br{top:12px;left:11px;}
-.logo-name{font-family:'Epilogue',sans-serif;font-size:1.1rem;font-weight:900;letter-spacing:-.02em;}
+.logo-name{font-family:'Epilogue',sans-serif;font-size:1.1rem;font-weight:900;letter-spacing:-.02em;white-space:nowrap;}
 .logo-name span{color:var(--ms-blue);}
 .nav-links{display:flex;list-style:none;}
 .nav-links a{font-family:'JetBrains Mono',monospace;font-size:.63rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);text-decoration:none;padding:1.5rem 1.4rem;border-left:2px solid var(--border);display:block;transition:color .2s,background .2s;}
@@ -200,6 +200,11 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
   .nav-hamburger{display:none;}
 
 /* ── RESPONSIVE / MOBILE ── */
+@media (max-width: 900px) {
+  .nav-cta{font-size:.68rem;padding:1rem 1rem;white-space:nowrap;}
+  .nav-links a{font-size:.55rem;padding:1rem .9rem;}
+}
+
 @media (max-width: 768px) {
 
   /* NAV */
@@ -231,13 +236,13 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
   }
 
   /* HERO */
-  .hero{padding:0;}
+  .hero{padding:0;min-height:auto;}
   .hero-top{
     grid-template-columns:1fr;
     border-bottom:2px solid var(--ink);
   }
   .hero-text{
-    padding:5rem 1.5rem 2rem;
+    padding:2rem 1.5rem 2rem;
     border-right:none;
     border-bottom:2px solid var(--ink);
   }
@@ -313,10 +318,12 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
 
   /* WHATSAPP BUTTON */
   .wa-float{
-    bottom:1rem;right:1rem;
-    font-size:.75rem;
-    padding:.6rem 1rem .6rem .75rem;
+    bottom:1rem;right:.75rem;
+    font-size:.68rem;
+    padding:.5rem .75rem .5rem .65rem;
+    border-radius:100px;
   }
+  .wa-float svg{width:16px;height:16px;}
 
   /* SECTION HEADINGS */
   .sec-title{font-size:clamp(1.8rem,7vw,2.8rem);}
@@ -362,7 +369,7 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
 <section class="hero" id="home">
   <div class="hero-top">
     <div class="hero-text">
-      <div class="hero-tag">Microsoft Partner specialising in Cloud Security, AI &amp; Microsoft 365 · Charities &amp; SMEs</div>
+      <div class="hero-tag">Microsoft Partner · Cloud Security · AI · Microsoft 365 · Charities &amp; <span style="text-transform:none;">SMEs</span></div>
       <h1 class="hero-headline">
         Cloud security.<br>
         <span class="serif">Governed.</span><br>
