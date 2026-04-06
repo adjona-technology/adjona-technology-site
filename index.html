@@ -28,7 +28,7 @@
   --nav-h:62px;
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-html{scroll-behavior:smooth;}
+html{scroll-behavior:auto;}
 body{background:var(--white);color:var(--ink);font-family:'Epilogue',sans-serif;font-weight:400;overflow-x:hidden;}
 
 nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:0 0 0 4rem;background:#fff;border-bottom:2px solid var(--ink);}
@@ -597,10 +597,22 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 // Close mobile nav when a link is clicked
 document.querySelectorAll('.nav-links a, .nav-cta-mobile').forEach(function(link){
-  link.addEventListener('click', function(){
+  link.addEventListener('click', function(e){
     var nav = document.querySelector('nav');
     nav.querySelector('.nav-links').classList.remove('nav-open');
     nav.querySelector('.nav-cta-mobile').classList.remove('nav-open');
+    // Smooth scroll with nav offset
+    var href = this.getAttribute('href');
+    if(href && href.startsWith('#')){
+      e.preventDefault();
+      var target = document.querySelector(href);
+      if(target){
+        var navH = nav.offsetHeight;
+        var top = target.getBoundingClientRect().top + window.pageYOffset - navH;
+        window.scrollTo({top: top, behavior: 'smooth'});
+        history.pushState(null, '', href);
+      }
+    }
   });
 });
 
