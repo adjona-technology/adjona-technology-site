@@ -174,13 +174,14 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
   .nav-links.nav-open{display:flex;}
   .nav-links a{border-left:none;border-bottom:1px solid var(--border);padding:1rem 0;}
   .nav-hamburger{display:block;background:none;border:none;font-size:1.4rem;cursor:pointer;padding:.5rem;color:var(--ink);margin-left:auto;}
-  .nav-cta{font-size:.75rem;padding:1rem 1.25rem;border-left:none;border-top:2px solid var(--ink);width:100%;text-align:center;display:block;order:3;}
+  .nav-cta{display:none;}
+  .nav-cta-mobile{display:none;width:100%;font-family:'Epilogue',sans-serif;font-size:.82rem;font-weight:900;background:var(--ms-blue);color:#fff;text-decoration:none;text-align:center;padding:1rem 1.25rem;border-top:2px solid var(--ink);}
+  .nav-cta-mobile.nav-open{display:block;}
 
   .hero{min-height:auto;}
   .hero-top{grid-template-columns:1fr;border-bottom:2px solid var(--ink);}
-  /* FIX: padding-top:2rem gives breathing room below nav on mobile */
-  .hero-text{padding:2rem 1.5rem 2rem;border-right:none;border-bottom:2px solid var(--ink);}
-  .hero-tag{margin-bottom:1rem;}
+  .hero-text{padding:2.5rem 1.5rem 2rem;border-right:none;border-bottom:2px solid var(--ink);}
+  .hero-tag{margin-bottom:1.25rem;opacity:1;transform:none;}
   .hero-headline{font-size:clamp(2.4rem,10vw,3.8rem);}
   .hero-body{font-size:.95rem;max-width:100%;}
   .hero-ctas{flex-direction:column;gap:.75rem;}
@@ -255,7 +256,12 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
     <li><a href="#contact">Contact</a></li>
   </ul>
   <a href="#contact" class="nav-cta">Book a Microsoft 365 Security Review</a>
-  <button class="nav-hamburger" onclick="this.closest('nav').querySelector('.nav-links').classList.toggle('nav-open')" aria-label="Menu">&#9776;</button>
+  <button class="nav-hamburger" aria-label="Menu" onclick="
+    var nav=this.closest('nav');
+    nav.querySelector('.nav-links').classList.toggle('nav-open');
+    nav.querySelector('.nav-cta-mobile').classList.toggle('nav-open');
+  ">&#9776;</button>
+  <a href="#contact" class="nav-cta-mobile">Book a Microsoft 365 Security Review</a>
 </nav>
 
 <section class="hero" id="home">
@@ -574,7 +580,7 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
   <ul class="f-links">
     <li><a href="#">LinkedIn</a></li>
     <li><a href="adjona-privacy.html">Privacy Policy</a></li>
-    <li><a href="mailto:info@adjona.com">info@adjona.com</a></li>
+    <li><a href="/cdn-cgi/l/email-protection#0a63646c654a6b6e6065646b24696567"><span class="__cf_email__" data-cfemail="147d7a727b5475707e7b7a753a777b79">[email&#160;protected]</span></a></li>
   </ul>
 </footer>
 
@@ -585,7 +591,7 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
   Quick question about your setup?
 </a>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 const els=document.querySelectorAll('.reveal');
 const obs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');}),{threshold:0.01,rootMargin:'0px 0px -20px 0px'});
 els.forEach(el=>obs.observe(el));
@@ -598,10 +604,4 @@ form.addEventListener('submit',async function(e){
   btn.textContent='Sending...';btn.disabled=true;
   try{
     const res=await fetch(form.action,{method:'POST',body:new FormData(form),headers:{'Accept':'application/json'}});
-    if(res.ok){form.style.display='none';document.getElementById('form-success').style.display='block';}
-    else{btn.textContent='Something went wrong — please try again';btn.disabled=false;}
-  }catch(err){btn.textContent='Something went wrong — please try again';btn.disabled=false;}
-});
-</script>
-</body>
-</html>
+    if(res.ok){form.style.display='none';document.getElementById('form-success').styl
