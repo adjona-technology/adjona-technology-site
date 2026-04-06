@@ -47,7 +47,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .hero{min-height:100vh;padding:4rem 0 0;display:flex;flex-direction:column;}
 .hero-top{flex:1;display:grid;grid-template-columns:1.2fr 0.8fr;border-bottom:2px solid var(--ink);}
 .hero-text{padding:5rem 4rem;border-right:2px solid var(--ink);display:flex;flex-direction:column;justify-content:center;}
-.hero-tag{font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ms-blue);margin-bottom:2rem;display:flex;align-items:center;gap:.75rem;}
+.hero-tag{font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.2em;color:var(--ms-blue);margin-bottom:2rem;display:flex;align-items:center;gap:.75rem;flex-wrap:wrap;}
 .hero-tag::before{content:'';width:28px;height:2px;background:var(--ms-blue);}
 .hero-headline{font-family:'Epilogue',sans-serif;font-size:clamp(3rem,5.5vw,6.5rem);font-weight:900;line-height:.9;letter-spacing:-.04em;margin-bottom:2.5rem;}
 .hero-headline .blue{color:var(--ms-blue);}
@@ -206,6 +206,8 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
 }
 
 @media (max-width: 768px) {
+  .nav-cta{display:none;}
+
 
   /* NAV */
   nav{
@@ -369,7 +371,7 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
 <section class="hero" id="home">
   <div class="hero-top">
     <div class="hero-text">
-      <div class="hero-tag">Microsoft Partner · Cloud Security · AI · Microsoft 365 · Charities &amp; <span style="text-transform:none;">SMEs</span></div>
+      <div class="hero-tag">MICROSOFT PARTNER · CLOUD SECURITY · AI · MICROSOFT 365 · CHARITIES &amp; SMEs</div>
       <h1 class="hero-headline">
         Cloud security.<br>
         <span class="serif">Governed.</span><br>
