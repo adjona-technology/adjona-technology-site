@@ -201,8 +201,8 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
 
 /* ── RESPONSIVE / MOBILE ── */
 @media (max-width: 900px) {
-  .nav-cta{font-size:.68rem;padding:1rem 1rem;white-space:nowrap;}
-  .nav-links a{font-size:.55rem;padding:1rem .9rem;}
+  .nav-cta{display:none;}
+  .nav-links a{font-size:.58rem;padding:1rem .9rem;letter-spacing:.1em;}
 }
 
 @media (max-width: 768px) {
@@ -244,7 +244,7 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
     border-bottom:2px solid var(--ink);
   }
   .hero-text{
-    padding:2rem 1.5rem 2rem;
+    padding:1.5rem 1.5rem 2rem;
     border-right:none;
     border-bottom:2px solid var(--ink);
   }
@@ -320,7 +320,7 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
 
   /* WHATSAPP BUTTON */
   .wa-float{
-    bottom:1rem;right:.75rem;
+    bottom:1rem;left:.75rem;right:auto;
     font-size:.68rem;
     padding:.5rem .75rem .5rem .65rem;
     border-radius:100px;
@@ -334,6 +334,8 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
 
   /* GENERAL PADDING */
   .sec-label{margin-bottom:.5rem;}
+  .hero-tag{margin-bottom:1rem;gap:.4rem;}
+  .hero-tag::before{width:16px;}
 }
 
 @media (max-width: 480px) {
