@@ -41,6 +41,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .nav-cta{font-family:'Epilogue',sans-serif;font-size:.88rem;font-weight:900;background:var(--ms-blue);color:#fff;text-decoration:none;border-left:2px solid var(--ink);padding:1.5rem 2.2rem;cursor:pointer;transition:background .2s;display:block;}
 .nav-cta:hover{background:#0062b0;}
 .nav-hamburger{display:none;}
+.nav-cta-mobile{display:none;}
 
 /* FIX: hero padding-top uses --nav-h variable so mobile override just changes the var */
 .hero{min-height:100vh;padding:var(--nav-h) 0 0;display:flex;flex-direction:column;}
@@ -175,8 +176,8 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
   .nav-links a{border-left:none;border-bottom:1px solid var(--border);padding:1rem 0;}
   .nav-hamburger{display:block;background:none;border:none;font-size:1.4rem;cursor:pointer;padding:.5rem;color:var(--ink);margin-left:auto;}
   .nav-cta{display:none;}
-  .nav-cta-mobile{display:none;width:100%;font-family:'Epilogue',sans-serif;font-size:.82rem;font-weight:900;background:var(--ms-blue);color:#fff;text-decoration:none;text-align:center;padding:1rem 1.25rem;border-top:2px solid var(--ink);}
-  .nav-cta-mobile.nav-open{display:block;}
+  .nav-cta-mobile{display:none !important;}
+  .nav-cta-mobile.nav-open{display:block !important;width:100%;font-family:'Epilogue',sans-serif;font-size:.82rem;font-weight:900;background:var(--ms-blue);color:#fff;text-decoration:none;text-align:center;padding:1rem 1.25rem;border-top:2px solid var(--ink);}
 
   .hero{min-height:auto;}
   .hero-top{grid-template-columns:1fr;border-bottom:2px solid var(--ink);}
