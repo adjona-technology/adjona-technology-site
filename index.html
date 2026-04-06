@@ -172,7 +172,7 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
   nav{padding:0 1.25rem;flex-wrap:wrap;position:fixed;}
   .logo{padding:.85rem 0;}
   .nav-links{display:none;width:100%;flex-direction:column;border-top:1px solid var(--border);}
-  .nav-links.nav-open{display:flex;}
+  .nav-links.nav-open{display:flex;background:#fff;position:relative;z-index:10;}
   .nav-links a{border-left:none;border-bottom:1px solid var(--border);padding:1rem 0;}
   .nav-hamburger{display:block;background:none;border:none;font-size:1.4rem;cursor:pointer;padding:.5rem;color:var(--ink);margin-left:auto;}
   .nav-cta{display:none;}
@@ -349,26 +349,26 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
       <div class="svc-desc">A plain-English review of your current Microsoft 365 and Azure security posture, with a prioritised action plan showing what to fix first, what can wait, and why.</div>
       <div class="svc-bar-wrap"><span class="svc-bar-tag">Audit</span><span class="svc-bar-tag">Roadmap</span><span class="svc-bar-tag">Report</span></div>
     </div>
+    <div class="svc-row">
+      <div class="svc-num" style="color:#0F4C81;">03</div>
+      <div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:.58rem;letter-spacing:.16em;text-transform:uppercase;color:#0F4C81;margin-bottom:.35rem;">Security</div>
+        <div class="svc-name">Azure Security &amp; Cloud Foundations</div>
+      </div>
+      <div class="svc-desc">Support for organisations using or moving to Azure, covering identity, monitoring, storage, networking, and security controls in a way that matches your real level of risk and internal capacity.</div>
+      <div class="svc-bar-wrap"><span class="svc-bar-tag">Azure</span><span class="svc-bar-tag">Container Apps</span><span class="svc-bar-tag">Monitor</span></div>
+    </div>
   </div>
 
   <div style="border-top:3px solid #D83B01;margin-bottom:0;" class="reveal">
     <div class="svc-row" style="background:#fff8f6;">
-      <div class="svc-num" style="color:#D83B01;">03</div>
+      <div class="svc-num" style="color:#D83B01;">04</div>
       <div>
         <div style="font-family:'JetBrains Mono',monospace;font-size:.58rem;letter-spacing:.16em;text-transform:uppercase;color:#D83B01;margin-bottom:.35rem;">Identity</div>
         <div class="svc-name">Microsoft 365 Security &amp; Identity</div>
       </div>
       <div class="svc-desc">We put the right foundations in place across Microsoft 365 and Entra, including MFA, Conditional Access, information protection, and access controls properly configured for your organisation.</div>
       <div class="svc-bar-wrap"><span class="svc-bar-tag">M365</span><span class="svc-bar-tag">Entra ID</span><span class="svc-bar-tag">Conditional Access</span></div>
-    </div>
-    <div class="svc-row">
-      <div class="svc-num" style="color:#D83B01;">04</div>
-      <div>
-        <div style="font-family:'JetBrains Mono',monospace;font-size:.58rem;letter-spacing:.16em;text-transform:uppercase;color:#D83B01;margin-bottom:.35rem;">Identity</div>
-        <div class="svc-name">Charity Cyber Health Check</div>
-      </div>
-      <div class="svc-desc">A structured review of your Microsoft 365 and Azure setup to identify security gaps, configuration issues, and governance risks, with a practical roadmap for improvement.</div>
-      <div class="svc-bar-wrap"><span class="svc-bar-tag">M365</span><span class="svc-bar-tag">Entra</span><span class="svc-bar-tag">Assessment</span></div>
     </div>
   </div>
 
@@ -382,20 +382,11 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
       <div class="svc-desc">Support with GDPR, privacy risk assessments, retention, information handling, and Microsoft Purview, built around the way your organisation actually works rather than a generic compliance template.</div>
       <div class="svc-bar-wrap"><span class="svc-bar-tag">Purview</span><span class="svc-bar-tag">DLP</span><span class="svc-bar-tag">UK GDPR</span></div>
     </div>
-    <div class="svc-row">
-      <div class="svc-num" style="color:#2F6B00;">06</div>
-      <div>
-        <div style="font-family:'JetBrains Mono',monospace;font-size:.58rem;letter-spacing:.16em;text-transform:uppercase;color:#2F6B00;margin-bottom:.35rem;">Data</div>
-        <div class="svc-name">Azure Security &amp; Cloud Foundations</div>
-      </div>
-      <div class="svc-desc">Support for organisations using or moving to Azure, covering identity, monitoring, storage, networking, and security controls in a way that matches your real level of risk and internal capacity.</div>
-      <div class="svc-bar-wrap"><span class="svc-bar-tag">Azure</span><span class="svc-bar-tag">Container Apps</span><span class="svc-bar-tag">Monitor</span></div>
-    </div>
   </div>
 
   <div style="border-top:3px solid #F2A900;" class="reveal">
     <div class="svc-row" style="background:#fffcf2;">
-      <div class="svc-num" style="color:#F2A900;">07</div>
+      <div class="svc-num" style="color:#F2A900;">06</div>
       <div>
         <div style="font-family:'JetBrains Mono',monospace;font-size:.58rem;letter-spacing:.16em;text-transform:uppercase;color:#F2A900;margin-bottom:.35rem;">AI</div>
         <div class="svc-name">AI Readiness &amp; Governance</div>
