@@ -159,6 +159,7 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
 .wa-float{position:fixed;bottom:2rem;right:2rem;z-index:500;display:flex;align-items:center;gap:.6rem;background:#25D366;color:#fff;padding:.75rem 1.25rem .75rem .9rem;border-radius:100px;box-shadow:0 4px 20px rgba(37,211,102,.35);text-decoration:none;font-family:'Epilogue',sans-serif;font-size:.82rem;font-weight:700;transition:transform .2s,box-shadow .2s;}
 .wa-float:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(37,211,102,.45);}
 .wa-float svg{width:20px;height:20px;flex-shrink:0;}
+.wa-float.wa-hidden{opacity:0;pointer-events:none;}
 
 @media (max-width: 900px) {
   .nav-cta{display:none;}
@@ -569,7 +570,7 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
   <ul class="f-links">
     <li><a href="https://www.linkedin.com/company/adjona-technology-limited/">LinkedIn</a></li>
     <li><a href="adjona-privacy.html">Privacy Policy</a></li>
-    <li><a href="/cdn-cgi/l/email-protection#0a63646c654a6b6e6065646b24696567"><span class="__cf_email__" data-cfemail="147d7a727b5475707e7b7a753a777b79">[email&#160;protected]</span></a></li>
+    <li><a href="<li><a href="mailto:info@adjona.com">info@adjona.com</a></li>"><span class="__cf_email__" data-cfemail="147d7a727b5475707e7b7a753a777b79">[email&#160;protected]</span></a></li>
   </ul>
 </footer>
 
@@ -602,7 +603,20 @@ document.querySelectorAll('.nav-links a, .nav-cta-mobile').forEach(function(link
   });
 });
 });
-
+var waBtn = document.querySelector('.wa-float');
+if(waBtn){
+  window.addEventListener('scroll', function(){
+    var footer = document.querySelector('footer');
+    if(footer){
+      var footerTop = footer.getBoundingClientRect().top;
+      if(footerTop < window.innerHeight){
+        waBtn.classList.add('wa-hidden');
+      } else {
+        waBtn.classList.remove('wa-hidden');
+      }
+    }
+  });
+}
 const els=document.querySelectorAll('.reveal');
 const obs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');}),{threshold:0.01,rootMargin:'0px 0px -20px 0px'});
 els.forEach(el=>obs.observe(el));
