@@ -156,7 +156,7 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
 .r2{}.r3{}
 @media (max-width:1024px){.reveal{opacity:1;transform:none;}}
 
-.wa-float{position:fixed;bottom:2rem;right:2rem;z-index:500;display:flex;align-items:center;gap:.6rem;background:#25D366;color:#fff;padding:.75rem 1.25rem .75rem .9rem;border-radius:100px;box-shadow:0 4px 20px rgba(37,211,102,.35);text-decoration:none;font-family:'Epilogue',sans-serif;font-size:.82rem;font-weight:700;transition:transform .2s,box-shadow .2s;}
+.wa-float{position:fixed;bottom:2rem;right:2rem;z-index:500;display:flex;align-items:center;gap:.6rem;background:#25D366;color:#fff;padding:.75rem 1.25rem .75rem .9rem;border-radius:100px;box-shadow:0 4px 20px rgba(37,211,102,.35);text-decoration:none;font-family:'Epilogue',sans-serif;font-size:.82rem;font-weight:700;transition:transform .2s,box-shadow .2s,opacity .2s;}
 .wa-float:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(37,211,102,.45);}
 .wa-float svg{width:20px;height:20px;flex-shrink:0;}
 .wa-float.wa-hidden{opacity:0;pointer-events:none;}
@@ -395,6 +395,14 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
       <div class="svc-desc">We help you prepare for Microsoft Copilot and other AI tools by putting the right permissions, data controls, governance, and usage rules in place before rollout.</div>
       <div class="svc-bar-wrap"><span class="svc-bar-tag">Copilot</span><span class="svc-bar-tag">Copilot Studio</span><span class="svc-bar-tag">Azure AI</span></div>
     </div>
+    <div class="svc-row" style="background:#f7fbf5;">
+      <div class="svc-num" style="color:#2F6B00;">07</div>
+      <div>
+        <div class="svc-name">Charity Systems &amp; Workflow Automation</div>
+      </div>
+      <div class="svc-desc">We specialise in helping charities and non-profits get more from Microsoft 365 — building SharePoint-based tools for record-keeping, case management, and reporting, and using Power Automate to reduce manual administration. Whether you need a structured operational system or just want existing processes to work more reliably, we build practical solutions on the M365 you already have.</div>
+      <div class="svc-bar-wrap"><span class="svc-bar-tag">SharePoint</span><span class="svc-bar-tag">Power Automate</span><span class="svc-bar-tag">M365</span><span class="svc-bar-tag">Charities</span></div>
+    </div>
   </div>
 </section>
 
@@ -543,7 +551,6 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
       </select>
       <textarea class="cta-textarea" name="message" placeholder="Tell us a little about your organisation and what you're looking to achieve..."></textarea>
       <button type="submit" class="cta-btn">Book a Charity Cyber Health Check</button>
-      <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
     </form>
     <div id="form-success" style="display:none;width:100%;padding:3rem 0;">
       <div style="border-left:3px solid var(--ms-grn);padding:1.5rem 2rem;background:#f9fbf5;">
@@ -555,7 +562,7 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
   </div>
 </section>
 
-<footer>
+<footer style="padding-bottom:5rem;">
   <div class="f-logo">
     <svg width="28" height="22" viewBox="0 0 36 28" xmlns="http://www.w3.org/2000/svg">
       <polygon points="0,28 6,28 7,17 6,16 0,16" fill="#0F4C81"/>
@@ -569,7 +576,7 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
     <div class="f-copy">© 2026 Adjona Technology Limited · Registered in England &amp; Wales · Company No. 05007410</div>
   </div>
   <ul class="f-links">
-    <li><a href="https://www.linkedin.com/company/adjona-technology-limited/">LinkedIn</a></li>
+    <li><a href="https://www.linkedin.com/company/adjona-technology-limited/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
     <li><a href="adjona-privacy.html">Privacy Policy</a></li>
     <li><a href="mailto:info@adjona.com">info@adjona.com</a></li>
   </ul>
@@ -582,7 +589,7 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
   Quick question about your setup?
 </a>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 document.addEventListener('DOMContentLoaded', function(){
 // Close mobile nav when a link is clicked
 document.querySelectorAll('.nav-links a, .nav-cta-mobile').forEach(function(link){
@@ -604,6 +611,8 @@ document.querySelectorAll('.nav-links a, .nav-cta-mobile').forEach(function(link
   });
 });
 });
+
+// Hide WhatsApp button when footer is visible
 var waBtn = document.querySelector('.wa-float');
 if(waBtn){
   window.addEventListener('scroll', function(){
@@ -618,6 +627,7 @@ if(waBtn){
     }
   });
 }
+
 const els=document.querySelectorAll('.reveal');
 const obs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');}),{threshold:0.01,rootMargin:'0px 0px -20px 0px'});
 els.forEach(el=>obs.observe(el));
