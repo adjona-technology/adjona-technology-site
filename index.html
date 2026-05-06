@@ -43,7 +43,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .nav-hamburger{display:none;}
 .nav-cta-mobile{display:none;}
 
-/* FIX: hero padding-top uses --nav-h variable so mobile override just changes the var */
 .hero{min-height:100vh;padding:var(--nav-h) 0 0;display:flex;flex-direction:column;}
 .hero-top{flex:1;display:grid;grid-template-columns:1.2fr 0.8fr;border-bottom:2px solid var(--ink);}
 .hero-text{padding:5rem 4rem;border-right:2px solid var(--ink);display:flex;flex-direction:column;justify-content:center;}
@@ -167,9 +166,7 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
 }
 
 @media (max-width: 768px) {
-  /* FIX: override --nav-h for mobile nav height, hero padding-top inherits automatically */
   :root{--nav-h:58px;}
-
   nav{padding:0 1.25rem;flex-wrap:wrap;position:fixed;}
   .logo{padding:.85rem 0;}
   .nav-links{display:none;width:100%;flex-direction:column;border-top:1px solid var(--border);}
@@ -179,7 +176,6 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
   .nav-cta{display:none;}
   .nav-cta-mobile{display:none !important;}
   .nav-cta-mobile.nav-open{display:block !important;width:100%;font-family:'Epilogue',sans-serif;font-size:.82rem;font-weight:900;background:var(--ms-blue);color:#fff;text-decoration:none;text-align:center;padding:1rem 1.25rem;border-top:2px solid var(--ink);}
-
   .hero{min-height:auto;}
   .hero-top{grid-template-columns:1fr;border-bottom:2px solid var(--ink);}
   .hero-text{padding:2.5rem 1.5rem 2rem;border-right:none;border-bottom:2px solid var(--ink);}
@@ -188,43 +184,32 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
   .hero-body{font-size:.95rem;max-width:100%;}
   .hero-ctas{flex-direction:column;gap:.75rem;}
   .btn-solid,.btn-outline{display:block;text-align:center;border-left:2px solid var(--ink);}
-
   .hero-quad-mobile{padding:2rem 1.5rem;border-top:2px solid var(--ink);}
-
   .four-stripe{height:5px;}
-
   .services{padding:3rem 1.5rem;}
   .svc-row{grid-template-columns:2.5rem 1fr;gap:1rem;}
   .svc-row > div:nth-child(3){grid-column:2;}
   .svc-bar-wrap{grid-column:2;justify-content:flex-start;}
-
   .health-check{padding:2.5rem 1.5rem;}
   .hc-inner{grid-template-columns:1fr;}
-
   .approach{grid-template-columns:1fr;}
   .ap-left{padding:3rem 1.5rem;border-right:none;border-bottom:2px solid var(--ink);}
   .ap-right{padding:3rem 1.5rem;}
-
   .cases{padding:3rem 1.5rem;}
   .cases-grid{grid-template-columns:1fr;}
   .case-card{border-right:none;border-bottom:2px solid var(--ink);}
   .case-card:last-child{border-bottom:none;}
-
   .certs{padding:3rem 1.5rem;}
   .cert-cloud{gap:.5rem;}
   .cert{font-size:.58rem;}
-
   .cta{grid-template-columns:1fr;}
   .cta-blue{padding:3rem 1.5rem;}
   .cta-form-panel{padding:2.5rem 1.5rem;}
-
   footer{flex-direction:column;align-items:flex-start;gap:1.25rem;padding:1.5rem;}
   .f-links{flex-wrap:wrap;gap:1rem;}
-
   .wa-float{display:none;}
   .hero-tag{display:none;}
   .nav-cta{display:none !important;}
-
   .sec-title{font-size:clamp(1.8rem,7vw,2.8rem);}
   .ap-title{font-size:clamp(1.6rem,6vw,2.4rem);}
   .cta-title{font-size:clamp(2rem,8vw,3rem);}
@@ -400,7 +385,7 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
       <div>
         <div class="svc-name">Charity Systems &amp; Workflow Automation</div>
       </div>
-      <div class="svc-desc">We specialise in helping charities and non-profits get more from Microsoft 365 — building SharePoint-based tools for record-keeping, case management, and reporting, and using Power Automate to reduce manual administration. Whether you need a structured operational system or just want existing processes to work more reliably, we build practical solutions on the M365 you already have.</div>
+      <div class="svc-desc">We specialise in helping charities and non-profits get more from Microsoft 365 — building SharePoint-based tools for record-keeping, case management, and reporting, and using Power Automate to reduce manual administration. Whether you need a structured operational system or just want existing processes to work more reliably, we build practical solutions on the M365 you already have.<br><br><a href="demonstrator-clinical-assessments.html" style="font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ms-grn);text-decoration:none;border-bottom:1px solid rgba(47,107,0,.3);">View solution demonstrator &rarr;</a></div>
       <div class="svc-bar-wrap"><span class="svc-bar-tag">SharePoint</span><span class="svc-bar-tag">Power Automate</span><span class="svc-bar-tag">M365</span><span class="svc-bar-tag">Charities</span></div>
     </div>
   </div>
@@ -592,28 +577,26 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
 
 <script>
 document.addEventListener('DOMContentLoaded', function(){
-// Close mobile nav when a link is clicked
-document.querySelectorAll('.nav-links a, .nav-cta-mobile').forEach(function(link){
-  link.addEventListener('click', function(e){
-    var nav = document.querySelector('nav');
-    nav.querySelector('.nav-links').classList.remove('nav-open');
-    nav.querySelector('.nav-cta-mobile').classList.remove('nav-open');
-    var href = this.getAttribute('href');
-    if(href && href.startsWith('#')){
-      e.preventDefault();
-      var target = document.querySelector(href);
-      if(target){
-        var navH = nav.offsetHeight;
-        var top = target.getBoundingClientRect().top + window.pageYOffset - navH;
-        window.scrollTo({top: top, behavior: 'smooth'});
-        history.pushState(null, '', href);
+  document.querySelectorAll('.nav-links a, .nav-cta-mobile').forEach(function(link){
+    link.addEventListener('click', function(e){
+      var nav = document.querySelector('nav');
+      nav.querySelector('.nav-links').classList.remove('nav-open');
+      nav.querySelector('.nav-cta-mobile').classList.remove('nav-open');
+      var href = this.getAttribute('href');
+      if(href && href.startsWith('#')){
+        e.preventDefault();
+        var target = document.querySelector(href);
+        if(target){
+          var navH = nav.offsetHeight;
+          var top = target.getBoundingClientRect().top + window.pageYOffset - navH;
+          window.scrollTo({top: top, behavior: 'smooth'});
+          history.pushState(null, '', href);
+        }
       }
-    }
+    });
   });
 });
-});
 
-// Hide WhatsApp button when footer is visible
 var waBtn = document.querySelector('.wa-float');
 if(waBtn){
   window.addEventListener('scroll', function(){
@@ -641,4 +624,10 @@ form.addEventListener('submit',async function(e){
   btn.textContent='Sending...';btn.disabled=true;
   try{
     const res=await fetch(form.action,{method:'POST',body:new FormData(form),headers:{'Accept':'application/json'}});
-    if(res.ok){form.style.display='none';document.getElementById('form-success').styl
+    if(res.ok){form.style.display='none';document.getElementById('form-success').style.display='block';}
+    else{btn.textContent='Book a Charity Cyber Health Check';btn.disabled=false;alert('Something went wrong. Please try again.');}
+  }catch(err){btn.textContent='Book a Charity Cyber Health Check';btn.disabled=false;alert('Something went wrong. Please try again.');}
+});
+</script>
+</body>
+</html>
