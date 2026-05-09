@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Microsoft 365 Security &amp; Governance for Charities, SMEs &amp; Care Providers | Adjona Technology</title>
+<meta name="description" content="Adjona Technology is a Microsoft AI Cloud Partner helping charities and SMEs secure Microsoft 365, improve governance, and adopt AI responsibly. Based in the UK.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="192x192" href="favicon-192.png">
+<meta property="og:title" content="Microsoft 365 Security &amp; Governance for Charities, SMEs &amp; Care Providers | Adjona Technology">
+<meta property="og:description" content="Adjona Technology is a Microsoft AI Cloud Partner helping charities and SMEs secure Microsoft 365, improve governance, and adopt AI responsibly. Based in the UK.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://adjona.com">
+<meta property="og:image" content="https://staging.adjona.com/adjona-social-preview.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Microsoft 365 Security &amp; Governance for Charities, SMEs &amp; Care Providers | Adjona Technology">
+<meta name="twitter:description" content="Adjona Technology is a Microsoft AI Cloud Partner helping charities and SMEs secure Microsoft 365, improve governance, and adopt AI responsibly. Based in the UK.">
+<meta name="twitter:image" content="https://staging.adjona.com/adjona-social-preview.png">
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;700;800;900&family=Lora:ital,wght@1,500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<!-- Clarity tracking code for https://adjona.com/ -->
+<script>
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "wmyh9800tx");
+</script>
+<style>
+:root{
+  --white:#ffffff;--off:#f5f5f0;--ink:#0d0d0d;
+  --ms-blue:#0F4C81;--ms-red:#D83B01;--ms-grn:#2F6B00;--ms-yel:#F2A900;
+  --muted:#666;--border:rgba(13,13,13,0.1);
+  --nav-h:62px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:auto;}
+body{background:var(--white);color:var(--ink);font-family:'Epilogue',sans-serif;font-weight:400;overflow-x:hidden;}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:0 0 0 4rem;background:#fff;border-bottom:2px solid var(--ink);}
+.logo{display:flex;align-items:center;gap:.75rem;padding:1.1rem 0;}
+.logo-name{font-family:'Epilogue',sans-serif;font-size:1.1rem;font-weight:900;letter-spacing:-.02em;white-space:nowrap;}
+.logo-name span{color:var(--ms-blue);}
+.nav-links{display:flex;list-style:none;}
+.nav-links a{font-family:'JetBrains Mono',monospace;font-size:.63rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);text-decoration:none;padding:1.5rem 1.4rem;border-left:2px solid var(--border);display:block;transition:color .2s,background .2s;}
+.nav-links a:hover{color:var(--ms-blue);background:rgba(0,120,212,.04);}
+.nav-cta{font-family:'Epilogue',sans-serif;font-size:.88rem;font-weight:900;background:var(--ms-blue);color:#fff;text-decoration:none;border-left:2px solid var(--ink);padding:1.5rem 2.2rem;cursor:pointer;transition:background .2s;display:block;}
+.nav-cta:hover{background:#0062b0;}
+.nav-hamburger{display:none;}
+.nav-cta-mobile{display:none;}
+
+.hero{min-height:100vh;padding:var(--nav-h) 0 0;display:flex;flex-direction:column;}
+.hero-top{flex:1;display:grid;grid-template-columns:1.2fr 0.8fr;border-bottom:2px solid var(--ink);}
+.hero-text{padding:5rem 4rem;border-right:2px solid var(--ink);display:flex;flex-direction:column;justify-content:center;}
+.hero-tag{font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.2em;color:var(--ms-blue);margin-bottom:2rem;display:block;padding-left:2.25rem;position:relative;}
+.hero-tag::before{content:'';width:28px;height:2px;background:var(--ms-blue);position:absolute;left:0;top:50%;transform:translateY(-50%);}
+.hero-headline{font-family:'Epilogue',sans-serif;font-size:clamp(3rem,5.5vw,6.5rem);font-weight:900;line-height:.9;letter-spacing:-.04em;margin-bottom:2.5rem;}
+.hero-headline .blue{color:var(--ms-blue);}
+.hero-headline .serif{font-family:'Lora',serif;font-style:italic;font-weight:500;letter-spacing:-.02em;}
+.hero-body{font-size:1.05rem;line-height:1.85;color:var(--muted);max-width:460px;margin-bottom:2.5rem;}
+.hero-ctas{display:flex;gap:0;}
+.btn-solid{font-family:'Epilogue',sans-serif;font-size:.9rem;font-weight:900;background:var(--ink);color:#fff;border:2px solid var(--ink);padding:.85rem 2rem;cursor:pointer;text-decoration:none;display:inline-block;transition:background .2s,color .2s;}
+.btn-solid:hover{background:#fff;color:var(--ink);}
+.btn-outline{font-family:'Epilogue',sans-serif;font-size:.9rem;font-weight:900;background:#fff;color:var(--ink);border:2px solid var(--ink);border-left:none;padding:.85rem 2rem;cursor:pointer;text-decoration:none;display:inline-block;transition:background .2s,color .2s;}
+.btn-outline:hover{background:var(--ink);color:#fff;}
+
+.four-stripe{display:grid;grid-template-columns:repeat(4,1fr);height:6px;}
+.fs.b{background:var(--ms-blue);}.fs.r{background:var(--ms-red);}.fs.g{background:var(--ms-grn);}.fs.y{background:var(--ms-yel);}
+
+.services{padding:6rem 4rem;border-top:2px solid var(--ink);}
+.sec-label{font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ms-blue);margin-bottom:.75rem;}
+.sec-title{font-family:'Epilogue',sans-serif;font-size:clamp(2.2rem,4vw,4.5rem);font-weight:900;letter-spacing:-.03em;line-height:.95;margin-bottom:.75rem;}
+.sec-title .serif{font-family:'Lora',serif;font-style:italic;font-weight:500;}
+.sec-sub{font-size:.9rem;color:var(--muted);line-height:1.7;margin-bottom:3rem;max-width:600px;}
+.svc-row{display:grid;grid-template-columns:3.5rem 1fr 1fr auto;gap:2rem;align-items:start;padding:1.75rem 0;border-bottom:1px solid var(--border);transition:background .2s;cursor:default;}
+.svc-row:hover{background:var(--off);}
+.svc-num{font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--muted);padding-top:.2rem;}
+.svc-name{font-family:'Epilogue',sans-serif;font-size:1.15rem;font-weight:800;letter-spacing:-.02em;}
+.svc-desc{font-size:.88rem;color:var(--muted);line-height:1.7;}
+.svc-bar-wrap{display:flex;gap:.5rem;flex-wrap:wrap;justify-content:flex-end;}
+.svc-bar-tag{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;border:1.5px solid var(--border);padding:.3rem .7rem;color:var(--muted);white-space:nowrap;}
+
+.health-check{background:var(--off);border-top:2px solid var(--ink);border-bottom:2px solid var(--ink);padding:4rem;}
+.hc-inner{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;}
+.hc-label{font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ms-grn);margin-bottom:.75rem;}
+.hc-title{font-family:'Epilogue',sans-serif;font-size:clamp(1.8rem,3vw,2.8rem);font-weight:900;letter-spacing:-.03em;line-height:1;margin-bottom:1rem;}
+.hc-desc{font-size:.92rem;color:var(--muted);line-height:1.8;margin-bottom:1.5rem;}
+.hc-typical{font-family:'JetBrains Mono',monospace;font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ms-blue);margin-bottom:.5rem;}
+.hc-typical-val{font-size:.9rem;color:var(--muted);line-height:1.6;}
+.hc-deliverables{display:flex;flex-direction:column;gap:0;border:2px solid var(--ink);}
+.hc-d-title{font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.15em;text-transform:uppercase;padding:.9rem 1.25rem;background:var(--ink);color:#fff;}
+.hc-d-item{display:flex;align-items:center;gap:1rem;padding:.9rem 1.25rem;border-bottom:1px solid var(--border);font-size:.88rem;}
+.hc-d-item:last-child{border-bottom:none;}
+.hc-d-dot{width:8px;height:8px;flex-shrink:0;}
+.hc-d-item:nth-child(2) .hc-d-dot{background:var(--ms-grn);}
+.hc-d-item:nth-child(3) .hc-d-dot{background:var(--ms-blue);}
+.hc-d-item:nth-child(4) .hc-d-dot{background:var(--ms-red);}
+.hc-d-item:nth-child(5) .hc-d-dot{background:var(--ms-yel);}
+.hc-d-item:nth-child(6) .hc-d-dot{background:var(--ms-grn);}
+.hc-d-item:nth-child(7) .hc-d-dot{background:var(--ms-blue);}
+
+.approach{display:grid;grid-template-columns:1fr 1fr;border-top:2px solid var(--ink);}
+.ap-left{padding:5rem 4rem;border-right:2px solid var(--ink);}
+.ap-title{font-family:'Epilogue',sans-serif;font-size:clamp(2rem,3.5vw,3.5rem);font-weight:900;letter-spacing:-.03em;line-height:1;margin:1rem 0 2rem;}
+.ap-body p{font-size:.95rem;color:var(--muted);line-height:1.85;margin-bottom:1rem;}
+.ap-reassurance{margin-top:1.5rem;padding:1.25rem 1.5rem;border-left:3px solid var(--ms-grn);background:#f9fbf5;font-size:.88rem;color:#3a5a1a;line-height:1.7;}
+.ap-right{padding:5rem 4rem;}
+.pillars{display:flex;flex-direction:column;gap:1.5rem;}
+.pillar{display:flex;flex-direction:column;gap:.5rem;}
+.p-top{display:flex;align-items:center;gap:.75rem;}
+.p-sq{width:12px;height:12px;flex-shrink:0;}
+.p-name{font-family:'Epilogue',sans-serif;font-size:1rem;font-weight:800;letter-spacing:-.02em;}
+.p-desc{font-size:.85rem;color:var(--muted);line-height:1.7;padding-left:1.75rem;}
+
+.cases{padding:6rem 4rem;border-top:2px solid var(--ink);background:var(--off);}
+.cases-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:2px solid var(--ink);margin-top:3rem;}
+.case-card{padding:2.5rem 2rem;border-right:2px solid var(--ink);}
+.case-card:last-child{border-right:none;}
+.case-tag{font-family:'JetBrains Mono',monospace;font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:.75rem;}
+.case-tag.blue{color:var(--ms-blue);}.case-tag.red{color:var(--ms-red);}.case-tag.grn{color:var(--ms-grn);}
+.case-title{font-family:'Epilogue',sans-serif;font-size:1.1rem;font-weight:800;letter-spacing:-.02em;margin-bottom:.75rem;}
+.case-body{font-size:.83rem;color:var(--muted);line-height:1.75;}
+
+.certs{padding:6rem 4rem;border-top:2px solid var(--ink);}
+.cert-cloud{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:2rem;}
+.cert{font-family:'JetBrains Mono',monospace;font-size:.65rem;letter-spacing:.08em;text-transform:uppercase;border:1.5px solid var(--border);padding:.45rem 1rem;color:var(--muted);background:var(--white);transition:all .2s;cursor:default;}
+.cert:hover{border-color:var(--ms-blue);color:var(--ms-blue);}
+.cert.hi{border-color:var(--ms-blue);color:var(--ms-blue);font-weight:700;}
+.cert.hi:hover{background:var(--ms-blue);color:#fff;}
+
+.cta{display:grid;grid-template-columns:1fr 1fr;border-top:2px solid var(--ink);}
+.cta-blue{background:var(--ms-blue);padding:5rem 4rem;display:flex;flex-direction:column;justify-content:center;}
+.cta-tag{font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.6);margin-bottom:1rem;}
+.cta-title{font-family:'Epilogue',sans-serif;font-size:clamp(2.5rem,4vw,4rem);font-weight:900;letter-spacing:-.04em;line-height:.95;color:#fff;margin-bottom:1rem;}
+.cta-title .serif{font-family:'Lora',serif;font-style:italic;font-weight:500;}
+.cta-sub{font-size:.95rem;color:rgba(255,255,255,.7);line-height:1.8;max-width:380px;margin-bottom:1.5rem;}
+.cta-typical{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.45);margin-bottom:.4rem;}
+.cta-typical-val{font-size:.85rem;color:rgba(255,255,255,.6);line-height:1.6;}
+.cta-form-panel{padding:5rem 4rem;display:flex;align-items:center;background:var(--off);}
+.cta-form{display:flex;flex-direction:column;gap:1rem;width:100%;}
+.cta-input{font-family:'Epilogue',sans-serif;font-size:.95rem;background:var(--white);border:2px solid var(--border);padding:.9rem 1.1rem;outline:none;transition:border-color .2s;}
+.cta-input:focus{border-color:var(--ms-blue);}
+.cta-select{font-family:'Epilogue',sans-serif;font-size:.95rem;background:var(--white);border:2px solid var(--border);padding:.9rem 1.1rem;outline:none;transition:border-color .2s;cursor:pointer;}
+.cta-select:focus{border-color:var(--ms-blue);}
+.cta-textarea{font-family:'Epilogue',sans-serif;font-size:.95rem;background:var(--white);border:2px solid var(--border);padding:.9rem 1.1rem;outline:none;transition:border-color .2s;resize:vertical;min-height:100px;}
+.cta-textarea:focus{border-color:var(--ms-blue);}
+.cta-btn{font-family:'Epilogue',sans-serif;font-size:.95rem;font-weight:900;background:var(--ink);color:#fff;border:2px solid var(--ink);padding:1rem;cursor:pointer;transition:background .2s,color .2s;letter-spacing:-.01em;}
+.cta-btn:hover{background:#fff;color:var(--ink);}
+
+footer{display:flex;align-items:center;justify-content:space-between;padding:1.5rem 4rem;border-top:2px solid var(--ink);}
+.f-copy-wrap{display:flex;flex-direction:column;gap:.2rem;}
+.f-logo{display:flex;align-items:center;gap:.65rem;}
+.f-name{font-family:'Epilogue',sans-serif;font-size:1rem;font-weight:900;letter-spacing:-.02em;}
+.f-name span{color:var(--ms-blue);}
+.f-copy{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.06em;color:var(--muted);}
+.f-links{display:flex;gap:2rem;list-style:none;}
+.f-links a{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color .2s;}
+.f-links a:hover{color:var(--ms-blue);}
+
+.reveal{opacity:1;transform:none;}
+.r2{}.r3{}
+@media (max-width:1024px){.reveal{opacity:1;transform:none;}}
+
+.wa-float{position:fixed;bottom:2rem;right:2rem;z-index:500;display:flex;align-items:center;gap:.6rem;background:#25D366;color:#fff;padding:.75rem 1.25rem .75rem .9rem;border-radius:100px;box-shadow:0 4px 20px rgba(37,211,102,.35);text-decoration:none;font-family:'Epilogue',sans-serif;font-size:.82rem;font-weight:700;transition:transform .2s,box-shadow .2s,opacity .2s;}
+.wa-float:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(37,211,102,.45);}
+.wa-float svg{width:20px;height:20px;flex-shrink:0;}
+.wa-float.wa-hidden{opacity:0;pointer-events:none;}
+
+@media (max-width: 900px) {
+  .nav-cta{display:none;}
+  .nav-links a{font-size:.58rem;padding:1rem .9rem;letter-spacing:.1em;}
+}
+
+@media (max-width: 768px) {
+  :root{--nav-h:58px;}
+  nav{padding:0 1.25rem;flex-wrap:wrap;position:fixed;}
+  .logo{padding:.85rem 0;}
+  .nav-links{display:none;width:100%;flex-direction:column;border-top:1px solid var(--border);}
+  .nav-links.nav-open{display:flex;background:#fff;position:relative;z-index:10;}
+  .nav-links a{border-left:none;border-bottom:1px solid var(--border);padding:1rem 0;}
+  .nav-hamburger{display:block;background:none;border:none;font-size:1.4rem;cursor:pointer;padding:.5rem;color:var(--ink);margin-left:auto;}
+  .nav-cta{display:none;}
+  .nav-cta-mobile{display:none !important;}
+  .nav-cta-mobile.nav-open{display:block !important;width:100%;font-family:'Epilogue',sans-serif;font-size:.82rem;font-weight:900;background:var(--ms-blue);color:#fff;text-decoration:none;text-align:center;padding:1rem 1.25rem;border-top:2px solid var(--ink);}
+  .hero{min-height:auto;}
+  .hero-top{grid-template-columns:1fr;border-bottom:2px solid var(--ink);}
+  .hero-text{padding:2.5rem 1.5rem 2rem;border-right:none;border-bottom:2px solid var(--ink);}
+  .hero-tag{margin-bottom:1.25rem;opacity:1;transform:none;}
+  .hero-headline{font-size:clamp(2.4rem,10vw,3.8rem);}
+  .hero-body{font-size:.95rem;max-width:100%;}
+  .hero-ctas{flex-direction:column;gap:.75rem;}
+  .btn-solid,.btn-outline{display:block;text-align:center;border-left:2px solid var(--ink);}
+  .hero-quad-mobile{padding:2rem 1.5rem;border-top:2px solid var(--ink);}
+  .four-stripe{height:5px;}
+  .services{padding:3rem 1.5rem;}
+  .svc-row{grid-template-columns:2.5rem 1fr;gap:1rem;}
+  .svc-row > div:nth-child(3){grid-column:2;}
+  .svc-bar-wrap{grid-column:2;justify-content:flex-start;}
+  .health-check{padding:2.5rem 1.5rem;}
+  .hc-inner{grid-template-columns:1fr;}
+  .approach{grid-template-columns:1fr;}
+  .ap-left{padding:3rem 1.5rem;border-right:none;border-bottom:2px solid var(--ink);}
+  .ap-right{padding:3rem 1.5rem;}
+  .cases{padding:3rem 1.5rem;}
+  .cases-grid{grid-template-columns:1fr;}
+  .case-card{border-right:none;border-bottom:2px solid var(--ink);}
+  .case-card:last-child{border-bottom:none;}
+  .certs{padding:3rem 1.5rem;}
+  .cert-cloud{gap:.5rem;}
+  .cert{font-size:.58rem;}
+  .cta{grid-template-columns:1fr;}
+  .cta-blue{padding:3rem 1.5rem;}
+  .cta-form-panel{padding:2.5rem 1.5rem;}
+  footer{flex-direction:column;align-items:flex-start;gap:1.25rem;padding:1.5rem;}
+  .f-links{flex-wrap:wrap;gap:1rem;}
+  .wa-float{display:none;}
+  .hero-tag{display:none;}
+  .nav-cta{display:none !important;}
+  .sec-title{font-size:clamp(1.8rem,7vw,2.8rem);}
+  .ap-title{font-size:clamp(1.6rem,6vw,2.4rem);}
+  .cta-title{font-size:clamp(2rem,8vw,3rem);}
+  .sec-label{margin-bottom:.5rem;}
+}
+
+@media (max-width: 480px) {
+  .hero-headline{font-size:2.2rem;}
+  .hero-text{padding-left:1.25rem;padding-right:1.25rem;}
+  .services,.certs,.cases,.cta-blue,.cta-form-panel,
+  .health-check,.ap-left,.ap-right{padding-left:1.25rem;padding-right:1.25rem;}
+  footer{padding:1.25rem;}
+  .svc-name{font-size:1rem;}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">
+    <svg width="36" height="28" viewBox="0 0 36 28" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="0,28 6,28 7,17 6,16 0,16" fill="#0F4C81"/>
+      <polygon points="9,28 15,28 16,12 15,11 9,11" fill="#D83B01"/>
+      <polygon points="18,28 24,28 25,7 24,6 18,6" fill="#2F6B00"/>
+      <polygon points="27,28 33,28 34,1 33,0 27,0" fill="#F2A900"/>
+    </svg>
+    <div class="logo-name">Adjona <span>Technology</span></div>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="additional-services.html">Projects &amp; Support</a></li>
+    <li><a href="#approach">About</a></li>
+    <li><a href="#certs">Credentials</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta">Book a Charity Cyber Health Check</a>
+  <button class="nav-hamburger" aria-label="Menu" onclick="
+    var nav=this.closest('nav');
+    nav.querySelector('.nav-links').classList.toggle('nav-open');
+    nav.querySelector('.nav-cta-mobile').classList.toggle('nav-open');
+  ">&#9776;</button>
+  <a href="#contact" class="nav-cta-mobile">Book a Charity Cyber Health Check</a>
+</nav>
+
+<main>
+<section class="hero" id="home">
+  <div class="hero-top">
+    <div class="hero-text">
+      <div class="hero-tag">MICROSOFT AI CLOUD PARTNER · MICROSOFT 365 SECURITY · AZURE · AI GOVERNANCE · CHARITIES &amp; SMEs</div>
+      <h1 class="hero-headline">
+        Cloud security.<br>
+        <span class="serif">Governed.</span><br>
+        <span class="blue">AI-Ready.</span>
+      </h1>
+      <p class="hero-body">Adjona Technology is a Microsoft AI Cloud Partner helping charities and smaller organisations secure Microsoft 365, Azure, and AI adoption with practical advice, hands-on implementation, and real charity governance insight.</p>
+      <div class="hero-ctas">
+        <a href="#contact" class="btn-solid">Book a Charity Cyber Health Check</a>
+        <a href="#services" class="btn-outline">See How We Help</a>
+      </div>
+      <p style="margin-top:1rem;font-size:.8rem;color:#888;">No obligation · No hard sell · Practical advice you can act on</p>
+    </div>
+    <div style="display:flex;flex-direction:column;justify-content:center;align-items:center;padding:3rem 2rem;background:var(--off);border-left:2px solid var(--ink);">
+      <div style="width:100%;max-width:420px;">
+        <div style="display:flex;align-items:flex-end;justify-content:center;gap:1.5rem;height:200px;margin-bottom:1.5rem;">
+          <div style="display:flex;flex-direction:column;align-items:center;">
+            <div style="width:72px;height:96px;background:#0F4C81;clip-path:polygon(0 0,78% 0,100% 10%,100% 100%,0 100%);"></div>
+          </div>
+          <div style="display:flex;flex-direction:column;align-items:center;">
+            <div style="width:60px;height:120px;background:#D83B01;clip-path:polygon(0 0,78% 0,100% 10%,100% 100%,0 100%);"></div>
+          </div>
+          <div style="display:flex;flex-direction:column;align-items:center;">
+            <div style="width:60px;height:150px;background:#2F6B00;clip-path:polygon(0 0,78% 0,100% 10%,100% 100%,0 100%);"></div>
+          </div>
+          <div style="display:flex;flex-direction:column;align-items:center;">
+            <div style="width:60px;height:185px;background:#F2A900;clip-path:polygon(0 0,78% 0,100% 10%,100% 100%,0 100%);"></div>
+          </div>
+        </div>
+        <div style="display:flex;justify-content:center;gap:0;border-top:2px solid var(--ink);">
+          <div style="flex:0 0 72px;text-align:center;padding:.6rem .25rem 0;">
+            <div style="font-family:'Epilogue',sans-serif;font-size:.72rem;font-weight:800;color:#0F4C81;">Security</div>
+            <div style="font-family:'JetBrains Mono',monospace;font-size:.52rem;color:var(--muted);margin-top:.15rem;">Cloud &amp; SIEM</div>
+          </div>
+          <div style="flex:0 0 60px;text-align:center;padding:.6rem .25rem 0;">
+            <div style="font-family:'Epilogue',sans-serif;font-size:.72rem;font-weight:800;color:#D83B01;">Identity</div>
+            <div style="font-family:'JetBrains Mono',monospace;font-size:.52rem;color:var(--muted);margin-top:.15rem;">Entra &amp; MFA</div>
+          </div>
+          <div style="flex:0 0 60px;text-align:center;padding:.6rem .25rem 0;">
+            <div style="font-family:'Epilogue',sans-serif;font-size:.72rem;font-weight:800;color:#2F6B00;">Data</div>
+            <div style="font-family:'JetBrains Mono',monospace;font-size:.52rem;color:var(--muted);margin-top:.15rem;">Purview &amp; DLP</div>
+          </div>
+          <div style="flex:0 0 60px;text-align:center;padding:.6rem .25rem 0;">
+            <div style="font-family:'Epilogue',sans-serif;font-size:.72rem;font-weight:800;color:#F2A900;">AI</div>
+            <div style="font-family:'JetBrains Mono',monospace;font-size:.52rem;color:var(--muted);margin-top:.15rem;">Copilot &amp; ML</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="four-stripe">
+    <div class="fs b"></div><div class="fs r"></div><div class="fs g"></div><div class="fs y"></div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="sec-label">Services</div>
+  <h2 class="sec-title reveal">Four pillars. <span class="serif">One partner.</span></h2>
+  <p class="sec-sub reveal r2">We help charities and SMEs strengthen security, improve governance, and make better use of Microsoft 365 and Azure without adding unnecessary complexity.</p>
+
+  <div style="border-top:3px solid #0F4C81;margin-bottom:0;" class="reveal">
+    <div class="svc-row" style="background:#f9fbff;">
+      <div class="svc-num" style="color:#0F4C81;">01</div>
+      <div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:.58rem;letter-spacing:.16em;text-transform:uppercase;color:#0F4C81;margin-bottom:.35rem;">Security</div>
+        <div class="svc-name">Security Monitoring &amp; Threat Protection</div>
+      </div>
+      <div class="svc-desc">We help you strengthen detection, response, and identity protection across Microsoft Defender, Sentinel, and Entra using controls that fit your size, budget, and risk profile.</div>
+      <div class="svc-bar-wrap"><span class="svc-bar-tag">Sentinel</span><span class="svc-bar-tag">Defender XDR</span><span class="svc-bar-tag">Entra</span></div>
+    </div>
+    <div class="svc-row">
+      <div class="svc-num" style="color:#0F4C81;">02</div>
+      <div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:.58rem;letter-spacing:.16em;text-transform:uppercase;color:#0F4C81;margin-bottom:.35rem;">Security</div>
+        <div class="svc-name">Security Review &amp; Improvement Roadmap</div>
+      </div>
+      <div class="svc-desc">A plain-English review of your current Microsoft 365 and Azure security posture, with a prioritised action plan showing what to fix first, what can wait, and why.</div>
+      <div class="svc-bar-wrap"><span class="svc-bar-tag">Audit</span><span class="svc-bar-tag">Roadmap</span><span class="svc-bar-tag">Report</span></div>
+    </div>
+    <div class="svc-row">
+      <div class="svc-num" style="color:#0F4C81;">03</div>
+      <div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:.58rem;letter-spacing:.16em;text-transform:uppercase;color:#0F4C81;margin-bottom:.35rem;">Security</div>
+        <div class="svc-name">Azure Security &amp; Cloud Foundations</div>
+      </div>
+      <div class="svc-desc">Support for organisations using or moving to Azure, covering identity, monitoring, storage, networking, and security controls in a way that matches your real level of risk and internal capacity.</div>
+      <div class="svc-bar-wrap"><span class="svc-bar-tag">Azure</span><span class="svc-bar-tag">Container Apps</span><span class="svc-bar-tag">Monitor</span></div>
+    </div>
+  </div>
+
+  <div style="border-top:3px solid #D83B01;margin-bottom:0;" class="reveal">
+    <div class="svc-row" style="background:#fff8f6;">
+      <div class="svc-num" style="color:#D83B01;">04</div>
+      <div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:.58rem;letter-spacing:.16em;text-transform:uppercase;color:#D83B01;margin-bottom:.35rem;">Identity</div>
+        <div class="svc-name">Microsoft 365 Security &amp; Identity</div>
+      </div>
+      <div class="svc-desc">We put the right foundations in place across Microsoft 365 and Entra, including MFA, Conditional Access, information protection, and access controls properly configured for your organisation.</div>
+      <div class="svc-bar-wrap"><span class="svc-bar-tag">M365</span><span class="svc-bar-tag">Entra ID</span><span class="svc-bar-tag">Conditional Access</span></div>
+    </div>
+  </div>
+
+  <div style="border-top:3px solid #2F6B00;margin-bottom:0;" class="reveal">
+    <div class="svc-row" style="background:#f7fbf5;">
+      <div class="svc-num" style="color:#2F6B00;">05</div>
+      <div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:.58rem;letter-spacing:.16em;text-transform:uppercase;color:#2F6B00;margin-bottom:.35rem;">Data</div>
+        <div class="svc-name">Data Protection &amp; DPO Support</div>
+      </div>
+      <div class="svc-desc">Support with GDPR, privacy risk assessments, retention, information handling, and Microsoft Purview, built around the way your organisation actually works rather than a generic compliance template.</div>
+      <div class="svc-bar-wrap"><span class="svc-bar-tag">Purview</span><span class="svc-bar-tag">DLP</span><span class="svc-bar-tag">UK GDPR</span></div>
+    </div>
+  </div>
+
+  <div style="border-top:3px solid #F2A900;" class="reveal">
+    <div class="svc-row" style="background:#fffcf2;">
+      <div class="svc-num" style="color:#F2A900;">06</div>
+      <div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:.58rem;letter-spacing:.16em;text-transform:uppercase;color:#F2A900;margin-bottom:.35rem;">AI</div>
+        <div class="svc-name">AI Readiness &amp; Governance</div>
+      </div>
+      <div class="svc-desc">We help you prepare for Microsoft Copilot and other AI tools by putting the right permissions, data controls, governance, and usage rules in place before rollout.</div>
+      <div class="svc-bar-wrap"><span class="svc-bar-tag">Copilot</span><span class="svc-bar-tag">Copilot Studio</span><span class="svc-bar-tag">Azure AI</span></div>
+    </div>
+    <div class="svc-row" style="background:#f7fbf5;">
+      <div class="svc-num" style="color:#2F6B00;">07</div>
+      <div>
+        <div class="svc-name">Charity Systems &amp; Workflow Automation</div>
+      </div>
+      <div class="svc-desc">We specialise in helping charities and non-profits get more from Microsoft 365 — building SharePoint-based tools for record-keeping, case management, and reporting, and using Power Automate to reduce manual administration. Whether you need a structured operational system or just want existing processes to work more reliably, we build practical solutions on the M365 you already have.<br><br><a href="demonstrator-clinical-assessments.html" style="font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ms-grn);text-decoration:none;border-bottom:1px solid rgba(47,107,0,.3);">View solution demonstrator &rarr;</a></div>
+      <div class="svc-bar-wrap"><span class="svc-bar-tag">SharePoint</span><span class="svc-bar-tag">Power Automate</span><span class="svc-bar-tag">M365</span><span class="svc-bar-tag">Charities</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="health-check" id="healthcheck">
+  <div class="hc-inner">
+    <div>
+      <div class="hc-label">Featured Service</div>
+      <h2 class="hc-title reveal">Charity Cyber<br>Health Check</h2>
+      <p class="hc-desc reveal r2">A structured review of your Microsoft 365 and Azure environment designed for charities and smaller organisations that need a clear view of their security risks, governance gaps, and immediate priorities.</p>
+      <div class="reveal r3">
+        <div class="hc-typical">Typical engagement</div>
+        <div class="hc-typical-val">Remote assessment over 2 to 3 days · Written findings and priority actions within 5 working days · Follow-up call to explain the results</div>
+        <div style="margin-top:1rem;font-size:.8rem;color:#888;">Many smaller organisations have at least one significant security or governance gap that can be addressed quickly once identified.</div>
+      </div>
+    </div>
+    <div class="reveal r2">
+      <div class="hc-deliverables">
+        <div class="hc-d-title">Deliverables</div>
+        <div class="hc-d-item"><div class="hc-d-dot"></div>Microsoft 365 and Entra security review</div>
+        <div class="hc-d-item"><div class="hc-d-dot"></div>Identity and access assessment</div>
+        <div class="hc-d-item"><div class="hc-d-dot"></div>Data protection and sharing review</div>
+        <div class="hc-d-item"><div class="hc-d-dot"></div>Risk summary in plain English</div>
+        <div class="hc-d-item"><div class="hc-d-dot"></div>Prioritised remediation roadmap</div>
+        <div class="hc-d-item"><div class="hc-d-dot"></div>Executive summary suitable for trustees or leadership</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="approach" id="approach">
+  <div class="ap-left">
+    <div class="sec-label">About Adjona</div>
+    <h2 class="ap-title reveal">Where governance <span class="serif">meets</span> technology.</h2>
+    <div class="ap-body reveal r2">
+      <p>Adjona Technology combines Microsoft AI Cloud Partner expertise with real governance experience gained through charity leadership, board responsibility, and data protection work.</p>
+      <p>We help organisations turn governance, compliance, and security requirements into practical technical controls that can actually be implemented and maintained.</p>
+      <p>We understand both the governance pressures organisations face and the technical work needed to respond properly. The aim is always practical improvement, not abstract advice.</p>
+    </div>
+    <div class="ap-reassurance reveal r3">
+      Adjona Technology works with organisations where trust and accountability matter. Our advice is grounded in the same governance standards that trustees and directors are expected to uphold.
+    </div>
+  </div>
+  <div class="ap-right">
+    <div class="pillars reveal r2">
+      <div class="pillar">
+        <div class="p-top"><div class="p-sq" style="background:var(--ms-blue)"></div><div class="p-name">Board-level accountability</div></div>
+        <div class="p-desc">Real charity governance experience means we understand trustee responsibilities, operational constraints, and the need for proportionate controls that can actually be maintained.</div>
+      </div>
+      <div class="pillar">
+        <div class="p-top"><div class="p-sq" style="background:var(--ms-red)"></div><div class="p-name">Charity sector knowledge</div></div>
+        <div class="p-desc">We work with the realities charities face: limited budgets, small teams, volunteer trustees, and competing priorities. Our recommendations are proportionate, not enterprise theatre.</div>
+      </div>
+      <div class="pillar">
+        <div class="p-top"><div class="p-sq" style="background:var(--ms-grn)"></div><div class="p-name">Plain English delivery</div></div>
+        <div class="p-desc">No unnecessary jargon. You will understand what we found, what it means, and what to do next.</div>
+      </div>
+      <div class="pillar">
+        <div class="p-top"><div class="p-sq" style="background:var(--ms-yel)"></div><div class="p-name">SME-appropriate scope</div></div>
+        <div class="p-desc">Proportionate, cost-effective security and governance support shaped around your organisation's size, maturity, and level of risk.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cases" id="cases">
+  <div class="sec-label">Case Studies</div>
+  <h2 class="sec-title reveal">Common situations <span class="serif">we help with.</span></h2>
+  <div class="cases-grid reveal r2">
+    <div class="case-card">
+      <div class="case-tag blue">Charity · Microsoft 365</div>
+      <div class="case-title">A charity wants to know whether its Microsoft 365 setup is actually secure</div>
+      <p class="case-body">We review identity, MFA, admin access, sharing, and governance controls, then produce a prioritised action plan in plain English.</p>
+    </div>
+    <div class="case-card">
+      <div class="case-tag red">SME · AI Governance</div>
+      <div class="case-title">An organisation is interested in Microsoft Copilot but is not sure its data is ready</div>
+      <p class="case-body">We assess permissions, labelling, data exposure risks, and governance before rollout so AI adoption starts from a safer baseline.</p>
+    </div>
+    <div class="case-card">
+      <div class="case-tag grn">Charity · Data Protection</div>
+      <div class="case-title">A smaller organisation needs practical data protection support without hiring a full-time DPO</div>
+      <p class="case-body">We support GDPR-related reviews, DPIAs, retention, policies, and Microsoft Purview configuration in a way that fits existing operations.</p>
+    </div>
+  </div>
+</section>
+
+<section class="certs" id="certs">
+  <div class="sec-label">Credentials</div>
+  <h2 class="sec-title reveal">Core areas <span class="serif">of expertise.</span></h2>
+  <div class="cert-areas reveal r2" style="display:flex;flex-direction:column;gap:1.5rem;margin-top:2rem;">
+    <div class="cert-area">
+      <div style="font-family:'Epilogue',sans-serif;font-size:1rem;font-weight:800;letter-spacing:-.02em;margin-bottom:.4rem;">Microsoft 365 security</div>
+      <div style="font-size:.88rem;color:var(--muted);line-height:1.7;">Entra ID, MFA, Conditional Access, identity protection</div>
+    </div>
+    <div class="cert-area" style="border-top:1px solid var(--border);padding-top:1.5rem;">
+      <div style="font-family:'Epilogue',sans-serif;font-size:1rem;font-weight:800;letter-spacing:-.02em;margin-bottom:.4rem;">Threat protection and monitoring</div>
+      <div style="font-size:.88rem;color:var(--muted);line-height:1.7;">Microsoft Defender XDR, Defender for Cloud, Microsoft Sentinel</div>
+    </div>
+    <div class="cert-area" style="border-top:1px solid var(--border);padding-top:1.5rem;">
+      <div style="font-family:'Epilogue',sans-serif;font-size:1rem;font-weight:800;letter-spacing:-.02em;margin-bottom:.4rem;">Data protection and compliance</div>
+      <div style="font-size:.88rem;color:var(--muted);line-height:1.7;">Microsoft Purview, DLP, retention, eDiscovery, information protection</div>
+    </div>
+    <div class="cert-area" style="border-top:1px solid var(--border);padding-top:1.5rem;">
+      <div style="font-family:'Epilogue',sans-serif;font-size:1rem;font-weight:800;letter-spacing:-.02em;margin-bottom:.4rem;">Azure and cloud security</div>
+      <div style="font-size:.88rem;color:var(--muted);line-height:1.7;">Azure administration, monitoring, networking, secure workloads</div>
+    </div>
+    <div class="cert-area" style="border-top:1px solid var(--border);padding-top:1.5rem;">
+      <div style="font-family:'Epilogue',sans-serif;font-size:1rem;font-weight:800;letter-spacing:-.02em;margin-bottom:.4rem;">AI readiness and governance</div>
+      <div style="font-size:.88rem;color:var(--muted);line-height:1.7;">Microsoft Copilot readiness, Copilot Studio, Azure AI, secure AI adoption</div>
+    </div>
+    <div class="cert-area" style="border-top:2px solid var(--ink);padding-top:1.5rem;margin-top:.5rem;">
+      <a href="https://marketplace.microsoft.com/en-gb/partners/c4ead6cf-d6a0-4973-8bf7-f3e644e195ae/overview" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:.75rem;text-decoration:none;border:1.5px solid var(--border);padding:.75rem 1.25rem;transition:border-color .2s,background .2s;" onmouseover="this.style.borderColor='#0F4C81';this.style.background='#f0f5fb';" onmouseout="this.style.borderColor='rgba(13,13,13,0.1)';this.style.background='transparent';">
+        <svg width="20" height="20" viewBox="0 0 23 23" xmlns="http://www.w3.org/2000/svg"><rect x="1" y="1" width="10" height="10" fill="#f25022"/><rect x="12" y="1" width="10" height="10" fill="#7fba00"/><rect x="1" y="12" width="10" height="10" fill="#00a4ef"/><rect x="12" y="12" width="10" height="10" fill="#ffb900"/></svg>
+        <span style="font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ms-blue);font-weight:500;">View our Microsoft Marketplace partner profile &rarr;</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="cta" id="contact">
+  <div class="cta-blue">
+    <div class="cta-tag">Get Started</div>
+    <h2 class="cta-title reveal">Get a clearer view<br>of your <span class="serif">Microsoft security risks.</span></h2>
+    <p class="cta-sub reveal r2">Start with a short, structured conversation about your Microsoft 365 and Azure environment, current concerns, and where a review or improvement project would add most value.</p>
+    <div class="reveal r3">
+      <div class="cta-typical">Typical engagement</div>
+      <div class="cta-typical-val">30-minute introductory call · Brief written summary · Optional next-step recommendation</div>
+    </div>
+  </div>
+  <div class="cta-form-panel">
+    <form class="cta-form reveal r2" id="contact-form" action="https://formspree.io/f/xnjgkkzw" method="POST">
+      <p style="font-size:.8rem;color:#888;margin-bottom:1rem;">Designed for charities and SMEs that want practical, proportionate Microsoft security advice.</p>
+      <input class="cta-input" type="text" name="name" placeholder="Your name" required>
+      <input class="cta-input" type="email" name="email" placeholder="Work email" required>
+      <input class="cta-input" type="text" name="organisation" placeholder="Organisation name">
+      <label for="org-type" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;">Organisation type</label>
+      <select id="org-type" class="cta-select" name="organisation_type">
+        <option value="">Organisation type...</option>
+        <option>Registered charity</option>
+        <option>Small or medium enterprise</option>
+        <option>Other</option>
+      </select>
+      <label for="area-interest" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;">Area of interest</label>
+      <select id="area-interest" class="cta-select" name="area_of_interest">
+        <option value="">Area of interest...</option>
+        <option>Charity Cyber Health Check</option>
+        <option>AI Readiness &amp; Governance</option>
+        <option>Security Monitoring &amp; Threat Protection</option>
+        <option>Data Protection &amp; Compliance / DPO</option>
+        <option>Azure Security &amp; Cloud Migration</option>
+        <option>Microsoft 365 &amp; Copilot Readiness</option>
+        <option>Security Review &amp; Improvement Roadmap</option>
+        <option>General enquiry</option>
+      </select>
+      <textarea class="cta-textarea" name="message" placeholder="Tell us a little about your organisation and what you're looking to achieve..."></textarea>
+      <button type="submit" class="cta-btn">Book a Charity Cyber Health Check</button>
+    </form>
+    <div id="form-success" style="display:none;width:100%;padding:3rem 0;">
+      <div style="border-left:3px solid var(--ms-grn);padding:1.5rem 2rem;background:#f9fbf5;">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.15em;text-transform:uppercase;color:var(--ms-grn);margin-bottom:.75rem;">Message Received</div>
+        <div style="font-family:'Epilogue',sans-serif;font-size:1.1rem;font-weight:800;margin-bottom:.5rem;">Thank you — we'll be in touch shortly.</div>
+        <div style="font-size:.88rem;color:var(--muted);line-height:1.75;">We aim to respond within one working day. In the meantime, if you have an urgent question you can <a href="https://wa.me/442033550538" style="color:var(--ms-blue);text-decoration:none;border-bottom:1px solid rgba(0,120,212,.3);">message us on WhatsApp</a>.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer style="padding-bottom:5rem;">
+  <div class="f-logo">
+    <svg width="28" height="22" viewBox="0 0 36 28" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="0,28 6,28 7,17 6,16 0,16" fill="#0F4C81"/>
+      <polygon points="9,28 15,28 16,12 15,11 9,11" fill="#D83B01"/>
+      <polygon points="18,28 24,28 25,7 24,6 18,6" fill="#2F6B00"/>
+      <polygon points="27,28 33,28 34,1 33,0 27,0" fill="#F2A900"/>
+    </svg>
+    <div class="f-name">Adjona <span>Technology</span> Limited</div>
+  </div>
+  <div class="f-copy-wrap">
+    <div class="f-copy">© 2026 Adjona Technology Limited · Registered in England &amp; Wales · Company No. 05007410</div>
+    <div style="margin-top:.4rem;">
+      <a href="https://marketplace.microsoft.com/en-gb/partners/c4ead6cf-d6a0-4973-8bf7-f3e644e195ae/overview" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:.5rem;text-decoration:none;">
+        <svg width="14" height="14" viewBox="0 0 23 23" xmlns="http://www.w3.org/2000/svg"><rect x="1" y="1" width="10" height="10" fill="#f25022"/><rect x="12" y="1" width="10" height="10" fill="#7fba00"/><rect x="1" y="12" width="10" height="10" fill="#00a4ef"/><rect x="12" y="12" width="10" height="10" fill="#ffb900"/></svg>
+        <span style="font-family:'JetBrains Mono',monospace;font-size:.58rem;letter-spacing:.08em;color:var(--muted);">Listed on Microsoft Marketplace</span>
+      </a>
+    </div>
+  </div>
+  <ul class="f-links">
+    <li><a href="https://www.linkedin.com/company/adjona-technology-limited/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+    <li><a href="https://adjona.eventbrite.com" target="_blank" rel="noopener noreferrer">Events</a></li>
+    <li><a href="https://outlook.office.com/book/AdjonaTechnologyLimited1@adjona.com/s/ElOd0P60CEiQxQcnIYWXWw2" target="_blank" rel="noopener noreferrer">Book a Call</a></li>
+    <li><a href="adjona-privacy.html">Privacy Policy</a></li>
+    <li><a href="adjona-terms.html">Terms &amp; Conditions</a></li>
+    <li><a href="mailto:info@adjona.com">info@adjona.com</a></li>
+  </ul>
+</footer>
+
+<a href="https://wa.me/442033550538?text=Hi%2C%20I%27m%20interested%20in%20a%20Microsoft%20365%20security%20review%20for%20our%20organisation.%20We%20are%20a%20%5Bcharity%2FSME%5D%20with%20approximately%20%5BX%5D%20users.%20Could%20you%20advise%20on%20next%20steps%3F" class="wa-float" target="_blank" rel="noopener noreferrer">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+  Quick question about your setup?
+</a>
+
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  document.querySelectorAll('.nav-links a, .nav-cta-mobile').forEach(function(link){
+    link.addEventListener('click', function(e){
+      var nav = document.querySelector('nav');
+      nav.querySelector('.nav-links').classList.remove('nav-open');
+      nav.querySelector('.nav-cta-mobile').classList.remove('nav-open');
+      var href = this.getAttribute('href');
+      if(href && href.startsWith('#')){
+        e.preventDefault();
+        var target = document.querySelector(href);
+        if(target){
+          var navH = nav.offsetHeight;
+          var top = target.getBoundingClientRect().top + window.pageYOffset - navH;
+          window.scrollTo({top: top, behavior: 'smooth'});
+          history.pushState(null, '', href);
+        }
+      }
+    });
+  });
+});
+
+var waBtn = document.querySelector('.wa-float');
+if(waBtn){
+  window.addEventListener('scroll', function(){
+    var footer = document.querySelector('footer');
+    if(footer){
+      var footerTop = footer.getBoundingClientRect().top;
+      if(footerTop < window.innerHeight){
+        waBtn.classList.add('wa-hidden');
+      } else {
+        waBtn.classList.remove('wa-hidden');
+      }
+    }
+  });
+}
+
+const els=document.querySelectorAll('.reveal');
+const obs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');}),{threshold:0.01,rootMargin:'0px 0px -20px 0px'});
+els.forEach(el=>obs.observe(el));
+window.addEventListener('load',()=>els.forEach(el=>{const r=el.getBoundingClientRect();if(r.top<window.innerHeight)el.classList.add('visible');}));
+
+const form=document.getElementById('contact-form');
+form.addEventListener('submit',async function(e){
+  e.preventDefault();
+  const btn=form.querySelector('button[type="submit"]');
+  btn.textContent='Sending...';btn.disabled=true;
+  try{
+    const res=await fetch(form.action,{method:'POST',body:new FormData(form),headers:{'Accept':'application/json'}});
+    if(res.ok){form.style.display='none';document.getElementById('form-success').style.display='block';}
+    else{btn.textContent='Book a Charity Cyber Health Check';btn.disabled=false;alert('Something went wrong. Please try again.');}
+  }catch(err){btn.textContent='Book a Charity Cyber Health Check';btn.disabled=false;alert('Something went wrong. Please try again.');}
+});
+</script>
+</body>
+</html>
