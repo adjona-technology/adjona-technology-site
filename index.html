@@ -32,7 +32,7 @@
 :root{
   --white:#ffffff;--off:#f5f5f0;--ink:#0d0d0d;
   --ms-blue:#0F4C81;--ms-red:#D83B01;--ms-grn:#2F6B00;--ms-yel:#F2A900;
-  --muted:#888;--border:rgba(13,13,13,0.1);
+  --muted:#444;--border:rgba(13,13,13,0.1);
   --nav-h:62px;
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
@@ -44,7 +44,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .logo-name{font-family:'Epilogue',sans-serif;font-size:1.1rem;font-weight:900;letter-spacing:-.02em;white-space:nowrap;}
 .logo-name span{color:var(--ms-blue);}
 .nav-links{display:flex;list-style:none;}
-.nav-links a{font-family:'JetBrains Mono',monospace;font-size:.63rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);text-decoration:none;padding:1.5rem 1.4rem;border-left:2px solid var(--border);display:block;transition:color .2s,background .2s;}
+.nav-links a{font-family:'JetBrains Mono',monospace;font-size:.63rem;letter-spacing:.14em;text-transform:uppercase;color:#333;text-decoration:none;padding:1.5rem 1.4rem;border-left:2px solid var(--border);display:block;transition:color .2s,background .2s;}
 .nav-links a:hover{color:var(--ms-blue);background:rgba(0,120,212,.04);}
 .nav-cta{font-family:'Epilogue',sans-serif;font-size:.88rem;font-weight:900;background:var(--ms-blue);color:#fff;text-decoration:none;border-left:2px solid var(--ink);padding:1.5rem 2.2rem;cursor:pointer;transition:background .2s;display:block;}
 .nav-cta:hover{background:#0062b0;}
@@ -132,12 +132,12 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 
 .cta{display:grid;grid-template-columns:1fr 1fr;border-top:2px solid var(--ink);}
 .cta-blue{background:var(--ms-blue);padding:5rem 4rem;display:flex;flex-direction:column;justify-content:center;}
-.cta-tag{font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.6);margin-bottom:1rem;}
+.cta-tag{font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.9);margin-bottom:1rem;}
 .cta-title{font-family:'Epilogue',sans-serif;font-size:clamp(2.5rem,4vw,4rem);font-weight:900;letter-spacing:-.04em;line-height:.95;color:#fff;margin-bottom:1rem;}
 .cta-title .serif{font-family:'Lora',serif;font-style:italic;font-weight:500;}
-.cta-sub{font-size:.95rem;color:rgba(255,255,255,.7);line-height:1.8;max-width:380px;margin-bottom:1.5rem;}
-.cta-typical{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.45);margin-bottom:.4rem;}
-.cta-typical-val{font-size:.85rem;color:rgba(255,255,255,.6);line-height:1.6;}
+.cta-sub{font-size:.95rem;color:rgba(255,255,255,.9);line-height:1.8;max-width:380px;margin-bottom:1.5rem;}
+.cta-typical{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.8);margin-bottom:.4rem;}
+.cta-typical-val{font-size:.85rem;color:rgba(255,255,255,.85);line-height:1.6;}
 .cta-form-panel{padding:5rem 4rem;display:flex;align-items:center;background:var(--off);}
 .cta-form{display:flex;flex-direction:column;gap:1rem;width:100%;}
 .cta-input{font-family:'Epilogue',sans-serif;font-size:.95rem;background:var(--white);border:2px solid var(--border);padding:.9rem 1.1rem;outline:none;transition:border-color .2s;}
@@ -154,9 +154,9 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
 .f-logo{display:flex;align-items:center;gap:.65rem;}
 .f-name{font-family:'Epilogue',sans-serif;font-size:1rem;font-weight:900;letter-spacing:-.02em;}
 .f-name span{color:var(--ms-blue);}
-.f-copy{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.06em;color:var(--muted);}
+.f-copy{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.06em;color:#333;}
 .f-links{display:flex;gap:2rem;list-style:none;}
-.f-links a{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color .2s;}
+.f-links a{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:#333;text-decoration:none;transition:color .2s;}
 .f-links a:hover{color:var(--ms-blue);}
 
 .reveal{opacity:1;transform:none;}
@@ -262,6 +262,7 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
   <a href="#contact" class="nav-cta-mobile">Book a Charity Cyber Health Check</a>
 </nav>
 
+<main>
 <section class="hero" id="home">
   <div class="hero-top">
     <div class="hero-text">
@@ -276,7 +277,7 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
         <a href="#contact" class="btn-solid">Book a Charity Cyber Health Check</a>
         <a href="#services" class="btn-outline">See How We Help</a>
       </div>
-      <p style="margin-top:1rem;font-size:.8rem;color:#888;">No obligation · No hard sell · Practical advice you can act on</p>
+      <p style="margin-top:1rem;font-size:.8rem;color:#444;">No obligation · No hard sell · Practical advice you can act on</p>
     </div>
     <div style="display:flex;flex-direction:column;justify-content:center;align-items:center;padding:3rem 2rem;background:var(--off);border-left:2px solid var(--ink);">
       <div style="width:100%;max-width:420px;">
@@ -297,19 +298,19 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
         <div style="display:flex;justify-content:center;gap:0;border-top:2px solid var(--ink);">
           <div style="flex:0 0 72px;text-align:center;padding:.6rem .25rem 0;">
             <div style="font-family:'Epilogue',sans-serif;font-size:.72rem;font-weight:800;color:#0F4C81;">Security</div>
-            <div style="font-family:'JetBrains Mono',monospace;font-size:.52rem;color:var(--muted);margin-top:.15rem;">Cloud &amp; SIEM</div>
+            <div style="font-family:'JetBrains Mono',monospace;font-size:.62rem;color:#444;margin-top:.15rem;">Cloud &amp; SIEM</div>
           </div>
           <div style="flex:0 0 60px;text-align:center;padding:.6rem .25rem 0;">
             <div style="font-family:'Epilogue',sans-serif;font-size:.72rem;font-weight:800;color:#D83B01;">Identity</div>
-            <div style="font-family:'JetBrains Mono',monospace;font-size:.52rem;color:var(--muted);margin-top:.15rem;">Entra &amp; MFA</div>
+            <div style="font-family:'JetBrains Mono',monospace;font-size:.62rem;color:#444;margin-top:.15rem;">Entra &amp; MFA</div>
           </div>
           <div style="flex:0 0 60px;text-align:center;padding:.6rem .25rem 0;">
             <div style="font-family:'Epilogue',sans-serif;font-size:.72rem;font-weight:800;color:#2F6B00;">Data</div>
-            <div style="font-family:'JetBrains Mono',monospace;font-size:.52rem;color:var(--muted);margin-top:.15rem;">Purview &amp; DLP</div>
+            <div style="font-family:'JetBrains Mono',monospace;font-size:.62rem;color:#444;margin-top:.15rem;">Purview &amp; DLP</div>
           </div>
           <div style="flex:0 0 60px;text-align:center;padding:.6rem .25rem 0;">
             <div style="font-family:'Epilogue',sans-serif;font-size:.72rem;font-weight:800;color:#F2A900;">AI</div>
-            <div style="font-family:'JetBrains Mono',monospace;font-size:.52rem;color:var(--muted);margin-top:.15rem;">Copilot &amp; ML</div>
+            <div style="font-family:'JetBrains Mono',monospace;font-size:.62rem;color:#444;margin-top:.15rem;">Copilot &amp; ML</div>
           </div>
         </div>
       </div>
@@ -409,7 +410,7 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
       <div class="reveal r3">
         <div class="hc-typical">Typical engagement</div>
         <div class="hc-typical-val">Remote assessment over 2 to 3 days · Written findings and priority actions within 5 working days · Follow-up call to explain the results</div>
-        <div style="margin-top:1rem;font-size:.8rem;color:#888;">Many smaller organisations have at least one significant security or governance gap that can be addressed quickly once identified.</div>
+        <div style="margin-top:1rem;font-size:.8rem;color:#444;">Many smaller organisations have at least one significant security or governance gap that can be addressed quickly once identified.</div>
       </div>
     </div>
     <div class="reveal r2">
@@ -528,17 +529,19 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
   </div>
   <div class="cta-form-panel">
     <form class="cta-form reveal r2" id="contact-form" action="https://formspree.io/f/xnjgkkzw" method="POST">
-      <p style="font-size:.8rem;color:#888;margin-bottom:1rem;">Designed for charities and SMEs that want practical, proportionate Microsoft security advice.</p>
+      <p style="font-size:.8rem;color:#444;margin-bottom:1rem;">Designed for charities and SMEs that want practical, proportionate Microsoft security advice.</p>
       <input class="cta-input" type="text" name="name" placeholder="Your name" required>
       <input class="cta-input" type="email" name="email" placeholder="Work email" required>
       <input class="cta-input" type="text" name="organisation" placeholder="Organisation name">
-      <select class="cta-select" name="organisation_type">
+      <label for="org-type" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;">Organisation type</label>
+      <select id="org-type" class="cta-select" name="organisation_type">
         <option value="">Organisation type...</option>
         <option>Registered charity</option>
         <option>Small or medium enterprise</option>
         <option>Other</option>
       </select>
-      <select class="cta-select" name="area_of_interest">
+      <label for="area-interest" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;">Area of interest</label>
+      <select id="area-interest" class="cta-select" name="area_of_interest">
         <option value="">Area of interest...</option>
         <option>Charity Cyber Health Check</option>
         <option>AI Readiness &amp; Governance</option>
@@ -561,6 +564,8 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
     </div>
   </div>
 </section>
+
+</main>
 
 <footer style="padding-bottom:5rem;">
   <div class="f-logo">
