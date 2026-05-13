@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fixing Messy Teams, SharePoint and File Access in Microsoft 365 | Adjona Technology</title>
+<meta name="description" content="Tired of chaotic Teams and lost files? Join Adjona Technology for a practical online briefing on SharePoint structure, file access and Microsoft 365 governance. Wednesday 3 June 2026, 12:30–1:15 PM BST.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;700;800;900&family=Lora:ital,wght@1,500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<!-- Clarity tracking code for https://adjona.com/ -->
+<script>
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "wmyh9800tx");
+</script>
+<!-- Noscript content for added SEO -->
+<noscript><a href="https://www.eventbrite.co.uk/e/fixing-messy-teams-sharepoint-and-file-access-in-microsoft-365-tickets-1988415823254" rel="noopener noreferrer" target="_blank">Buy Tickets on Eventbrite</a></noscript>
+<style>
+:root{
+  --white:#ffffff;--off:#f5f5f0;--ink:#0d0d0d;
+  --ms-blue:#0F4C81;--ms-red:#D83B01;--ms-grn:#2F6B00;--ms-yel:#F2A900;
+  --muted:#444;--border:rgba(13,13,13,0.1);
+  --nav-h:62px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--white);color:var(--ink);font-family:'Epilogue',sans-serif;font-weight:400;overflow-x:hidden;}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:0 0 0 4rem;background:#fff;border-bottom:2px solid var(--ink);}
+.logo{display:flex;align-items:center;gap:.75rem;padding:1.1rem 0;text-decoration:none;}
+.logo-name{font-family:'Epilogue',sans-serif;font-size:1.1rem;font-weight:900;letter-spacing:-.02em;white-space:nowrap;color:var(--ink);}
+.logo-name span{color:var(--ms-blue);}
+.nav-links{display:flex;list-style:none;}
+.nav-links a{font-family:'JetBrains Mono',monospace;font-size:.63rem;letter-spacing:.14em;text-transform:uppercase;color:#333;text-decoration:none;padding:1.5rem 1.4rem;border-left:2px solid var(--border);display:block;transition:color .2s,background .2s;}
+.nav-links a:hover{color:var(--ms-blue);background:rgba(0,120,212,.04);}
+.nav-cta{font-family:'Epilogue',sans-serif;font-size:.88rem;font-weight:900;background:var(--ms-blue);color:#fff;text-decoration:none;border-left:2px solid var(--ink);padding:1.5rem 2.2rem;cursor:pointer;transition:background .2s;display:block;}
+.nav-cta:hover{background:#0062b0;}
+.nav-hamburger{display:none;}
+.nav-cta-mobile{display:none;}
+
+.four-stripe{display:grid;grid-template-columns:repeat(4,1fr);height:6px;}
+.fs.b{background:var(--ms-blue);}.fs.r{background:var(--ms-red);}.fs.g{background:var(--ms-grn);}.fs.y{background:var(--ms-yel);}
+
+/* HERO */
+.event-hero{padding:calc(var(--nav-h) + 5rem) 4rem 5rem;border-bottom:2px solid var(--ink);background:var(--ms-blue);position:relative;overflow:hidden;}
+.event-hero::after{content:'';position:absolute;right:-100px;top:-100px;width:500px;height:500px;border-radius:50%;background:rgba(255,255,255,.04);}
+.event-hero-inner{max-width:860px;position:relative;}
+.event-breadcrumb{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.6);margin-bottom:1.5rem;}
+.event-breadcrumb a{color:rgba(255,255,255,.6);text-decoration:none;}
+.event-breadcrumb a:hover{color:#fff;}
+.event-tag{font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.2em;color:var(--ms-yel);margin-bottom:1.5rem;display:block;padding-left:2.25rem;position:relative;}
+.event-tag::before{content:'';width:28px;height:2px;background:var(--ms-yel);position:absolute;left:0;top:50%;transform:translateY(-50%);}
+.event-hero h1{font-family:'Epilogue',sans-serif;font-size:clamp(2.4rem,4.5vw,5rem);font-weight:900;line-height:.92;letter-spacing:-.04em;color:#fff;margin-bottom:2rem;}
+.event-hero h1 .serif{font-family:'Lora',serif;font-style:italic;font-weight:500;}
+.event-meta{display:flex;flex-wrap:wrap;gap:1.5rem;margin-bottom:2.5rem;}
+.event-meta-item{display:flex;align-items:center;gap:.5rem;}
+.event-meta-label{font-family:'JetBrains Mono',monospace;font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.6);}
+.event-meta-val{font-family:'Epilogue',sans-serif;font-size:.95rem;font-weight:700;color:#fff;}
+.event-cta-btn{display:inline-block;font-family:'Epilogue',sans-serif;font-size:1rem;font-weight:900;background:var(--ms-yel);color:var(--ink);border:none;padding:1rem 2.5rem;cursor:pointer;text-decoration:none;transition:opacity .2s;letter-spacing:-.01em;}
+.event-cta-btn:hover{opacity:.88;}
+.event-free{font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.1em;color:rgba(255,255,255,.6);margin-left:1rem;vertical-align:middle;}
+
+/* CONTENT */
+.event-body{display:grid;grid-template-columns:1fr 380px;gap:0;border-bottom:2px solid var(--ink);}
+.event-main{padding:5rem 4rem;border-right:2px solid var(--ink);}
+.event-sidebar{padding:4rem 3rem;background:var(--off);}
+
+.sec-label{font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ms-blue);margin-bottom:.75rem;}
+.sec-title{font-family:'Epilogue',sans-serif;font-size:clamp(1.8rem,3vw,2.8rem);font-weight:900;letter-spacing:-.03em;line-height:1;margin-bottom:1.25rem;}
+.sec-title .serif{font-family:'Lora',serif;font-style:italic;font-weight:500;}
+.body-text{font-size:.95rem;color:var(--muted);line-height:1.85;margin-bottom:1rem;}
+
+/* WHAT WE'LL COVER */
+.cover-list{border-top:2px solid var(--ink);margin-top:1.5rem;}
+.cover-item{display:flex;align-items:flex-start;gap:1rem;padding:1rem 0;border-bottom:1px solid var(--border);}
+.cover-item:last-child{border-bottom:none;}
+.cover-dot{width:8px;height:8px;background:var(--ms-grn);flex-shrink:0;margin-top:.45rem;}
+.cover-text{font-size:.92rem;color:var(--muted);line-height:1.65;}
+
+/* WHO IT'S FOR */
+.who-grid{display:grid;grid-template-columns:1fr 1fr;gap:.5rem;margin-top:1.25rem;}
+.who-item{font-size:.88rem;color:var(--muted);padding:.65rem .9rem;border:1px solid var(--border);background:var(--white);}
+
+/* SIDEBAR */
+.sidebar-block{margin-bottom:2.5rem;}
+.sidebar-label{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ms-blue);margin-bottom:.75rem;}
+.sidebar-val{font-family:'Epilogue',sans-serif;font-size:1rem;font-weight:700;color:var(--ink);line-height:1.5;}
+.sidebar-sub{font-size:.85rem;color:var(--muted);margin-top:.25rem;}
+
+.register-box{background:var(--ms-blue);padding:2rem;}
+.register-box .reg-title{font-family:'Epilogue',sans-serif;font-size:1.2rem;font-weight:900;color:#fff;margin-bottom:.5rem;}
+.register-box .reg-sub{font-size:.85rem;color:rgba(255,255,255,.75);margin-bottom:1.5rem;line-height:1.6;}
+.register-btn{display:block;width:100%;font-family:'Epilogue',sans-serif;font-size:.95rem;font-weight:900;background:var(--ms-yel);color:var(--ink);border:none;padding:.9rem;cursor:pointer;text-decoration:none;text-align:center;transition:opacity .2s;}
+.register-btn:hover{opacity:.88;}
+.register-free{font-family:'JetBrains Mono',monospace;font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-top:.75rem;display:block;text-align:center;}
+
+/* FOOTER */
+footer{display:flex;align-items:center;justify-content:space-between;padding:1.5rem 4rem;border-top:2px solid var(--ink);}
+.f-copy-wrap{display:flex;flex-direction:column;gap:.2rem;}
+.f-logo{display:flex;align-items:center;gap:.65rem;}
+.f-name{font-family:'Epilogue',sans-serif;font-size:1rem;font-weight:900;letter-spacing:-.02em;}
+.f-name span{color:var(--ms-blue);}
+.f-copy{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.06em;color:#333;}
+.f-links{display:flex;gap:2rem;list-style:none;}
+.f-links a{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:#333;text-decoration:none;transition:color .2s;}
+.f-links a:hover{color:var(--ms-blue);}
+
+.wa-float{position:fixed;bottom:2rem;right:2rem;z-index:500;display:flex;align-items:center;gap:.6rem;background:#25D366;color:#1a1a1a;padding:.75rem 1.25rem .75rem .9rem;border-radius:100px;box-shadow:0 4px 20px rgba(37,211,102,.35);text-decoration:none;font-family:'Epilogue',sans-serif;font-size:.82rem;font-weight:700;transition:transform .2s,box-shadow .2s,opacity .2s;}
+.wa-float:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(37,211,102,.45);}
+.wa-float svg{width:20px;height:20px;flex-shrink:0;}
+.wa-float.wa-hidden{opacity:0;pointer-events:none;}
+
+@media(max-width:900px){
+  .nav-cta{display:none;}
+  .event-body{grid-template-columns:1fr;}
+  .event-main{border-right:none;border-bottom:2px solid var(--ink);padding:3rem 1.5rem;}
+  .event-sidebar{padding:3rem 1.5rem;}
+}
+@media(max-width:768px){
+  :root{--nav-h:58px;}
+  nav{padding:0 1.25rem;flex-wrap:wrap;}
+  .logo{padding:.85rem 0;}
+  .nav-links{display:none;width:100%;flex-direction:column;border-top:1px solid var(--border);}
+  .nav-links.nav-open{display:flex;background:#fff;}
+  .nav-links a{border-left:none;border-bottom:1px solid var(--border);padding:1rem 0;}
+  .nav-hamburger{display:block;background:none;border:none;font-size:1.4rem;cursor:pointer;padding:.5rem;color:var(--ink);margin-left:auto;}
+  .nav-cta{display:none !important;}
+  .nav-cta-mobile{display:none !important;}
+  .nav-cta-mobile.nav-open{display:block !important;width:100%;font-family:'Epilogue',sans-serif;font-size:.82rem;font-weight:900;background:var(--ms-blue);color:#fff;text-decoration:none;text-align:center;padding:1rem 1.25rem;border-top:2px solid var(--ink);}
+  .event-hero{padding:calc(var(--nav-h) + 2.5rem) 1.5rem 3rem;}
+  .who-grid{grid-template-columns:1fr;}
+  footer{flex-direction:column;align-items:flex-start;gap:1.25rem;padding:1.5rem;}
+  .f-links{flex-wrap:wrap;gap:1rem;}
+  .wa-float{display:none;}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="logo">
+    <svg width="36" height="28" viewBox="0 0 36 28" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="0,28 6,28 7,17 6,16 0,16" fill="#0F4C81"/>
+      <polygon points="9,28 15,28 16,12 15,11 9,11" fill="#D83B01"/>
+      <polygon points="18,28 24,28 25,7 24,6 18,6" fill="#2F6B00"/>
+      <polygon points="27,28 33,28 34,1 33,0 27,0" fill="#F2A900"/>
+    </svg>
+    <div class="logo-name">Adjona <span>Technology</span></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html#services">Services</a></li>
+    <li><a href="additional-services.html">Projects &amp; Support</a></li>
+    <li><a href="index.html#approach">About</a></li>
+    <li><a href="index.html#certs">Credentials</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+  <a href="#" onclick="document.getElementById('eventbrite-widget-modal-trigger-1988415823254').click();return false;" class="nav-cta">Register Free</a>
+  <button class="nav-hamburger" aria-label="Menu" onclick="
+    var nav=this.closest('nav');
+    nav.querySelector('.nav-links').classList.toggle('nav-open');
+    nav.querySelector('.nav-cta-mobile').classList.toggle('nav-open');
+  ">&#9776;</button>
+  <a href="#" onclick="document.getElementById('eventbrite-widget-modal-trigger-1988415823254').click();return false;" class="nav-cta-mobile">Register Free</a>
+</nav>
+
+<section class="event-hero">
+  <div class="event-hero-inner">
+    <div class="event-breadcrumb"><a href="index.html">Adjona Technology</a> &nbsp;/&nbsp; Events</div>
+    <span class="event-tag">Free Online Event &nbsp;·&nbsp; Microsoft 365</span>
+    <h1>Fixing Messy Teams,<br><span class="serif">SharePoint</span> and<br>File Access</h1>
+    <div class="event-meta">
+      <div class="event-meta-item">
+        <div>
+          <div class="event-meta-label">Date</div>
+          <div class="event-meta-val">Wednesday 3 June 2026</div>
+        </div>
+      </div>
+      <div class="event-meta-item">
+        <div>
+          <div class="event-meta-label">Time</div>
+          <div class="event-meta-val">12:30 PM – 1:15 PM BST</div>
+        </div>
+      </div>
+      <div class="event-meta-item">
+        <div>
+          <div class="event-meta-label">Format</div>
+          <div class="event-meta-val">Online</div>
+        </div>
+      </div>
+      <div class="event-meta-item">
+        <div>
+          <div class="event-meta-label">Price</div>
+          <div class="event-meta-val">Free</div>
+        </div>
+      </div>
+    </div>
+    <button onclick="document.getElementById('eventbrite-widget-modal-trigger-1988415823254').click()" class="event-cta-btn">Register Free</button>
+  </div>
+</section>
+
+<div class="four-stripe">
+  <div class="fs b"></div><div class="fs r"></div><div class="fs g"></div><div class="fs y"></div>
+</div>
+
+<main>
+<div class="event-body">
+  <div class="event-main">
+
+    <div style="margin-bottom:3.5rem;">
+      <div class="sec-label">About this event</div>
+      <h2 class="sec-title">Is your Microsoft 365 <span class="serif">working against you?</span></h2>
+      <p class="body-text">Many organisations using Microsoft 365 end up with Teams channels nobody uses, SharePoint sites nobody understands, and files scattered across OneDrive, shared drives and email attachments. Nobody means for it to happen — but it creates real problems: staff can't find things, sensitive files are accessible to people who shouldn't see them, and IT ends up managing chaos rather than reducing it.</p>
+      <p class="body-text">This session is a practical 45-minute briefing on what goes wrong, why it happens, and what you can do about it. No slides full of Microsoft marketing. Just honest, practical guidance on how to bring structure and control back to your Microsoft 365 environment.</p>
+    </div>
+
+    <div style="margin-bottom:3.5rem;">
+      <div class="sec-label">What we'll cover</div>
+      <h2 class="sec-title">45 minutes of <span class="serif">practical guidance.</span></h2>
+      <div class="cover-list">
+        <div class="cover-item"><div class="cover-dot"></div><div class="cover-text">Why Teams and SharePoint become chaotic — and the common mistakes that cause it</div></div>
+        <div class="cover-item"><div class="cover-dot"></div><div class="cover-text">How to think about SharePoint structure so files are easy to find and govern</div></div>
+        <div class="cover-item"><div class="cover-dot"></div><div class="cover-text">File access and permissions — what oversharing looks like and how to fix it</div></div>
+        <div class="cover-item"><div class="cover-dot"></div><div class="cover-text">OneDrive vs SharePoint — when to use each and how to stop duplication</div></div>
+        <div class="cover-item"><div class="cover-dot"></div><div class="cover-text">Practical next steps you can act on without a large IT project</div></div>
+        <div class="cover-item"><div class="cover-dot"></div><div class="cover-text">Q&amp;A — bring your specific questions</div></div>
+      </div>
+    </div>
+
+    <div>
+      <div class="sec-label">Who this is for</div>
+      <h2 class="sec-title">Practical guidance for <span class="serif">the people who manage it.</span></h2>
+      <p class="body-text">This session is aimed at the people who deal with the day-to-day reality of Microsoft 365 — not just IT teams.</p>
+      <div class="who-grid">
+        <div class="who-item">Charity operations and admin leads</div>
+        <div class="who-item">Office managers and executive assistants</div>
+        <div class="who-item">IT managers and coordinators</div>
+        <div class="who-item">Small business owners and directors</div>
+        <div class="who-item">Trustees and senior managers</div>
+        <div class="who-item">Anyone responsible for Microsoft 365</div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="event-sidebar">
+
+    <div class="register-box" style="margin-bottom:2.5rem;">
+      <div class="reg-title">Reserve your place</div>
+      <div class="reg-sub">Free to attend. 45 minutes. Practical guidance you can act on the same day.</div>
+      <button onclick="document.getElementById('eventbrite-widget-modal-trigger-1988415823254').click()" class="register-btn">Register Free</button>
+      <span class="register-free">No payment required</span>
+    </div>
+
+    <div class="sidebar-block">
+      <div class="sidebar-label">Date</div>
+      <div class="sidebar-val">Wednesday 3 June 2026</div>
+    </div>
+    <div class="sidebar-block">
+      <div class="sidebar-label">Time</div>
+      <div class="sidebar-val">12:30 PM – 1:15 PM BST</div>
+      <div class="sidebar-sub">11:30 AM – 12:15 PM UTC</div>
+    </div>
+    <div class="sidebar-block">
+      <div class="sidebar-label">Format</div>
+      <div class="sidebar-val">Online</div>
+      <div class="sidebar-sub">Link sent on registration</div>
+    </div>
+    <div class="sidebar-block">
+      <div class="sidebar-label">Organiser</div>
+      <div class="sidebar-val">Adjona Technology</div>
+      <div class="sidebar-sub"><a href="index.html" style="color:var(--ms-blue);text-decoration:none;">adjona.com</a></div>
+    </div>
+    <div class="sidebar-block">
+      <div class="sidebar-label">Questions?</div>
+      <div class="sidebar-sub"><a href="mailto:info@adjona.com" style="color:var(--ms-blue);text-decoration:none;">info@adjona.com</a></div>
+    </div>
+
+  </div>
+</div>
+</main>
+
+<footer style="padding-bottom:5rem;">
+  <div class="f-logo">
+    <svg width="28" height="22" viewBox="0 0 36 28" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="0,28 6,28 7,17 6,16 0,16" fill="#0F4C81"/>
+      <polygon points="9,28 15,28 16,12 15,11 9,11" fill="#D83B01"/>
+      <polygon points="18,28 24,28 25,7 24,6 18,6" fill="#2F6B00"/>
+      <polygon points="27,28 33,28 34,1 33,0 27,0" fill="#F2A900"/>
+    </svg>
+    <div class="f-name">Adjona <span>Technology</span> Limited</div>
+  </div>
+  <div class="f-copy-wrap">
+    <div class="f-copy">© 2026 Adjona Technology Limited · Registered in England &amp; Wales · Company No. 05007410</div>
+    <div style="margin-top:.4rem;">
+      <a href="https://marketplace.microsoft.com/en-gb/partners/c4ead6cf-d6a0-4973-8bf7-f3e644e195ae/overview" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:.5rem;text-decoration:none;">
+        <svg width="14" height="14" viewBox="0 0 23 23" xmlns="http://www.w3.org/2000/svg"><rect x="1" y="1" width="10" height="10" fill="#f25022"/><rect x="12" y="1" width="10" height="10" fill="#7fba00"/><rect x="1" y="12" width="10" height="10" fill="#00a4ef"/><rect x="12" y="12" width="10" height="10" fill="#ffb900"/></svg>
+        <span style="font-family:'JetBrains Mono',monospace;font-size:.58rem;letter-spacing:.08em;color:#444;">Listed on Microsoft Marketplace</span>
+      </a>
+    </div>
+  </div>
+  <ul class="f-links">
+    <li><a href="https://www.linkedin.com/company/adjona-technology-limited/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+    <li><a href="https://adjona.eventbrite.com" target="_blank" rel="noopener noreferrer">Events</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+    <li><a href="adjona-privacy.html">Privacy Policy</a></li>
+    <li><a href="mailto:info@adjona.com">info@adjona.com</a></li>
+  </ul>
+</footer>
+
+<a href="https://wa.me/442033550538?text=Hi%2C%20I%27m%20interested%20in%20your%20Microsoft%20365%20event%20on%203%20June." class="wa-float" target="_blank" rel="noopener noreferrer">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+  Question about this event?
+</a>
+
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+  document.querySelectorAll('.nav-links a,.nav-cta-mobile').forEach(function(link){
+    link.addEventListener('click',function(){
+      var nav=document.querySelector('nav');
+      nav.querySelector('.nav-links').classList.remove('nav-open');
+      nav.querySelector('.nav-cta-mobile').classList.remove('nav-open');
+    });
+  });
+});
+var waBtn=document.querySelector('.wa-float');
+if(waBtn){
+  window.addEventListener('scroll',function(){
+    var footer=document.querySelector('footer');
+    if(footer){
+      var footerTop=footer.getBoundingClientRect().top;
+      if(footerTop<window.innerHeight){waBtn.classList.add('wa-hidden');}
+      else{waBtn.classList.remove('wa-hidden');}
+    }
+  });
+}
+</script>
+
+<button id="eventbrite-widget-modal-trigger-1988415823254" type="button" style="display:none;">Buy Tickets</button>
+<script src="https://www.eventbrite.co.uk/static/widgets/eb_widgets.js"></script>
+<script type="text/javascript">
+    var exampleCallback = function() {
+        console.log('Order complete!');
+    };
+    window.EBWidgets.createWidget({
+        widgetType: 'checkout',
+        eventId: '1988415823254',
+        modal: true,
+        modalTriggerElementId: 'eventbrite-widget-modal-trigger-1988415823254',
+        onOrderComplete: exampleCallback
+    });
+</script>
+
+</body>
+</html>
