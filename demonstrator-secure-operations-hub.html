@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Secure Operations Hub Demonstrator | Adjona Technology</title>
+<meta name="description" content="A practical Microsoft 365 demonstrator showing how organisations can manage documents, staff workflows, referral tracking, access controls and cyber readiness in one structured operating environment.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="192x192" href="favicon-192.png">
+<meta property="og:title" content="Secure Operations Hub Demonstrator | Adjona Technology">
+<meta property="og:description" content="A practical Microsoft 365 demonstrator showing how organisations can manage documents, staff workflows, referral tracking, access controls and cyber readiness in one structured operating environment.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://adjona.com/demonstrator-secure-operations-hub.html">
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;700;800;900&family=Lora:ital,wght@1,500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script>
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "wmyh9800tx");
+</script>
+<style>
+:root{
+--white:#ffffff;--off:#f5f5f0;--ink:#0d0d0d;
+--ms-blue:#0F4C81;--ms-red:#D83B01;--ms-grn:#2F6B00;--ms-yel:#F2A900;
+--muted:#888;--border:rgba(13,13,13,0.1);
+--nav-h:62px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--white);color:var(--ink);font-family:'Epilogue',sans-serif;font-weight:400;overflow-x:hidden;}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:0 0 0 4rem;background:#fff;border-bottom:2px solid var(--ink);}
+.logo{display:flex;align-items:center;gap:.75rem;padding:1.1rem 0;text-decoration:none;}
+.logo-name{font-family:'Epilogue',sans-serif;font-size:1.1rem;font-weight:900;letter-spacing:-.02em;white-space:nowrap;color:var(--ink);}
+.logo-name span{color:var(--ms-blue);}
+.nav-links{display:flex;list-style:none;}
+.nav-links a{font-family:'JetBrains Mono',monospace;font-size:.63rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);text-decoration:none;padding:1.5rem 1.4rem;border-left:2px solid var(--border);display:block;transition:color .2s,background .2s;}
+.nav-links a:hover{color:var(--ms-blue);background:rgba(0,120,212,.04);}
+.nav-cta{font-family:'Epilogue',sans-serif;font-size:.88rem;font-weight:900;background:var(--ms-blue);color:#fff;text-decoration:none;border-left:2px solid var(--ink);padding:1.5rem 2.2rem;cursor:pointer;transition:background .2s;display:block;}
+.nav-cta:hover{background:#0062b0;}
+.nav-hamburger{display:none;}
+.nav-cta-mobile{display:none;}
+
+.four-stripe{display:grid;grid-template-columns:repeat(4,1fr);height:6px;}
+.fs.b{background:var(--ms-blue);}.fs.r{background:var(--ms-red);}.fs.g{background:var(--ms-grn);}.fs.y{background:var(--ms-yel);}
+
+.page-hero{padding:calc(var(--nav-h) + 5rem) 4rem 5rem;border-bottom:2px solid var(--ink);}
+.page-hero-inner{max-width:860px;}
+.page-breadcrumb{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:1.5rem;}
+.page-breadcrumb a{color:var(--muted);text-decoration:none;}
+.page-breadcrumb a:hover{color:var(--ms-blue);}
+.page-tag{font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.2em;color:var(--ms-blue);margin-bottom:1.5rem;display:block;padding-left:2.25rem;position:relative;}
+.page-tag::before{content:'';width:28px;height:2px;background:var(--ms-blue);position:absolute;left:0;top:50%;transform:translateY(-50%);}
+.page-hero h1{font-family:'Epilogue',sans-serif;font-size:clamp(2.8rem,5vw,5.5rem);font-weight:900;line-height:.92;letter-spacing:-.04em;margin-bottom:2rem;}
+.page-hero h1 .serif{font-family:'Lora',serif;font-style:italic;font-weight:500;letter-spacing:-.02em;}
+.page-hero-body{font-size:1.05rem;line-height:1.85;color:var(--muted);max-width:640px;margin-bottom:2.5rem;}
+.tool-pills{display:flex;flex-wrap:wrap;gap:.5rem;}
+.tool-pill{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;border:1.5px solid var(--border);padding:.35rem .8rem;color:var(--muted);}
+
+.page-section{padding:5rem 4rem;border-bottom:2px solid var(--ink);}
+.page-section:last-of-type{border-bottom:none;}
+.page-section.off{background:var(--off);}
+
+.sec-label{font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ms-blue);margin-bottom:.75rem;}
+.sec-label.red{color:var(--ms-red);}
+.sec-label.grn{color:var(--ms-grn);}
+.sec-label.yel{color:var(--ms-yel);}
+
+.sec-title{font-family:'Epilogue',sans-serif;font-size:clamp(2rem,3.5vw,3.2rem);font-weight:900;letter-spacing:-.03em;line-height:.95;margin-bottom:1.25rem;}
+.sec-title .serif{font-family:'Lora',serif;font-style:italic;font-weight:500;}
+
+.body-text{font-size:.95rem;color:var(--muted);line-height:1.85;margin-bottom:1rem;max-width:700px;}
+.body-text:last-child{margin-bottom:0;}
+
+.challenge-list{border-top:2px solid var(--ink);margin-top:2rem;}
+.challenge-item{display:grid;grid-template-columns:3.5rem 1fr;gap:1.5rem;padding:1.25rem 0;border-bottom:1px solid var(--border);align-items:start;}
+.challenge-item:last-child{border-bottom:none;}
+.challenge-num{font-family:'JetBrains Mono',monospace;font-size:.65rem;color:var(--ms-red);padding-top:.2rem;}
+.challenge-text{font-size:.92rem;line-height:1.75;color:var(--muted);}
+
+.cap-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;border:2px solid var(--ink);margin-top:2.5rem;}
+.cap-item{display:flex;align-items:flex-start;gap:1rem;padding:1.25rem 1.5rem;border-bottom:1px solid var(--border);border-right:1px solid var(--border);}
+.cap-item:nth-child(even){border-right:none;}
+.cap-item:nth-last-child(-n+2){border-bottom:none;}
+.cap-dot{width:8px;height:8px;flex-shrink:0;margin-top:.45rem;}
+.cap-dot.blue{background:var(--ms-blue);}
+.cap-dot.grn{background:var(--ms-grn);}
+.cap-text{font-size:.88rem;line-height:1.7;color:var(--muted);}
+
+.demo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:2px solid var(--ink);margin-top:2.5rem;}
+.demo-card{padding:1.75rem 1.5rem;border-right:2px solid var(--ink);border-bottom:2px solid var(--ink);}
+.demo-card:nth-child(3n){border-right:none;}
+.demo-card:nth-last-child(-n+3){border-bottom:none;}
+.demo-card-colour{width:32px;height:3px;margin-bottom:1rem;}
+.demo-card-name{font-family:'Epilogue',sans-serif;font-size:.9rem;font-weight:800;letter-spacing:-.02em;margin-bottom:.4rem;}
+.demo-card-desc{font-size:.78rem;color:var(--muted);line-height:1.65;}
+
+.gov-box{border:2px solid var(--ink);margin-top:2.5rem;}
+.gov-box-title{font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.15em;text-transform:uppercase;padding:.9rem 1.25rem;background:var(--ink);color:#fff;}
+.gov-grid{display:grid;grid-template-columns:1fr 1fr;}
+.gov-item{display:flex;align-items:center;gap:1rem;padding:1rem 1.25rem;border-bottom:1px solid var(--border);border-right:1px solid var(--border);font-size:.85rem;color:var(--muted);}
+.gov-item:nth-child(even){border-right:none;}
+.gov-item:nth-last-child(-n+2){border-bottom:none;}
+.gov-dot{width:6px;height:6px;flex-shrink:0;}
+
+.principle-box{border-left:3px solid var(--ms-yel);background:#fffbf0;padding:1.25rem 1.5rem;font-size:.88rem;color:#5a3e00;line-height:1.75;margin-top:2rem;}
+.principle-box strong{font-family:'Epilogue',sans-serif;font-size:1rem;font-weight:800;display:block;margin-bottom:.25rem;color:#a07000;}
+
+.workflow-list{border-top:2px solid var(--ink);margin-top:2rem;}
+.workflow-item{display:grid;grid-template-columns:3.5rem 1fr;gap:1.5rem;padding:1.25rem 0;border-bottom:1px solid var(--border);align-items:start;}
+.workflow-item:last-child{border-bottom:none;}
+.workflow-num{font-family:'JetBrains Mono',monospace;font-size:.65rem;color:var(--ms-blue);padding-top:.2rem;}
+.workflow-title{font-family:'Epilogue',sans-serif;font-size:.95rem;font-weight:800;letter-spacing:-.02em;margin-bottom:.3rem;}
+.workflow-desc{font-size:.88rem;color:var(--muted);line-height:1.7;}
+
+.who-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:2px solid var(--ink);margin-top:2.5rem;}
+.who-card{padding:1.75rem 1.5rem;border-right:2px solid var(--ink);}
+.who-card:last-child{border-right:none;}
+.who-tag{font-family:'JetBrains Mono',monospace;font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ms-blue);margin-bottom:.6rem;}
+.who-title{font-family:'Epilogue',sans-serif;font-size:.95rem;font-weight:800;letter-spacing:-.02em;margin-bottom:.6rem;}
+.who-desc{font-size:.82rem;color:var(--muted);line-height:1.75;}
+
+.cta-strip{display:grid;grid-template-columns:1fr 1fr;border-top:2px solid var(--ink);}
+.cta-blue{background:var(--ms-blue);padding:5rem 4rem;display:flex;flex-direction:column;justify-content:center;}
+.cta-tag{font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.6);margin-bottom:1rem;}
+.cta-title{font-family:'Epilogue',sans-serif;font-size:clamp(2.2rem,3.5vw,3.5rem);font-weight:900;letter-spacing:-.04em;line-height:.95;color:#fff;margin-bottom:1rem;}
+.cta-title .serif{font-family:'Lora',serif;font-style:italic;font-weight:500;}
+.cta-sub{font-size:.95rem;color:rgba(255,255,255,.7);line-height:1.8;max-width:380px;margin-bottom:2rem;}
+.cta-actions{display:flex;flex-direction:column;gap:.75rem;}
+.cta-btn-solid{font-family:'Epilogue',sans-serif;font-size:.9rem;font-weight:900;background:#fff;color:var(--ms-blue);border:2px solid #fff;padding:.85rem 2rem;cursor:pointer;text-decoration:none;display:inline-block;transition:background .2s,color .2s;text-align:center;}
+.cta-btn-solid:hover{background:var(--ms-yel);border-color:var(--ms-yel);color:var(--ink);}
+.cta-btn-outline{font-family:'Epilogue',sans-serif;font-size:.9rem;font-weight:900;background:transparent;color:#fff;border:2px solid rgba(255,255,255,.4);padding:.85rem 2rem;cursor:pointer;text-decoration:none;display:inline-block;transition:all .2s;text-align:center;}
+.cta-btn-outline:hover{border-color:#fff;background:rgba(255,255,255,.1);}
+.cta-right{background:var(--off);padding:5rem 4rem;display:flex;flex-direction:column;justify-content:center;}
+.cta-right-label{font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:1.5rem;}
+.contact-block{display:flex;flex-direction:column;gap:1.25rem;}
+.contact-line{display:flex;flex-direction:column;gap:.25rem;}
+.contact-line-label{font-family:'JetBrains Mono',monospace;font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);}
+.contact-line-val{font-family:'Epilogue',sans-serif;font-size:1.1rem;font-weight:800;color:var(--ink);}
+.contact-line-val a{color:var(--ms-blue);text-decoration:none;}
+.contact-line-val a:hover{text-decoration:underline;}
+
+footer{display:flex;align-items:center;justify-content:space-between;padding:1.5rem 4rem;border-top:2px solid var(--ink);}
+.f-copy-wrap{display:flex;flex-direction:column;gap:.2rem;}
+.f-logo{display:flex;align-items:center;gap:.65rem;}
+.f-name{font-family:'Epilogue',sans-serif;font-size:1rem;font-weight:900;letter-spacing:-.02em;}
+.f-name span{color:var(--ms-blue);}
+.f-copy{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.06em;color:var(--muted);}
+.f-links{display:flex;gap:2rem;list-style:none;}
+.f-links a{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color .2s;}
+.f-links a:hover{color:var(--ms-blue);}
+
+.wa-float{position:fixed;bottom:2rem;right:2rem;z-index:500;display:flex;align-items:center;gap:.6rem;background:#25D366;color:#fff;padding:.75rem 1.25rem .75rem .9rem;border-radius:100px;box-shadow:0 4px 20px rgba(37,211,102,.35);text-decoration:none;font-family:'Epilogue',sans-serif;font-size:.82rem;font-weight:700;transition:transform .2s,box-shadow .2s,opacity .2s;}
+.wa-float:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(37,211,102,.45);}
+.wa-float svg{width:20px;height:20px;flex-shrink:0;}
+.wa-float.wa-hidden{opacity:0;pointer-events:none;}
+
+@media(max-width:1000px){
+  .nav-cta{display:none;}
+  .nav-links a{font-size:.58rem;padding:1rem .9rem;letter-spacing:.1em;}
+}
+@media(max-width:768px){
+  :root{--nav-h:58px;}
+  nav{flex-wrap:wrap;padding:0 1rem;}
+  .logo{padding:.85rem 0;}
+  .nav-links{display:none;width:100%;flex-direction:column;border-top:1px solid var(--border);}
+  .nav-links.nav-open{display:flex;background:#fff;position:relative;z-index:10;}
+  .nav-links a{border-left:none;border-bottom:1px solid var(--border);padding:1rem 0;}
+  .nav-hamburger{display:block;background:none;border:none;font-size:1.4rem;cursor:pointer;padding:.5rem;color:var(--ink);margin-left:auto;}
+  .nav-cta{display:none !important;}
+  .nav-cta-mobile{display:none !important;}
+  .nav-cta-mobile.nav-open{display:block !important;width:100%;font-family:'Epilogue',sans-serif;font-size:.82rem;font-weight:900;background:var(--ms-blue);color:#fff;text-decoration:none;text-align:center;padding:1rem 1.25rem;border-top:2px solid var(--ink);}
+  .page-hero{padding:calc(var(--nav-h) + 3rem) 1.5rem 3rem;}
+  .page-section{padding:3rem 1.5rem;}
+  .demo-grid{grid-template-columns:1fr 1fr;}
+  .demo-card:nth-child(3n){border-right:2px solid var(--ink);}
+  .demo-card:nth-child(2n){border-right:none;}
+  .demo-card:nth-last-child(-n+3){border-bottom:2px solid var(--ink);}
+  .demo-card:last-child{border-bottom:none;}
+  .cap-grid{grid-template-columns:1fr;}
+  .cap-item{border-right:none;}
+  .cap-item:nth-last-child(-n+2){border-bottom:1px solid var(--border);}
+  .cap-item:last-child{border-bottom:none;}
+  .gov-grid{grid-template-columns:1fr;}
+  .gov-item{border-right:none;}
+  .gov-item:nth-last-child(-n+2){border-bottom:1px solid var(--border);}
+  .gov-item:last-child{border-bottom:none;}
+  .who-grid{grid-template-columns:1fr;}
+  .who-card{border-right:none;border-bottom:2px solid var(--ink);}
+  .who-card:last-child{border-bottom:none;}
+  .cta-strip{grid-template-columns:1fr;}
+  .cta-blue{padding:3rem 1.5rem;}
+  .cta-right{padding:3rem 1.5rem;}
+  footer{flex-direction:column;align-items:flex-start;gap:1.25rem;padding:1.5rem;}
+  .f-links{flex-wrap:wrap;gap:1rem;}
+  .wa-float{display:none;}
+}
+@media(max-width:480px){
+  .page-hero{padding-left:1.25rem;padding-right:1.25rem;}
+  .page-section{padding-left:1.25rem;padding-right:1.25rem;}
+  .demo-grid{grid-template-columns:1fr;}
+  .demo-card{border-right:none;border-bottom:2px solid var(--ink);}
+  .demo-card:last-child{border-bottom:none;}
+  footer{padding:1.25rem;}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="logo">
+    <svg width="36" height="28" viewBox="0 0 36 28" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="0,28 6,28 7,17 6,16 0,16" fill="#0F4C81"/>
+      <polygon points="9,28 15,28 16,12 15,11 9,11" fill="#D83B01"/>
+      <polygon points="18,28 24,28 25,7 24,6 18,6" fill="#2F6B00"/>
+      <polygon points="27,28 33,28 34,1 33,0 27,0" fill="#F2A900"/>
+    </svg>
+    <div class="logo-name">Adjona <span>Technology</span></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html#services">Services</a></li>
+    <li><a href="additional-services.html">Projects &amp; Support</a></li>
+    <li><a href="index.html#approach">About</a></li>
+    <li><a href="index.html#certs">Credentials</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+  <a href="index.html#contact" class="nav-cta">Book a Charity Cyber Health Check</a>
+  <button class="nav-hamburger" aria-label="Menu" onclick="
+    var nav=this.closest('nav');
+    nav.querySelector('.nav-links').classList.toggle('nav-open');
+    nav.querySelector('.nav-cta-mobile').classList.toggle('nav-open');
+  ">&#9776;</button>
+  <a href="index.html#contact" class="nav-cta-mobile">Book a Charity Cyber Health Check</a>
+</nav>
+
+<section class="page-hero">
+  <div class="page-hero-inner">
+    <div class="page-breadcrumb"><a href="index.html">Adjona Technology</a> &nbsp;/&nbsp; Solution Demonstrator</div>
+    <span class="page-tag">Solution Demonstrator &nbsp;·&nbsp; Microsoft 365 Operating Environment</span>
+    <h1>Secure Operations<br>Hub <span class="serif">Demonstrator</span></h1>
+    <p class="page-hero-body">Adjona's Secure Operations Hub Demonstrator shows how Microsoft 365 can be used to organise documents, workflows, referrals, access controls and cyber readiness in one structured environment. It is not a fixed product. It is a practical example of the type of tailored Microsoft 365 solution Adjona can design and implement for organisations that need better structure, security and operational visibility.</p>
+    <div class="tool-pills">
+      <span class="tool-pill">SharePoint</span>
+      <span class="tool-pill">Microsoft Lists</span>
+      <span class="tool-pill">Power Automate</span>
+      <span class="tool-pill">Microsoft Forms</span>
+      <span class="tool-pill">Power BI</span>
+      <span class="tool-pill">Microsoft Teams</span>
+    </div>
+  </div>
+</section>
+
+<div class="four-stripe">
+  <div class="fs b"></div><div class="fs r"></div><div class="fs g"></div><div class="fs y"></div>
+</div>
+<div style="border-top:2px solid var(--ink);padding:2.5rem 4rem;">
+  <div style="font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:1rem;">Watch · Secure Operations Hub Demonstrator</div>
+  <div style="position:relative;padding-bottom:56.25%;height:0;border:2px solid var(--ink);overflow:hidden;">
+    <iframe style="position:absolute;top:0;left:0;width:100%;height:100%;border:none;" src="https://www.youtube.com/embed/r45K5sj27Lg" title="Secure Operations Hub Demonstrator — Adjona Technology" allowfullscreen loading="lazy"></iframe>
+  </div>
+</div>
+
+<section class="page-section off">
+  <div class="sec-label red">The problem</div>
+  <h2 class="sec-title">Organisations grow faster<br><span class="serif">than their systems.</span></h2>
+  <p class="body-text">Small organisations often rely on a mixture of email, spreadsheets, shared folders and informal processes to manage important work. That may be manageable at the beginning, but it can quickly create problems.</p>
+  <p class="body-text">These issues are not just technical problems. They affect governance, accountability, service quality, data protection and organisational resilience.</p>
+  <div class="challenge-list">
+    <div class="challenge-item"><div class="challenge-num">01</div><div class="challenge-text">Staff are unsure where the latest version of a document is stored</div></div>
+    <div class="challenge-item"><div class="challenge-num">02</div><div class="challenge-text">Sensitive information is saved in the wrong place</div></div>
+    <div class="challenge-item"><div class="challenge-num">03</div><div class="challenge-text">Referrals, enquiries or service requests are tracked manually</div></div>
+    <div class="challenge-item"><div class="challenge-num">04</div><div class="challenge-text">HR requests depend on email chains or spreadsheets</div></div>
+    <div class="challenge-item"><div class="challenge-num">05</div><div class="challenge-text">Access permissions are not reviewed regularly</div></div>
+    <div class="challenge-item"><div class="challenge-num">06</div><div class="challenge-text">Device and software records are incomplete</div></div>
+    <div class="challenge-item"><div class="challenge-num">07</div><div class="challenge-text">Cyber Essentials preparation becomes rushed and reactive</div></div>
+    <div class="challenge-item"><div class="challenge-num">08</div><div class="challenge-text">Managers lack a clear view of operational activity and outstanding actions</div></div>
+  </div>
+</section>
+
+<section class="page-section">
+  <div class="sec-label">Solution</div>
+  <h2 class="sec-title">A practical Microsoft 365<br><span class="serif">operating hub.</span></h2>
+  <p class="body-text">Adjona helps organisations use Microsoft 365 to create practical, secure operating environments. A Secure Operations Hub can bring together SharePoint, Microsoft Lists, Power Automate, Teams, Microsoft Forms, Power BI and Microsoft 365 security controls to support day-to-day work.</p>
+  <p class="body-text">The aim is not to add complexity. The aim is to make important work easier to manage, safer to operate, and clearer to oversee.</p>
+  <div class="cap-grid">
+    <div class="cap-item"><div class="cap-dot blue"></div><div class="cap-text">A SharePoint-based staff hub or intranet</div></div>
+    <div class="cap-item"><div class="cap-dot blue"></div><div class="cap-text">Structured document libraries</div></div>
+    <div class="cap-item"><div class="cap-dot blue"></div><div class="cap-text">Clear permissions and access controls</div></div>
+    <div class="cap-item"><div class="cap-dot blue"></div><div class="cap-text">Staff onboarding resources</div></div>
+    <div class="cap-item"><div class="cap-dot blue"></div><div class="cap-text">Referral or enquiry tracking</div></div>
+    <div class="cap-item"><div class="cap-dot blue"></div><div class="cap-text">HR request workflows</div></div>
+    <div class="cap-item"><div class="cap-dot blue"></div><div class="cap-text">Asset and access registers</div></div>
+    <div class="cap-item"><div class="cap-dot blue"></div><div class="cap-text">Cyber Essentials readiness tracking</div></div>
+    <div class="cap-item"><div class="cap-dot blue"></div><div class="cap-text">Management dashboards and reporting</div></div>
+    <div class="cap-item"><div class="cap-dot blue"></div><div class="cap-text">Practical handover for non-technical teams</div></div>
+  </div>
+</section>
+
+<section class="page-section off">
+  <div class="sec-label">Demonstrator</div>
+  <h2 class="sec-title">What the demonstrator <span class="serif">shows.</span></h2>
+  <p class="body-text">The demonstrator includes example areas for each of the operational processes a structured Microsoft 365 environment can support. It shows how common operational challenges can be organised in one secure environment rather than being spread across inboxes, spreadsheets and unmanaged folders.</p>
+  <p class="body-text">The demonstrator is designed to support discovery conversations. It helps organisations visualise what a tailored Microsoft 365 solution could look like in practice.</p>
+  <div class="demo-grid">
+    <div class="demo-card">
+      <div class="demo-card-colour" style="background:var(--ms-blue);"></div>
+      <div class="demo-card-name">Staff information and onboarding</div>
+      <div class="demo-card-desc">Centralised resources, induction materials and team directory</div>
+    </div>
+    <div class="demo-card">
+      <div class="demo-card-colour" style="background:var(--ms-blue);"></div>
+      <div class="demo-card-name">Policies and procedures</div>
+      <div class="demo-card-desc">Version-controlled document library with clear ownership</div>
+    </div>
+    <div class="demo-card">
+      <div class="demo-card-colour" style="background:var(--ms-blue);"></div>
+      <div class="demo-card-name">Document management</div>
+      <div class="demo-card-desc">Structured libraries replacing scattered shared drives and email attachments</div>
+    </div>
+    <div class="demo-card">
+      <div class="demo-card-colour" style="background:var(--ms-red);"></div>
+      <div class="demo-card-name">Referral and enquiry tracking</div>
+      <div class="demo-card-desc">Lists-based tracker with status, assignment and audit trail</div>
+    </div>
+    <div class="demo-card">
+      <div class="demo-card-colour" style="background:var(--ms-red);"></div>
+      <div class="demo-card-name">HR requests</div>
+      <div class="demo-card-desc">Form-driven workflow replacing email chains and manual spreadsheets</div>
+    </div>
+    <div class="demo-card">
+      <div class="demo-card-colour" style="background:var(--ms-red);"></div>
+      <div class="demo-card-name">Asset tracking</div>
+      <div class="demo-card-desc">Device and software register with assigned users and status</div>
+    </div>
+    <div class="demo-card">
+      <div class="demo-card-colour" style="background:var(--ms-grn);"></div>
+      <div class="demo-card-name">Access management</div>
+      <div class="demo-card-desc">Permissions register and regular review process</div>
+    </div>
+    <div class="demo-card">
+      <div class="demo-card-colour" style="background:var(--ms-grn);"></div>
+      <div class="demo-card-name">Cyber Essentials readiness</div>
+      <div class="demo-card-desc">Evidence tracker aligned to the five Cyber Essentials controls</div>
+    </div>
+    <div class="demo-card">
+      <div class="demo-card-colour" style="background:var(--ms-yel);"></div>
+      <div class="demo-card-name">Management visibility</div>
+      <div class="demo-card-desc">Dashboards and reporting giving a clear operational picture</div>
+    </div>
+  </div>
+</section>
+
+<section class="page-section">
+  <div class="sec-label grn">Cyber and security</div>
+  <h2 class="sec-title">Cyber readiness built into<br><span class="serif">everyday operations.</span></h2>
+  <p class="body-text">Cyber security works best when it is built into normal working practices. A Secure Operations Hub can help organisations keep track of key areas so that managers have a clearer view of what needs attention and important controls are not missed.</p>
+  <div class="gov-box">
+    <div class="gov-box-title">Key areas supported</div>
+    <div class="gov-grid">
+      <div class="gov-item"><div class="gov-dot" style="background:var(--ms-grn);"></div>User access and permissions</div>
+      <div class="gov-item"><div class="gov-dot" style="background:var(--ms-grn);"></div>Multi-factor authentication</div>
+      <div class="gov-item"><div class="gov-dot" style="background:var(--ms-grn);"></div>Devices and assigned users</div>
+      <div class="gov-item"><div class="gov-dot" style="background:var(--ms-grn);"></div>Software and update status</div>
+      <div class="gov-item"><div class="gov-dot" style="background:var(--ms-grn);"></div>Malware protection</div>
+      <div class="gov-item"><div class="gov-dot" style="background:var(--ms-grn);"></div>Security actions and outstanding risks</div>
+      <div class="gov-item"><div class="gov-dot" style="background:var(--ms-grn);"></div>Cyber Essentials evidence</div>
+      <div class="gov-item"><div class="gov-dot" style="background:var(--ms-grn);"></div>Administrative responsibilities</div>
+    </div>
+  </div>
+  <div class="principle-box">
+    <strong>Built in, not bolted on</strong>
+    Cyber security evidence and controls are maintained as part of day-to-day operations rather than being gathered reactively when a funder, commissioner or assessor asks for them.
+  </div>
+</section>
+
+<section class="page-section off">
+  <div class="sec-label">How Adjona can help</div>
+  <h2 class="sec-title">Practical implementation<br><span class="serif">around your organisation.</span></h2>
+  <p class="body-text">Adjona does not sell one-size-fits-all software products. We design and implement practical Microsoft 365 solutions around the way each organisation works. Work usually begins with a focused assessment of existing systems, documents, risks, workflows and priorities.</p>
+  <div class="workflow-list">
+    <div class="workflow-item">
+      <div class="workflow-num">01</div>
+      <div>
+        <div class="workflow-title">Review the current Microsoft 365 setup</div>
+        <div class="workflow-desc">Understand what is already in place, what is missing, and where the risks are.</div>
+      </div>
+    </div>
+    <div class="workflow-item">
+      <div class="workflow-num">02</div>
+      <div>
+        <div class="workflow-title">Map document and workflow requirements</div>
+        <div class="workflow-desc">Identify what needs to be stored, who needs access, and how work actually flows through the organisation.</div>
+      </div>
+    </div>
+    <div class="workflow-item">
+      <div class="workflow-num">03</div>
+      <div>
+        <div class="workflow-title">Design and build a SharePoint structure</div>
+        <div class="workflow-desc">Configure libraries, lists and permissions that match the organisation's actual needs.</div>
+      </div>
+    </div>
+    <div class="workflow-item">
+      <div class="workflow-num">04</div>
+      <div>
+        <div class="workflow-title">Build simple Power Automate workflows</div>
+        <div class="workflow-desc">Automate routine steps — notifications, approvals, record creation — without adding technical complexity.</div>
+      </div>
+    </div>
+    <div class="workflow-item">
+      <div class="workflow-num">05</div>
+      <div>
+        <div class="workflow-title">Improve access control and security settings</div>
+        <div class="workflow-desc">Tighten permissions, review accounts and improve the organisation's security posture.</div>
+      </div>
+    </div>
+    <div class="workflow-item">
+      <div class="workflow-num">06</div>
+      <div>
+        <div class="workflow-title">Provide documentation and handover</div>
+        <div class="workflow-desc">Ensure the team understands what has been built and can manage it confidently going forward.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="page-section">
+  <div class="sec-label">Who this is for</div>
+  <h2 class="sec-title">Designed for organisations<br><span class="serif">that need better structure.</span></h2>
+  <p class="body-text">The Secure Operations Hub is relevant to any organisation where operational processes have outgrown the informal systems that were adequate at an earlier stage.</p>
+  <div class="who-grid">
+    <div class="who-card">
+      <div class="who-tag">Charities</div>
+      <div class="who-title">Charities and voluntary organisations</div>
+      <div class="who-desc">Organisations managing referrals, volunteers, funders and compliance obligations across a small team, often with limited IT support.</div>
+    </div>
+    <div class="who-card">
+      <div class="who-tag">SMEs</div>
+      <div class="who-title">Small and medium businesses</div>
+      <div class="who-desc">Growing businesses where document management, HR processes and access controls have not kept pace with headcount.</div>
+    </div>
+    <div class="who-card">
+      <div class="who-tag">Any sector</div>
+      <div class="who-title">Organisations preparing for audit or assessment</div>
+      <div class="who-desc">Organisations that need to demonstrate structured operations, clear access controls and cyber readiness to funders, commissioners or assessors.</div>
+    </div>
+  </div>
+</section>
+
+<div class="cta-strip">
+  <div class="cta-blue">
+    <div class="cta-tag">Get started</div>
+    <div class="cta-title">Build a more secure<br><span class="serif">operating foundation.</span></div>
+    <p class="cta-sub">If your organisation is relying on scattered files, manual trackers, unclear access permissions or ad-hoc processes, Adjona can help you create a more structured Microsoft 365 operating environment.</p>
+    <div class="cta-actions">
+      <a href="https://outlook.office.com/book/AdjonaTechnologyLimited1@adjona.com/s/ElOd0P60CEiQxQcnIYWXWw2" target="_blank" rel="noopener noreferrer" class="cta-btn-solid">Book an introductory conversation</a>
+      <a href="index.html#contact" class="cta-btn-outline">Send us a message</a>
+    </div>
+  </div>
+  <div class="cta-right">
+    <div class="cta-right-label">Get in touch</div>
+    <div class="contact-block">
+      <div class="contact-line">
+        <div class="contact-line-label">Phone</div>
+        <div class="contact-line-val"><a href="tel:+442033550538">+44 20 3355 0538</a></div>
+      </div>
+      <div class="contact-line">
+        <div class="contact-line-label">Email</div>
+        <div class="contact-line-val"><a href="mailto:info@adjona.com">info@adjona.com</a></div>
+      </div>
+      <div class="contact-line">
+        <div class="contact-line-label">WhatsApp</div>
+        <div class="contact-line-val"><a href="https://wa.me/442033550538?text=Hi%2C%20I%27m%20interested%20in%20the%20Secure%20Operations%20Hub%20for%20our%20organisation." target="_blank" rel="noopener noreferrer">Message us directly</a></div>
+      </div>
+      <div class="contact-line" style="margin-top:.5rem;">
+        <div class="contact-line-label">Response time</div>
+        <div class="contact-line-val" style="font-size:.88rem;font-weight:400;color:var(--muted);">We aim to respond within one working day. No obligation, no hard sell.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer style="padding-bottom:5rem;">
+  <div class="f-logo">
+    <svg width="28" height="22" viewBox="0 0 36 28" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="0,28 6,28 7,17 6,16 0,16" fill="#0F4C81"/>
+      <polygon points="9,28 15,28 16,12 15,11 9,11" fill="#D83B01"/>
+      <polygon points="18,28 24,28 25,7 24,6 18,6" fill="#2F6B00"/>
+      <polygon points="27,28 33,28 34,1 33,0 27,0" fill="#F2A900"/>
+    </svg>
+    <div class="f-name">Adjona <span>Technology</span> Limited</div>
+  </div>
+  <div class="f-copy-wrap">
+    <div class="f-copy">© 2026 Adjona Technology Limited · Registered in England &amp; Wales · Company No. 05007410</div>
+    <div style="margin-top:.4rem;">
+      <a href="https://marketplace.microsoft.com/en-gb/partners/c4ead6cf-d6a0-4973-8bf7-f3e644e195ae/overview" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:.5rem;text-decoration:none;">
+        <svg width="14" height="14" viewBox="0 0 23 23" xmlns="http://www.w3.org/2000/svg"><rect x="1" y="1" width="10" height="10" fill="#f25022"/><rect x="12" y="1" width="10" height="10" fill="#7fba00"/><rect x="1" y="12" width="10" height="10" fill="#00a4ef"/><rect x="12" y="12" width="10" height="10" fill="#ffb900"/></svg>
+        <span style="font-family:'JetBrains Mono',monospace;font-size:.58rem;letter-spacing:.08em;color:var(--muted);">Listed on Microsoft Marketplace</span>
+      </a>
+    </div>
+  </div>
+  <ul class="f-links">
+    <li><a href="https://www.linkedin.com/company/adjona-technology-limited/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+    <li><a href="https://adjona.eventbrite.com" target="_blank" rel="noopener noreferrer">Events</a></li>
+    <li><a href="https://outlook.office.com/book/AdjonaTechnologyLimited1@adjona.com/s/ElOd0P60CEiQxQcnIYWXWw2" target="_blank" rel="noopener noreferrer">Book a Call</a></li>
+    <li><a href="adjona-privacy.html">Privacy Policy</a></li>
+    <li><a href="adjona-terms.html">Terms &amp; Conditions</a></li>
+    <li><a href="mailto:info@adjona.com">info@adjona.com</a></li>
+  </ul>
+</footer>
+
+<a href="https://wa.me/442033550538?text=Hi%2C%20I%27m%20interested%20in%20the%20Secure%20Operations%20Hub%20for%20our%20organisation." class="wa-float" target="_blank" rel="noopener noreferrer">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+  Quick question about your setup?
+</a>
+
+<script>
+document.querySelectorAll('.nav-links a,.nav-cta-mobile').forEach(function(link){
+  link.addEventListener('click',function(){
+    var nav=document.querySelector('nav');
+    nav.querySelector('.nav-links').classList.remove('nav-open');
+    nav.querySelector('.nav-cta-mobile').classList.remove('nav-open');
+  });
+});
+window.addEventListener('scroll',function(){
+  var waBtn=document.querySelector('.wa-float');
+  if(!waBtn)return;
+  var footer=document.querySelector('footer');
+  if(footer){
+    var footerTop=footer.getBoundingClientRect().top;
+    if(footerTop<window.innerHeight){waBtn.classList.add('wa-hidden');}
+    else{waBtn.classList.remove('wa-hidden');}
+  }
+});
+</script>
+</body>
+</html>
