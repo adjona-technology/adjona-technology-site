@@ -411,8 +411,8 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
 <section class="health-check" id="healthcheck">
   <div class="hc-inner">
     <div>
-      <div class="hc-label">Paid Service</div>
-      <h2 class="hc-title reveal">Charity Cyber<br>Health Check</h2>
+      <div class="hc-label">Microsoft 365 Review</div>
+      <h2 class="hc-title reveal">Microsoft 365 Security &amp;<br>Governance Review</h2>
       <p class="hc-desc reveal r2">A structured review of your Microsoft 365 and Azure environment designed for charities and smaller organisations that need a clear view of their security risks, governance gaps, and immediate priorities.</p>
       <div class="reveal r3">
         <div class="hc-typical">Typical engagement</div>
@@ -629,8 +629,8 @@ form.addEventListener('submit',async function(e){
   try{
     const res=await fetch(form.action,{method:'POST',body:new FormData(form),headers:{'Accept':'application/json'}});
     if(res.ok){form.style.display='none';document.getElementById('form-success').style.display='block';}
-    else{btn.textContent='Book a Charity Cyber Health Check';btn.disabled=false;alert('Something went wrong. Please try again.');}
-  }catch(err){btn.textContent='Book a Charity Cyber Health Check';btn.disabled=false;alert('Something went wrong. Please try again.');}
+    else{btn.textContent='Send Enquiry';btn.disabled=false;alert('Something went wrong. Please try again.');}
+  }catch(err){btn.textContent='Send Enquiry';btn.disabled=false;alert('Something went wrong. Please try again.');}
 });
 </script>
 </body>
