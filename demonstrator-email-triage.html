@@ -3,520 +3,259 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Assisted Email Triage Demonstrator | Adjona Technology</title>
-<meta name="description" content="A Microsoft 365 solution demonstrator showing how shared mailboxes, Power Automate and SharePoint can improve enquiry visibility, response consistency and operational governance for charities and SMEs.">
+<title>Assisted Inbox Triage System | Microsoft 365 Package | Adjona Technology</title>
+<meta name="description" content="A practical Microsoft 365 package for organisations that rely on shared mailboxes to manage enquiries, referrals, support requests or operational messages.">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="icon" type="image/x-icon" href="favicon.ico">
 <link rel="apple-touch-icon" sizes="192x192" href="favicon-192.png">
-<meta property="og:title" content="Assisted Email Triage Demonstrator | Adjona Technology">
-<meta property="og:description" content="A Microsoft 365 assisted email triage demonstrator showing how shared mailbox enquiries can be triaged, recorded in SharePoint and linked to suggested responses or next actions.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://adjona.com/demonstrator-email-triage.html">
 <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;700;800;900&family=Lora:ital,wght@1,500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<!-- Clarity tracking code for https://adjona.com/ -->
-<script>
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "wmyh9800tx");
-</script>
+<script>(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","wmyh9800tx");</script>
 <style>
-:root{
---white:#ffffff;--off:#f5f5f0;--ink:#0d0d0d;
---ms-blue:#0F4C81;--ms-red:#D83B01;--ms-grn:#2F6B00;--ms-yel:#F2A900;
---muted:#888;--border:rgba(13,13,13,0.1);
---nav-h:62px;
-}
+:root{--white:#ffffff;--off:#f5f5f0;--ink:#0d0d0d;--ms-blue:#0F4C81;--ms-red:#D83B01;--ms-grn:#2F6B00;--ms-yel:#F2A900;--muted:#444;--border:rgba(13,13,13,0.1);--nav-h:62px;}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;}
 body{background:var(--white);color:var(--ink);font-family:'Epilogue',sans-serif;font-weight:400;overflow-x:hidden;}
-
 nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:0 0 0 4rem;background:#fff;border-bottom:2px solid var(--ink);}
 .logo{display:flex;align-items:center;gap:.75rem;padding:1.1rem 0;text-decoration:none;}
 .logo-name{font-family:'Epilogue',sans-serif;font-size:1.1rem;font-weight:900;letter-spacing:-.02em;white-space:nowrap;color:var(--ink);}
 .logo-name span{color:var(--ms-blue);}
 .nav-links{display:flex;list-style:none;}
-.nav-links a{font-family:'JetBrains Mono',monospace;font-size:.63rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);text-decoration:none;padding:1.5rem 1.4rem;border-left:2px solid var(--border);display:block;transition:color .2s,background .2s;}
+.nav-links a{font-family:'JetBrains Mono',monospace;font-size:.63rem;letter-spacing:.14em;text-transform:uppercase;color:#333;text-decoration:none;padding:1.5rem 1.4rem;border-left:2px solid var(--border);display:block;transition:color .2s,background .2s;}
 .nav-links a:hover{color:var(--ms-blue);background:rgba(0,120,212,.04);}
+.nav-links a.active{color:var(--ms-blue);}
 .nav-cta{font-family:'Epilogue',sans-serif;font-size:.88rem;font-weight:900;background:var(--ms-blue);color:#fff;text-decoration:none;border-left:2px solid var(--ink);padding:1.5rem 2.2rem;cursor:pointer;transition:background .2s;display:block;}
 .nav-cta:hover{background:#0062b0;}
 .nav-hamburger{display:none;}
 .nav-cta-mobile{display:none;}
-
 .four-stripe{display:grid;grid-template-columns:repeat(4,1fr);height:6px;}
 .fs.b{background:var(--ms-blue);}.fs.r{background:var(--ms-red);}.fs.g{background:var(--ms-grn);}.fs.y{background:var(--ms-yel);}
-
-.page-hero{padding:calc(var(--nav-h) + 5rem) 4rem 5rem;border-bottom:2px solid var(--ink);}
-.page-hero-inner{max-width:860px;}
-.page-breadcrumb{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:1.5rem;}
-.page-breadcrumb a{color:var(--muted);text-decoration:none;}
-.page-breadcrumb a:hover{color:var(--ms-blue);}
-.page-tag{font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.2em;color:var(--ms-blue);margin-bottom:1.5rem;display:block;padding-left:2.25rem;position:relative;}
-.page-tag::before{content:'';width:28px;height:2px;background:var(--ms-blue);position:absolute;left:0;top:50%;transform:translateY(-50%);}
-.page-hero h1{font-family:'Epilogue',sans-serif;font-size:clamp(2.8rem,5vw,5.5rem);font-weight:900;line-height:.92;letter-spacing:-.04em;margin-bottom:2rem;}
-.page-hero h1 .serif{font-family:'Lora',serif;font-style:italic;font-weight:500;letter-spacing:-.02em;}
-.page-hero-body{font-size:1.05rem;line-height:1.85;color:var(--muted);max-width:640px;margin-bottom:2.5rem;}
-.tool-pills{display:flex;flex-wrap:wrap;gap:.5rem;}
-.tool-pill{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;border:1.5px solid var(--border);padding:.35rem .8rem;color:var(--muted);}
-
-.page-section{padding:5rem 4rem;border-bottom:2px solid var(--ink);}
-.page-section:last-of-type{border-bottom:none;}
-.page-section.off{background:var(--off);}
-
-.sec-label{font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ms-blue);margin-bottom:.75rem;}
-.sec-label.red{color:var(--ms-red);}
-.sec-label.grn{color:var(--ms-grn);}
-.sec-label.yel{color:var(--ms-yel);}
-
-.sec-title{font-family:'Epilogue',sans-serif;font-size:clamp(2rem,3.5vw,3.2rem);font-weight:900;letter-spacing:-.03em;line-height:.95;margin-bottom:1.25rem;}
+.page-hero{padding:calc(var(--nav-h) + 4rem) 4rem 4rem;border-bottom:2px solid var(--ink);}
+.breadcrumb{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:1.25rem;}
+.breadcrumb a{color:var(--muted);text-decoration:none;}
+.breadcrumb a:hover{color:var(--ms-blue);}
+.page-tag{font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.2em;display:block;padding-left:2.25rem;position:relative;margin-bottom:1.5rem;}
+.page-tag::before{content:'';width:28px;height:2px;position:absolute;left:0;top:50%;transform:translateY(-50%);}
+.page-hero h1{font-family:'Epilogue',sans-serif;font-size:clamp(2.4rem,4.5vw,4.5rem);font-weight:900;line-height:.92;letter-spacing:-.04em;margin-bottom:1.25rem;}
+.page-hero h1 .serif{font-family:'Lora',serif;font-style:italic;font-weight:500;}
+.hero-sub{font-size:1rem;line-height:1.85;color:var(--muted);max-width:680px;margin-bottom:2rem;}
+.glance-box{border:2px solid var(--ink);margin-top:2.5rem;display:inline-block;min-width:500px;}
+.glance-title{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;padding:.8rem 1.25rem;background:var(--ink);color:#fff;}
+.glance-row{display:flex;justify-content:space-between;align-items:center;padding:.75rem 1.25rem;border-bottom:1px solid var(--border);font-size:.85rem;gap:2rem;}
+.glance-row:last-child{border-bottom:none;}
+.glance-label{color:var(--muted);white-space:nowrap;}
+.glance-val{font-weight:700;color:var(--ink);text-align:right;}
+.body-section{padding:4rem;}
+.body-section+.body-section{border-top:1px solid var(--border);}
+.sec-label{font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ms-blue);margin-bottom:.6rem;}
+.sec-title{font-family:'Epilogue',sans-serif;font-size:clamp(1.6rem,2.5vw,2.2rem);font-weight:900;letter-spacing:-.03em;line-height:1;margin-bottom:1rem;}
 .sec-title .serif{font-family:'Lora',serif;font-style:italic;font-weight:500;}
-
-.body-text{font-size:.95rem;color:var(--muted);line-height:1.85;margin-bottom:1rem;max-width:700px;}
-.body-text:last-child{margin-bottom:0;}
-
-.challenge-list{border-top:2px solid var(--ink);margin-top:2rem;}
-.challenge-item{display:grid;grid-template-columns:3.5rem 1fr;gap:1.5rem;padding:1.25rem 0;border-bottom:1px solid var(--border);align-items:start;}
-.challenge-item:last-child{border-bottom:none;}
-.challenge-num{font-family:'JetBrains Mono',monospace;font-size:.65rem;color:var(--ms-red);padding-top:.2rem;}
-.challenge-text{font-size:.92rem;line-height:1.75;color:var(--muted);}
-
-.workflow-list{border-top:2px solid var(--ink);margin-top:2rem;}
-.workflow-item{display:grid;grid-template-columns:3.5rem 1fr;gap:1.5rem;padding:1.25rem 0;border-bottom:1px solid var(--border);align-items:start;}
-.workflow-item:last-child{border-bottom:none;}
-.workflow-num{font-family:'JetBrains Mono',monospace;font-size:.65rem;color:var(--ms-blue);padding-top:.2rem;}
-.workflow-body{}
-.workflow-title{font-family:'Epilogue',sans-serif;font-size:.95rem;font-weight:800;letter-spacing:-.02em;margin-bottom:.3rem;}
-.workflow-desc{font-size:.88rem;color:var(--muted);line-height:1.7;}
-
-.tool-cards{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:2px solid var(--ink);margin-top:2.5rem;}
-.tool-card{padding:1.75rem 1.5rem;border-right:2px solid var(--ink);}
-.tool-card:last-child{border-right:none;}
-.tool-card-colour{width:100%;height:4px;margin-bottom:1rem;}
-.tool-card-name{font-family:'Epilogue',sans-serif;font-size:1rem;font-weight:800;letter-spacing:-.02em;margin-bottom:.5rem;}
-.tool-card-desc{font-size:.82rem;color:var(--muted);line-height:1.7;}
-
-.cap-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;border:2px solid var(--ink);margin-top:2.5rem;}
-.cap-item{display:flex;align-items:flex-start;gap:1rem;padding:1.25rem 1.5rem;border-bottom:1px solid var(--border);border-right:1px solid var(--border);}
-.cap-item:nth-child(even){border-right:none;}
-.cap-item:nth-last-child(-n+2){border-bottom:none;}
-.cap-dot{width:8px;height:8px;background:var(--ms-grn);flex-shrink:0;margin-top:.45rem;}
-.cap-text{font-size:.88rem;line-height:1.7;color:var(--muted);}
-
-.two-col{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;margin-top:2.5rem;}
-
-.gov-box{border:2px solid var(--ink);margin-top:2.5rem;}
-.gov-box-title{font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.15em;text-transform:uppercase;padding:.9rem 1.25rem;background:var(--ink);color:#fff;}
-.gov-grid{display:grid;grid-template-columns:1fr 1fr;}
-.gov-item{display:flex;align-items:center;gap:1rem;padding:1rem 1.25rem;border-bottom:1px solid var(--border);border-right:1px solid var(--border);font-size:.85rem;color:var(--muted);}
-.gov-item:nth-child(even){border-right:none;}
-.gov-item:nth-last-child(-n+2){border-bottom:none;}
-.gov-dot{width:6px;height:6px;flex-shrink:0;}
-
-.principle-box{border-left:3px solid var(--ms-red);background:#fff8f6;padding:1.25rem 1.5rem;font-size:.88rem;color:#5a1a00;line-height:1.75;margin-top:2rem;}
-.principle-box strong{font-family:'Epilogue',sans-serif;font-size:1rem;font-weight:800;display:block;margin-bottom:.25rem;color:var(--ms-red);}
-
-.roadmap-tags{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:2rem;}
-.roadmap-tag{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;border:1.5px solid var(--border);padding:.4rem .9rem;color:var(--muted);transition:all .2s;cursor:default;}
-.roadmap-tag:hover{border-color:var(--ms-blue);color:var(--ms-blue);}
-
-.who-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:2px solid var(--ink);margin-top:2.5rem;}
-.who-card{padding:1.75rem 1.5rem;border-right:2px solid var(--ink);}
-.who-card:last-child{border-right:none;}
-.who-tag{font-family:'JetBrains Mono',monospace;font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ms-blue);margin-bottom:.6rem;}
-.who-title{font-family:'Epilogue',sans-serif;font-size:.95rem;font-weight:800;letter-spacing:-.02em;margin-bottom:.6rem;}
-.who-desc{font-size:.82rem;color:var(--muted);line-height:1.75;}
-
-.cta-strip{display:grid;grid-template-columns:1fr 1fr;border-top:2px solid var(--ink);}
-.cta-blue{background:var(--ms-blue);padding:5rem 4rem;display:flex;flex-direction:column;justify-content:center;}
-.cta-tag{font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.6);margin-bottom:1rem;}
-.cta-title{font-family:'Epilogue',sans-serif;font-size:clamp(2.2rem,3.5vw,3.5rem);font-weight:900;letter-spacing:-.04em;line-height:.95;color:#fff;margin-bottom:1rem;}
+.body-text{font-size:.92rem;color:var(--muted);line-height:1.85;margin-bottom:1rem;}
+.deliverables{border:2px solid var(--ink);margin-top:1.5rem;}
+.del-header{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;padding:.8rem 1.25rem;background:var(--ink);color:#fff;}
+.del-item{display:flex;align-items:flex-start;gap:.75rem;padding:.85rem 1.25rem;border-bottom:1px solid var(--border);font-size:.88rem;color:var(--muted);line-height:1.6;}
+.del-item:last-child{border-bottom:none;}
+.del-dot{width:6px;height:6px;flex-shrink:0;margin-top:.45rem;}
+.support-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1.5rem;}
+.support-card{border:2px solid var(--ink);padding:1.5rem;}
+.support-card-label{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:.5rem;}
+.support-card-price{font-family:'Epilogue',sans-serif;font-size:1.4rem;font-weight:900;color:var(--ink);margin-bottom:.5rem;}
+.support-card-desc{font-size:.82rem;color:var(--muted);line-height:1.65;}
+.governance-box{background:var(--off);border-left:3px solid var(--ms-red);padding:1.5rem 2rem;margin-top:1.5rem;}
+.governance-box p{font-size:.88rem;color:var(--muted);line-height:1.8;margin-bottom:.75rem;}
+.governance-box p:last-child{margin-bottom:0;}
+.video-wrap{position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border:2px solid var(--ink);margin-top:1.5rem;}
+.video-wrap iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:none;}
+.disclaimer{padding:2rem 4rem;border-top:1px solid var(--border);background:var(--white);}
+.disclaimer p{font-size:.8rem;color:var(--muted);line-height:1.75;max-width:800px;border-left:3px solid var(--border);padding-left:1.25rem;}
+.cta-section{display:grid;grid-template-columns:1fr 1fr;border-top:2px solid var(--ink);}
+.cta-blue{background:var(--ms-blue);padding:4rem;display:flex;flex-direction:column;justify-content:center;gap:1rem;}
+.cta-tag{font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.9);margin-bottom:.25rem;}
+.cta-title{font-family:'Epilogue',sans-serif;font-size:clamp(1.8rem,3vw,2.8rem);font-weight:900;letter-spacing:-.03em;line-height:.95;color:#fff;}
 .cta-title .serif{font-family:'Lora',serif;font-style:italic;font-weight:500;}
-.cta-sub{font-size:.95rem;color:rgba(255,255,255,.7);line-height:1.8;max-width:380px;margin-bottom:2rem;}
-.cta-actions{display:flex;flex-direction:column;gap:.75rem;}
-.cta-btn-solid{font-family:'Epilogue',sans-serif;font-size:.9rem;font-weight:900;background:#fff;color:var(--ms-blue);border:2px solid #fff;padding:.85rem 2rem;cursor:pointer;text-decoration:none;display:inline-block;transition:background .2s,color .2s;text-align:center;}
+.cta-sub{font-size:.9rem;color:rgba(255,255,255,.8);line-height:1.8;max-width:380px;}
+.cta-typical{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.7);}
+.cta-typical-val{font-size:.85rem;color:rgba(255,255,255,.8);line-height:1.6;}
+.cta-actions{display:flex;flex-direction:column;gap:.75rem;margin-top:.5rem;}
+.cta-btn-solid{font-family:'Epilogue',sans-serif;font-size:.9rem;font-weight:900;background:#fff;color:var(--ms-blue);border:2px solid #fff;padding:.85rem 2rem;text-decoration:none;display:block;transition:all .2s;text-align:center;}
 .cta-btn-solid:hover{background:var(--ms-yel);border-color:var(--ms-yel);color:var(--ink);}
-.cta-btn-outline{font-family:'Epilogue',sans-serif;font-size:.9rem;font-weight:900;background:transparent;color:#fff;border:2px solid rgba(255,255,255,.4);padding:.85rem 2rem;cursor:pointer;text-decoration:none;display:inline-block;transition:all .2s;text-align:center;}
+.cta-btn-outline{font-family:'Epilogue',sans-serif;font-size:.9rem;font-weight:900;background:transparent;color:#fff;border:2px solid rgba(255,255,255,.4);padding:.85rem 2rem;text-decoration:none;display:block;transition:all .2s;text-align:center;}
 .cta-btn-outline:hover{border-color:#fff;background:rgba(255,255,255,.1);}
-.cta-right{background:var(--off);padding:5rem 4rem;display:flex;flex-direction:column;justify-content:center;}
-.cta-right-label{font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:1.5rem;}
-.contact-block{display:flex;flex-direction:column;gap:1.25rem;}
-.contact-line{display:flex;flex-direction:column;gap:.25rem;}
-.contact-line-label{font-family:'JetBrains Mono',monospace;font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);}
-.contact-line-val{font-family:'Epilogue',sans-serif;font-size:1.1rem;font-weight:800;color:var(--ink);}
-.contact-line-val a{color:var(--ms-blue);text-decoration:none;}
-.contact-line-val a:hover{text-decoration:underline;}
-
+.cta-right-panel{background:var(--off);padding:4rem;display:flex;flex-direction:column;justify-content:center;gap:1.5rem;}
+.cta-right-label{font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);}
+.contact-item{display:flex;flex-direction:column;gap:.2rem;}
+.contact-item-label{font-family:'JetBrains Mono',monospace;font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);}
+.contact-item-val{font-family:'Epilogue',sans-serif;font-size:1rem;font-weight:800;}
+.contact-item-val a{color:var(--ms-blue);text-decoration:none;}
 footer{display:flex;align-items:center;justify-content:space-between;padding:1.5rem 4rem;border-top:2px solid var(--ink);}
 .f-copy-wrap{display:flex;flex-direction:column;gap:.2rem;}
 .f-logo{display:flex;align-items:center;gap:.65rem;}
 .f-name{font-family:'Epilogue',sans-serif;font-size:1rem;font-weight:900;letter-spacing:-.02em;}
 .f-name span{color:var(--ms-blue);}
-.f-copy{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.06em;color:var(--muted);}
-.f-links{display:flex;gap:2rem;list-style:none;}
-.f-links a{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color .2s;}
+.f-copy{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.06em;color:#333;}
+.f-links{display:flex;gap:2rem;list-style:none;align-items:center;}
+.f-links a{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:#333;text-decoration:none;transition:color .2s;}
 .f-links a:hover{color:var(--ms-blue);}
-
-.wa-float{position:fixed;bottom:2rem;right:2rem;z-index:500;display:flex;align-items:center;gap:.6rem;background:#25D366;color:#fff;padding:.75rem 1.25rem .75rem .9rem;border-radius:100px;box-shadow:0 4px 20px rgba(37,211,102,.35);text-decoration:none;font-family:'Epilogue',sans-serif;font-size:.82rem;font-weight:700;transition:transform .2s,box-shadow .2s,opacity .2s;}
+.wa-float{position:fixed;bottom:2rem;right:2rem;z-index:500;display:flex;align-items:center;gap:.6rem;background:#25D366;color:#1a1a1a;padding:.75rem 1.25rem .75rem .9rem;border-radius:100px;box-shadow:0 4px 20px rgba(37,211,102,.35);text-decoration:none;font-family:'Epilogue',sans-serif;font-size:.82rem;font-weight:700;transition:transform .2s,box-shadow .2s,opacity .2s;}
 .wa-float:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(37,211,102,.45);}
 .wa-float svg{width:20px;height:20px;flex-shrink:0;}
 .wa-float.wa-hidden{opacity:0;pointer-events:none;}
-
-@media(max-width:1000px){
-  .nav-cta{display:none;}
-  .nav-links a{font-size:.58rem;padding:1rem .9rem;letter-spacing:.1em;}
-}
-@media(max-width:768px){
-  :root{--nav-h:58px;}
-  nav{padding:0 1.25rem;flex-wrap:wrap;position:fixed;}
-  .logo{padding:.85rem 0;}
-  .nav-links{display:none;width:100%;flex-direction:column;border-top:1px solid var(--border);}
-  .nav-links.nav-open{display:flex;background:#fff;position:relative;z-index:10;}
-  .nav-links a{border-left:none;border-bottom:1px solid var(--border);padding:1rem 0;}
-  .nav-hamburger{display:block;background:none;border:none;font-size:1.4rem;cursor:pointer;padding:.5rem;color:var(--ink);margin-left:auto;}
-  .nav-cta{display:none !important;}
-  .nav-cta-mobile{display:none !important;}
-  .nav-cta-mobile.nav-open{display:block !important;width:100%;font-family:'Epilogue',sans-serif;font-size:.82rem;font-weight:900;background:var(--ms-blue);color:#fff;text-decoration:none;text-align:center;padding:1rem 1.25rem;border-top:2px solid var(--ink);}
-  .page-hero{padding:calc(var(--nav-h) + 2.5rem) 1.5rem 3rem;}
-  .page-section{padding:3rem 1.5rem;}
-  .tool-cards{grid-template-columns:1fr 1fr;}
-  .tool-card{border-right:2px solid var(--ink);}
-  .tool-card:nth-child(even){border-right:none;}
-  .tool-card:nth-child(n+3){border-top:2px solid var(--ink);}
-  .cap-grid{grid-template-columns:1fr;}
-  .cap-item{border-right:none;}
-  .cap-item:nth-last-child(-n+2){border-bottom:1px solid var(--border);}
-  .cap-item:last-child{border-bottom:none;}
-  .gov-grid{grid-template-columns:1fr;}
-  .gov-item{border-right:none;}
-  .gov-item:nth-last-child(-n+2){border-bottom:1px solid var(--border);}
-  .gov-item:last-child{border-bottom:none;}
-  .two-col{grid-template-columns:1fr;gap:2rem;}
-  .who-grid{grid-template-columns:1fr;}
-  .who-card{border-right:none;border-bottom:2px solid var(--ink);}
-  .who-card:last-child{border-bottom:none;}
-  .cta-strip{grid-template-columns:1fr;}
-  .cta-blue{padding:3rem 1.5rem;}
-  .cta-right{padding:3rem 1.5rem;}
-  footer{flex-direction:column;align-items:flex-start;gap:1.25rem;padding:1.5rem;}
-  .f-links{flex-wrap:wrap;gap:1rem;}
-  .wa-float{display:none;}
-}
-@media(max-width:480px){
-  .page-hero{padding-left:1.25rem;padding-right:1.25rem;}
-  .page-section{padding-left:1.25rem;padding-right:1.25rem;}
-  .tool-cards{grid-template-columns:1fr;}
-  .tool-card{border-right:none;border-bottom:2px solid var(--ink);}
-  .tool-card:last-child{border-bottom:none;}
-  footer{padding:1.25rem;}
-}
+@media(max-width:1000px){.nav-cta{display:none;}.cta-section{grid-template-columns:1fr;}.support-grid{grid-template-columns:1fr;}.glance-box{min-width:0;width:100%;}.body-section{padding:3rem 1.5rem;}.disclaimer{padding:1.5rem;}.cta-blue,.cta-right-panel{padding:3rem 1.5rem;}}
+@media(max-width:768px){:root{--nav-h:58px;}nav{padding:0 1.25rem;flex-wrap:wrap;}.logo{padding:.85rem 0;}.nav-links{display:none;width:100%;flex-direction:column;border-top:1px solid var(--border);}.nav-links.nav-open{display:flex;background:#fff;}.nav-links a{border-left:none;border-bottom:1px solid var(--border);padding:1rem 0;}.nav-hamburger{display:block;background:none;border:none;font-size:1.4rem;cursor:pointer;padding:.5rem;color:var(--ink);margin-left:auto;}.nav-cta{display:none !important;}.nav-cta-mobile{display:none !important;}.nav-cta-mobile.nav-open{display:block !important;width:100%;font-family:'Epilogue',sans-serif;font-size:.82rem;font-weight:900;background:var(--ms-blue);color:#fff;text-decoration:none;text-align:center;padding:1rem 1.25rem;border-top:2px solid var(--ink);}.page-hero{padding:calc(var(--nav-h) + 2rem) 1.5rem 2.5rem;}footer{flex-direction:column;align-items:flex-start;gap:1.25rem;padding:1.5rem;}.f-links{flex-wrap:wrap;gap:1rem;}.wa-float{display:none;}}
 </style>
 </head>
 <body>
-
 <nav>
-  <a href="index.html" class="logo">
-    <svg width="36" height="28" viewBox="0 0 36 28" xmlns="http://www.w3.org/2000/svg">
-      <polygon points="0,28 6,28 7,17 6,16 0,16" fill="#0F4C81"/>
-      <polygon points="9,28 15,28 16,12 15,11 9,11" fill="#D83B01"/>
-      <polygon points="18,28 24,28 25,7 24,6 18,6" fill="#2F6B00"/>
-      <polygon points="27,28 33,28 34,1 33,0 27,0" fill="#F2A900"/>
-    </svg>
-    <div class="logo-name">Adjona <span>Technology</span></div>
-  </a>
+  <a href="index.html" class="logo"><svg width="36" height="28" viewBox="0 0 36 28" xmlns="http://www.w3.org/2000/svg"><polygon points="0,28 6,28 7,17 6,16 0,16" fill="#0F4C81"/><polygon points="9,28 15,28 16,12 15,11 9,11" fill="#D83B01"/><polygon points="18,28 24,28 25,7 24,6 18,6" fill="#2F6B00"/><polygon points="27,28 33,28 34,1 33,0 27,0" fill="#F2A900"/></svg><div class="logo-name">Adjona <span>Technology</span></div></a>
     <ul class="nav-links">
     <li><a href="index.html#approach">About</a></li>
     <li><a href="index.html#services">Services</a></li>
     <li><a href="additional-services.html">Projects &amp; Support</a></li>
-    <li><a href="demonstrators.html">Practical Demonstrators</a></li>
+    <li><a href="packages.html" class="active">Solution Packages</a></li>
     <li><a href="index.html#certs">Credentials</a></li>
     <li><a href="enquiry.html">Contact Us</a></li>
   </ul>
-  <a href="https://outlook.office.com/book/AdjonaTechnologyLimited1@adjona.com/s/ElOd0P60CEiQxQcnIYWXWw2" target="_blank" rel="noopener noreferrer" class="nav-cta">Book a Free Introductory Conversation</a>
-  <button class="nav-hamburger" aria-label="Menu" onclick="
-    var nav=this.closest('nav');
-    nav.querySelector('.nav-links').classList.toggle('nav-open');
-    nav.querySelector('.nav-cta-mobile').classList.toggle('nav-open');
-  ">&#9776;</button>
-  <a href="https://outlook.office.com/book/AdjonaTechnologyLimited1@adjona.com/s/ElOd0P60CEiQxQcnIYWXWw2" target="_blank" rel="noopener noreferrer" class="nav-cta-mobile">Book a Free Introductory Conversation</a>
+  <a href="https://outlook.office.com/book/AdjonaTechnologyLimited1@adjona.com/s/ElOd0P60CEiQxQcnIYWXWw2" target="_blank" rel="noopener noreferrer" class="nav-cta">Book an Introductory Conversation</a>
+  <button class="nav-hamburger" aria-label="Menu" onclick="var nav=this.closest('nav');nav.querySelector('.nav-links').classList.toggle('nav-open');nav.querySelector('.nav-cta-mobile').classList.toggle('nav-open');">&#9776;</button>
+  <a href="https://outlook.office.com/book/AdjonaTechnologyLimited1@adjona.com/s/ElOd0P60CEiQxQcnIYWXWw2" target="_blank" rel="noopener noreferrer" class="nav-cta-mobile">Book an Introductory Conversation</a>
 </nav>
 
 <section class="page-hero">
-  <div class="page-hero-inner">
-    <div class="page-breadcrumb"><a href="index.html">Adjona Technology</a> &nbsp;/&nbsp; <a href="demonstrators.html">Practical Demonstrators</a></div>
-    <span class="page-tag">Solution Demonstrator &nbsp;·&nbsp; Microsoft 365 Workflow Automation</span>
-    <h1>Assisted Email<br>Triage <span class="serif">Demonstrator</span></h1>
-    <p class="page-hero-body">Many organisations rely on shared mailboxes to manage enquiries, referrals, requests and general correspondence. Over time this becomes difficult to manage — messages get missed, responses vary between staff, and there is often no clear record of how an enquiry was handled. Adjona Technology built a Microsoft 365 proof of concept to show how a structured assisted triage process can improve visibility, consistency and governance.</p>
-    <div class="tool-pills">
-      <span class="tool-pill">Shared Mailbox</span>
-      <span class="tool-pill">Power Automate</span>
-      <span class="tool-pill">SharePoint</span>
-      <span class="tool-pill">Microsoft Teams</span>
-    </div>
+  <div class="breadcrumb"><a href="index.html">Adjona Technology</a> &nbsp;/&nbsp; <a href="packages.html">Solution Packages</a> &nbsp;/&nbsp; Assisted Inbox Triage System</div>
+  <span class="page-tag" style="color:var(--ms-red);">Package 02 &nbsp;·&nbsp; Inbox &amp; Workflow</span>
+  <h1>Assisted Inbox <span class="serif">Triage System</span></h1>
+  <p class="hero-sub">A practical Microsoft 365 package for organisations that rely on shared mailboxes to manage enquiries, referrals, support requests, complaints or operational messages. Adjona builds a structured triage workflow using Outlook, Power Automate, SharePoint, Microsoft Lists and Teams, helping staff see what has arrived, who needs to act and what has already been handled.</p>
+  <div class="glance-box">
+    <div class="glance-title">At a glance</div>
+    <div class="glance-row"><span class="glance-label">Best for</span><span class="glance-val">Shared mailboxes receiving enquiries, referrals, support requests or volunteer messages</span></div>
+    <div class="glance-row"><span class="glance-label">Typical setup investment</span><span class="glance-val">£1,200–£2,500</span></div>
+    <div class="glance-row"><span class="glance-label">Typical delivery</span><span class="glance-val">5–10 working days</span></div>
+    <div class="glance-row"><span class="glance-label">Optional monthly support</span><span class="glance-val">from £250/month</span></div>
+    <div class="glance-row"><span class="glance-label">Main outcome</span><span class="glance-val">A structured inbox triage process with clearer ownership, audit trail and reporting</span></div>
   </div>
 </section>
 
-<div class="four-stripe">
-  <div class="fs b"></div><div class="fs r"></div><div class="fs g"></div><div class="fs y"></div>
+<div class="four-stripe"><div class="fs b"></div><div class="fs r"></div><div class="fs g"></div><div class="fs y"></div></div>
+
+<main>
+<div class="body-section">
+  <div class="sec-label">The problem</div>
+  <h2 class="sec-title">Who this is <span class="serif">for</span></h2>
+  <p class="body-text">Organisations that run shared mailboxes often end up with messages that nobody has picked up, duplicated responses, no record of what was done, and no easy way for managers to see what is outstanding. Staff spend time hunting through email threads instead of acting on them.</p>
+  <p class="body-text">This is particularly common in charities, care providers, CICs and small teams where the shared inbox is the de facto system for managing referrals, enquiries, volunteer messages or service requests — without any supporting structure around it.</p>
 </div>
-<div style="border-top:2px solid var(--ink);padding:2.5rem 4rem;">
-  <div style="font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:1rem;">Watch · Assisted Email Triage Demonstrator</div>
-  <div style="position:relative;padding-bottom:56.25%;height:0;border:2px solid var(--ink);overflow:hidden;">
-    <iframe style="position:absolute;top:0;left:0;width:100%;height:100%;border:none;" src="https://www.youtube.com/embed/5hfLLrXUQyA" title="Assisted Email Triage Demonstrator — Adjona Technology" allowfullscreen loading="lazy"></iframe>
+
+<div class="body-section">
+  <div class="sec-label">Deliverables</div>
+  <h2 class="sec-title">What you <span class="serif">get</span></h2>
+  <div class="deliverables">
+    <div class="del-header">Included in the package</div>
+    <div class="del-item"><div class="del-dot" style="background:var(--ms-red);"></div>Review of current shared mailbox process and pain points</div>
+    <div class="del-item"><div class="del-dot" style="background:var(--ms-red);"></div>Agreed enquiry categories and triage logic</div>
+    <div class="del-item"><div class="del-dot" style="background:var(--ms-red);"></div>Microsoft Lists or SharePoint triage log</div>
+    <div class="del-item"><div class="del-dot" style="background:var(--ms-red);"></div>Power Automate workflow to record and route incoming messages</div>
+    <div class="del-item"><div class="del-dot" style="background:var(--ms-red);"></div>Suggested response or next-action library, where required</div>
+    <div class="del-item"><div class="del-dot" style="background:var(--ms-red);"></div>Optional Teams notifications for new or urgent messages</div>
+    <div class="del-item"><div class="del-dot" style="background:var(--ms-red);"></div>Basic reporting view for management oversight</div>
+    <div class="del-item"><div class="del-dot" style="background:var(--ms-red);"></div>Human review step retained — staff remain responsible for acting on messages</div>
+    <div class="del-item"><div class="del-dot" style="background:var(--ms-red);"></div>Staff handover guide</div>
+    <div class="del-item"><div class="del-dot" style="background:var(--ms-red);"></div>Walkthrough session with the team</div>
   </div>
 </div>
 
-<section class="page-section">
-  <div class="sec-label red">The problem</div>
-  <h2 class="sec-title">Shared mailboxes are <span class="serif">hard to manage.</span></h2>
-  <p class="body-text">Shared mailboxes are often used as informal front doors into an organisation. They may receive volunteer enquiries, referral requests, service user messages, complaints, supplier emails, general information requests or internal support queries. Without a structured process, the same set of problems tends to emerge.</p>
-  <div class="challenge-list">
-    <div class="challenge-item">
-      <div class="challenge-num">01</div>
-      <div class="challenge-text">Messages missed or left unactioned because there is no clear ownership or visibility of what has arrived.</div>
-    </div>
-    <div class="challenge-item">
-      <div class="challenge-num">02</div>
-      <div class="challenge-text">Responses varying between staff or volunteers, with no consistent approach to common enquiry types.</div>
-    </div>
-    <div class="challenge-item">
-      <div class="challenge-num">03</div>
-      <div class="challenge-text">No clear record of how enquiries were handled, making handover, oversight and reporting difficult.</div>
-    </div>
-    <div class="challenge-item">
-      <div class="challenge-num">04</div>
-      <div class="challenge-text">Difficulty prioritising — all enquiries sit in the same inbox regardless of urgency or type.</div>
-    </div>
-    <div class="challenge-item">
-      <div class="challenge-num">05</div>
-      <div class="challenge-text">Limited management visibility of volumes, response times or whether similar enquiries are being handled consistently.</div>
-    </div>
-  </div>
-</section>
+<div class="body-section">
+  <div class="sec-label">Delivery</div>
+  <h2 class="sec-title">How it <span class="serif">works</span></h2>
+  <p class="body-text">Adjona reviews your current inbox process, agrees the triage categories and workflow logic with your team, builds the automation, tests it, and provides a practical handover so staff can use it confidently from day one.</p>
+  <p class="body-text">The final scope is confirmed after a short introductory conversation, because every organisation's mailbox setup, message volumes and workflow needs are different.</p>
+</div>
 
-<section class="page-section off">
-  <div class="sec-label">The demonstrator</div>
-  <h2 class="sec-title">A five-step assisted <span class="serif">triage workflow.</span></h2>
-  <p class="body-text">Adjona built a Microsoft 365 proof of concept showing how a shared mailbox triage process can be made more structured, visible and consistent — using tools many organisations are already paying for. The workflow follows five steps from arrival to staff review.</p>
-  <div class="workflow-list">
-    <div class="workflow-item">
-      <div class="workflow-num">01</div>
-      <div class="workflow-body">
-        <div class="workflow-title">Email arrives</div>
-        <div class="workflow-desc">An enquiry-style email arrives in a test triage mailbox. Power Automate monitors the mailbox and triggers the workflow automatically.</div>
-      </div>
-    </div>
-    <div class="workflow-item">
-      <div class="workflow-num">02</div>
-      <div class="workflow-body">
-        <div class="workflow-title">Triage logic applied</div>
-        <div class="workflow-desc">The workflow identifies the broad type of enquiry based on subject, sender or content — categorising it for routing and review.</div>
-      </div>
-    </div>
-    <div class="workflow-item">
-      <div class="workflow-num">03</div>
-      <div class="workflow-body">
-        <div class="workflow-title">Outcome recorded in SharePoint</div>
-        <div class="workflow-desc">The triage result is written automatically into a SharePoint list, creating a structured log of every enquiry received.</div>
-      </div>
-    </div>
-    <div class="workflow-item">
-      <div class="workflow-num">04</div>
-      <div class="workflow-body">
-        <div class="workflow-title">Suggested responses associated</div>
-        <div class="workflow-desc">Relevant suggested responses, useful links or internal next actions can be associated with different enquiry types — giving staff a consistent starting point.</div>
-      </div>
-    </div>
-    <div class="workflow-item">
-      <div class="workflow-num">05</div>
-      <div class="workflow-body">
-        <div class="workflow-title">Staff review and act</div>
-        <div class="workflow-desc">Staff review the triage log before deciding what action to take. Human judgement remains at the centre of every decision.</div>
-      </div>
-    </div>
+<div class="body-section">
+  <div class="sec-label">Governance &amp; safety</div>
+  <h2 class="sec-title">Assisted triage, <span class="serif">not automatic decisions</span></h2>
+  <div class="governance-box">
+    <p>This package is designed to support staff judgement, not replace it. The workflow surfaces messages, records them and routes them — but staff remain responsible for reviewing enquiries and deciding how to respond.</p>
+    <p>Licensing, permissions and information governance requirements are confirmed during scoping. The package is built using Microsoft 365 tools where suitable.</p>
   </div>
-  <div class="tool-cards" style="margin-top:3rem;">
-    <div class="tool-card">
-      <div class="tool-card-colour" style="background:var(--ms-blue);"></div>
-      <div class="tool-card-name">Shared Mailbox</div>
-      <div class="tool-card-desc">The single point of entry for incoming enquiries, monitored continuously by Power Automate.</div>
-    </div>
-    <div class="tool-card">
-      <div class="tool-card-colour" style="background:var(--ms-red);"></div>
-      <div class="tool-card-name">Power Automate</div>
-      <div class="tool-card-desc">Applies triage logic, routes enquiries and writes structured records without manual intervention.</div>
-    </div>
-    <div class="tool-card">
-      <div class="tool-card-colour" style="background:var(--ms-grn);"></div>
-      <div class="tool-card-name">SharePoint</div>
-      <div class="tool-card-desc">Stores the triage log and holds the response library associated with each enquiry type.</div>
-    </div>
-    <div class="tool-card">
-      <div class="tool-card-colour" style="background:var(--ms-yel);"></div>
-      <div class="tool-card-name">Microsoft Teams</div>
-      <div class="tool-card-desc">Optional notifications or approval steps where an enquiry needs immediate attention or escalation.</div>
-    </div>
-  </div>
-</section>
+</div>
 
-<section class="page-section">
-  <div class="sec-label red">Governance</div>
-  <h2 class="sec-title">Assisted triage, not automatic <span class="serif">decision-making.</span></h2>
-  <p class="body-text">This proof of concept does not remove human review. The workflow organises incoming information, suggests likely categories and points staff towards relevant responses or next actions. Staff remain responsible for reviewing each enquiry and deciding what should happen.</p>
-  <p class="body-text">This matters wherever an enquiry may involve personal information, complaints, safeguarding concerns, vulnerable people, legal issues or anything unusual. The workflow is designed to support judgement — not replace it.</p>
-  <div class="principle-box">
-    <strong>Automation should support judgement, not replace it.</strong>
-    The demonstrator is built around this principle. Every enquiry in the triage log is reviewed by a person before any action is taken.
-  </div>
-  <div class="two-col" style="margin-top:3rem;">
-    <div>
-      <p class="body-text">For organisations handling enquiries from service users, clients, patients or members of the public, the governance implications of how incoming messages are managed are significant. An assisted triage workflow can help create a more consistent, auditable and accountable process — without introducing unnecessary automation risk.</p>
+<div class="body-section">
+  <div class="sec-label">Optional monthly support</div>
+  <h2 class="sec-title">Keep it <span class="serif">working</span></h2>
+  <p class="body-text">After setup, Adjona can provide monthly support to review the workflow, adjust categories, update suggested responses, check reporting and make small improvements as the organisation learns from real usage.</p>
+  <div class="support-grid">
+    <div class="support-card">
+      <div class="support-card-label">Light support</div>
+      <div class="support-card-price">from £250/month</div>
+      <div class="support-card-desc">Periodic reviews, category adjustments, minor workflow changes and reporting checks.</div>
     </div>
-    <div>
-      <div class="gov-box">
-        <div class="gov-box-title">A production version would need to consider</div>
-        <div class="gov-grid">
-          <div class="gov-item"><div class="gov-dot" style="background:var(--ms-blue);"></div>Role-based access to the triage log</div>
-          <div class="gov-item"><div class="gov-dot" style="background:var(--ms-blue);"></div>SharePoint permissions and sharing controls</div>
-          <div class="gov-item"><div class="gov-dot" style="background:var(--ms-red);"></div>Retention of enquiry records</div>
-          <div class="gov-item"><div class="gov-dot" style="background:var(--ms-red);"></div>Handling of personal data in email content</div>
-          <div class="gov-item"><div class="gov-dot" style="background:var(--ms-grn);"></div>Escalation routes for sensitive enquiries</div>
-          <div class="gov-item"><div class="gov-dot" style="background:var(--ms-grn);"></div>DPIA requirements where appropriate</div>
-          <div class="gov-item"><div class="gov-dot" style="background:var(--ms-yel);"></div>Staff training and adoption</div>
-          <div class="gov-item"><div class="gov-dot" style="background:var(--ms-yel);"></div>Review and audit of triage logic</div>
-        </div>
-      </div>
+    <div class="support-card">
+      <div class="support-card-label">Core support</div>
+      <div class="support-card-price">from £450/month</div>
+      <div class="support-card-desc">Regular reviews, proactive improvements, response library updates, staff queries and management reporting.</div>
     </div>
   </div>
-</section>
+</div>
 
-<section class="page-section off">
-  <div class="sec-label grn">What it improves</div>
-  <h2 class="sec-title">Better visibility, consistency <span class="serif">and oversight.</span></h2>
-  <p class="body-text">An assisted triage workflow addresses the practical operational problems that build up around unstructured shared mailbox use. The improvements are immediate and measurable.</p>
-  <div class="cap-grid">
-    <div class="cap-item"><div class="cap-dot"></div><div class="cap-text">Visibility of incoming enquiries — staff can see what has arrived, what is waiting and what has been actioned</div></div>
-    <div class="cap-item"><div class="cap-dot"></div><div class="cap-text">Consistency of suggested responses — common enquiry types point to the same starting point every time</div></div>
-    <div class="cap-item"><div class="cap-dot"></div><div class="cap-text">Handover between staff or volunteers — the triage log gives anyone picking up the mailbox an immediate picture</div></div>
-    <div class="cap-item"><div class="cap-dot"></div><div class="cap-text">Basic audit trail — a structured record of every enquiry received and how it was categorised</div></div>
-    <div class="cap-item"><div class="cap-dot"></div><div class="cap-text">Prioritisation — enquiry types can be flagged or routed differently based on category or urgency</div></div>
-    <div class="cap-item"><div class="cap-dot"></div><div class="cap-text">Reporting and service improvement — volume and category data becomes available for management and governance purposes</div></div>
+<div class="body-section">
+  <div class="sec-label">See it in action</div>
+  <h2 class="sec-title">Working <span class="serif">demonstrator</span></h2>
+  <p class="body-text">The video below shows the Assisted Inbox Triage demonstrator — a working example of the type of triage system Adjona can implement for your organisation.</p>
+  <div class="video-wrap">
+    <iframe src="https://www.youtube.com/embed/5hfLLrXUQyA" title="Assisted Inbox Triage Demonstrator — Adjona Technology" allowfullscreen loading="lazy"></iframe>
   </div>
-</section>
+</div>
+</main>
 
-<section class="page-section">
-  <div class="sec-label">Who this could help</div>
-  <h2 class="sec-title">Common situations <span class="serif">we see.</span></h2>
-  <p class="body-text">Assisted email triage is relevant to any organisation where a shared mailbox is handling a significant volume of varied enquiries — and where consistency, visibility and governance matter.</p>
-  <div class="who-grid">
-    <div class="who-card">
-      <div class="who-tag">Charities &amp; CICs</div>
-      <div class="who-title">Managing enquiries from service users, referrers or the public</div>
-      <div class="who-desc">Where incoming messages may include sensitive or safeguarding-related content and a consistent, auditable process is important for governance and funder reporting.</div>
-    </div>
-    <div class="who-card">
-      <div class="who-tag">Care providers</div>
-      <div class="who-title">Handling referrals, clinical queries and administrative requests</div>
-      <div class="who-desc">Where enquiry type determines who needs to act and how quickly, and where missed messages carry real operational risk.</div>
-    </div>
-    <div class="who-card">
-      <div class="who-tag">SMEs &amp; growing businesses</div>
-      <div class="who-title">Scaling up without adding headcount</div>
-      <div class="who-desc">Where a growing volume of enquiries is being handled by a small team and a more structured process would reduce administration and improve response consistency.</div>
-    </div>
-  </div>
-</section>
+<div class="disclaimer">
+  <p>Pricing shown is a typical setup investment. Final scope and price are confirmed after a short discovery conversation. Larger migrations, complex integrations, major data cleansing, licensing changes and extensive staff training are quoted separately.</p>
+</div>
 
-<section class="page-section off">
-  <div class="sec-label yel">What comes next</div>
-  <h2 class="sec-title">A foundation to <span class="serif">build on.</span></h2>
-  <p class="body-text">The Microsoft 365 architecture allows for extension over time. Organisations can start with a practical assisted triage workflow and build towards a more mature operational model — without changing platforms or adding new software.</p>
-  <div class="roadmap-tags">
-    <span class="roadmap-tag">Approval workflows for sensitive enquiries</span>
-    <span class="roadmap-tag">Priority flags by enquiry type</span>
-    <span class="roadmap-tag">Dashboards and service-level tracking</span>
-    <span class="roadmap-tag">Microsoft Teams alerts</span>
-    <span class="roadmap-tag">Response time reporting</span>
-    <span class="roadmap-tag">Integration with case management</span>
-    <span class="roadmap-tag">Automated acknowledgement emails</span>
-    <span class="roadmap-tag">Structured evidence for audits or inspections</span>
-  </div>
-</section>
-
-<div class="cta-strip">
+<div class="cta-section">
   <div class="cta-blue">
-    <div class="cta-tag">Already using Microsoft 365?</div>
-    <h2 class="cta-title">Your shared mailbox could work <span class="serif">a lot harder.</span></h2>
-    <p class="cta-sub">Adjona Technology helps smaller organisations make better use of Microsoft 365 by improving security, governance, workflow design and operational resilience. Let's talk about what's possible for your organisation.</p>
+    <div class="cta-tag">Get Started</div>
+    <h2 class="cta-title">Discuss an Assisted <span class="serif">Inbox Triage System</span></h2>
+    <p class="cta-sub">Book a free introductory conversation to discuss your current inbox setup and whether this package is the right fit.</p>
+    <div class="cta-typical">Typical next step</div>
+    <div class="cta-typical-val">Free · 30 minutes · No obligation</div>
     <div class="cta-actions">
-      <a href="https://outlook.office.com/book/AdjonaTechnologyLimited1@adjona.com/s/ElOd0P60CEiQxQcnIYWXWw2" target="_blank" rel="noopener noreferrer" class="cta-btn-solid">Book a Free Introductory Conversation</a>
-      <a href="demonstrators.html" class="cta-btn-outline">See all demonstrators</a>
+      <a href="https://outlook.office.com/book/AdjonaTechnologyLimited1@adjona.com/s/ElOd0P60CEiQxQcnIYWXWw2" target="_blank" rel="noopener noreferrer" class="cta-btn-solid">Discuss an Assisted Inbox Triage System</a>
+      <a href="packages.html" class="cta-btn-outline">See all solution packages</a>
     </div>
   </div>
-  <div class="cta-right">
+  <div class="cta-right-panel">
     <div class="cta-right-label">Get in touch</div>
-    <div class="contact-block">
-      <div class="contact-line">
-        <div class="contact-line-label">Phone</div>
-        <div class="contact-line-val"><a href="tel:+442033550538">+44 20 3355 0538</a></div>
-      </div>
-      <div class="contact-line">
-        <div class="contact-line-label">Email</div>
-        <div class="contact-line-val"><a href="mailto:info@adjona.com">info@adjona.com</a></div>
-      </div>
-      <div class="contact-line">
-        <div class="contact-line-label">WhatsApp</div>
-        <div class="contact-line-val"><a href="https://wa.me/442033550538" target="_blank" rel="noopener noreferrer">Message us directly</a></div>
-      </div>
-      <div class="contact-line" style="margin-top:.5rem;">
-        <div class="contact-line-label">Response time</div>
-        <div class="contact-line-val" style="font-size:.88rem;font-weight:400;color:var(--muted);">We aim to respond within one working day. No obligation, no hard sell.</div>
-      </div>
-    </div>
+    <div class="contact-item"><div class="contact-item-label">Phone</div><div class="contact-item-val"><a href="tel:+442033550538">+44 20 3355 0538</a></div></div>
+    <div class="contact-item"><div class="contact-item-label">Email</div><div class="contact-item-val"><a href="mailto:info@adjona.com">info@adjona.com</a></div></div>
+    <div class="contact-item"><div class="contact-item-label">WhatsApp</div><div class="contact-item-val"><a href="https://wa.me/442033550538" target="_blank" rel="noopener noreferrer">Message us directly</a></div></div>
   </div>
 </div>
 
 <footer style="padding-bottom:5rem;">
   <div class="f-logo">
-    <svg width="28" height="22" viewBox="0 0 36 28" xmlns="http://www.w3.org/2000/svg">
-      <polygon points="0,28 6,28 7,17 6,16 0,16" fill="#0F4C81"/>
-      <polygon points="9,28 15,28 16,12 15,11 9,11" fill="#D83B01"/>
-      <polygon points="18,28 24,28 25,7 24,6 18,6" fill="#2F6B00"/>
-      <polygon points="27,28 33,28 34,1 33,0 27,0" fill="#F2A900"/>
-    </svg>
+    <svg width="28" height="22" viewBox="0 0 36 28" xmlns="http://www.w3.org/2000/svg"><polygon points="0,28 6,28 7,17 6,16 0,16" fill="#0F4C81"/><polygon points="9,28 15,28 16,12 15,11 9,11" fill="#D83B01"/><polygon points="18,28 24,28 25,7 24,6 18,6" fill="#2F6B00"/><polygon points="27,28 33,28 34,1 33,0 27,0" fill="#F2A900"/></svg>
     <div class="f-name">Adjona <span>Technology</span> Limited</div>
   </div>
   <div class="f-copy-wrap">
-    <div class="f-copy">© 2026 Adjona Technology Limited · Registered in England &amp; Wales · Co. No. 05007410 · 5th Floor, 167-169 Great Portland Street, London W1W 5PF</div>
-    <div style="margin-top:.4rem;">
-      <a href="https://marketplace.microsoft.com/en-gb/partners/c4ead6cf-d6a0-4973-8bf7-f3e644e195ae/overview" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:.5rem;text-decoration:none;">
-        <svg width="14" height="14" viewBox="0 0 23 23" xmlns="http://www.w3.org/2000/svg"><rect x="1" y="1" width="10" height="10" fill="#f25022"/><rect x="12" y="1" width="10" height="10" fill="#7fba00"/><rect x="1" y="12" width="10" height="10" fill="#00a4ef"/><rect x="12" y="12" width="10" height="10" fill="#ffb900"/></svg>
-        <span style="font-family:'JetBrains Mono',monospace;font-size:.58rem;letter-spacing:.08em;color:var(--muted);">View Adjona's Microsoft partner profile</span>
-      </a>
-    </div>
+    <div class="f-copy">&copy; 2026 Adjona Technology Limited &middot; Registered in England &amp; Wales &middot; Co. No. 05007410 &middot; 5th Floor, 167-169 Great Portland Street, London W1W 5PF</div>
+    <div style="margin-top:.4rem;"><a href="https://marketplace.microsoft.com/en-gb/partners/c4ead6cf-d6a0-4973-8bf7-f3e644e195ae/overview" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:.5rem;text-decoration:none;"><svg width="14" height="14" viewBox="0 0 23 23" xmlns="http://www.w3.org/2000/svg"><rect x="1" y="1" width="10" height="10" fill="#f25022"/><rect x="12" y="1" width="10" height="10" fill="#7fba00"/><rect x="1" y="12" width="10" height="10" fill="#00a4ef"/><rect x="12" y="12" width="10" height="10" fill="#ffb900"/></svg><span style="font-family:'JetBrains Mono',monospace;font-size:.58rem;letter-spacing:.08em;color:#444;">View Adjona's Microsoft partner profile</span></a></div>
   </div>
-  <ul class="f-links">
+  <ul class="f-links" style="align-items:center;">
     <li><a href="https://www.linkedin.com/company/adjona-technology-limited/" target="_blank" rel="noopener noreferrer" style="display:flex;align-items:center;gap:.4rem;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" style="flex-shrink:0;"><path fill="currentColor" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg> LinkedIn</a></li>
     <li><a href="https://www.youtube.com/@AdjonaTechnology" target="_blank" rel="noopener noreferrer" style="display:flex;align-items:center;gap:.4rem;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABOcAAAQzCAYAAAAozUiIAAAACXBIWXMAABcRAAAXEQHKJvM/AAAgAElEQVR4nOzd3XUVd7bu4dmMfY9OBCrPBJAjYDkCcATIEViOwCKCI0dw5AgOjmCLDEQC/72I4OAIOBdV2DIWoI9VNevjecZguIe7t/u9arZ+VM36z8ePHwMAAAAAmN6T6gEAAAAAsFXiHAAAAAAUEecAAAAAoIg4BwAAAABFxDkAAAAAKCLOAQAAAEARcQ4AAAAAiohzAAAAAFBEnAMAAACAIuIcAAAAABQR5wAAAACgiDgHAAAAAEXEOQAAAAAoIs4BAAAAQBFxDgAAAACKiHMAAAAAUEScAwAAAIAi4hwAAAAAFBHnAAAAAKCIOAcAAAAARcQ5AAAAACgizgEAAABAEXEOAAAAAIqIcwAAAABQRJwDAAAAgCLiHAAAAAAUEecAAAAAoIg4BwAAAABFxDkAAAAAKCLOAQAAAEARcQ4AAAAAiohzAAAAAFBEnAMAAACAIuIcAAAAABQR5wAAAACgiDgHAAAAAEXEOQAAAAAoIs4BAAAAQBFxDgAAAACKiHMAAAAAUEScAwAAAIAi4hwAAAAAFBHnAAAAAKCIOAcAAAAARcQ5AAAAACgizgEAAABAEXEOAAAAAIqIcwAAAABQRJwDAAAAgCLiHAAAAAAUEecAAAAAoIg4BwAAAABFxDkAAAAAKCLOAQAAAEARcQ4AAAAAiohzAAAAAFBEnAMAAACAIuIcAAAAABQR5wAAAACgiDgHAAAAAEXEOQAAAAAoIs4BAAAAQBFxDgAAAACKiHMAAAAAUEScAwAAAIAi4hwAAAAAFBHnAAAAAKCIOAcAAAAARcQ5AAAAACgizgEAAABAEXEOAAAAAIqIcwAAAABQRJwDAAAAgCLiHAAAAAAUEecAAAAAoIg4BwAAAABFxDkAAAAAKCLOAQAAAEARcQ4AAAAAiohzAAAAAFBEnAMAAACAIuIcAAAAABQR5wAAAACgiDgHAAAAAEXEOQAAAAAoIs4BAAAAQBFxDgAAAACKiHMAAAAAUEScAwAAAIAi4hwAAAAAFBHnAAAAAKCIOAcAAAAARcQ5AAAAACgizgEAAABAEXEOAAAAAIqIcwAAAABQRJwDAAAAgCLiHAAAAAAUEecAAAAAoIg4BwAAAABFxDkAAAAAKCLOAQAAAEARcQ4AAAAAiohzAAAAAFBEnAMAAACAIuIcAAAAABQR5wAAAACgiDgHAAAAAEXEOQAAAAAoIs4BAAAAQBFxDgAAAACKiHMAAAAAUEScAwAAAIAi4hwAAAAAFBHnAAAAAKCIOAcAAAAARcQ5AAAAACgizgEAAABAEXEOAAAAAIqIcwAAAABQRJwDAAAAgCLiHAAAAAAUEecAAAAAoIg4BwAAAABFxDkAAAAAKCLOAQAAAEARcQ4AAAAAiohzAAAAAFBEnAMAAACAIuIcAAAAABQR5wAAAACgiDgHAAAAAEXEOQAAAAAoIs4BAAAAQBFxDgAAAACKiHMAAAAAUEScAwAAAIAi4hwAAAAAFBHnAAAAAKCIOAcAAAAARcQ5AAAAACgizgEAAABAEXEOAAAAAIqIcwAAAABQRJwDAAAAgCLiHAAAAAAUEecAAAAAoIg4BwAAAABFxDkAAAAAKCLOAQAAAEARcQ4AAAAAiohzAAAAAFBEnAMAAACAIuIcAAAAABQR5wAAAACgiDgHAAAAAEXEOQAAAAAoIs4BAAAAQBFxDgAAAACKiHMAAAAAUEScAwAAAIAi4hwAAAAAFBHnAAAAAKCIOAcAAAAARcQ5AAAAACgizgEAAABAEXEOAAAAAIqIcwAAAABQRJwDAAAAgCLiHAAAAAAUEecAAAAAoIg4BwAAAABFxDkAAAAAKCLOAQAAAEARcQ4AAAAAiohzAAAAAFBEnAMAAACAIuIcAAAAABQR5wAAAACgiDgHAAAAAEXEOQAAAAAoIs4BAAAAQBFxDgAAAACKiHMAAAAAUEScAwAAAIAi4hwAAAAAFBHnAAAAAKCIOAcAAAAARcQ5AAAAACgizgEAAABAEXEOAAAAAIqIcwAAAABQRJwDAAAAgCLiHAAAAAAUEecAAAAAoIg4BwAAAABFxDkAAAAAKCLOAQAAAEARcQ4AAAAAiohzAAAAAFBEnAMAAACAIuIcAAAAABQR5wAAAACgiDgHAAAAAEXEOQAAAAAoIs4BAAAAQBFxDgAAAACKiHMAAAAAUEScAwAAAIAi4hwAAAAAFBHnAAAAAKCIOAcAAAAARcQ5AAAAACgizgEAAABAEXEOAAAAAIqIcwAAAABQRJwDAAAAgCLiHAAAAAAUEecAAAAAoIg4BwAAAABFxDkAAAAAKCLOAQAAAEARcQ4AAAAAiohz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BwAAAAAh4hwAAAAAhIhzAAAAABAizgEAAABAiDgHAAAAACHiHAAAAACEiHMAAAAAECLOAQAAAECIOAcAAAAAIeIcAAAAAISIcwAAAAAQIs4BAAAAQIg4BwAAAAAh4hwAAAAAhIhzAAAAABAizgEAAABAiDgHAAAAACHiHAAAAACEiHMAAAAAECLOAQAAAECIOAcAAAAAIeIcAAAAAISIcwAAAAAQIs4BAAAAQIg4BwAAAAAh4hwAAAAAhIhzAAAAABAizgEAAABAiDgHAAAAACHiHAAAAACEiHMAAAAAECLOAQAAAECIOAcAAAAAIeIcAAAAAISIcwAAAAAQIs4BAAAAQIg4BwAAAAAh4hwAAAAAhIhzAAAAABAizgEAAABAiDgHAAAAACHiHAAAAACEiHMAAAAAECLOAQAAAECIOAcAAAAAIeIcAAAAAISIcwAAAAAQIs4BAAAAQIg4BwAAAAAh4hwAAAAAhIhzAAAAABAizgEAAABAiDgHAAAAACHiHAAAAACEiHMAAAAAECLOAQAAAECIOAcAAAAAIeIcAAAAAISIcwAAAAAQIs4BAAAAQIg4BwAAAAAh4hwAAAAAhIhzAAAAABAizgEAAABAiDgHAAAAACHiHAAAAACEiHMAAAAAECLOAQAAAECIOAcAAAAAIeIcAAAAAISIcwAAAAAQIs4BAAAAQIg4BwAAAAAh4hwAAAAAhIhzAAAAABAizgEAAABAiDgHAAAAACHiHAAAAACEiHMAAAAAECLOAQAAAECIOAcAAAAAIeIcAAAAAISIcwAAAAAQIs4BAAAAQIg4BwAAAAAh4hwAAAAAhIhzAAAAABAizgEAAABAiDgHAAAAACHiHAAAAACEiHMAAAAAECLOAQAAAECIOAcAAAAAIeIcAAAAAISIcwAAAAAQIs4BAAAAQIg4BwAAAAAh4hwAAAAAhIhzAAAAABAizgEAAABAiDgHAAAAACHiHAAAAACEiHMAAAAAECLOAQAAAECIOAcAAAAAIeIcAAAAAISIcwAAAAAQIs4BAAAAQIg4BwAAAAAh4hwAAAAAhIhzAAAAABAizgEAAABAiDgHAAAAACHiHAAAAACEiHMAAAAAECLOAQAAAECIOAcAAAAAIeIcAAAAAISIcwAAAAAQIs4BAAAAQIg4BwAAAAAh4hwAAAAAhIhzAAAAABAizgEAAABAiDgHAAAAACHiHAAAAACEiHMAAAAAECLOAQAAAECIOAcAAAAAIeIcAAAAAISIcwAAAAAQIs4BAAAAQIg4BwAAAAAh4hwAAAAAhIhzAAAAABAizgEAAABAiDgHAAAAACHiHAAAAACEiHMAAAAAECLOAQAAAECIOAcAAAAAIeIcAAAAAISIcwAAAAAQIs4BAAAAQIg4BwAAAAAh4hwAAAAAhIhzAAAAABAizgEAAABAiDgHAAAAACHiHAAAAACEiHMAAAAAECLOAQAAAEDI/wNKqT/pk/lSMgAAAABJRU5ErkJggg==" width="14" height="14" alt="" aria-hidden="true" style="display:block;"> YouTube</a></li>
     <li><a href="https://adjona.eventbrite.com" target="_blank" rel="noopener noreferrer">Events</a></li>
-    <li><a href="https://outlook.office.com/book/AdjonaTechnologyLimited1@adjona.com/s/ElOd0P60CEiQxQcnIYWXWw2?ismsaljsauthenabled" target="_blank" rel="noopener noreferrer">Book a Call</a></li>
+    <li><a href="https://outlook.office.com/book/AdjonaTechnologyLimited1@adjona.com/s/ElOd0P60CEiQxQcnIYWXWw2" target="_blank" rel="noopener noreferrer">Book a Call</a></li>
     <li><a href="adjona-privacy.html">Privacy Policy</a></li>
     <li><a href="adjona-terms.html">Terms &amp; Conditions</a></li>
     <li><a href="mailto:info@adjona.com">info@adjona.com</a></li>
   </ul>
 </footer>
 
-<a href="https://wa.me/442033550538?text=Hi%2C%20I%27m%20interested%20in%20a%20Microsoft%20365%20security%20review%20for%20our%20organisation.%20We%20are%20a%20%5Bcharity%2FSME%5D%20with%20approximately%20%5BX%5D%20users.%20Could%20you%20advise%20on%20next%20steps%3F" class="wa-float" target="_blank" rel="noopener noreferrer">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-  </svg>
-  Quick question about your setup?
-</a>
+<a href="https://wa.me/442033550538?text=Hi%2C%20I%27d%20like%20to%20discuss%20the%20Assisted%20Inbox%20Triage%20System%20package." class="wa-float" target="_blank" rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>Question about this package?</a>
 
 <script>
 document.addEventListener('DOMContentLoaded',function(){
   document.querySelectorAll('.nav-links a,.nav-cta-mobile').forEach(function(link){
-    link.addEventListener('click',function(e){
+    link.addEventListener('click',function(){
       var nav=document.querySelector('nav');
       nav.querySelector('.nav-links').classList.remove('nav-open');
       nav.querySelector('.nav-cta-mobile').classList.remove('nav-open');
@@ -524,16 +263,7 @@ document.addEventListener('DOMContentLoaded',function(){
   });
 });
 var waBtn=document.querySelector('.wa-float');
-if(waBtn){
-  window.addEventListener('scroll',function(){
-    var footer=document.querySelector('footer');
-    if(footer){
-      var footerTop=footer.getBoundingClientRect().top;
-      if(footerTop<window.innerHeight){waBtn.classList.add('wa-hidden');}
-      else{waBtn.classList.remove('wa-hidden');}
-    }
-  });
-}
+if(waBtn){window.addEventListener('scroll',function(){var footer=document.querySelector('footer');if(footer){var ft=footer.getBoundingClientRect().top;if(ft<window.innerHeight){waBtn.classList.add('wa-hidden');}else{waBtn.classList.remove('wa-hidden');}}});}
 </script>
 </body>
 </html>
