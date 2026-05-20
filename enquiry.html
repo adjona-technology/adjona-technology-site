@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us | Adjona Technology</title>
+<meta name="description" content="Get in touch with Adjona Technology. Tell us what you need help with and we will review your enquiry and reply with the most suitable next step.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="192x192" href="favicon-192.png">
+<meta property="og:title" content="Contact Us | Adjona Technology">
+<meta property="og:description" content="Tell us what you need help with. Adjona Technology will review your enquiry and reply with the most suitable next step.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://adjona.com/enquiry.html">
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;700;800;900&family=Lora:ital,wght@1,500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<!-- Clarity tracking code for https://adjona.com/ -->
+<script>
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "wmyh9800tx");
+</script>
+<style>
+:root{
+  --white:#ffffff;--off:#f5f5f0;--ink:#0d0d0d;
+  --ms-blue:#0F4C81;--ms-red:#D83B01;--ms-grn:#2F6B00;--ms-yel:#F2A900;
+  --muted:#444;--border:rgba(13,13,13,0.1);
+  --nav-h:62px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--white);color:var(--ink);font-family:'Epilogue',sans-serif;font-weight:400;overflow-x:hidden;}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:0 0 0 4rem;background:#fff;border-bottom:2px solid var(--ink);}
+.logo{display:flex;align-items:center;gap:.75rem;padding:1.1rem 0;text-decoration:none;}
+.logo-name{font-family:'Epilogue',sans-serif;font-size:1.1rem;font-weight:900;letter-spacing:-.02em;white-space:nowrap;color:var(--ink);}
+.logo-name span{color:var(--ms-blue);}
+.nav-links{display:flex;list-style:none;}
+.nav-links a{font-family:'JetBrains Mono',monospace;font-size:.63rem;letter-spacing:.14em;text-transform:uppercase;color:#333;text-decoration:none;padding:1.5rem 1.4rem;border-left:2px solid var(--border);display:block;transition:color .2s,background .2s;}
+.nav-links a:hover{color:var(--ms-blue);background:rgba(0,120,212,.04);}
+.nav-links a.active{color:var(--ms-blue);}
+.nav-cta{font-family:'Epilogue',sans-serif;font-size:.88rem;font-weight:900;background:var(--ms-blue);color:#fff;text-decoration:none;border-left:2px solid var(--ink);padding:1.5rem 2.2rem;cursor:pointer;transition:background .2s;display:block;}
+.nav-cta:hover{background:#0062b0;}
+.nav-hamburger{display:none;}
+.nav-cta-mobile{display:none;}
+
+.four-stripe{display:grid;grid-template-columns:repeat(4,1fr);height:6px;}
+.fs.b{background:var(--ms-blue);}.fs.r{background:var(--ms-red);}.fs.g{background:var(--ms-grn);}.fs.y{background:var(--ms-yel);}
+
+/* PAGE HERO */
+.page-hero{padding:calc(var(--nav-h) + 5rem) 4rem 5rem;border-bottom:2px solid var(--ink);background:var(--ms-blue);}
+.page-hero-inner{max-width:860px;}
+.page-breadcrumb{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.6);margin-bottom:1.5rem;}
+.page-breadcrumb a{color:rgba(255,255,255,.6);text-decoration:none;}
+.page-breadcrumb a:hover{color:#fff;}
+.page-tag{font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.2em;color:var(--ms-yel);margin-bottom:1.5rem;display:block;padding-left:2.25rem;position:relative;}
+.page-tag::before{content:'';width:28px;height:2px;background:var(--ms-yel);position:absolute;left:0;top:50%;transform:translateY(-50%);}
+.page-hero h1{font-family:'Epilogue',sans-serif;font-size:clamp(2.8rem,5vw,5.5rem);font-weight:900;line-height:.92;letter-spacing:-.04em;color:#fff;margin-bottom:1.5rem;}
+.page-hero h1 .serif{font-family:'Lora',serif;font-style:italic;font-weight:500;}
+.page-hero-body{font-size:1.05rem;line-height:1.85;color:rgba(255,255,255,.8);max-width:640px;}
+
+/* CONTENT */
+.content-grid{display:grid;grid-template-columns:1fr 1.4fr;border-bottom:2px solid var(--ink);}
+.content-left{padding:5rem 4rem;border-right:2px solid var(--ink);}
+.content-right{padding:5rem 4rem;background:var(--off);}
+
+.sec-label{font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ms-blue);margin-bottom:.75rem;}
+.sec-title{font-family:'Epilogue',sans-serif;font-size:clamp(1.8rem,3vw,2.8rem);font-weight:900;letter-spacing:-.03em;line-height:1;margin-bottom:1.25rem;}
+.sec-title .serif{font-family:'Lora',serif;font-style:italic;font-weight:500;}
+.body-text{font-size:.95rem;color:var(--muted);line-height:1.85;margin-bottom:1rem;}
+
+/* WHAT HAPPENS */
+.steps{display:flex;flex-direction:column;gap:0;border:2px solid var(--ink);margin-top:2rem;}
+.step{display:flex;align-items:flex-start;gap:1rem;padding:1.25rem 1.5rem;border-bottom:1px solid var(--border);}
+.step:last-child{border-bottom:none;}
+.step-num{font-family:'JetBrains Mono',monospace;font-size:.65rem;color:var(--ms-blue);flex-shrink:0;padding-top:.2rem;min-width:2rem;}
+.step-text{font-size:.88rem;color:var(--muted);line-height:1.7;}
+
+/* ALTERNATIVE */
+.alt-block{margin-top:2.5rem;padding:1.5rem;border-left:3px solid var(--ms-yel);background:#fffdf0;}
+.alt-label{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:#7a5200;margin-bottom:.5rem;}
+.alt-text{font-size:.88rem;color:#5a4400;line-height:1.7;margin-bottom:.75rem;}
+.alt-link{font-family:'Epilogue',sans-serif;font-size:.9rem;font-weight:900;color:#fff;background:var(--ms-blue);text-decoration:none;padding:.65rem 1.5rem;display:inline-block;transition:background .2s;}
+.alt-link:hover{background:#0062b0;}
+
+/* FORM EMBED */
+.form-wrap{width:100%;border:2px solid var(--ink);background:var(--white);}
+.form-intro{padding:1.5rem 1.5rem .5rem;border-bottom:1px solid var(--border);}
+.form-intro-text{font-size:.85rem;color:var(--muted);line-height:1.7;}
+
+/* CONTACT DETAILS */
+.contact-items{display:flex;flex-direction:column;gap:1.5rem;margin-top:2rem;}
+.contact-item{display:flex;flex-direction:column;gap:.25rem;}
+.contact-item-label{font-family:'JetBrains Mono',monospace;font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);}
+.contact-item-val{font-family:'Epilogue',sans-serif;font-size:1rem;font-weight:700;color:var(--ink);}
+.contact-item-val a{color:var(--ms-blue);text-decoration:none;}
+.contact-item-val a:hover{text-decoration:underline;}
+
+/* FOOTER */
+footer{display:flex;align-items:center;justify-content:space-between;padding:1.5rem 4rem;border-top:2px solid var(--ink);}
+.f-copy-wrap{display:flex;flex-direction:column;gap:.2rem;}
+.f-logo{display:flex;align-items:center;gap:.65rem;}
+.f-name{font-family:'Epilogue',sans-serif;font-size:1rem;font-weight:900;letter-spacing:-.02em;}
+.f-name span{color:var(--ms-blue);}
+.f-copy{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.06em;color:#333;}
+.f-links{display:flex;gap:2rem;list-style:none;align-items:center;}
+.f-links a{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:#333;text-decoration:none;transition:color .2s;}
+.f-links a:hover{color:var(--ms-blue);}
+
+.wa-float{position:fixed;bottom:2rem;right:2rem;z-index:500;display:flex;align-items:center;gap:.6rem;background:#25D366;color:#1a1a1a;padding:.75rem 1.25rem .75rem .9rem;border-radius:100px;box-shadow:0 4px 20px rgba(37,211,102,.35);text-decoration:none;font-family:'Epilogue',sans-serif;font-size:.82rem;font-weight:700;transition:transform .2s,box-shadow .2s,opacity .2s;}
+.wa-float:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(37,211,102,.45);}
+.wa-float svg{width:20px;height:20px;flex-shrink:0;}
+.wa-float.wa-hidden{opacity:0;pointer-events:none;}
+
+@media(max-width:1000px){
+  .nav-cta{display:none;}
+  .nav-links a{font-size:.58rem;padding:1rem .9rem;letter-spacing:.1em;}
+  .content-grid{grid-template-columns:1fr;}
+  .content-left{border-right:none;border-bottom:2px solid var(--ink);padding:3rem 1.5rem;}
+  .content-right{padding:3rem 1.5rem;}
+}
+@media(max-width:768px){
+  :root{--nav-h:58px;}
+  nav{padding:0 1.25rem;flex-wrap:wrap;}
+  .logo{padding:.85rem 0;}
+  .nav-links{display:none;width:100%;flex-direction:column;border-top:1px solid var(--border);}
+  .nav-links.nav-open{display:flex;background:#fff;}
+  .nav-links a{border-left:none;border-bottom:1px solid var(--border);padding:1rem 0;}
+  .nav-hamburger{display:block;background:none;border:none;font-size:1.4rem;cursor:pointer;padding:.5rem;color:var(--ink);margin-left:auto;}
+  .nav-cta{display:none !important;}
+  .nav-cta-mobile{display:none !important;}
+  .nav-cta-mobile.nav-open{display:block !important;width:100%;font-family:'Epilogue',sans-serif;font-size:.82rem;font-weight:900;background:var(--ms-blue);color:#fff;text-decoration:none;text-align:center;padding:1rem 1.25rem;border-top:2px solid var(--ink);}
+  .page-hero{padding:calc(var(--nav-h) + 2.5rem) 1.5rem 3rem;}
+  footer{flex-direction:column;align-items:flex-start;gap:1.25rem;padding:1.5rem;}
+  .f-links{flex-wrap:wrap;gap:1rem;}
+  .wa-float{display:none;}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="logo">
+    <svg width="36" height="28" viewBox="0 0 36 28" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="0,28 6,28 7,17 6,16 0,16" fill="#0F4C81"/>
+      <polygon points="9,28 15,28 16,12 15,11 9,11" fill="#D83B01"/>
+      <polygon points="18,28 24,28 25,7 24,6 18,6" fill="#2F6B00"/>
+      <polygon points="27,28 33,28 34,1 33,0 27,0" fill="#F2A900"/>
+    </svg>
+    <div class="logo-name">Adjona <span>Technology</span></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html#approach">About</a></li>
+    <li><a href="index.html#services">Services</a></li>
+    <li><a href="additional-services.html">Projects &amp; Support</a></li>
+    <li><a href="demonstrators.html">Practical Demonstrators</a></li>
+    <li><a href="index.html#certs">Credentials</a></li>
+    <li><a href="enquiry.html" class="active">Contact Us</a></li>
+  </ul>
+  <a href="https://outlook.office.com/book/AdjonaTechnologyLimited1@adjona.com/s/ElOd0P60CEiQxQcnIYWXWw2" target="_blank" rel="noopener noreferrer" class="nav-cta">Book a Free Introductory Conversation</a>
+  <button class="nav-hamburger" aria-label="Menu" onclick="
+    var nav=this.closest('nav');
+    nav.querySelector('.nav-links').classList.toggle('nav-open');
+    nav.querySelector('.nav-cta-mobile').classList.toggle('nav-open');
+  ">&#9776;</button>
+  <a href="https://outlook.office.com/book/AdjonaTechnologyLimited1@adjona.com/s/ElOd0P60CEiQxQcnIYWXWw2" target="_blank" rel="noopener noreferrer" class="nav-cta-mobile">Book a Free Introductory Conversation</a>
+</nav>
+
+<section class="page-hero">
+  <div class="page-hero-inner">
+    <div class="page-breadcrumb"><a href="index.html">Adjona Technology</a> &nbsp;/&nbsp; Contact Us</div>
+    <span class="page-tag">Get in Touch</span>
+    <h1>Tell us what you<br>need <span class="serif">help with.</span></h1>
+    <p class="page-hero-body">Adjona Technology will review your enquiry and reply with the most suitable next step — which may be an email response, an introductory conversation, or a paid assessment where appropriate.</p>
+  </div>
+</section>
+
+<div class="four-stripe">
+  <div class="fs b"></div><div class="fs r"></div><div class="fs g"></div><div class="fs y"></div>
+</div>
+
+<main>
+<div class="content-grid">
+  <div class="content-left">
+
+    <div style="margin-bottom:3rem;">
+      <div class="sec-label">What happens next</div>
+      <h2 class="sec-title">We'll get back to <span class="serif">you promptly.</span></h2>
+      <p class="body-text">Fill in the form and tell us about your organisation and what you need help with. We review every enquiry personally and respond within one working day.</p>
+      <div class="steps">
+        <div class="step"><div class="step-num">01</div><div class="step-text">You submit the enquiry form with details about your organisation and what you need help with</div></div>
+        <div class="step"><div class="step-num">02</div><div class="step-text">Adjona Technology reviews your enquiry — usually within one working day</div></div>
+        <div class="step"><div class="step-num">03</div><div class="step-text">We reply with the most suitable next step — an email response, a free introductory conversation, or a paid review where appropriate</div></div>
+        <div class="step"><div class="step-num">04</div><div class="step-text">No obligation, no hard sell — just honest, practical advice about whether and how we can help</div></div>
+      </div>
+    </div>
+
+    <div class="alt-block">
+      <div class="alt-label">Ready to book directly?</div>
+      <p class="alt-text">If you'd prefer to skip the form and book a free 30-minute introductory conversation straight away, you can do that here.</p>
+      <a href="https://outlook.office.com/book/AdjonaTechnologyLimited1@adjona.com/s/ElOd0P60CEiQxQcnIYWXWw2" target="_blank" rel="noopener noreferrer" class="alt-link">Book a Free Introductory Conversation &rarr;</a>
+    </div>
+
+    <div class="contact-items" style="margin-top:3rem;">
+      <div class="contact-item">
+        <div class="contact-item-label">Phone</div>
+        <div class="contact-item-val"><a href="tel:+442033550538">+44 20 3355 0538</a></div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-item-label">Email</div>
+        <div class="contact-item-val"><a href="mailto:info@adjona.com">info@adjona.com</a></div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-item-label">WhatsApp</div>
+        <div class="contact-item-val"><a href="https://wa.me/442033550538" target="_blank" rel="noopener noreferrer">Message us directly</a></div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-item-label">Registered office</div>
+        <div class="contact-item-val" style="font-size:.88rem;font-weight:400;color:var(--muted);">5th Floor, 167-169 Great Portland Street, London W1W 5PF</div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="content-right">
+    <div class="sec-label">Enquiry Form</div>
+    <h2 class="sec-title" style="margin-bottom:1.5rem;">Send us an <span class="serif">enquiry.</span></h2>
+    <p class="body-text" style="margin-bottom:1.5rem;">The form below is connected to our intake system. Your enquiry will be logged, reviewed and followed up personally.</p>
+    <div class="form-wrap">
+      <iframe src="https://forms.office.com/Pages/ResponsePage.aspx?id=z9bqxKDWc0mL9_PmROGVrshI0Fi3teFPvW6mpagZELJUNVI0MDNBNzJMUVFDMFdBOUFKOFREOEdZOC4u&embed=true" frameborder="0" marginwidth="0" marginheight="0" style="border:none;width:100%;min-height:700px;" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen title="Adjona Technology Enquiry Form"></iframe>
+    </div>
+  </div>
+</div>
+</main>
+
+<footer style="padding-bottom:5rem;">
+  <div class="f-logo">
+    <svg width="28" height="22" viewBox="0 0 36 28" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="0,28 6,28 7,17 6,16 0,16" fill="#0F4C81"/>
+      <polygon points="9,28 15,28 16,12 15,11 9,11" fill="#D83B01"/>
+      <polygon points="18,28 24,28 25,7 24,6 18,6" fill="#2F6B00"/>
+      <polygon points="27,28 33,28 34,1 33,0 27,0" fill="#F2A900"/>
+    </svg>
+    <div class="f-name">Adjona <span>Technology</span> Limited</div>
+  </div>
+  <div class="f-copy-wrap">
+    <div class="f-copy">© 2026 Adjona Technology Limited · Registered in England &amp; Wales · Co. No. 05007410 · 5th Floor, 167-169 Great Portland Street, London W1W 5PF</div>
+    <div style="margin-top:.4rem;">
+      <a href="https://marketplace.microsoft.com/en-gb/partners/c4ead6cf-d6a0-4973-8bf7-f3e644e195ae/overview" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:.5rem;text-decoration:none;">
+        <svg width="14" height="14" viewBox="0 0 23 23" xmlns="http://www.w3.org/2000/svg"><rect x="1" y="1" width="10" height="10" fill="#f25022"/><rect x="12" y="1" width="10" height="10" fill="#7fba00"/><rect x="1" y="12" width="10" height="10" fill="#00a4ef"/><rect x="12" y="12" width="10" height="10" fill="#ffb900"/></svg>
+        <span style="font-family:'JetBrains Mono',monospace;font-size:.58rem;letter-spacing:.08em;color:#444;">View Adjona's Microsoft partner profile</span>
+      </a>
+    </div>
+  </div>
+  <ul class="f-links">
+    <li><a href="https://www.linkedin.com/company/adjona-technology-limited/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+    <li><a href="https://www.youtube.com/@AdjonaTechnology" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+    <li><a href="https://adjona.eventbrite.com" target="_blank" rel="noopener noreferrer">Events</a></li>
+    <li><a href="https://outlook.office.com/book/AdjonaTechnologyLimited1@adjona.com/s/ElOd0P60CEiQxQcnIYWXWw2" target="_blank" rel="noopener noreferrer">Book a Call</a></li>
+    <li><a href="adjona-privacy.html">Privacy Policy</a></li>
+    <li><a href="adjona-terms.html">Terms &amp; Conditions</a></li>
+    <li><a href="mailto:info@adjona.com">info@adjona.com</a></li>
+  </ul>
+</footer>
+
+<a href="https://wa.me/442033550538?text=Hi%2C%20I%27d%20like%20to%20find%20out%20more%20about%20Adjona%20Technology." class="wa-float" target="_blank" rel="noopener noreferrer">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+  Quick question?
+</a>
+
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+  document.querySelectorAll('.nav-links a,.nav-cta-mobile').forEach(function(link){
+    link.addEventListener('click',function(){
+      var nav=document.querySelector('nav');
+      nav.querySelector('.nav-links').classList.remove('nav-open');
+      nav.querySelector('.nav-cta-mobile').classList.remove('nav-open');
+    });
+  });
+});
+var waBtn=document.querySelector('.wa-float');
+if(waBtn){
+  window.addEventListener('scroll',function(){
+    var footer=document.querySelector('footer');
+    if(footer){
+      var footerTop=footer.getBoundingClientRect().top;
+      if(footerTop<window.innerHeight){waBtn.classList.add('wa-hidden');}
+      else{waBtn.classList.remove('wa-hidden');}
+    }
+  });
+}
+</script>
+</body>
+</html>
