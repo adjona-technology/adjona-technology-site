@@ -68,7 +68,7 @@
   </url>
   <url>
     <loc>https://adjona.com/insights.html</loc>
-    <lastmod>2026-06-04</lastmod>
+    <lastmod>2026-06-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -89,5 +89,17 @@
     <lastmod>2026-06-04</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://adjona.com/insights/fixing-teams-sharepoint-file-access.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://adjona.com/insights/care-provider-records-evidence-microsoft-365.html</loc>
+    <lastmod>2026-06-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>
