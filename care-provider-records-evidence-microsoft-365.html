@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Can your care service find and protect the records, emails and evidence it relies on? | Adjona Technology</title>
+<meta name="description" content="Many care providers use Microsoft 365 every day — but important records, emails and evidence can still be scattered, unprotected and hard to find when it matters most.">
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<link rel="icon" type="image/x-icon" href="../favicon.ico">
+<link rel="apple-touch-icon" sizes="192x192" href="../favicon-192.png">
+<meta property="og:title" content="Can your care service find and protect the records, emails and evidence it relies on? | Adjona Technology">
+<meta property="og:description" content="Many care providers use Microsoft 365 every day — but important records, emails and evidence can still be scattered, unprotected and hard to find when it matters most.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://adjona.com/insights/care-provider-records-evidence-microsoft-365.html">
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;700;800;900&family=Lora:ital,wght@1,500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script>
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "wmyh9800tx");
+</script>
+<style>
+:root{
+  --white:#ffffff;--off:#f5f5f0;--ink:#0d0d0d;
+  --ms-blue:#0F4C81;--ms-red:#D83B01;--ms-grn:#2F6B00;--ms-yel:#F2A900;
+  --muted:#444;--border:rgba(13,13,13,0.1);
+  --nav-h:62px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--white);color:var(--ink);font-family:'Epilogue',sans-serif;font-weight:400;overflow-x:hidden;}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:0 0 0 4rem;background:#fff;border-bottom:2px solid var(--ink);}
+.logo{display:flex;align-items:center;gap:.75rem;padding:1.1rem 0;text-decoration:none;}
+.logo-name{font-family:'Epilogue',sans-serif;font-size:1.1rem;font-weight:900;letter-spacing:-.02em;white-space:nowrap;color:var(--ink);}
+.logo-name span{color:var(--ms-blue);}
+.nav-links{display:flex;list-style:none;}
+.nav-links a{font-family:'JetBrains Mono',monospace;font-size:.63rem;letter-spacing:.14em;text-transform:uppercase;color:#333;text-decoration:none;padding:1.5rem 1.4rem;border-left:2px solid var(--border);display:block;transition:color .2s,background .2s;}
+.nav-links a:hover{color:var(--ms-blue);background:rgba(0,120,212,.04);}
+.nav-links a.active{color:var(--ms-blue);}
+.nav-cta{font-family:'Epilogue',sans-serif;font-size:.88rem;font-weight:900;background:var(--ms-blue);color:#fff;text-decoration:none;border-left:2px solid var(--ink);padding:1.5rem 2.2rem;cursor:pointer;transition:background .2s;display:block;}
+.nav-cta:hover{background:#0062b0;}
+.nav-hamburger{display:none;}
+.nav-cta-mobile{display:none;}
+
+.four-stripe{display:grid;grid-template-columns:repeat(4,1fr);height:6px;}
+.fs.b{background:var(--ms-blue);}.fs.r{background:var(--ms-red);}.fs.g{background:var(--ms-grn);}.fs.y{background:var(--ms-yel);}
+
+.art-hero{padding:calc(var(--nav-h) + 5rem) 4rem 5rem;border-bottom:2px solid var(--ink);}
+.art-hero-inner{max-width:860px;}
+.page-breadcrumb{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:1.5rem;}
+.page-breadcrumb a{color:var(--muted);text-decoration:none;}
+.page-breadcrumb a:hover{color:var(--ms-blue);}
+.art-tag{font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.2em;color:var(--ms-blue);margin-bottom:1.5rem;display:block;padding-left:2.25rem;position:relative;}
+.art-tag::before{content:'';width:28px;height:2px;background:var(--ms-blue);position:absolute;left:0;top:50%;transform:translateY(-50%);}
+.art-hero h1{font-family:'Epilogue',sans-serif;font-size:clamp(2rem,4vw,4.2rem);font-weight:900;line-height:.96;letter-spacing:-.04em;margin-bottom:1.5rem;}
+.art-hero h1 .serif{font-family:'Lora',serif;font-style:italic;font-weight:500;letter-spacing:-.02em;}
+.art-hero-intro{font-size:1.05rem;line-height:1.85;color:var(--muted);max-width:680px;margin-bottom:2rem;font-weight:700;color:var(--ink);}
+.art-meta{display:flex;gap:2rem;flex-wrap:wrap;}
+.art-meta-item{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);}
+
+.art-body{display:grid;grid-template-columns:1fr 280px;gap:0;border-bottom:2px solid var(--ink);}
+.art-content{padding:4rem;border-right:2px solid var(--ink);}
+.art-content p{font-size:.95rem;line-height:1.9;color:var(--muted);margin-bottom:1.5rem;}
+.art-content h2{font-family:'Epilogue',sans-serif;font-size:1.35rem;font-weight:900;letter-spacing:-.02em;margin:2.5rem 0 .75rem;color:var(--ink);}
+.art-content h3{font-family:'Epilogue',sans-serif;font-size:1.05rem;font-weight:800;letter-spacing:-.01em;margin:2rem 0 .5rem;color:var(--ink);}
+.art-content ul,.art-content ol{padding-left:1.5rem;margin-bottom:1.5rem;}
+.art-content li{font-size:.95rem;line-height:1.8;color:var(--muted);margin-bottom:.35rem;}
+.art-content strong{color:var(--ink);font-weight:700;}
+.art-content .callout{padding:1.25rem 1.5rem;border-left:3px solid var(--ms-blue);background:#f0f5fb;margin:2rem 0;font-size:.9rem;line-height:1.8;color:#1a3a5e;}
+.art-content .callout.grn{border-color:var(--ms-grn);background:#f7fbf5;color:#2a4e1a;}
+.art-content .callout.yel{border-color:var(--ms-yel);background:#fffcf0;color:#6b4800;}
+
+.art-sidebar{padding:3rem 2rem;background:var(--off);}
+.sidebar-block{margin-bottom:2.5rem;}
+.sidebar-label{font-family:'JetBrains Mono',monospace;font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:.75rem;}
+.sidebar-title{font-family:'Epilogue',sans-serif;font-size:1rem;font-weight:800;letter-spacing:-.02em;margin-bottom:.5rem;}
+.sidebar-body{font-size:.82rem;color:var(--muted);line-height:1.7;margin-bottom:1rem;}
+.sidebar-cta{font-family:'Epilogue',sans-serif;font-size:.82rem;font-weight:900;background:var(--ms-blue);color:#fff;border:none;padding:.75rem 1.25rem;text-decoration:none;display:block;text-align:center;transition:background .2s;}
+.sidebar-cta:hover{background:#0062b0;}
+.sidebar-divider{border:none;border-top:1px solid var(--border);margin:2rem 0;}
+
+.art-nav{display:flex;justify-content:space-between;align-items:center;padding:1.5rem 4rem;border-bottom:2px solid var(--ink);}
+.art-nav a{font-family:'Epilogue',sans-serif;font-size:.88rem;font-weight:900;color:var(--ms-blue);text-decoration:none;}
+.art-nav a:hover{text-decoration:underline;}
+
+.page-cta{display:grid;grid-template-columns:1fr 1fr;border-top:2px solid var(--ink);}
+.cta-blue{background:var(--ms-blue);padding:5rem 4rem;display:flex;flex-direction:column;justify-content:center;}
+.cta-tag{font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.9);margin-bottom:1rem;}
+.cta-title{font-family:'Epilogue',sans-serif;font-size:clamp(2rem,3.5vw,3.5rem);font-weight:900;letter-spacing:-.04em;line-height:.95;color:#fff;margin-bottom:1rem;}
+.cta-title .serif{font-family:'Lora',serif;font-style:italic;font-weight:500;}
+.cta-sub{font-size:.95rem;color:rgba(255,255,255,.85);line-height:1.8;max-width:400px;margin-bottom:2rem;}
+.cta-actions{display:flex;flex-direction:column;gap:.75rem;}
+.cta-btn-solid{font-family:'Epilogue',sans-serif;font-size:.9rem;font-weight:900;background:#fff;color:var(--ms-blue);border:2px solid #fff;padding:.85rem 2rem;text-decoration:none;display:inline-block;transition:all .2s;text-align:center;}
+.cta-btn-solid:hover{background:var(--ms-yel);border-color:var(--ms-yel);color:var(--ink);}
+.cta-btn-outline{font-family:'Epilogue',sans-serif;font-size:.9rem;font-weight:900;background:transparent;color:#fff;border:2px solid rgba(255,255,255,.4);padding:.85rem 2rem;text-decoration:none;display:inline-block;transition:all .2s;text-align:center;}
+.cta-btn-outline:hover{border-color:#fff;background:rgba(255,255,255,.1);}
+.cta-right{background:var(--off);padding:5rem 4rem;display:flex;flex-direction:column;justify-content:center;}
+.cta-right-label{font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:1.5rem;}
+.contact-block{display:flex;flex-direction:column;gap:1.25rem;}
+.contact-line{display:flex;flex-direction:column;gap:.25rem;}
+.contact-line-label{font-family:'JetBrains Mono',monospace;font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);}
+.contact-line-val{font-family:'Epilogue',sans-serif;font-size:1.1rem;font-weight:800;color:var(--ink);}
+.contact-line-val a{color:var(--ms-blue);text-decoration:none;}
+.contact-line-val a:hover{text-decoration:underline;}
+
+footer{display:flex;align-items:center;justify-content:space-between;padding:1.5rem 4rem;border-top:2px solid var(--ink);}
+.f-copy-wrap{display:flex;flex-direction:column;gap:.2rem;}
+.f-logo{display:flex;align-items:center;gap:.65rem;}
+.f-name{font-family:'Epilogue',sans-serif;font-size:1rem;font-weight:900;letter-spacing:-.02em;}
+.f-name span{color:var(--ms-blue);}
+.f-copy{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.06em;color:#333;}
+.f-links{display:flex;gap:2rem;list-style:none;align-items:center;}
+.f-links a{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:#333;text-decoration:none;transition:color .2s;}
+.f-links a:hover{color:var(--ms-blue);}
+
+.wa-float{position:fixed;bottom:2rem;right:2rem;z-index:500;display:flex;align-items:center;gap:.6rem;background:#25D366;color:#1a1a1a;padding:.75rem 1.25rem .75rem .9rem;border-radius:100px;box-shadow:0 4px 20px rgba(37,211,102,.35);text-decoration:none;font-family:'Epilogue',sans-serif;font-size:.82rem;font-weight:700;transition:transform .2s,box-shadow .2s,opacity .2s;}
+.wa-float:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(37,211,102,.45);}
+.wa-float svg{width:20px;height:20px;flex-shrink:0;}
+.wa-float.wa-hidden{opacity:0;pointer-events:none;}
+
+@media(max-width:1000px){
+  .nav-cta{display:none;}
+  .art-body{grid-template-columns:1fr;}
+  .art-content{border-right:none;border-bottom:2px solid var(--ink);padding:3rem 1.5rem;}
+  .art-sidebar{padding:2.5rem 1.5rem;}
+  .art-nav{padding:1.25rem 1.5rem;}
+  .page-cta{grid-template-columns:1fr;}
+  .cta-blue{padding:3rem 1.5rem;}
+  .cta-right{padding:3rem 1.5rem;}
+}
+@media(max-width:768px){
+  :root{--nav-h:58px;}
+  nav{padding:0 1.25rem;flex-wrap:wrap;}
+  .logo{padding:.85rem 0;}
+  .nav-links{display:none;width:100%;flex-direction:column;border-top:1px solid var(--border);}
+  .nav-links.nav-open{display:flex;background:#fff;}
+  .nav-links a{border-left:none;border-bottom:1px solid var(--border);padding:1rem 0;}
+  .nav-hamburger{display:block;background:none;border:none;font-size:1.4rem;cursor:pointer;padding:.5rem;color:var(--ink);margin-left:auto;}
+  .nav-cta{display:none !important;}
+  .nav-cta-mobile{display:none !important;}
+  .nav-cta-mobile.nav-open{display:block !important;width:100%;font-family:'Epilogue',sans-serif;font-size:.82rem;font-weight:900;background:var(--ms-blue);color:#fff;text-decoration:none;text-align:center;padding:1rem 1.25rem;border-top:2px solid var(--ink);}
+  .art-hero{padding:calc(var(--nav-h) + 2.5rem) 1.5rem 3rem;}
+  footer{flex-direction:column;align-items:flex-start;gap:1.25rem;padding:1.5rem;}
+  .f-links{flex-wrap:wrap;gap:1rem;}
+  .wa-float{display:none;}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="logo" href="../index.html">
+    <svg width="36" height="28" viewBox="0 0 36 28" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="0,28 6,28 7,17 6,16 0,16" fill="#0F4C81"/>
+      <polygon points="9,28 15,28 16,12 15,11 9,11" fill="#D83B01"/>
+      <polygon points="18,28 24,28 25,7 24,6 18,6" fill="#2F6B00"/>
+      <polygon points="27,28 33,28 34,1 33,0 27,0" fill="#F2A900"/>
+    </svg>
+    <div class="logo-name">Adjona <span>Technology</span></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="../index.html#approach">About</a></li>
+    <li><a href="../index.html#services">Services</a></li>
+    <li><a href="../additional-services.html">Projects &amp; Support</a></li>
+    <li><a href="../packages.html">Solution Packages</a></li>
+    <li><a href="../index.html#certs">Credentials</a></li>
+    <li><a href="../insights.html" class="active">Insights</a></li>
+    <li><a href="../enquiry.html">Contact Us</a></li>
+  </ul>
+  <a href="https://outlook.office.com/book/AdjonaTechnologyLimited1@adjona.com/s/ElOd0P60CEiQxQcnIYWXWw2" target="_blank" rel="noopener noreferrer" class="nav-cta">Book an Introductory Conversation</a>
+  <button class="nav-hamburger" aria-label="Menu" onclick="
+    var nav=this.closest('nav');
+    nav.querySelector('.nav-links').classList.toggle('nav-open');
+    nav.querySelector('.nav-cta-mobile').classList.toggle('nav-open');
+  ">&#9776;</button>
+  <a href="https://outlook.office.com/book/AdjonaTechnologyLimited1@adjona.com/s/ElOd0P60CEiQxQcnIYWXWw2" target="_blank" rel="noopener noreferrer" class="nav-cta-mobile">Book an Introductory Conversation</a>
+</nav>
+
+<section class="art-hero">
+  <div class="art-hero-inner">
+    <div class="page-breadcrumb"><a href="../index.html">Adjona Technology</a> &nbsp;/&nbsp; <a href="../insights.html">Insights</a> &nbsp;/&nbsp; Records &amp; Evidence for Care Providers</div>
+    <span class="art-tag">Microsoft 365 &nbsp;&middot;&nbsp; Care Providers</span>
+    <h1>Can your care service find and <span class="serif">protect the records,</span> emails and evidence it relies on?</h1>
+    <p class="art-hero-intro">Many care providers use Microsoft 365 every day, but important information can still become scattered across Outlook, OneDrive, SharePoint, Teams, shared mailboxes, paper files, old laptops and supplier accounts.</p>
+    <div class="art-meta">
+      <div class="art-meta-item">June 2026</div>
+      <div class="art-meta-item">10 min read</div>
+      <div class="art-meta-item">Adjona Technology</div>
+    </div>
+  </div>
+</section>
+
+<div class="four-stripe">
+  <div class="fs b"></div><div class="fs r"></div><div class="fs g"></div><div class="fs y"></div>
+</div>
+
+<div class="art-body">
+  <article class="art-content">
+
+    <p>For a care service, important records are not always held in one system. Some information may be in a care management platform. Some may be in Outlook. Some may be in a shared mailbox. Some may be attached to emails, stored in OneDrive, saved in SharePoint, discussed in Teams, scanned from paper files, or held by a previous IT supplier.</p>
+
+    <p>That creates a simple but important question: when you need to find a record, email, policy or piece of evidence, can you find it quickly, trust it, protect it and explain who has access to it?</p>
+
+    <p>For many small and growing care providers, the honest answer is: <strong>not always</strong>.</p>
+
+    <div class="callout">When records, emails and documents are hard to find quickly, the problem is often described as an IT issue. But in a care service, information management affects much more than technology. It affects how quickly managers respond to concerns, whether staff use the right version of a policy, whether confidential information is properly protected, and whether the organisation can show what happened, when, and by whom.</div>
+
+    <h2>This is not just an IT problem</h2>
+
+    <p>A care provider may have good staff, good intentions and a Microsoft 365 subscription, but still struggle because the working environment has grown informally over time.</p>
+
+    <p>Someone created a Teams site. Someone else saved files in OneDrive. A previous supplier set up SharePoint. Staff send documents as attachments. A shared mailbox has thousands of messages. Policies exist in several versions. Old accounts remain active because nobody is sure what they own.</p>
+
+    <p>Nothing may feel urgent day to day — until someone needs evidence quickly.</p>
+
+    <h2>Important information is often scattered</h2>
+
+    <p>In a typical care organisation, key information may be spread across several places. Care-related documents may be in one location. Policies somewhere else. HR files in folders only one person understands. Commissioner emails in an inbox. Safeguarding correspondence in attachments. Training evidence in spreadsheets. Contracts, insurance documents, meeting notes and action plans held separately again.</p>
+
+    <p>Microsoft 365 can support all of this, but only if it is organised and governed properly. Without structure, Microsoft 365 can become a place where information is technically stored, but practically hidden.</p>
+
+    <p>The organisation may have Outlook, Teams, SharePoint and OneDrive, but still not have clear answers to basic questions:</p>
+
+    <ul>
+      <li>Where do final policies live?</li>
+      <li>Who owns each shared mailbox?</li>
+      <li>Who can access confidential folders?</li>
+      <li>Are staff saving business records in personal OneDrive areas?</li>
+      <li>Are shared mailboxes monitored properly?</li>
+      <li>Are old users, former staff, volunteers or suppliers still able to access files?</li>
+      <li>Can managers find the latest version of a document?</li>
+      <li>Are important emails being filed or just left in inboxes?</li>
+      <li>Is sensitive information being shared securely?</li>
+      <li>Is there a clear process when staff leave?</li>
+    </ul>
+
+    <p>These are not theoretical questions. They are everyday governance questions.</p>
+
+    <h2>"We use Microsoft 365" does not mean "we are in control"</h2>
+
+    <p>Microsoft 365 includes powerful tools, but it does not automatically create good information management. This matters because care providers often need to respond quickly and confidently. When a commissioner, local authority, NHS team, safeguarding contact, family member, auditor, or manager asks for information, the organisation should not have to search across ten different places and hope the right file appears.</p>
+
+    <div class="callout yel">A care provider can have Microsoft 365 and still have too many administrator accounts, weak or inconsistent multi-factor authentication, old accounts that were never disabled, documents saved in individual OneDrive accounts, confusing Teams and SharePoint sites, unclear file ownership, uncontrolled external sharing, multiple versions of the same policy, and no regular review of who can access sensitive information.</div>
+
+    <p>Records, policies, emails and evidence should be accurate enough to rely on, current enough to be useful, available to the right staff, protected from inappropriate access, shared securely when necessary, retained in a sensible place, and connected to clear ownership and responsibility.</p>
+
+    <p>Used well, SharePoint can provide controlled document areas. Teams can support collaboration. Outlook and shared mailboxes can help manage communication. OneDrive can support personal working files. Microsoft 365 admin controls can protect users, devices and access. Used poorly, the same tools create confusion: duplicated files, uncontrolled sharing links, unmanaged inboxes, unclear ownership, and sensitive information sitting in places nobody reviews.</p>
+
+    <h2>A better setup does not need to be complicated</h2>
+
+    <p>A better Microsoft 365 setup does not always mean buying a new system. For many care providers, the first step is to make better use of the tools already available.</p>
+
+    <h3>1. A clear evidence workspace</h3>
+    <p>There should be a known place for important organisational evidence — policies, audits, action plans, meeting notes, contracts, insurance documents, risk-related records and governance documents. It does not need to be complicated. It needs to be clear, secure and understood by the people who use it.</p>
+
+    <h3>2. Proper ownership</h3>
+    <p>Each important area should have an owner. If nobody owns a folder, mailbox, site or process, it will usually become messy over time. Ownership matters because someone needs to decide what belongs there, who should have access, and when information should be reviewed or removed.</p>
+
+    <h3>3. Controlled access</h3>
+    <p>Not everyone needs access to everything. Care providers handle confidential and sensitive information. Access should reflect roles and responsibilities, not convenience. It should also be clear what happens when someone leaves, changes role, or no longer needs access.</p>
+
+    <h3>4. Separate admin and everyday use</h3>
+    <p>Administrator accounts should not be treated casually. A Microsoft 365 administrator can change users, email, files, security settings and permissions. At minimum, organisations should understand who has admin access, whether those accounts are properly protected, and whether any old supplier or former staff account still has unnecessary privileges.</p>
+
+    <h3>5. Better shared mailbox handling</h3>
+    <p>Many care providers rely heavily on shared mailboxes. That can work well, but only when there is a clear process for triage, ownership and filing. Otherwise, important messages can be missed, duplicated, answered inconsistently or left buried in the inbox. A shared mailbox should not just be a dumping ground — it should support a working process.</p>
+
+    <h3>6. Version control and document confidence</h3>
+    <p>Staff need to know which document is current. Policies, procedures, forms, letters and templates can quickly become confusing if several versions are circulating by email or saved in different folders. A better setup should make it easy to identify the current version, reduce duplication and avoid staff relying on outdated documents.</p>
+
+    <h3>7. Secure sharing</h3>
+    <p>Care providers often need to share information with external people and organisations. That sharing should be deliberate, controlled and reviewable. The organisation should understand how external sharing works, what is allowed, who can create sharing links, and how access can be removed when no longer needed.</p>
+
+    <div class="callout grn"><strong>A useful test.</strong> If you were asked for evidence tomorrow, how quickly could you find it? The latest version of a key policy. Evidence that an action was completed. Correspondence about a concern. A record of who has access to a sensitive folder. Notes from a governance meeting. Confirmation of who can access a shared mailbox. If those answers depend on one person's memory or a long inbox search, the organisation may be carrying more risk than it realises.</div>
+
+    <h2>This is about confidence, not perfection</h2>
+
+    <p>Small care providers do not need an enterprise-grade information governance department. But they do need enough structure to know where important information lives, who controls it, and how it is protected.</p>
+
+    <p>The goal is not to create bureaucracy. The goal is to reduce confusion.</p>
+
+    <p>Good Microsoft 365 governance should help a care provider find important information faster, reduce duplicated and outdated documents, protect confidential records, manage staff and supplier access, respond more confidently to information requests, keep clearer evidence of decisions and actions, and support safer, more consistent operations.</p>
+
+    <p>That is especially important for organisations that have grown quickly, inherited a messy setup, changed IT providers, moved from paper to digital working, or rely heavily on email and attachments.</p>
+
+    <h2>How Adjona can help</h2>
+
+    <p>Adjona helps small organisations make practical, controlled use of Microsoft 365. For care providers, that can include reviewing how Outlook, Teams, SharePoint, OneDrive, shared mailboxes, permissions and administrator accounts are currently being used — then helping create a clearer and safer structure.</p>
+
+    <p>That might involve organising key records and evidence areas, improving shared mailbox triage, reviewing administrator and user access, checking whether files are stored in the right places, reducing duplication and confusion, improving document control, reviewing external sharing, identifying old accounts and supplier access, and helping managers understand what is working and what needs attention.</p>
+
+    <p>Microsoft 365 is already a central part of how many care providers work. The question is whether it is helping the organisation stay in control — or quietly making important information harder to manage.</p>
+
+    <p>If your care service is not sure where key records, emails, policies and evidence live, now is a good time to review the setup before pressure arrives.</p>
+
+  </article>
+
+  <aside class="art-sidebar">
+    <div class="sidebar-block">
+      <div class="sidebar-label">About Adjona</div>
+      <div class="sidebar-body">Adjona Technology is a Microsoft AI Cloud Partner helping charities, care providers, and smaller organisations secure Microsoft 365, improve governance, and adopt AI responsibly.</div>
+    </div>
+    <hr class="sidebar-divider">
+    <div class="sidebar-block">
+      <div class="sidebar-label">Free introductory conversation</div>
+      <div class="sidebar-title">Not sure where your records and evidence live?</div>
+      <div class="sidebar-body">Book a free 30-minute call. We can help you understand what needs attention and what to do about it.</div>
+      <a href="https://outlook.office.com/book/AdjonaTechnologyLimited1@adjona.com/s/ElOd0P60CEiQxQcnIYWXWw2" target="_blank" rel="noopener noreferrer" class="sidebar-cta">Book a Free Call &rarr;</a>
+    </div>
+    <hr class="sidebar-divider">
+    <div class="sidebar-block">
+      <div class="sidebar-label">Related reading</div>
+      <div class="sidebar-body"><a href="fixing-teams-sharepoint-file-access.html" style="color:var(--ms-blue);text-decoration:none;font-weight:700;">Fixing Messy Teams, SharePoint and File Access &rarr;</a></div>
+    </div>
+    <hr class="sidebar-divider">
+    <div class="sidebar-block">
+      <div class="sidebar-label">Solution packages</div>
+      <div class="sidebar-body"><a href="../packages.html" style="color:var(--ms-blue);text-decoration:none;font-weight:700;">View our Microsoft 365 solution packages &rarr;</a></div>
+    </div>
+  </aside>
+</div>
+
+<div class="art-nav">
+  <a href="../insights.html">&larr; All Insights</a>
+  <span></span>
+</div>
+
+<div class="page-cta">
+  <div class="cta-blue">
+    <div class="cta-tag">Free Introductory Conversation</div>
+    <h2 class="cta-title">Is your care service <span class="serif">in control of its information?</span></h2>
+    <p class="cta-sub">Adjona Technology helps care providers make Microsoft 365 clearer, safer and easier to manage. Book a free 30-minute conversation — no obligation, no hard sell.</p>
+    <div class="cta-actions">
+      <a href="https://outlook.office.com/book/AdjonaTechnologyLimited1@adjona.com/s/ElOd0P60CEiQxQcnIYWXWw2" target="_blank" rel="noopener noreferrer" class="cta-btn-solid">Book a Free Introductory Conversation</a>
+      <a href="../enquiry.html" class="cta-btn-outline">Send an Enquiry &rarr;</a>
+    </div>
+  </div>
+  <div class="cta-right">
+    <div class="cta-right-label">Get in touch</div>
+    <div class="contact-block">
+      <div class="contact-line">
+        <div class="contact-line-label">Email</div>
+        <div class="contact-line-val"><a href="mailto:info@adjona.com">info@adjona.com</a></div>
+      </div>
+      <div class="contact-line">
+        <div class="contact-line-label">WhatsApp</div>
+        <div class="contact-line-val"><a href="https://wa.me/442033550538" target="_blank" rel="noopener noreferrer">Message us directly</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer style="padding-bottom:5rem;">
+  <div class="f-logo">
+    <svg width="28" height="22" viewBox="0 0 36 28" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="0,28 6,28 7,17 6,16 0,16" fill="#0F4C81"/>
+      <polygon points="9,28 15,28 16,12 15,11 9,11" fill="#D83B01"/>
+      <polygon points="18,28 24,28 25,7 24,6 18,6" fill="#2F6B00"/>
+      <polygon points="27,28 33,28 34,1 33,0 27,0" fill="#F2A900"/>
+    </svg>
+    <div class="f-name">Adjona <span>Technology</span> Limited</div>
+  </div>
+  <div class="f-copy-wrap">
+    <div class="f-copy">© 2026 Adjona Technology Limited · Registered in England &amp; Wales · Co. No. 05007410 · 5th Floor, 167-169 Great Portland Street, London W1W 5PF</div>
+    <div style="margin-top:.4rem;">
+      <a href="https://marketplace.microsoft.com/en-gb/partners/c4ead6cf-d6a0-4973-8bf7-f3e644e195ae/overview" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:.5rem;text-decoration:none;">
+        <svg width="14" height="14" viewBox="0 0 23 23" xmlns="http://www.w3.org/2000/svg"><rect x="1" y="1" width="10" height="10" fill="#f25022"/><rect x="12" y="1" width="10" height="10" fill="#7fba00"/><rect x="1" y="12" width="10" height="10" fill="#00a4ef"/><rect x="12" y="12" width="10" height="10" fill="#ffb900"/></svg>
+        <span style="font-family:'JetBrains Mono',monospace;font-size:.58rem;letter-spacing:.08em;color:#444;">View Adjona's Microsoft partner profile</span>
+      </a>
+    </div>
+  </div>
+  <ul class="f-links" style="align-items:center;">
+    <li><a href="https://www.linkedin.com/company/adjona-technology-limited/" target="_blank" rel="noopener noreferrer" style="display:flex;align-items:center;gap:.4rem;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" style="flex-shrink:0;"><path fill="currentColor" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg> LinkedIn</a></li>
+    <li><a href="https://www.youtube.com/@AdjonaTechnology" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+    <li><a href="../events.html">Events</a></li>
+    <li><a href="https://outlook.office.com/book/AdjonaTechnologyLimited1@adjona.com/s/ElOd0P60CEiQxQcnIYWXWw2" target="_blank" rel="noopener noreferrer">Book a Call</a></li>
+    <li><a href="../adjona-privacy.html">Privacy Policy</a></li>
+    <li><a href="../adjona-terms.html">Terms &amp; Conditions</a></li>
+    <li><a href="mailto:info@adjona.com">info@adjona.com</a></li>
+  </ul>
+</footer>
+
+<a href="https://wa.me/442033550538?text=Hi%2C%20I%20read%20your%20article%20on%20records%20and%20evidence%20for%20care%20providers%20and%20have%20a%20question%20about%20our%20setup." class="wa-float" target="_blank" rel="noopener noreferrer">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+  Question about this topic?
+</a>
+
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+  document.querySelectorAll('.nav-links a,.nav-cta-mobile').forEach(function(link){
+    link.addEventListener('click',function(){
+      var nav=document.querySelector('nav');
+      nav.querySelector('.nav-links').classList.remove('nav-open');
+      nav.querySelector('.nav-cta-mobile').classList.remove('nav-open');
+    });
+  });
+});
+var waBtn=document.querySelector('.wa-float');
+if(waBtn){
+  window.addEventListener('scroll',function(){
+    var footer=document.querySelector('footer');
+    if(footer){
+      var footerTop=footer.getBoundingClientRect().top;
+      if(footerTop<window.innerHeight){waBtn.classList.add('wa-hidden');}
+      else{waBtn.classList.remove('wa-hidden');}
+    }
+  });
+}
+</script>
+</body>
+</html>
