@@ -3,122 +3,154 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="robots" content="noindex, nofollow">
-<title>Privacy & Cookie Policy — Adjona Technology Limited</title>
-<meta name="description" content="Privacy and cookie policy for Adjona Technology Limited.">
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 28'><polygon points='0,28 6,28 7,17 6,16 0,16' fill='%230F4C81'/><polygon points='9,28 15,28 16,12 15,11 9,11' fill='%23D83B01'/><polygon points='18,28 24,28 25,7 24,6 18,6' fill='%232F6B00'/><polygon points='27,28 33,28 34,1 33,0 27,0' fill='%23F2A900'/></svg>">
-<meta name="description" content="Privacy and cookie policy for Adjona Technology Limited.">
+<title>Resources | Guides &amp; Toolkits | Adjona Technology</title>
+<meta name="description" content="Practical Microsoft 365, governance and compliance guides for UK charities, CICs, care providers and SMEs. Written for practical implementation.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="192x192" href="favicon-192.png">
+<meta property="og:title" content="Insights | Adjona Technology">
+<meta property="og:description" content="Practical articles on Microsoft 365 security, governance, data protection, and AI readiness for charities, care providers, and smaller organisations.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://adjona.com/insights.html">
 <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;700;800;900&family=Lora:ital,wght@1,500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<!-- Clarity tracking code for https://adjona.com/ -->
+<script>
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "wmyh9800tx");
+</script>
 <style>
 :root{
   --white:#ffffff;--off:#f5f5f0;--ink:#0d0d0d;
   --ms-blue:#0F4C81;--ms-red:#D83B01;--ms-grn:#2F6B00;--ms-yel:#F2A900;
-  --muted:#888;--border:rgba(13,13,13,0.1);
+  --muted:#444;--border:rgba(13,13,13,0.1);
+  --nav-h:62px;
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;}
 body{background:var(--white);color:var(--ink);font-family:'Epilogue',sans-serif;font-weight:400;overflow-x:hidden;}
 
-
-
 nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:0 0 0 4rem;background:#fff;border-bottom:2px solid var(--ink);}
 .logo{display:flex;align-items:center;gap:.75rem;padding:1.1rem 0;text-decoration:none;}
-
-.logo-name{font-family:'Epilogue',sans-serif;font-size:1.1rem;font-weight:900;letter-spacing:-.02em;color:var(--ink);}
+.logo-name{font-family:'Epilogue',sans-serif;font-size:1.1rem;font-weight:900;letter-spacing:-.02em;white-space:nowrap;color:var(--ink);}
 .logo-name span{color:var(--ms-blue);}
 .nav-links{display:flex;list-style:none;}
-.nav-links a{font-family:'JetBrains Mono',monospace;font-size:.63rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);text-decoration:none;padding:1.5rem 1.4rem;border-left:2px solid var(--border);display:block;transition:color .2s,background .2s;}
+.nav-links a{font-family:'JetBrains Mono',monospace;font-size:.63rem;letter-spacing:.14em;text-transform:uppercase;color:#333;text-decoration:none;padding:1.5rem 1.4rem;border-left:2px solid var(--border);display:block;transition:color .2s,background .2s;}
 .nav-links a:hover{color:var(--ms-blue);background:rgba(0,120,212,.04);}
+.nav-links a.active{color:var(--ms-blue);}
 .nav-cta{font-family:'Epilogue',sans-serif;font-size:.88rem;font-weight:900;background:var(--ms-blue);color:#fff;text-decoration:none;border-left:2px solid var(--ink);padding:1.5rem 2.2rem;cursor:pointer;transition:background .2s;display:block;}
 .nav-cta:hover{background:#0062b0;}
+.nav-hamburger{display:none;}
+.nav-cta-mobile{display:none;}
 
-/* Four stripe */
-.four-stripe{display:grid;grid-template-columns:repeat(4,1fr);height:5px;margin-top:calc(3.1rem + 2px);}
+.four-stripe{display:grid;grid-template-columns:repeat(4,1fr);height:6px;}
 .fs.b{background:var(--ms-blue);}.fs.r{background:var(--ms-red);}.fs.g{background:var(--ms-grn);}.fs.y{background:var(--ms-yel);}
 
-/* Page header */
-.page-header{padding:4rem 4rem 3rem;border-bottom:2px solid var(--ink);background:var(--off);display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:end;}
-.ph-eyebrow{font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ms-blue);margin-bottom:.75rem;display:flex;align-items:center;gap:.6rem;}
-.ph-eyebrow::before{content:'';width:24px;height:2px;background:var(--ms-blue);}
-.ph-title{font-family:'Epilogue',sans-serif;font-size:clamp(2.5rem,4vw,5rem);font-weight:900;letter-spacing:-.04em;line-height:.92;}
-.ph-title .serif{font-family:'Lora',serif;font-style:italic;font-weight:500;}
-.ph-meta{display:flex;flex-direction:column;gap:.75rem;}
-.ph-meta-item{padding:.9rem 1.1rem;border:1px solid var(--border);background:#fff;}
-.ph-meta-label{font-family:'JetBrains Mono',monospace;font-size:.57rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:.25rem;}
-.ph-meta-val{font-family:'Epilogue',sans-serif;font-size:.9rem;font-weight:700;}
+.page-hero{padding:calc(var(--nav-h) + 5rem) 4rem 5rem;border-bottom:2px solid var(--ink);}
+.page-hero-inner{max-width:860px;}
+.page-breadcrumb{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:1.5rem;}
+.page-breadcrumb a{color:var(--muted);text-decoration:none;}
+.page-breadcrumb a:hover{color:var(--ms-blue);}
+.page-tag{font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.2em;color:var(--ms-blue);margin-bottom:1.5rem;display:block;padding-left:2.25rem;position:relative;}
+.page-tag::before{content:'';width:28px;height:2px;background:var(--ms-blue);position:absolute;left:0;top:50%;transform:translateY(-50%);}
+.page-hero h1{font-family:'Epilogue',sans-serif;font-size:clamp(2.8rem,5vw,5.5rem);font-weight:900;line-height:.92;letter-spacing:-.04em;margin-bottom:2rem;}
+.page-hero h1 .serif{font-family:'Lora',serif;font-style:italic;font-weight:500;letter-spacing:-.02em;}
+.page-hero-body{font-size:1.05rem;line-height:1.85;color:var(--muted);max-width:680px;}
 
-/* Content layout */
-.content-wrap{display:grid;grid-template-columns:220px 1fr;border-bottom:2px solid var(--ink);}
+.sec-label{font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ms-blue);margin-bottom:.75rem;}
+.sec-title{font-family:'Epilogue',sans-serif;font-size:clamp(2rem,3.5vw,3.5rem);font-weight:900;letter-spacing:-.03em;line-height:.95;margin-bottom:.75rem;}
+.sec-title .serif{font-family:'Lora',serif;font-style:italic;font-weight:500;}
 
-/* Sidebar */
-.sidebar{border-right:2px solid var(--ink);padding:2.5rem 1.75rem;position:sticky;top:calc(3.1rem + 2px + 5px);height:fit-content;align-self:start;}
-.toc-label{font-family:'JetBrains Mono',monospace;font-size:.57rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:1rem;}
-.toc{list-style:none;}
-.toc a{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);text-decoration:none;padding:.55rem .65rem;border-left:2px solid var(--border);display:block;transition:color .2s,border-color .2s,background .2s;line-height:1.5;}
-.toc a:hover,.toc a.active{color:var(--ms-blue);border-color:var(--ms-blue);background:rgba(0,120,212,.03);}
+.page-cta{display:grid;grid-template-columns:1fr 1fr;border-top:2px solid var(--ink);}
+.cta-blue{background:var(--ms-blue);padding:5rem 4rem;display:flex;flex-direction:column;justify-content:center;}
+.cta-tag{font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.9);margin-bottom:1rem;}
+.cta-title{font-family:'Epilogue',sans-serif;font-size:clamp(2rem,3.5vw,3.5rem);font-weight:900;letter-spacing:-.04em;line-height:.95;color:#fff;margin-bottom:1rem;}
+.cta-title .serif{font-family:'Lora',serif;font-style:italic;font-weight:500;}
+.cta-sub{font-size:.95rem;color:rgba(255,255,255,.85);line-height:1.8;max-width:400px;margin-bottom:2rem;}
+.cta-actions{display:flex;flex-direction:column;gap:.75rem;}
+.cta-btn-solid{font-family:'Epilogue',sans-serif;font-size:.9rem;font-weight:900;background:#fff;color:var(--ms-blue);border:2px solid #fff;padding:.85rem 2rem;text-decoration:none;display:inline-block;transition:all .2s;text-align:center;}
+.cta-btn-solid:hover{background:var(--ms-yel);border-color:var(--ms-yel);color:var(--ink);}
+.cta-btn-outline{font-family:'Epilogue',sans-serif;font-size:.9rem;font-weight:900;background:transparent;color:#fff;border:2px solid rgba(255,255,255,.4);padding:.85rem 2rem;text-decoration:none;display:inline-block;transition:all .2s;text-align:center;}
+.cta-btn-outline:hover{border-color:#fff;background:rgba(255,255,255,.1);}
+.cta-right{background:var(--off);padding:5rem 4rem;display:flex;flex-direction:column;justify-content:center;}
+.cta-right-label{font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:1.5rem;}
+.contact-block{display:flex;flex-direction:column;gap:1.25rem;}
+.contact-line{display:flex;flex-direction:column;gap:.25rem;}
+.contact-line-label{font-family:'JetBrains Mono',monospace;font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);}
+.contact-line-val{font-family:'Epilogue',sans-serif;font-size:1.1rem;font-weight:800;color:var(--ink);}
+.contact-line-val a{color:var(--ms-blue);text-decoration:none;}
+.contact-line-val a:hover{text-decoration:underline;}
 
-/* Main content */
-.main-content{padding:3.5rem 4.5rem 5rem;}
-.policy-section{margin-bottom:3.5rem;padding-bottom:3.5rem;border-bottom:1px solid var(--border);}
-.policy-section:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0;}
-.section-num{font-family:'JetBrains Mono',monospace;font-size:.58rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:.4rem;}
-.section-title{font-family:'Epilogue',sans-serif;font-size:1.4rem;font-weight:900;letter-spacing:-.02em;margin-bottom:1.25rem;}
-.section-body{font-size:.95rem;line-height:1.9;color:rgba(13,13,13,.75);}
-.section-body p{margin-bottom:1rem;}
-.section-body p:last-child{margin-bottom:0;}
-.section-body strong{color:var(--ink);font-weight:700;}
-.section-body a{color:var(--ms-blue);text-decoration:none;border-bottom:1px solid rgba(0,120,212,.3);}
-.section-body a:hover{border-color:var(--ms-blue);}
-
-/* Tables */
-.data-table{width:100%;border-collapse:collapse;margin:1.25rem 0;font-size:.87rem;}
-.data-table th{font-family:'JetBrains Mono',monospace;font-size:.57rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);padding:.65rem .9rem;text-align:left;border-bottom:2px solid var(--ink);background:var(--off);}
-.data-table td{padding:.8rem .9rem;border-bottom:1px solid var(--border);vertical-align:top;line-height:1.65;}
-.data-table tr:last-child td{border-bottom:none;}
-.data-table tr:hover td{background:var(--off);}
-
-/* Highlight boxes */
-.callout{background:var(--off);border-left:3px solid var(--ms-blue);padding:1.1rem 1.4rem;margin:1.25rem 0;font-size:.9rem;line-height:1.75;}
-.callout.grn{border-color:var(--ms-grn);}
-.callout.red{border-color:var(--ms-red);}
-
-/* Rights grid */
-.rights-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);margin:1.25rem 0;}
-.right-item{background:#fff;padding:1.1rem;transition:background .2s;}
-.right-item:hover{background:var(--off);}
-.right-name{font-family:'Epilogue',sans-serif;font-size:.88rem;font-weight:800;margin-bottom:.25rem;display:flex;align-items:center;gap:.5rem;}
-.right-sq{width:8px;height:8px;flex-shrink:0;}
-.right-desc{font-size:.8rem;color:var(--muted);line-height:1.6;}
-
-/* Cookie toggle */
-.cookie-types{display:flex;flex-direction:column;gap:1px;background:var(--border);margin:1.25rem 0;}
-.cookie-type{background:#fff;padding:1.1rem 1.25rem;display:flex;align-items:flex-start;gap:1rem;}
-.ct-dot{width:10px;height:10px;flex-shrink:0;margin-top:3px;}
-.ct-name{font-family:'Epilogue',sans-serif;font-size:.9rem;font-weight:800;margin-bottom:.2rem;}
-.ct-desc{font-size:.82rem;color:var(--muted);line-height:1.65;}
-.ct-req{font-family:'JetBrains Mono',monospace;font-size:.55rem;letter-spacing:.1em;text-transform:uppercase;padding:.18rem .5rem;border:1px solid var(--border);color:var(--muted);margin-left:auto;flex-shrink:0;white-space:nowrap;align-self:flex-start;}
-.ct-req.yes{color:var(--ms-grn);border-color:var(--ms-grn);}
-
-/* Footer */
 footer{display:flex;align-items:center;justify-content:space-between;padding:1.5rem 4rem;border-top:2px solid var(--ink);}
 .f-copy-wrap{display:flex;flex-direction:column;gap:.2rem;}
-.f-copy{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.06em;color:var(--muted);}
-.f-logo{display:flex;align-items:center;gap:.65rem;text-decoration:none;}
-.f-mark{position:relative;width:20px;height:20px;flex-shrink:0;}
-.fsq{width:8px;height:8px;position:absolute;}
-.fsq.tl{top:0;left:3px;}.fsq.tr{top:0;left:12px;}
-.fsq.bl{top:11px;left:0;}.fsq.br{top:11px;left:10px;}
-.f-name{font-family:'Epilogue',sans-serif;font-size:.9rem;font-weight:900;letter-spacing:-.02em;color:var(--ink);}
+.f-logo{display:flex;align-items:center;gap:.65rem;}
+.f-name{font-family:'Epilogue',sans-serif;font-size:1rem;font-weight:900;letter-spacing:-.02em;}
 .f-name span{color:var(--ms-blue);}
-.f-links{display:flex;gap:2rem;list-style:none;}
-.f-links a{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color .2s;}
+.f-copy{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.06em;color:#333;}
+.f-links{display:flex;gap:2rem;list-style:none;align-items:center;}
+.f-links a{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:#333;text-decoration:none;transition:color .2s;}
 .f-links a:hover{color:var(--ms-blue);}
+
+.wa-float{position:fixed;bottom:2rem;right:2rem;z-index:500;display:flex;align-items:center;gap:.6rem;background:#25D366;color:#1a1a1a;padding:.75rem 1.25rem .75rem .9rem;border-radius:100px;box-shadow:0 4px 20px rgba(37,211,102,.35);text-decoration:none;font-family:'Epilogue',sans-serif;font-size:.82rem;font-weight:700;transition:transform .2s,box-shadow .2s,opacity .2s;}
+.wa-float:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(37,211,102,.45);}
+.wa-float svg{width:20px;height:20px;flex-shrink:0;}
+.wa-float.wa-hidden{opacity:0;pointer-events:none;}
+
+
+/* INSIGHTS INDEX */
+.insights-section{padding:5rem 4rem;border-bottom:2px solid var(--ink);}
+.insights-grid{display:flex;flex-direction:column;gap:0;margin-top:3rem;border:2px solid var(--ink);}
+.ins-row{display:grid;grid-template-columns:9rem 1fr auto;gap:2rem;align-items:start;padding:2rem;border-bottom:1px solid var(--border);text-decoration:none;color:inherit;transition:background .2s;}
+.ins-row:last-child{border-bottom:none;}
+.ins-row:hover{background:var(--off);}
+.ins-date{font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);padding-top:.2rem;}
+.ins-body{}
+.ins-tag{font-family:'JetBrains Mono',monospace;font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:.4rem;}
+.ins-tag.blue{color:var(--ms-blue);}
+.ins-tag.red{color:#a82d01;}
+.ins-tag.grn{color:var(--ms-grn);}
+.ins-tag.yel{color:#8a5e00;}
+.ins-title{font-family:'Epilogue',sans-serif;font-size:1.1rem;font-weight:800;letter-spacing:-.02em;margin-bottom:.4rem;}
+.ins-summary{font-size:.85rem;color:var(--muted);line-height:1.7;}
+.ins-arrow{font-family:'Epilogue',sans-serif;font-size:.9rem;font-weight:900;color:var(--ms-blue);white-space:nowrap;padding-top:.2rem;}
+
+@media(max-width:1000px){
+  .insights-section{padding-left:1.5rem;padding-right:1.5rem;}
+  .ins-row{grid-template-columns:1fr;gap:.5rem;}
+  .ins-arrow{display:none;}
+}
+
+
+@media(max-width:1000px){
+  .nav-cta{display:none;}
+  .page-cta{grid-template-columns:1fr;}
+  .cta-blue{padding:3rem 1.5rem;}
+  .cta-right{padding:3rem 1.5rem;}
+}
+@media(max-width:768px){
+  :root{--nav-h:58px;}
+  nav{padding:0 1.25rem;flex-wrap:wrap;}
+  .logo{padding:.85rem 0;}
+  .nav-links{display:none;width:100%;flex-direction:column;border-top:1px solid var(--border);}
+  .nav-links.nav-open{display:flex;background:#fff;}
+  .nav-links a{border-left:none;border-bottom:1px solid var(--border);padding:1rem 0;}
+  .nav-hamburger{display:block;background:none;border:none;font-size:1.4rem;cursor:pointer;padding:.5rem;color:var(--ink);margin-left:auto;}
+  .nav-cta{display:none !important;}
+  .nav-cta-mobile{display:none !important;}
+  .nav-cta-mobile.nav-open{display:block !important;width:100%;font-family:'Epilogue',sans-serif;font-size:.82rem;font-weight:900;background:var(--ms-blue);color:#fff;text-decoration:none;text-align:center;padding:1rem 1.25rem;border-top:2px solid var(--ink);}
+  .page-hero{padding:calc(var(--nav-h) + 2.5rem) 1.5rem 3rem;}
+  footer{flex-direction:column;align-items:flex-start;gap:1.25rem;padding:1.5rem;}
+  .f-links{flex-wrap:wrap;gap:1rem;}
+  .wa-float{display:none;}
+}
 </style>
 </head>
 <body>
 
 <nav>
-  <a href="index.html" class="logo">
+  <a class="logo" href="index.html">
     <svg width="36" height="28" viewBox="0 0 36 28" xmlns="http://www.w3.org/2000/svg">
       <polygon points="0,28 6,28 7,17 6,16 0,16" fill="#0F4C81"/>
       <polygon points="9,28 15,28 16,12 15,11 9,11" fill="#D83B01"/>
@@ -128,239 +160,60 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
     <div class="logo-name">Adjona <span>Technology</span></div>
   </a>
   <ul class="nav-links">
-    <li><a href="index.html#services">Services</a></li>
     <li><a href="index.html#approach">About</a></li>
+    <li><a href="index.html#services">Services</a></li>
+    <li><a href="additional-services.html">Projects &amp; Support</a></li>
+    <li><a href="packages.html">Solution Packages</a></li>
     <li><a href="index.html#certs">Credentials</a></li>
-    <li><a href="resources.html">Resources</a></li>
+    <li><a href="resources.html" class="active">Resources</a></li>
     <li><a href="insights.html">Insights</a></li>
-    <li><a href="index.html#contact">Contact</a></li>
+    <li><a href="enquiry.html">Contact Us</a></li>
   </ul>
-  <a href="index.html#contact" class="nav-cta">Book a Consultation</a>
+  <a href="https://outlook.office.com/book/AdjonaTechnologyLimited1@adjona.com/s/ElOd0P60CEiQxQcnIYWXWw2" target="_blank" rel="noopener noreferrer" class="nav-cta">Book an Introductory Conversation</a>
+  <button class="nav-hamburger" aria-label="Menu" onclick="
+    var nav=this.closest('nav');
+    nav.querySelector('.nav-links').classList.toggle('nav-open');
+    nav.querySelector('.nav-cta-mobile').classList.toggle('nav-open');
+  ">&#9776;</button>
+  <a href="https://outlook.office.com/book/AdjonaTechnologyLimited1@adjona.com/s/ElOd0P60CEiQxQcnIYWXWw2" target="_blank" rel="noopener noreferrer" class="nav-cta-mobile">Book an Introductory Conversation</a>
 </nav>
 
-<div class="four-stripe">
-  <div class="fs b"></div><div class="fs r"></div><div class="fs g"></div><div class="fs y"></div>
-</div>
+<div class="four-stripe"><div class="fs b"></div><div class="fs r"></div><div class="fs g"></div><div class="fs y"></div></div>
 
-<!-- PAGE HEADER -->
-<header class="page-header">
-  <div>
-    <div class="ph-eyebrow">Legal</div>
-    <h1 class="ph-title">Privacy &amp;<br><span class="serif">Cookie Policy.</span></h1>
+<section class="page-hero">
+  <div class="page-hero-inner">
+    <div class="page-breadcrumb"><a href="index.html">Home</a> / Resources</div>
+    <span class="page-tag">Guides &amp; Toolkits</span>
+    <h1>Practical <span class="serif">resources.</span></h1>
+    <p class="page-hero-body">Practical Microsoft 365, governance and compliance guides for small organisations. Designed for charities, CICs, care providers and SMEs — written for practical implementation, not shelfware.</p>
   </div>
-  <div class="ph-meta">
-    <div class="ph-meta-item">
-      <div class="ph-meta-label">Company</div>
-      <div class="ph-meta-val">Adjona Technology Limited</div>
+</section>
+
+<section class="cases" style="background:#fff;">
+  <div class="sec-label">Available now</div>
+  <h2 class="sec-title reveal">Data protection <span class="serif">guides.</span></h2>
+  <div class="cases-grid reveal r2" style="grid-template-columns:repeat(2,1fr);">
+    <div class="case-card">
+      <div class="case-tag blue">Data Protection · PDF Guide</div>
+      <div class="case-title">Data Protection Complaints Process Guide — Basic Edition</div>
+      <p class="case-body">A plain-English PDF guide covering what the Data (Use and Access) Act 2025 requires, how to recognise a data protection complaint, and what your organisation needs to put in place. Includes workflow overview, triage guidance and Microsoft 365 setup considerations.</p>
+      <div style="margin-top:1.5rem;padding-top:1.25rem;border-top:1px solid var(--border);">
+        <a href="https://payhip.com/b/g0mlD" target="_blank" rel="noopener noreferrer" style="font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:#fff;background:var(--ms-blue);border:1.5px solid var(--ms-blue);padding:.55rem 1.1rem;text-decoration:none;transition:background .2s,color .2s;" onmouseover="this.style.background='#fff';this.style.color='var(--ms-blue)';" onmouseout="this.style.background='var(--ms-blue)';this.style.color='#fff';">Get this guide &rarr;</a>
+      </div>
     </div>
-    <div class="ph-meta-item">
-      <div class="ph-meta-label">Company Number</div>
-      <div class="ph-meta-val">05007410</div>
-    </div>
-    <div class="ph-meta-item">
-      <div class="ph-meta-label">Last Updated</div>
-      <div class="ph-meta-val">April 2026</div>
-    </div>
-    <div class="ph-meta-item">
-      <div class="ph-meta-label">Jurisdiction</div>
-      <div class="ph-meta-val">United Kingdom (UK GDPR)</div>
+    <div class="case-card" style="border-right:none;">
+      <div class="case-tag grn">Data Protection · Practical Toolkit</div>
+      <div class="case-title">Data Protection Complaints Process Toolkit — Practical Edition</div>
+      <p class="case-body">Everything in the Basic Edition plus 13 editable Word templates — complaints policy, staff procedure, acknowledgement letters, investigation log, outcome letters, go-live checklist and monthly review report. Ready to adapt and deploy.</p>
+      <div style="margin-top:1.5rem;padding-top:1.25rem;border-top:1px solid var(--border);">
+        <a href="https://payhip.com/b/VmH9B" target="_blank" rel="noopener noreferrer" style="font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:#fff;background:var(--ms-blue);border:1.5px solid var(--ms-blue);padding:.55rem 1.1rem;text-decoration:none;transition:background .2s,color .2s;" onmouseover="this.style.background='#fff';this.style.color='var(--ms-blue)';" onmouseout="this.style.background='var(--ms-blue)';this.style.color='#fff';">Get this toolkit &rarr;</a>
+      </div>
     </div>
   </div>
-</header>
-
-<!-- CONTENT -->
-<div class="content-wrap">
-  <aside class="sidebar">
-    <div class="toc-label">Contents</div>
-    <ul class="toc">
-      <li><a href="#who-we-are">Who We Are</a></li>
-      <li><a href="#data-collected">Data We Collect</a></li>
-      <li><a href="#how-we-use">How We Use It</a></li>
-      <li><a href="#legal-basis">Legal Basis</a></li>
-      <li><a href="#sharing">Data Sharing</a></li>
-      <li><a href="#retention">Retention</a></li>
-      <li><a href="#your-rights">Your Rights</a></li>
-      <li><a href="#cookies">Cookies</a></li>
-      <li><a href="#security">Security</a></li>
-      <li><a href="#contact-us">Contact Us</a></li>
-    </ul>
-  </aside>
-
-  <main class="main-content">
-
-    <div class="policy-section" id="who-we-are">
-      <div class="section-num">01</div>
-      <h2 class="section-title">Who We Are</h2>
-      <div class="section-body">
-        <p>Adjona Technology Limited ("Adjona Technology", "we", "us", "our") is a Microsoft Partner consultancy registered in England and Wales (Company No. 05007410), specialising in cloud security, Microsoft 365, and AI solutions for charities and SMEs.</p>
-        <p>We are the data controller for personal information collected through our website at <a href="https://adjona.com">adjona.com</a> and in connection with our services.</p>
-        <p>If you have any questions about this policy or how we handle your personal data, please contact us at <a href="mailto:info@adjona.com">info@adjona.com</a>.</p>
-      </div>
-    </div>
-
-    <div class="policy-section" id="data-collected">
-      <div class="section-num">02</div>
-      <h2 class="section-title">Data We Collect</h2>
-      <div class="section-body">
-        <table class="data-table">
-          <thead>
-            <tr><th>Category</th><th>Examples</th><th>Source</th></tr>
-          </thead>
-          <tbody>
-            <tr><td><strong>Contact information</strong></td><td>Name, email address, organisation name, phone number</td><td>Contact and enquiry forms</td></tr>
-            <tr><td><strong>Professional information</strong></td><td>Job title, organisation type, area of interest</td><td>Forms, calls, email</td></tr>
-            <tr><td><strong>Technical data</strong></td><td>IP address, browser type, pages visited, referral source</td><td>Cookies and analytics</td></tr>
-            <tr><td><strong>Communications</strong></td><td>Emails, WhatsApp messages, enquiry content</td><td>Direct contact with us</td></tr>
-          </tbody>
-        </table>
-        <p>We do not collect sensitive personal data (such as health, financial, or biometric data) through our website. If sensitive data is shared in the course of a consultancy engagement, this will be governed by a separate data processing agreement.</p>
-      </div>
-    </div>
-
-    <div class="policy-section" id="how-we-use">
-      <div class="section-num">03</div>
-      <h2 class="section-title">How We Use Your Data</h2>
-      <div class="section-body">
-        <p><strong>Responding to enquiries.</strong> When you contact us via our website, WhatsApp, or email, we use your information to respond to your query and arrange calls or meetings.</p>
-        <p><strong>Delivering our services.</strong> Where you engage us as a client, we process your information to deliver security consultancy, Microsoft 365 configuration, and related services.</p>
-        <p><strong>Marketing communications.</strong> With your consent, we may send you relevant updates about our services or Microsoft security developments. You can unsubscribe at any time.</p>
-        <p><strong>Improving our website.</strong> We use anonymised analytics data to understand how visitors use our site and improve its content.</p>
-        <p><strong>Legal and compliance obligations.</strong> We may process data where required by law, including keeping financial and business records.</p>
-        <div class="callout">We will never sell your personal data to third parties, or use it for purposes incompatible with those described in this policy.</div>
-      </div>
-    </div>
-
-    <div class="policy-section" id="legal-basis">
-      <div class="section-num">04</div>
-      <h2 class="section-title">Legal Basis for Processing</h2>
-      <div class="section-body">
-        <table class="data-table">
-          <thead>
-            <tr><th>Purpose</th><th>Legal Basis</th></tr>
-          </thead>
-          <tbody>
-            <tr><td>Responding to enquiries</td><td>Legitimate interests (responding to your request)</td></tr>
-            <tr><td>Delivering contracted services</td><td>Contract performance</td></tr>
-            <tr><td>Marketing communications</td><td>Consent (withdrawable at any time)</td></tr>
-            <tr><td>Analytics and site improvement</td><td>Legitimate interests / Consent (non-essential cookies)</td></tr>
-            <tr><td>Financial and legal record-keeping</td><td>Legal obligation</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-
-    <div class="policy-section" id="sharing">
-      <div class="section-num">05</div>
-      <h2 class="section-title">Data Sharing</h2>
-      <div class="section-body">
-        <p>We do not sell or trade your personal data. We may share it in the following limited circumstances:</p>
-        <p><strong>Microsoft.</strong> As a Microsoft Partner, some of our services involve Microsoft 365, Azure, and related platforms. Data processed within those platforms is subject to Microsoft's privacy commitments and your organisation's Microsoft agreements.</p>
-        <p><strong>Formspree.</strong> Our contact form uses Formspree to route submissions to us. Formspree processes form data on our behalf and is bound by its own privacy policy.</p>
-        <p><strong>Service providers.</strong> We use trusted third-party tools to run our business, including email and scheduling platforms. These providers are contractually bound to process data only on our behalf.</p>
-        <p><strong>Legal requirements.</strong> We may disclose personal data if required to do so by law or in response to valid requests from public authorities.</p>
-        <div class="callout red">We do not transfer personal data outside the UK or EEA without appropriate safeguards in place.</div>
-      </div>
-    </div>
-
-    <div class="policy-section" id="retention">
-      <div class="section-num">06</div>
-      <h2 class="section-title">Data Retention</h2>
-      <div class="section-body">
-        <table class="data-table">
-          <thead>
-            <tr><th>Data Type</th><th>Retention Period</th></tr>
-          </thead>
-          <tbody>
-            <tr><td>Enquiry and contact data (non-client)</td><td>2 years from last contact</td></tr>
-            <tr><td>Client project data</td><td>7 years from project completion</td></tr>
-            <tr><td>Financial and invoicing records</td><td>7 years (legal requirement)</td></tr>
-            <tr><td>Marketing consent records</td><td>Until consent withdrawn + 1 year</td></tr>
-            <tr><td>Website analytics</td><td>26 months (anonymised)</td></tr>
-          </tbody>
-        </table>
-        <p>When data is no longer needed, we securely delete or anonymise it.</p>
-      </div>
-    </div>
-
-    <div class="policy-section" id="your-rights">
-      <div class="section-num">07</div>
-      <h2 class="section-title">Your Rights</h2>
-      <div class="section-body">
-        <p>Under UK GDPR, you have the following rights in relation to your personal data:</p>
-        <div class="rights-grid">
-          <div class="right-item"><div class="right-name"><div class="right-sq" style="background:var(--ms-blue)"></div>Access</div><div class="right-desc">Request a copy of the personal data we hold about you.</div></div>
-          <div class="right-item"><div class="right-name"><div class="right-sq" style="background:var(--ms-red)"></div>Rectification</div><div class="right-desc">Ask us to correct inaccurate or incomplete data.</div></div>
-          <div class="right-item"><div class="right-name"><div class="right-sq" style="background:var(--ms-grn)"></div>Erasure</div><div class="right-desc">Request deletion where we no longer have a lawful basis to hold it.</div></div>
-          <div class="right-item"><div class="right-name"><div class="right-sq" style="background:var(--ms-yel)"></div>Portability</div><div class="right-desc">Receive your data in a structured, machine-readable format.</div></div>
-          <div class="right-item"><div class="right-name"><div class="right-sq" style="background:var(--ms-blue)"></div>Objection</div><div class="right-desc">Object to processing based on legitimate interests, including direct marketing.</div></div>
-          <div class="right-item"><div class="right-name"><div class="right-sq" style="background:var(--ms-red)"></div>Restriction</div><div class="right-desc">Ask us to restrict processing while a dispute is resolved.</div></div>
-        </div>
-        <p>To exercise any of these rights, contact us at <a href="mailto:info@adjona.com">info@adjona.com</a>. We will respond within 30 days. You also have the right to lodge a complaint with the <a href="https://ico.org.uk" target="_blank" rel="noopener noreferrer">Information Commissioner's Office (ICO)</a>.</p>
-      </div>
-    </div>
-
-    <div class="policy-section" id="cookies">
-      <div class="section-num">08</div>
-      <h2 class="section-title">Cookie Policy</h2>
-      <div class="section-body">
-        <p>Our website uses cookies — small text files stored on your device — to make the site work and to help us understand how it is used.</p>
-        <div class="cookie-types">
-          <div class="cookie-type">
-            <div class="ct-dot" style="background:var(--ms-grn)"></div>
-            <div>
-              <div class="ct-name">Strictly Necessary</div>
-              <div class="ct-desc">Required for the website to function. Includes form submission handling via Formspree. Cannot be disabled.</div>
-            </div>
-            <div class="ct-req yes">Required</div>
-          </div>
-          <div class="cookie-type">
-            <div class="ct-dot" style="background:var(--ms-blue)"></div>
-            <div>
-              <div class="ct-name">Analytics</div>
-              <div class="ct-desc">Help us understand how visitors use the site — which pages are viewed, how long visitors stay, and where they come from. Data is anonymised.</div>
-            </div>
-            <div class="ct-req">Optional</div>
-          </div>
-          <div class="cookie-type">
-            <div class="ct-dot" style="background:var(--ms-yel)"></div>
-            <div>
-              <div class="ct-name">Marketing</div>
-              <div class="ct-desc">Used to track the effectiveness of any paid advertising or referral campaigns. We do not currently run paid advertising.</div>
-            </div>
-            <div class="ct-req">Optional</div>
-          </div>
-        </div>
-        <div class="callout grn">You can manage or withdraw cookie consent at any time via your browser settings. Withdrawing consent for non-essential cookies will not affect your use of the site.</div>
-      </div>
-    </div>
-
-    <div class="policy-section" id="security">
-      <div class="section-num">09</div>
-      <h2 class="section-title">Security</h2>
-      <div class="section-body">
-        <p>As a Microsoft security consultancy, we hold ourselves to the same standards we recommend to clients. We implement appropriate technical and organisational measures to protect your personal data against unauthorised access, loss, or disclosure — including access controls, encryption in transit and at rest, and regular security reviews.</p>
-        <p>Our internal systems run on the Microsoft 365 and Azure stack, governed by Microsoft's enterprise security commitments and our own security policies.</p>
-      </div>
-    </div>
-
-    <div class="policy-section" id="contact-us">
-      <div class="section-num">10</div>
-      <h2 class="section-title">Contact Us</h2>
-      <div class="section-body">
-        <p>For any questions, concerns, or requests relating to this policy or your personal data, please contact:</p>
-        <div class="callout">
-          <strong>Adjona Technology Limited</strong><br>
-          Data Controller · Company No. 05007410<br>
-          Registered in England &amp; Wales<br><br>
-          Email: <a href="mailto:info@adjona.com">info@adjona.com</a><br>
-          Website: <a href="https://adjona.com">adjona.com</a>
-        </div>
-        <p>We may update this policy periodically. The latest version will always be available on this page with the effective date shown above.</p>
-      </div>
-    </div>
-
-  </main>
-</div>
+  <div style="margin-top:2rem;padding:1.25rem 1.5rem;border-left:3px solid var(--ms-blue);background:var(--off);font-size:.85rem;color:var(--muted);line-height:1.75;" class="reveal r3">
+    Need help implementing this in Microsoft 365? The <strong>Guided Setup Session</strong> includes a 1-hour implementation session with an Adjona consultant. <a href="enquiry.html" style="color:var(--ms-blue);text-decoration:none;font-weight:600;">Contact us to find out more &rarr;</a>
+  </div>
+</section>
 
 <footer style="padding-bottom:5rem;">
   <div class="f-logo">
@@ -391,5 +244,4 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
     <li><a href="mailto:info@adjona.com">info@adjona.com</a></li>
   </ul>
 </footer>
-
-<script data-cfa
+</body></html>
