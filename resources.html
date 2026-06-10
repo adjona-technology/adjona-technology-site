@@ -63,6 +63,15 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .sec-title{font-family:'Epilogue',sans-serif;font-size:clamp(2rem,3.5vw,3.5rem);font-weight:900;letter-spacing:-.03em;line-height:.95;margin-bottom:.75rem;}
 .sec-title .serif{font-family:'Lora',serif;font-style:italic;font-weight:500;}
 
+.cases{padding:6rem 4rem;border-top:2px solid var(--ink);background:var(--off);}
+.cases-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:2px solid var(--ink);margin-top:3rem;}
+.case-card{padding:2.5rem 2rem;border-right:2px solid var(--ink);}
+.case-card:last-child{border-right:none;}
+.case-tag{font-family:'JetBrains Mono',monospace;font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:.75rem;}
+.case-tag.blue{color:var(--ms-blue);}.case-tag.red{color:#a82d01;}.case-tag.grn{color:var(--ms-grn);}
+.case-title{font-family:'Epilogue',sans-serif;font-size:1.1rem;font-weight:800;letter-spacing:-.02em;margin-bottom:.75rem;}
+.case-body{font-size:.83rem;color:var(--muted);line-height:1.75;}
+
 .page-cta{display:grid;grid-template-columns:1fr 1fr;border-top:2px solid var(--ink);}
 .cta-blue{background:var(--ms-blue);padding:5rem 4rem;display:flex;flex-direction:column;justify-content:center;}
 .cta-tag{font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.9);margin-bottom:1rem;}
@@ -210,8 +219,9 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
       </div>
     </div>
   </div>
-  <div style="margin-top:2rem;padding:1.25rem 1.5rem;border-left:3px solid var(--ms-blue);background:var(--off);font-size:.85rem;color:var(--muted);line-height:1.75;" class="reveal r3">
-    Need help implementing this in Microsoft 365? The <strong>Guided Setup Session</strong> includes a 1-hour implementation session with an Adjona consultant. <a href="enquiry.html" style="color:var(--ms-blue);text-decoration:none;font-weight:600;">Contact us to find out more &rarr;</a>
+  <div style="margin-top:2rem;padding:1.5rem 2rem;border-left:3px solid var(--ms-blue);background:var(--off);line-height:1.85;" class="reveal r3">
+    <p style="font-size:.88rem;color:var(--muted);margin-bottom:1.25rem;">Need help implementing this in Microsoft 365? The <strong style="color:var(--ink);">Guided Setup Session</strong> is available to organisations that have purchased the Practical Edition. It provides a 1-hour remote session to help plan and configure the Microsoft 365 setup around the toolkit, including the mailbox, Microsoft Lists complaint log, SharePoint evidence area and staff workflow.</p>
+    <a href="enquiry.html" style="font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:#fff;background:var(--ms-blue);border:1.5px solid var(--ms-blue);padding:.55rem 1.1rem;text-decoration:none;display:inline-block;transition:background .2s,color .2s;" onmouseover="this.style.background='#fff';this.style.color='var(--ms-blue)';" onmouseout="this.style.background='var(--ms-blue)';this.style.color='#fff';">Enquire about guided setup &rarr;</a>
   </div>
 </section>
 
