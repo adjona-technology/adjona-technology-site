@@ -3,15 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Why Your "Organic" Microsoft 365 Setup is a Hidden Risk | Adjona Technology</title>
-<meta name="description" content="Most small charities, CICs and care providers grow into Microsoft 365 gradually. That organic adoption creates hidden risks around permissions, data, email security and AI readiness.">
+<title>M365 Operational Resilience Blueprint: A 4-Phase Roadmap for Charities, Care Providers &amp; SMEs | Adjona Technology</title>
+<meta name="description" content="A practical 4-phase blueprint for building operational resilience in Microsoft 365 — secure foundations, structural clarity, governed automation and AI readiness — for charities, care providers and SMEs.">
 <link rel="icon" type="image/svg+xml" href="../favicon.svg">
 <link rel="icon" type="image/x-icon" href="../favicon.ico">
 <link rel="apple-touch-icon" sizes="192x192" href="../favicon-192.png">
-<meta property="og:title" content="Why Your &quot;Organic&quot; Microsoft 365 Setup is a Hidden Risk | Adjona Technology">
-<meta property="og:description" content="Most small charities, CICs and care providers grow into Microsoft 365 gradually. That organic adoption creates hidden risks around permissions, data, email security and AI readiness.">
+<meta property="og:title" content="M365 Operational Resilience Blueprint: A 4-Phase Roadmap for Charities, Care Providers &amp; SMEs">
+<meta property="og:description" content="A practical 4-phase blueprint for building operational resilience in Microsoft 365 — secure foundations, structural clarity, governed automation and AI readiness — for charities, care providers and SMEs.">
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://adjona.com/insights/organic-microsoft-365-hidden-risk.html">
+<meta property="og:url" content="https://adjona.com/insights/microsoft-365-operational-resilience-blueprint.html">
 <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;700;800;900&family=Lora:ital,wght@1,500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <script>
     (function(c,l,a,r,i,t,y){
@@ -75,6 +75,20 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .checklist-item{display:flex;align-items:flex-start;gap:.75rem;font-size:.9rem;line-height:1.7;color:var(--muted);}
 .checklist-item::before{content:'';width:8px;height:8px;flex-shrink:0;background:var(--ms-grn);margin-top:.45rem;}
 
+.phase-block{border:2px solid var(--ink);margin:1.75rem 0;}
+.phase-head{display:flex;align-items:center;gap:1rem;padding:1rem 1.25rem;background:var(--ink);color:#fff;}
+.phase-num{font-family:'JetBrains Mono',monospace;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;background:var(--ms-blue);color:#fff;padding:.3rem .6rem;flex-shrink:0;}
+.phase-title{font-family:'Epilogue',sans-serif;font-size:1rem;font-weight:800;letter-spacing:-.01em;}
+.phase-body{padding:1.25rem 1.5rem;}
+.phase-body p{margin-bottom:1rem;}
+.phase-body p:last-child{margin-bottom:0;}
+
+.diag-table{width:100%;border-collapse:collapse;margin:1.5rem 0 2rem;border:2px solid var(--ink);font-size:.85rem;}
+.diag-table th{font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;text-align:left;background:var(--off);color:var(--ink);padding:.75rem .9rem;border-bottom:2px solid var(--ink);}
+.diag-table td{padding:.85rem .9rem;border-bottom:1px solid var(--border);vertical-align:top;color:var(--muted);line-height:1.6;}
+.diag-table tr:last-child td{border-bottom:none;}
+.diag-table td:first-child{color:var(--ink);font-weight:700;}
+
 .art-sidebar{padding:3rem 2rem;background:var(--off);}
 .sidebar-block{margin-bottom:2.5rem;}
 .sidebar-label{font-family:'JetBrains Mono',monospace;font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:.75rem;}
@@ -128,6 +142,8 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
   .page-cta{grid-template-columns:1fr;}
   .cta-blue{padding:3rem 1.5rem;}
   .cta-right{padding:3rem 1.5rem;}
+  .diag-table{font-size:.78rem;}
+  .diag-table th,.diag-table td{padding:.6rem;}
 }
 @media(max-width:768px){
   :root{--nav-h:58px;}
@@ -143,6 +159,7 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
   .art-hero{padding:calc(var(--nav-h) + 2.5rem) 1.5rem 3rem;}
   footer{flex-direction:column;align-items:flex-start;gap:1.25rem;padding:1.5rem;}
   .f-links{flex-wrap:wrap;gap:1rem;}
+  .diag-table{display:block;overflow-x:auto;white-space:nowrap;}
 }
 </style>
 </head>
@@ -179,12 +196,12 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
 
 <section class="art-hero">
   <div class="art-hero-inner">
-    <div class="page-breadcrumb"><a href="../index.html">Adjona Technology</a> &nbsp;/&nbsp; <a href="../insights.html">Insights</a> &nbsp;/&nbsp; Organic Microsoft 365 Risk</div>
-    <span class="art-tag">Microsoft 365 &nbsp;&middot;&nbsp; Charities &nbsp;&middot;&nbsp; CICs &nbsp;&middot;&nbsp; Care Providers &nbsp;&middot;&nbsp; SMEs</span>
-    <h1>Why your <span class="serif">"organic"</span> Microsoft 365 setup is a hidden risk</h1>
+    <div class="page-breadcrumb"><a href="../index.html">Adjona Technology</a> &nbsp;/&nbsp; <a href="../insights.html">Insights</a> &nbsp;/&nbsp; Operational Resilience Blueprint</div>
+    <span class="art-tag">Microsoft 365 &nbsp;&middot;&nbsp; Charities &nbsp;&middot;&nbsp; Care Providers &nbsp;&middot;&nbsp; SMEs</span>
+    <h1>The Microsoft 365 <span class="serif">operational resilience</span> blueprint</h1>
     <div class="art-meta">
       <div class="art-meta-item">July 2026</div>
-      <div class="art-meta-item">8 min read</div>
+      <div class="art-meta-item">9 min read</div>
       <div class="art-meta-item">Adjona Technology</div>
     </div>
   </div>
@@ -197,86 +214,124 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
 <div class="art-body">
   <article class="art-content">
 
-    <p>For leaders at small charities, CICs and care providers, Microsoft 365 usually arrives in stages. It often starts with email, then moves into Teams for chat, before gradually expanding into SharePoint libraries and personal OneDrives. Each step makes sense at the time. The cumulative result, however, is frequently a messy digital environment — scattered files, unclear permissions and nobody quite sure what the current rules are.</p>
+    <p>Microsoft 365 can appear to be working perfectly well while risk quietly builds underneath. Email flows, Teams messages go back and forth, files get shared — day-to-day operations feel fine. That visible activity, though, sits on top of a much larger structure most leaders never see: unenforced multi-factor authentication, shadow administrator roles, uncontrolled external sharing links, and sensitive data buried in personal OneDrive folders.</p>
 
-    <p>This kind of organic adoption feels manageable day to day. The risk only becomes visible when something goes wrong: a staff member leaves with access they should not have had, sensitive information turns up in the wrong folder, or an auditor asks for evidence that cannot be found quickly.</p>
+    <p>Those risks develop gradually, the natural result of an organisation growing into Microsoft 365 one decision at a time rather than by design. They tend to become visible only when something forces the issue — a staff departure, an audit, an incident, or the introduction of an AI tool that surfaces everything it can reach.</p>
 
-    <p>The five areas below represent the most common places where that risk is hiding.</p>
+    <p>This blueprint sets out a practical, four-phase path from secure foundations to governed automation and AI readiness — the sequence we follow with charities, care providers and growing SMEs to close that gap before it gets tested.</p>
 
-    <h2>1. AI readiness is Microsoft 365 hygiene in disguise</h2>
+    <h2>Foundations first: the maturity model</h2>
 
-    <p>Many organisations are thinking about Microsoft Copilot and AI tools. The assumption is often that AI adoption is a licensing decision — buy the licences, switch it on. In practice, AI readiness is a data governance decision first.</p>
+    <p>Our core philosophy is simple: get the foundations right before introducing automation or AI into everyday work. Each phase depends on the one before it — you cannot build governed automation on ungoverned files, and you cannot roll out Copilot safely on top of unclear permissions.</p>
 
-    <p>AI tools are designed to surface information. That is their value. But in an organic Microsoft 365 environment, AI will surface everything — forgotten drafts, old files, confidential documents saved in the wrong place, sensitive information shared more widely than intended. AI does not know that a folder was meant to be private. It works with what is actually accessible.</p>
-
-    <div class="callout">If your permissions are loose, AI will inadvertently surface information to staff who should not see it. Fixing this after the fact — after Copilot is running — is significantly harder than fixing it first. AI readiness starts with Microsoft 365 hygiene.</div>
-
-    <p>That means reviewing who can access what across Teams and SharePoint, checking for overexposed libraries, reviewing guest access, and understanding where confidential information actually lives before AI has the opportunity to find it.</p>
-
-    <h2>2. Automating a broken process only makes it fail faster</h2>
-
-    <p>Power Automate and Microsoft Forms are genuinely useful. But in smaller organisations, important processes often live in people's heads, in chat threads, or in informal email chains. Automating those processes before they are properly understood tends to speed up duplication and errors rather than resolving them.</p>
-
-    <div class="callout yel">The aim is not to automate a broken process. The aim is to clarify the workflow — who does what, in what order, with what information — and then add automation where it genuinely reduces manual effort or improves consistency. Technical complexity added before that clarity is reached tends to make things worse, not better.</div>
-
-    <p>For sensitive areas — intake processes, case management, compliance tracking — good automation means consistent outcomes and a clear audit trail. That requires the human process to be understood first.</p>
-
-    <h2>3. The evidence probably exists — it just lacks structure</h2>
-
-    <p>For charities, care providers and housing associations that need to demonstrate compliance, the challenge is rarely a lack of work. Policies have been written. Risk assessments have been completed. Training has happened. The problem is that the evidence is fragmented — spread across email inboxes, SharePoint sites nobody manages, paper files, and personal OneDrive folders that only one person can find.</p>
-
-    <p>Every board report, commissioner review or regulatory inspection becomes a high-pressure search for documents that should be immediately to hand.</p>
-
-    <p>Moving from "we think it's somewhere" to "we know where it is" does not require a new software platform. It requires structure applied to the tools already available:</p>
-
-    <ul>
-      <li><strong>SharePoint document libraries</strong> — governed storage areas for core organisational documents, with named owners and clear folder logic</li>
-      <li><strong>Metadata columns</strong> — document type, owner, review date, status and risk area, making filtering and retrieval straightforward</li>
-      <li><strong>Microsoft Lists</strong> — structured registers for action plans, gap analysis, incident logs and compliance tracking</li>
-    </ul>
-
-    <p>The goal is an evidence workspace that a manager can navigate confidently, not just the person who set it up.</p>
-
-    <h2>4. Email authentication is the most overlooked trust signal</h2>
-
-    <p>Email remains one of the most significant operational risks for small organisations, and one of the most consistently overlooked. Weak email authentication means outgoing messages are more likely to be blocked, flagged or treated as suspicious by receiving organisations. It also leaves your domain vulnerable to spoofing — someone impersonating your organisation to funders, commissioners or service users.</p>
-
-    <p>Three technical records protect against this: SPF, DKIM and DMARC. Together they act as a digital signature that confirms to receiving email systems that a message genuinely came from your domain and has not been altered in transit.</p>
-
-    <div class="callout grn">
-      <strong>A quick check for your organisation:</strong>
-      <ul style="margin-top:.75rem;padding-left:1.25rem;">
-        <li style="margin-bottom:.4rem;">Have you identified every system allowed to send email on your behalf — including third-party tools, CRMs and case management platforms?</li>
-        <li style="margin-bottom:.4rem;">Is your SPF record current and restricted to authorised sending systems only?</li>
-        <li style="margin-bottom:.4rem;">Is DKIM enabled in Microsoft 365 to sign outbound messages?</li>
-        <li>Do you have a DMARC policy in place to monitor and protect your domain?</li>
-      </ul>
+    <div class="phase-block">
+      <div class="phase-head"><span class="phase-num">Step 1</span><span class="phase-title">Secure Foundations</span></div>
+      <div class="phase-body"><p>Identity, MFA, admin roles and email deliverability. You cannot build on an unsecure base.</p></div>
+    </div>
+    <div class="phase-block">
+      <div class="phase-head"><span class="phase-num">Step 2</span><span class="phase-title">Structural Clarity</span></div>
+      <div class="phase-body"><p>Tidying Teams and SharePoint, and creating the Evidence Workspace. Security means nothing if files are lost.</p></div>
+    </div>
+    <div class="phase-block">
+      <div class="phase-head"><span class="phase-num">Step 3</span><span class="phase-title">Governed Automation</span></div>
+      <div class="phase-body"><p>Replacing spreadsheets and ad hoc messaging apps with structured Microsoft 365 workflows. Automating chaos just makes the problem faster.</p></div>
+    </div>
+    <div class="phase-block">
+      <div class="phase-head"><span class="phase-num">Step 4</span><span class="phase-title">AI Readiness</span></div>
+      <div class="phase-body"><p>Fixing permissions and data structure before rolling out Copilot. AI makes existing governance problems more visible, not less.</p></div>
     </div>
 
-    <p>For many smaller organisations, the answer to at least one of these is no — or uncertain. Getting this right is one of the highest-value, lowest-complexity improvements available.</p>
+    <h2>Diagnosing operational friction</h2>
 
-    <h2>5. The basics protect more organisations than complex tools</h2>
+    <p>Most of the symptoms leaders notice day to day trace back to one of a small number of root causes. Naming the connection between the two is usually the first useful step.</p>
 
-    <p>Most small organisations do not need enterprise-grade security tooling. They need the fundamentals in place and properly maintained. In practice, most are one account compromise away from serious operational disruption — and the most common cause of that compromise is not a sophisticated attack. It is a missing control that should have been standard.</p>
+    <table class="diag-table">
+      <tr><th>Symptom (the pain)</th><th>Hidden risk (the root cause)</th><th>Practical fix</th></tr>
+      <tr><td>Staff use consumer messaging apps for operational chat</td><td>Data leakage, no audit trail, safeguarding risk</td><td>Secure Teams implementation &amp; communication policy</td></tr>
+      <tr><td>Organisational files live in personal OneDrives</td><td>Loss of access when staff leave, no version control</td><td>SharePoint clean-up &amp; file governance model</td></tr>
+      <tr><td>Emails frequently land in clients' junk folders</td><td>Weak domain trust, spoofing vulnerability</td><td>Email security configuration (SPF, DKIM, DMARC)</td></tr>
+      <tr><td>Compliance evidence is scattered across inboxes and spreadsheets</td><td>Last-minute panic before CQC or auditor inspections</td><td>The Adjona Evidence Workspace</td></tr>
+    </table>
 
-    <div class="callout red">Enforcing multi-factor authentication across all accounts, reviewing who holds administrator access, and promptly removing accounts for staff and volunteers who have left — these three actions provide more practical protection than most complex security tools. They are not glamorous. They are consistently the difference between organisations that recover quickly from incidents and those that do not.</div>
+    <h2>Phase 1: Secure foundations</h2>
 
-    <p>Smaller organisations benefit most from clear priorities and practical next steps rather than extensive technical reports. The question is not which security platform to buy. The question is whether the basics are genuinely in place.</p>
+    <p>Cyber resilience is not about buying expensive tools. It is about practical controls, proportionate to the organisation.</p>
 
-    <h2>The underlying pattern</h2>
+    <ul>
+      <li><strong>Identity</strong> — enforcing multi-factor authentication consistently across every account</li>
+      <li><strong>Administration</strong> — removing shadow admin roles and documenting privileged access</li>
+      <li><strong>Incident readiness</strong> — clear staff guidance on suspicious links and compromised accounts</li>
+      <li><strong>Email deliverability</strong> — configuring SPF, DKIM and DMARC to protect domain trust and prevent spoofing</li>
+    </ul>
 
-    <p>Across all five areas, the same dynamic appears. Organic growth produces a working environment that feels manageable until it is tested — by an audit, an incident, a staff change, or the introduction of new tools. At that point, the accumulated decisions of years become visible all at once.</p>
+    <div class="callout">This is the starting point of our Cyber Health Check: a plain-English review of your Microsoft 365 and Azure security posture, delivering a prioritised action plan of what to fix first and what can wait.</div>
 
-    <p>The good news is that none of this requires starting from scratch. Microsoft 365 already contains most of what smaller organisations need. What it usually lacks is deliberate structure, clear ownership and a routine of maintenance. Those things can be put in place without a major project or significant additional cost.</p>
+    <h2>Phase 2: Structural clarity and file clean-up</h2>
 
-    <p>If any of the five areas above feels familiar, that is usually a sign that a practical review is worth doing sooner rather than later — before pressure arrives rather than in response to it. For the full roadmap we use to close these gaps in order, see our <a href="microsoft-365-operational-resilience-blueprint.html" style="color:var(--ms-blue);text-decoration:none;font-weight:700;">Microsoft 365 operational resilience blueprint &rarr;</a>.</p>
+    <p>Teams and SharePoint should make collaboration easier, not create confusion. This phase moves organisations away from duplicated folders and uncontrolled sharing — personal OneDrives, dead Teams sites, email attachments and files left on local laptops — into governed SharePoint libraries, active Teams channels and secured external sharing.</p>
+
+    <p>In practice, that means:</p>
+
+    <div class="checklist">
+      <div class="checklist-item">Mapping active versus dead workspaces</div>
+      <div class="checklist-item">Moving organisational files out of personal OneDrives</div>
+      <div class="checklist-item">Tidying external sharing links and guest access</div>
+      <div class="checklist-item">Creating practical folder structures staff can actually follow</div>
+    </div>
+
+    <h3>The Adjona Evidence Workspace</h3>
+
+    <p>Often, the work is genuinely done, but the evidence is fragmented across inboxes and spreadsheets — causing panic before an inspection rather than confidence. The Evidence Workspace is a Microsoft 365 build on SharePoint and Microsoft Lists that stores, categorises and retrieves that evidence, using metadata columns for owner, review date, status and risk area, basic Power Automate review notifications, strict permissions for sensitive information, and dashboard views for things like CQC readiness or property compliance.</p>
+
+    <div class="callout grn">Evidence should not depend on memory, guesswork, or one person knowing where everything is.</div>
+
+    <h2>Phase 3: Governed workflow automation</h2>
+
+    <p>Many small organisations rely on spreadsheets and manual reminders to keep things moving. Automating an unclear process just makes the problem faster — so we clarify the workflow first, then build the pipeline: structured data capture, a processing and scoring logic engine, a notification or safeguarding-flag output, and a storage layer that keeps a full audit trail.</p>
+
+    <p>What we typically build includes enquiry and referral tracking, staff and volunteer onboarding flows, and assisted email triage for shared inboxes — with the goal of better control, clearer accountability, and more reliable evidence of what happened, when, and who needed to act.</p>
+
+    <h3>Solution demonstrator: a clinical assessment workflow</h3>
+
+    <p>The old way: assessments collected manually, re-entered into spreadsheets, with risk indicators missed due to delay and safeguarding alerts buried in individual inboxes.</p>
+
+    <p>The Adjona way: a client completes a structured assessment via Microsoft Forms; the response is automatically captured in SharePoint, applying consistent scoring logic; if a high-risk threshold is reached, Power Automate flags it instantly; and Microsoft Teams routes the safeguarding alert directly to the designated clinical lead.</p>
+
+    <div class="callout yel"><strong>A note on scope:</strong> workflows involving clinical or safeguarding information require careful design, strict access controls, and validation by qualified service leads before live use.</div>
+
+    <h2>Phase 4: AI and Copilot readiness</h2>
+
+    <p>AI can be genuinely useful, but its value depends entirely on the quality, structure and permissions of the information it can access. If Microsoft 365 is messy, AI will expose existing governance problems faster, not fix them.</p>
+
+    <p>The AI readiness checklist we work through with clients:</p>
+
+    <ul>
+      <li><strong>Permissions</strong> — restrict sensitive files to prevent oversharing surfaced through Copilot prompts</li>
+      <li><strong>Data structure</strong> — separate old drafts and confidential material from everyday working files</li>
+      <li><strong>Staff guidance</strong> — short acceptable-use guides covering personal data and the need for human review</li>
+      <li><strong>Use cases</strong> — identify safe, low-risk starting points, such as summarising public information</li>
+    </ul>
+
+    <div class="callout red">AI readiness is not just about buying licences. It starts with Microsoft 365 hygiene.</div>
+
+    <h2>The synthesis: the Secure Operations Hub</h2>
+
+    <p>Taken together, the four phases bring isolated fixes into a single, structured Microsoft 365 operating environment — structured document libraries and staff intranets, automated referral tracking and HR request workflows, and clear access controls with Cyber Essentials readiness tracking.</p>
+
+    <p>The result: important work becomes easier to manage, safer to operate, and clearer to oversee — all built on the Microsoft 365 platform an organisation already pays for.</p>
+
+    <h2>Sustaining resilience: fractional IT leadership</h2>
+
+    <p>Small organisations often need senior IT judgement before they need another software tool. Once the four phases are in place, ongoing fractional IT support keeps them that way — supplier and vendor coordination, a continuous technology risk register, concise board reporting for trustees, directors and scrutiny panels, and 90-day roadmaps that move an organisation from reactive break/fix to prioritised, planned improvement.</p>
+
+    <p>None of this requires starting from scratch. Microsoft 365 already contains most of what a smaller organisation needs — what it usually lacks is deliberate structure, clear ownership, and a routine of maintenance. Those things can be put in place in a sequence that respects where the organisation is today.</p>
 
   </article>
 
   <aside class="art-sidebar">
     <div class="sidebar-block">
       <div class="sidebar-label">About Adjona</div>
-      <div class="sidebar-body">Adjona Technology is a Microsoft AI Cloud Partner helping charities, care providers, CICs and SMEs build safer, better-governed Microsoft 365 environments.</div>
+      <div class="sidebar-body">Adjona Technology is a Microsoft AI Cloud Partner helping charities, care providers and SMEs build safer, better-governed Microsoft 365 environments.</div>
     </div>
     <hr class="sidebar-divider">
     <div class="sidebar-block">
@@ -287,6 +342,20 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
     </div>
     <hr class="sidebar-divider">
     <div class="sidebar-block">
+      <div class="sidebar-label">Phase 2 in practice</div>
+      <div class="sidebar-title">Evidence Workspace</div>
+      <div class="sidebar-body">Structured compliance and governance evidence, built on SharePoint and Microsoft Lists.</div>
+      <a href="../evidence-workspace.html" class="sidebar-cta">Find out more &rarr;</a>
+    </div>
+    <hr class="sidebar-divider">
+    <div class="sidebar-block">
+      <div class="sidebar-label">The synthesis</div>
+      <div class="sidebar-title">Secure Operations Hub Package</div>
+      <div class="sidebar-body">Bringing isolated solutions together into one structured Microsoft 365 operating environment.</div>
+      <a href="../secure-operations-hub-package.html" class="sidebar-cta">Find out more &rarr;</a>
+    </div>
+    <hr class="sidebar-divider">
+    <div class="sidebar-block">
       <div class="sidebar-label">Free introductory conversation</div>
       <div class="sidebar-body">Book a free 30-minute call. Practical advice you can act on.</div>
       <a href="https://outlook.office.com/book/AdjonaTechnologyLimited1@adjona.com/s/ElOd0P60CEiQxQcnIYWXWw2" target="_blank" rel="noopener noreferrer" class="sidebar-cta" style="margin-top:.5rem;background:#2F6B00;">Book a Free Call &rarr;</a>
@@ -294,8 +363,8 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
     <hr class="sidebar-divider">
     <div class="sidebar-block">
       <div class="sidebar-label">Related reading</div>
+      <div class="sidebar-body"><a href="organic-microsoft-365-hidden-risk.html" style="color:var(--ms-blue);text-decoration:none;font-weight:700;">Why your "organic" Microsoft 365 setup is a hidden risk &rarr;</a></div>
       <div class="sidebar-body"><a href="fixing-teams-sharepoint-file-access.html" style="color:var(--ms-blue);text-decoration:none;font-weight:700;">Fixing messy Teams, SharePoint and file access &rarr;</a></div>
-      <div class="sidebar-body"><a href="../microsoft-365-consultant-charities.html" style="color:var(--ms-blue);text-decoration:none;font-weight:700;">Microsoft 365 consultant for charities &rarr;</a></div>
     </div>
   </aside>
 </div>
@@ -308,10 +377,10 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
 <div class="page-cta">
   <div class="cta-blue">
     <div class="cta-tag">Free Introductory Conversation</div>
-    <h2 class="cta-title">Ready to review <span class="serif">your setup?</span></h2>
-    <p class="cta-sub">Adjona Technology helps charities, care providers, CICs and SMEs build practical, governed Microsoft 365 environments. Book a free 30-minute conversation to start.</p>
+    <h2 class="cta-title">Start with a clearer <span class="serif">view of your risks</span></h2>
+    <p class="cta-sub">Whether you need a focused Microsoft 365 Security Review, a scoped improvement project, or ongoing fractional IT support — the starting point is a short, practical conversation. No obligation, no hard sell.</p>
     <div class="cta-actions">
-      <a href="https://outlook.office.com/book/AdjonaTechnologyLimited1@adjona.com/s/ElOd0P60CEiQxQcnIYWXWw2" target="_blank" rel="noopener noreferrer" class="cta-btn-solid">Book a Free Introductory Conversation</a>
+      <a href="https://outlook.office.com/book/AdjonaTechnologyLimited1@adjona.com/s/ElOd0P60CEiQxQcnIYWXWw2" target="_blank" rel="noopener noreferrer" class="cta-btn-solid">Book a Cyber Health Check</a>
       <a href="../enquiry.html" class="cta-btn-outline">Send an Enquiry &rarr;</a>
     </div>
   </div>
