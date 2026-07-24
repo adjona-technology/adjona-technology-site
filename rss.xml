@@ -11,6 +11,13 @@
     <atom:link href="https://adjona.com/rss.xml" rel="self" type="application/rss+xml" />
 
     <item>
+      <title>Phishing has moved beyond email: is your Microsoft 365 environment ready?</title>
+      <link>https://adjona.com/insights/phishing-beyond-email-microsoft-365.html</link>
+      <guid isPermaLink="true">https://adjona.com/insights/phishing-beyond-email-microsoft-365.html</guid>
+      <description>Phishing now extends beyond email to Microsoft Teams, identity attacks and malicious applications. Here is what every organisation should review in their Microsoft 365 environment.</description>
+    </item>
+
+    <item>
       <title>The Microsoft 365 operational resilience blueprint</title>
       <link>https://adjona.com/insights/microsoft-365-operational-resilience-blueprint.html</link>
       <guid isPermaLink="true">https://adjona.com/insights/microsoft-365-operational-resilience-blueprint.html</guid>
