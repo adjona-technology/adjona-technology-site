@@ -116,6 +116,15 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
 .f-links a:hover{color:var(--ms-blue);}
 @media(max-width:1000px){.nav-cta{display:none;}.cta-section{grid-template-columns:1fr;}.support-grid{grid-template-columns:1fr;}.glance-box{min-width:0;width:100%;}.body-section{padding:3rem 1.5rem;}.disclaimer{padding:1.5rem;}.cta-blue,.cta-right-panel{padding:3rem 1.5rem;}}
 @media(max-width:768px){:root{--nav-h:58px;}nav{padding:0 1.25rem;flex-wrap:wrap;}.logo{padding:.85rem 0;}.nav-links{display:none;width:100%;flex-direction:column;border-top:1px solid var(--border);}.nav-links.nav-open{display:flex;background:#fff;}.nav-links a{border-left:none;border-bottom:1px solid var(--border);padding:1rem 0;}.nav-hamburger{display:block;background:none;border:none;font-size:1.4rem;cursor:pointer;padding:.5rem;color:var(--ink);margin-left:auto;}.nav-cta{display:none !important;}.nav-cta-mobile{display:none !important;}.nav-cta-mobile.nav-open{display:block !important;width:100%;font-family:'Epilogue',sans-serif;font-size:.82rem;font-weight:900;background:var(--ms-blue);color:#fff;text-decoration:none;text-align:center;padding:1rem 1.25rem;border-top:2px solid var(--ink);}.page-hero{padding:calc(var(--nav-h) + 2rem) 1.5rem 2.5rem;}footer{flex-direction:column;align-items:flex-start;gap:1.25rem;padding:1.5rem;}.f-links{flex-wrap:wrap;gap:1rem;}}
+
+/* COOKIE NOTICE */
+#cookie-bar{position:fixed;bottom:0;left:0;right:0;z-index:9999;background:#0d0d0d;border-top:2px solid #0F4C81;padding:.85rem 2rem;display:flex;align-items:center;justify-content:space-between;gap:1.5rem;flex-wrap:wrap;font-family:'Epilogue',sans-serif;font-size:.82rem;color:#ccc;transition:transform .3s;}
+#cookie-bar.hidden{transform:translateY(100%);}
+#cookie-bar a{color:#0F4C81;text-decoration:none;}
+#cookie-bar a:hover{text-decoration:underline;}
+#cookie-bar-accept{font-family:'Epilogue',sans-serif;font-size:.82rem;font-weight:900;background:#0F4C81;color:#fff;border:none;padding:.5rem 1.25rem;cursor:pointer;white-space:nowrap;transition:background .2s;}
+#cookie-bar-accept:hover{background:#0062b0;}
+@media(max-width:600px){#cookie-bar{flex-direction:column;align-items:flex-start;padding:1rem 1.25rem;}}
 </style>
 </head>
 <body>
@@ -283,5 +292,25 @@ document.addEventListener('DOMContentLoaded',function(){
   });
 });
 </script>
+
+<!-- Cookie notice -->
+<div id="cookie-bar" role="region" aria-label="Cookie notice">
+  <span>This site uses analytics cookies to understand how visitors use it. See our <a href="/adjona-privacy.html">privacy policy</a>.</span>
+  <button id="cookie-bar-accept" aria-label="Accept cookies">Got it</button>
+</div>
+<script>
+(function(){
+  try{
+    if(localStorage.getItem('adjona_cookie_ok')==='1'){
+      document.getElementById('cookie-bar').classList.add('hidden');
+    }
+  }catch(e){}
+  document.getElementById('cookie-bar-accept').addEventListener('click',function(){
+    try{localStorage.setItem('adjona_cookie_ok','1');}catch(e){}
+    document.getElementById('cookie-bar').classList.add('hidden');
+  });
+})();
+</script>
+
 </body>
 </html>
