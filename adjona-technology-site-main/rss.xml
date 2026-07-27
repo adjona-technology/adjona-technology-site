@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+     xmlns:atom="http://www.w3.org/2005/Atom">
+
+  <channel>
+
+    <title>Adjona Insights</title>
+    <link>https://adjona.com/insights.html</link>
+    <description>Practical insights on Microsoft 365 security, governance, data protection, automation and AI readiness for charities, care providers, CICs and smaller organisations.</description>
+    <language>en-gb</language>
+    <atom:link href="https://adjona.com/rss.xml" rel="self" type="application/rss+xml" />
+
+    <item>
+      <title>AI may not take your job. Refusing to adapt could.</title>
+      <link>https://adjona.com/insights/ai-may-not-take-your-job.html</link>
+      <guid isPermaLink="true">https://adjona.com/insights/ai-may-not-take-your-job.html</guid>
+      <description>AI does not usually erase whole occupations in one clean sweep. It changes which parts of a job are valuable. Lessons from the typewriter, the calculator and the spreadsheet for organisations adopting AI and Copilot today.</description>
+    </item>
+
+    <item>
+      <title>Phishing has moved beyond email: is your Microsoft 365 environment ready?</title>
+      <link>https://adjona.com/insights/phishing-beyond-email-microsoft-365.html</link>
+      <guid isPermaLink="true">https://adjona.com/insights/phishing-beyond-email-microsoft-365.html</guid>
+      <description>Phishing now extends beyond email to Microsoft Teams, identity attacks and malicious applications. Here is what every organisation should review in their Microsoft 365 environment.</description>
+    </item>
+
+    <item>
+      <title>The Microsoft 365 operational resilience blueprint</title>
+      <link>https://adjona.com/insights/microsoft-365-operational-resilience-blueprint.html</link>
+      <guid isPermaLink="true">https://adjona.com/insights/microsoft-365-operational-resilience-blueprint.html</guid>
+      <description>A practical four-phase roadmap from secure foundations to structural clarity, governed automation and AI readiness.</description>
+    </item>
+
+    <item>
+      <title>Trustee confidence is high, but important governance gaps remain</title>
+      <link>https://adjona.com/insights/trustee-confidence-governance-gaps-2026.html</link>
+      <guid isPermaLink="true">https://adjona.com/insights/trustee-confidence-governance-gaps-2026.html</guid>
+      <description>What the Charity Commission&#x27;s Research with trustees: 2026 reveals about trustee confidence, financial controls, governance knowledge and technology adoption.</description>
+    </item>
+
+    <item>
+      <title>Why your organic Microsoft 365 setup is a hidden risk</title>
+      <link>https://adjona.com/insights/organic-microsoft-365-hidden-risk.html</link>
+      <guid isPermaLink="true">https://adjona.com/insights/organic-microsoft-365-hidden-risk.html</guid>
+      <description>Why gradual Microsoft 365 adoption can create hidden risks involving permissions, information governance, email security, automation and AI readiness.</description>
+    </item>
+
+    <item>
+      <title>Can your care service find and protect the records, emails and evidence it relies on?</title>
+      <link>https://adjona.com/insights/care-provider-records-evidence-microsoft-365.html</link>
+      <guid isPermaLink="true">https://adjona.com/insights/care-provider-records-evidence-microsoft-365.html</guid>
+      <description>How care providers can organise and protect records, emails, documents and compliance evidence held across Microsoft 365 and other systems.</description>
+    </item>
+
+    <item>
+      <title>Fixing messy Teams, SharePoint and file access in Microsoft 365</title>
+      <link>https://adjona.com/insights/fixing-teams-sharepoint-file-access.html</link>
+      <guid isPermaLink="true">https://adjona.com/insights/fixing-teams-sharepoint-file-access.html</guid>
+      <description>How to review and improve Teams, SharePoint, OneDrive, file structures, external sharing and user permissions.</description>
+    </item>
+
+  </channel>
+
+</rss>
