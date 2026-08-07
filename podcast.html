@@ -22,17 +22,16 @@
 </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Insights | Microsoft 365 for Charities, Care Providers &amp; SMEs | Adjona Technology</title>
-<meta name="description" content="Practical articles on Microsoft 365 security, governance, data protection, and AI readiness for charities, care providers, and smaller organisations.">
+<title>Adjona Insights Podcast | Adjona Technology</title>
+<meta name="description" content="Adjona Insights: practical conversations on Microsoft 365, AI, security, automation and governance for charities, SMEs and other organisations. Listen on Spotify.">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="icon" type="image/x-icon" href="favicon.ico">
 <link rel="apple-touch-icon" sizes="192x192" href="favicon-192.png">
-<meta property="og:title" content="Insights | Adjona Technology">
-<meta property="og:description" content="Practical articles on Microsoft 365 security, governance, data protection, and AI readiness for charities, care providers, and smaller organisations.">
+<meta property="og:title" content="Adjona Insights Podcast | Adjona Technology">
+<meta property="og:description" content="Practical conversations on Microsoft 365, AI, security, automation and governance for charities, SMEs and other organisations. Listen on Spotify.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://adjona.com/insights.html">
+<meta property="og:url" content="https://adjona.com/podcast.html">
 <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;700;800;900&family=Lora:ital,wght@1,500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<!-- Clarity tracking code for https://adjona.com/ -->
 <script>
     (function(c,l,a,r,i,t,y){
         c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
@@ -78,9 +77,16 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .page-hero h1 .serif{font-family:'Lora',serif;font-style:italic;font-weight:500;letter-spacing:-.02em;}
 .page-hero-body{font-size:1.05rem;line-height:1.85;color:var(--muted);max-width:680px;}
 
-.sec-label{font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ms-blue);margin-bottom:.75rem;}
-.sec-title{font-family:'Epilogue',sans-serif;font-size:clamp(2rem,3.5vw,3.5rem);font-weight:900;letter-spacing:-.03em;line-height:.95;margin-bottom:.75rem;}
-.sec-title .serif{font-family:'Lora',serif;font-style:italic;font-weight:500;}
+.podcast-section{padding:5rem 4rem;border-bottom:2px solid var(--ink);}
+.pod-avail-label{font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ms-grn);margin-bottom:2rem;display:block;}
+.pod-episode{border:2px solid var(--ink);padding:2.5rem;margin-bottom:2.5rem;}
+.pod-episode:last-child{margin-bottom:0;}
+.pod-ep-tag{font-family:'JetBrains Mono',monospace;font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ms-blue);margin-bottom:.75rem;}
+.pod-ep-title{font-family:'Epilogue',sans-serif;font-size:1.4rem;font-weight:800;letter-spacing:-.02em;margin-bottom:.85rem;color:var(--ink);}
+.pod-ep-desc{font-size:.92rem;line-height:1.85;color:var(--muted);margin-bottom:1.75rem;max-width:760px;}
+.pod-ep-desc a{color:var(--ms-blue);text-decoration:none;font-weight:700;}
+.pod-ep-desc a:hover{text-decoration:underline;}
+.pod-embed iframe{display:block;border-radius:8px;max-width:640px;}
 
 .page-cta{display:grid;grid-template-columns:1fr 1fr;border-top:2px solid var(--ink);}
 .cta-blue{background:var(--ms-blue);padding:5rem 4rem;display:flex;flex-direction:column;justify-content:center;}
@@ -113,36 +119,12 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
 .f-links a:hover{color:var(--ms-blue);}
 
 
-
-/* INSIGHTS INDEX */
-.insights-section{padding:5rem 4rem;border-bottom:2px solid var(--ink);}
-.insights-grid{display:flex;flex-direction:column;gap:0;margin-top:3rem;border:2px solid var(--ink);}
-.ins-row{display:grid;grid-template-columns:9rem 1fr auto;gap:2rem;align-items:start;padding:2rem;border-bottom:1px solid var(--border);text-decoration:none;color:inherit;transition:background .2s;}
-.ins-row:last-child{border-bottom:none;}
-.ins-row:hover{background:var(--off);}
-.ins-date{font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);padding-top:.2rem;}
-.ins-body{}
-.ins-tag{font-family:'JetBrains Mono',monospace;font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:.4rem;}
-.ins-tag.blue{color:var(--ms-blue);}
-.ins-tag.red{color:#a82d01;}
-.ins-tag.grn{color:var(--ms-grn);}
-.ins-tag.yel{color:#8a5e00;}
-.ins-title{font-family:'Epilogue',sans-serif;font-size:1.1rem;font-weight:800;letter-spacing:-.02em;margin-bottom:.4rem;}
-.ins-summary{font-size:.85rem;color:var(--muted);line-height:1.7;}
-.ins-arrow{font-family:'Epilogue',sans-serif;font-size:.9rem;font-weight:900;color:var(--ms-blue);white-space:nowrap;padding-top:.2rem;}
-
-@media(max-width:1000px){
-  .insights-section{padding-left:1.5rem;padding-right:1.5rem;}
-  .ins-row{grid-template-columns:1fr;gap:.5rem;}
-  .ins-arrow{display:none;}
-}
-
-
 @media(max-width:1000px){
   .nav-cta{display:none;}
   .page-cta{grid-template-columns:1fr;}
   .cta-blue{padding:3rem 1.5rem;}
   .cta-right{padding:3rem 1.5rem;}
+  .pod-episode{padding:1.75rem;}
 }
 @media(max-width:768px){
   :root{--nav-h:58px;}
@@ -156,6 +138,7 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
   .nav-cta-mobile{display:none !important;}
   .nav-cta-mobile.nav-open{display:block !important;width:100%;font-family:'Epilogue',sans-serif;font-size:.82rem;font-weight:900;background:var(--ms-blue);color:#fff;text-decoration:none;text-align:center;padding:1rem 1.25rem;border-top:2px solid var(--ink);}
   .page-hero{padding:calc(var(--nav-h) + 2.5rem) 1.5rem 3rem;}
+  .podcast-section{padding:3rem 1.5rem;}
   footer{flex-direction:column;align-items:flex-start;gap:1.25rem;padding:1.5rem;}
   .f-links{flex-wrap:wrap;gap:1rem;}
 }
@@ -169,12 +152,11 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
 #cookie-bar-accept:hover{background:#0062b0;}
 @media(max-width:600px){#cookie-bar{flex-direction:column;align-items:flex-start;padding:1rem 1.25rem;}}
 </style>
-  <link rel="alternate" type="application/rss+xml" title="Adjona Insights" href="https://adjona.com/rss.xml">
 </head>
 <body>
 
 <nav>
-  <a class="logo" href="index.html">
+  <a href="index.html" class="logo">
     <svg width="36" height="28" viewBox="0 0 36 28" xmlns="http://www.w3.org/2000/svg">
       <polygon points="0,28 6,28 7,17 6,16 0,16" fill="#0F4C81"/>
       <polygon points="9,28 15,28 16,12 15,11 9,11" fill="#D83B01"/>
@@ -190,7 +172,7 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
     <li><a href="packages.html">Solution Packages</a></li>
     <li><a href="index.html#credentials">Credentials</a></li>
     <li><a href="resources.html">Resources</a></li>
-    <li><a href="insights.html" class="active">Insights</a></li>
+    <li><a href="insights.html">Insights</a></li>
     <li><a href="enquiry.html">Contact Us</a></li>
   </ul>
   <a href="https://outlook.office.com/book/AdjonaTechnologyLimited1@adjona.com/s/ElOd0P60CEiQxQcnIYWXWw2" target="_blank" rel="noopener noreferrer" class="nav-cta">Book a Free Introductory Conversation</a>
@@ -204,10 +186,10 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
 
 <section class="page-hero">
   <div class="page-hero-inner">
-    <div class="page-breadcrumb"><a href="index.html">Adjona Technology</a> &nbsp;/&nbsp; Insights</div>
-    <span class="page-tag">Microsoft 365 &nbsp;&middot;&nbsp; Security &nbsp;&middot;&nbsp; Governance &nbsp;&middot;&nbsp; AI Readiness</span>
-    <h1>Practical <span class="serif">Insights</span></h1>
-    <p class="page-hero-body">Plain-English articles on Microsoft 365 security, governance, data protection, and AI readiness for charities, care providers, CICs, and smaller organisations.</p>
+    <div class="page-breadcrumb"><a href="index.html">Adjona Technology</a> &nbsp;/&nbsp; Podcast</div>
+    <span class="page-tag">Microsoft 365 &nbsp;&middot;&nbsp; Security &nbsp;&middot;&nbsp; Governance &nbsp;&middot;&nbsp; AI</span>
+    <h1>Adjona Insights <span class="serif">podcast.</span></h1>
+    <p class="page-hero-body">Practical conversations on Microsoft 365, AI, automation, cybersecurity and digital governance for charities, SMEs and other organisations. Adjona Insights explores real-world technology challenges and practical approaches to solving them &mdash; available wherever you get your podcasts.</p>
   </div>
 </section>
 
@@ -215,133 +197,34 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
   <div class="fs b"></div><div class="fs r"></div><div class="fs g"></div><div class="fs y"></div>
 </div>
 
-<a href="podcast.html" style="display:flex;align-items:center;justify-content:space-between;gap:1.5rem;padding:1.5rem 4rem;background:var(--off);border-bottom:2px solid var(--ink);text-decoration:none;color:var(--ink);flex-wrap:wrap;">
-  <span style="font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);">New &middot; Adjona Insights is now also a podcast</span>
-  <span style="font-family:'Epilogue',sans-serif;font-size:.9rem;font-weight:900;color:var(--ms-blue);">Listen on Spotify &rarr;</span>
-</a>
+<section class="podcast-section">
+  <span class="pod-avail-label">Latest episodes</span>
 
-<section class="insights-section">
-  <div class="insights-grid">
-
-    <!-- TEMPLATE ROW — duplicate and edit for each new article -->
-    <a class="ins-row" href="insights/dbs-supervision-exemption-charity-volunteers.html">
-      <div class="ins-date"><time datetime="2026-08">Aug 2026</time></div>
-      <div class="ins-body">
-        <div class="ins-tag blue">Safeguarding &middot; Charities &middot; Governance</div>
-        <div class="ins-title">The September 2026 DBS change: what charities using volunteers need to do now</div>
-        <div class="ins-summary">From 1 September 2026, the DBS supervision exemption is removed. What charities, community groups and sports clubs using volunteers need to review before the deadline.</div>
-      </div>
-      <div class="ins-arrow">Read &rarr;</div>
-    </a>
-
-        <a class="ins-row" href="insights/eu-ai-transparency-rules-uk-organisations.html">
-      <div class="ins-date"><time datetime="2026-08">Aug 2026</time></div>
-      <div class="ins-body">
-        <div class="ins-tag blue">AI Governance &middot; Charities &middot; SMEs</div>
-        <div class="ins-title">The EU's AI transparency rules now apply: what UK organisations should do</div>
-        <div class="ins-summary">From 2 August 2026, EU AI Act transparency provisions began to apply. Practical steps UK charities, SMEs and service providers should take when using generative AI.</div>
-      </div>
-      <div class="ins-arrow">Read &rarr;</div>
-    </a>
-
-        <a class="ins-row" href="insights/equality-act-code-charity-governance.html">
-      <div class="ins-date"><time datetime="2026-08">Aug 2026</time></div>
-      <div class="ins-body">
-        <div class="ins-tag blue">Governance &middot; Charities &middot; Microsoft 365</div>
-        <div class="ins-title">What the draft Equality Act Code of Practice means for charity governance</div>
-        <div class="ins-summary">The draft Equality Act 2010 Code of Practice is a reminder that governance is about more than having the right policies — it is about being able to demonstrate how decisions were made and recorded.</div>
-      </div>
-      <div class="ins-arrow">Read &rarr;</div>
-    </a>
-
-        <a class="ins-row" href="insights/supplier-resilience-charity.html">
-      <div class="ins-date">Jul 2026</div>
-      <div class="ins-body">
-        <div class="ins-tag blue">Operational Resilience &middot; Charities &middot; Governance</div>
-        <div class="ins-title">When a critical supplier goes offline: a charity's guide to operational resilience</div>
-        <div class="ins-summary">The temporary suspension of CAF Bank's online banking service is a reminder that resilience extends beyond your own systems. A practical guide for trustees and charity leaders.</div>
-      </div>
-      <div class="ins-arrow">Read &rarr;</div>
-    </a>
-
-    <a class="ins-row" href="insights/ai-may-not-take-your-job.html">
-      <div class="ins-date">Jul 2026</div>
-      <div class="ins-body">
-        <div class="ins-tag blue">AI &amp; Automation &middot; Microsoft 365 &middot; Workplace Change</div>
-        <div class="ins-title">AI may not take your job. Refusing to adapt could.</div>
-        <div class="ins-summary">AI does not usually erase whole occupations in one clean sweep. It changes which parts of a job are valuable. Lessons from the typewriter, the calculator and the spreadsheet for organisations adopting AI and Copilot today.</div>
-      </div>
-      <div class="ins-arrow">Read &rarr;</div>
-    </a>
-
-    <a class="ins-row" href="insights/phishing-beyond-email-microsoft-365.html">
-      <div class="ins-date">Jul 2026</div>
-      <div class="ins-body">
-        <div class="ins-tag blue">Microsoft 365 &middot; Security &middot; Identity</div>
-        <div class="ins-title">Phishing has moved beyond email. Is your Microsoft 365 ready?</div>
-        <div class="ins-summary">Phishing now extends to Microsoft Teams, identity attacks and malicious applications. Here is what every organisation should review in their Microsoft 365 environment.</div>
-      </div>
-      <div class="ins-arrow">Read &rarr;</div>
-    </a>
-
-    <a class="ins-row" href="insights/microsoft-365-operational-resilience-blueprint.html">
-      <div class="ins-date">Jul 2026</div>
-      <div class="ins-body">
-        <div class="ins-tag blue">Microsoft 365 &middot; Charities &middot; Care Providers &middot; SMEs</div>
-        <div class="ins-title">The Microsoft 365 operational resilience blueprint</div>
-        <div class="ins-summary">A practical four-phase roadmap from secure foundations to structural clarity, governed automation and AI readiness &#8212; and how the phases come together into a Secure Operations Hub.</div>
-      </div>
-      <div class="ins-arrow">Read &rarr;</div>
-    </a>
-
-    <a class="ins-row" href="insights/trustee-confidence-governance-gaps-2026.html">
-      <div class="ins-date">Jul 2026</div>
-      <div class="ins-body">
-        <div class="ins-tag blue">Charity Governance &middot; Trustees &middot; Charity Commission Research</div>
-        <div class="ins-title">Trustee confidence is high, but important governance gaps remain</div>
-        <div class="ins-summary">The Charity Commission&#8217;s Research with Trustees 2026 finds trustees confident and committed, but reveals a gap between knowing governance principles and applying them, alongside banking friction and rising technology adoption.</div>
-      </div>
-      <div class="ins-arrow">Read &rarr;</div>
-    </a>
-
-    <a class="ins-row" href="insights/organic-microsoft-365-hidden-risk.html">
-      <div class="ins-date">Jul 2026</div>
-      <div class="ins-body">
-        <div class="ins-tag blue">Microsoft 365 &middot; Charities &middot; CICs &middot; Care Providers</div>
-        <div class="ins-title">Why your &#8220;organic&#8221; Microsoft 365 setup is a hidden risk</div>
-        <div class="ins-summary">Most small organisations grow into Microsoft 365 gradually. That organic adoption creates hidden risks around permissions, data, email security and AI readiness &#8212; risks that only become visible when something goes wrong.</div>
-      </div>
-      <div class="ins-arrow">Read &rarr;</div>
-    </a>
-
-    <a class="ins-row" href="insights/care-provider-records-evidence-microsoft-365.html">
-      <div class="ins-date">Jun 2026</div>
-      <div class="ins-body">
-        <div class="ins-tag blue">Microsoft 365 &middot; Care Providers</div>
-        <div class="ins-title">Can your care service find and protect the records, emails and evidence it relies on?</div>
-        <div class="ins-summary">Many care providers use Microsoft 365 every day, but important records, emails, policies and evidence can still become scattered across Outlook, OneDrive, SharePoint, Teams and shared mailboxes.</div>
-      </div>
-      <div class="ins-arrow">Read &rarr;</div>
-    </a>
-
-    <a class="ins-row" href="insights/fixing-teams-sharepoint-file-access.html">
-      <div class="ins-date">May 2026</div>
-      <div class="ins-body">
-        <div class="ins-tag blue">Microsoft 365 &middot; Charities &amp; SMEs</div>
-        <div class="ins-title">Fixing Messy Teams, SharePoint and File Access in Microsoft 365</div>
-        <div class="ins-summary">What actually goes wrong with Teams and SharePoint in small organisations, why it happens, and how to put it right without starting from scratch.</div>
-      </div>
-      <div class="ins-arrow">Read &rarr;</div>
-    </a>
-
+  <div class="pod-episode">
+    <div class="pod-ep-tag">Episode 2 &middot; Safeguarding &middot; Charities</div>
+    <div class="pod-ep-title">The DBS rules are changing: what charities need to know</div>
+    <p class="pod-ep-desc">A discussion of the September 2026 change to the DBS supervision exemption, what it means for charities and community groups using volunteers, and how to get ready before the 1 September deadline. Companion listening to the <a href="insights/dbs-supervision-exemption-charity-volunteers.html">DBS Insight article &rarr;</a></p>
+    <div class="pod-embed">
+      <iframe src="https://open.spotify.com/embed/episode/3pOWFZ9v6mCThj92mZWeo0?utm_source=generator" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Adjona Insights: The DBS rules are changing"></iframe>
+    </div>
   </div>
+
+  <div class="pod-episode">
+    <div class="pod-ep-tag">Episode 1 &middot; Introduction</div>
+    <div class="pod-ep-title">Inside Adjona Technology: Microsoft 365, AI, security, automation and governance</div>
+    <p class="pod-ep-desc">An AI-generated deep-dive audio overview based on information published on Adjona Technology's website. The hosts explore how Adjona helps charities, SMEs and other organisations with Microsoft 365, Teams and SharePoint governance, cybersecurity, automation and AI readiness.</p>
+    <div class="pod-embed">
+      <iframe src="https://open.spotify.com/embed/episode/1RNEDCp6Y0F0LQ4rE3Dprk?utm_source=generator" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Inside Adjona Technology"></iframe>
+    </div>
+  </div>
+
 </section>
 
 <div class="page-cta">
   <div class="cta-blue">
     <div class="cta-tag">Free Introductory Conversation</div>
     <h2 class="cta-title">Have a question <span class="serif">about your setup?</span></h2>
-    <p class="cta-sub">Book a free 30-minute conversation. No obligation, no hard sell — just practical advice on what we find and what it means for your organisation.</p>
+    <p class="cta-sub">Book a free 30-minute conversation. No obligation, no hard sell &mdash; just practical advice on what we find and what it means for your organisation.</p>
     <div class="cta-actions">
       <a href="https://outlook.office.com/book/AdjonaTechnologyLimited1@adjona.com/s/ElOd0P60CEiQxQcnIYWXWw2" target="_blank" rel="noopener noreferrer" class="cta-btn-solid">Book a Free Introductory Conversation</a>
       <a href="enquiry.html" class="cta-btn-outline">Send an Enquiry &rarr;</a>
