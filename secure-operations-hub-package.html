@@ -65,6 +65,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .glance-val{font-weight:700;color:var(--ink);text-align:right;}
 .body-section{padding:4rem;}
 .body-section+.body-section{border-top:1px solid var(--border);}
+.art-podcast{margin:0 0 2rem;padding:1.25rem 1.5rem 1.5rem;border:2px solid var(--ink);background:#f5f5f0;}
+.art-podcast-label{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:.9rem;}
+.art-podcast iframe{display:block;border-radius:8px;}
 .sec-label{font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ms-blue);margin-bottom:.6rem;}
 .sec-title{font-family:'Epilogue',sans-serif;font-size:clamp(1.6rem,2.5vw,2.2rem);font-weight:900;letter-spacing:-.03em;line-height:1;margin-bottom:1rem;}
 .sec-title .serif{font-family:'Lora',serif;font-style:italic;font-weight:500;}
@@ -166,6 +169,10 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
 
 <main>
 <div class="body-section">
+  <div class="art-podcast">
+    <div class="art-podcast-label">Adjona Insights &middot; A discussion of this package</div>
+    <iframe src="https://open.spotify.com/embed/episode/2IRp9W4ARE012gBNoaNX6b?utm_source=generator" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Adjona Insights podcast player"></iframe>
+  </div>
   <div class="sec-label">The problem</div>
   <h2 class="sec-title">Who this is <span class="serif">for</span></h2>
   <p class="body-text">Many small organisations end up with files scattered across OneDrive, SharePoint, email attachments and shared drives — with no consistent structure, unclear ownership and permissions that have drifted over time. Staff waste time finding documents. Sensitive files are accessible to people who should not have them. Governance evidence is difficult to produce when needed.</p>
