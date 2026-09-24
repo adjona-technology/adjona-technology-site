@@ -181,6 +181,13 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
 #cookie-bar-accept:hover{background:#0062b0;}
 @media(max-width:600px){#cookie-bar{flex-direction:column;align-items:flex-start;padding:1rem 1.25rem;}}
 </style>
+<script>
+(function(){
+  if(typeof window.clarity !== 'function') return;
+  window.clarity("set", "page_type", "service");
+  window.clarity("set", "topic", "projects-support");
+})();
+</script>
 </head>
 <body>
 
@@ -204,9 +211,9 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
     <li><a href="insights.html">Insights</a></li>
     <li><a href="enquiry.html">Contact Us</a></li>
   </ul>
-  <a href="https://outlook.office.com/book/AdjonaTechnologyLimited1@adjona.com/s/ElOd0P60CEiQxQcnIYWXWw2" target="_blank" rel="noopener noreferrer" class="nav-cta">Book a Free Introductory Conversation</a>
+  <a onclick="if(typeof window.clarity==='function')window.clarity('event','book_call_click')" href="https://outlook.office.com/book/AdjonaTechnologyLimited1@adjona.com/s/ElOd0P60CEiQxQcnIYWXWw2" target="_blank" rel="noopener noreferrer" class="nav-cta">Book a Free Introductory Conversation</a>
   <button class="nav-hamburger" aria-label="Menu" onclick="var nav=this.closest('nav');nav.querySelector('.nav-links').classList.toggle('nav-open');nav.querySelector('.nav-cta-mobile').classList.toggle('nav-open');">&#9776;</button>
-  <a href="https://outlook.office.com/book/AdjonaTechnologyLimited1@adjona.com/s/ElOd0P60CEiQxQcnIYWXWw2" target="_blank" rel="noopener noreferrer" class="nav-cta-mobile">Book a Free Introductory Conversation</a>
+  <a onclick="if(typeof window.clarity==='function')window.clarity('event','book_call_click')" href="https://outlook.office.com/book/AdjonaTechnologyLimited1@adjona.com/s/ElOd0P60CEiQxQcnIYWXWw2" target="_blank" rel="noopener noreferrer" class="nav-cta-mobile">Book a Free Introductory Conversation</a>
 </nav>
 
 <section class="page-hero">
@@ -429,7 +436,7 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
     <h2 class="cta-title">Need practical support beyond<br>a <span class="serif">one-off review?</span></h2>
     <p class="cta-sub">Start with a short conversation about your current Microsoft 365 setup, operational pressures and governance concerns. We will help identify whether you need a focused review, a scoped improvement project, or ongoing fractional IT management support.</p>
     <div class="cta-actions">
-      <a href="https://outlook.office.com/book/AdjonaTechnologyLimited1@adjona.com/s/ElOd0P60CEiQxQcnIYWXWw2" target="_blank" rel="noopener noreferrer" class="cta-btn-solid">Book a Free Introductory Conversation</a>
+      <a onclick="if(typeof window.clarity==='function')window.clarity('event','book_call_click')" href="https://outlook.office.com/book/AdjonaTechnologyLimited1@adjona.com/s/ElOd0P60CEiQxQcnIYWXWw2" target="_blank" rel="noopener noreferrer" class="cta-btn-solid">Book a Free Introductory Conversation</a>
       <a href="services.html" class="cta-btn-outline">See all services</a>
     </div>
   </div>

@@ -169,6 +169,13 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
 #cookie-bar-accept:hover{background:#0062b0;}
 @media(max-width:600px){#cookie-bar{flex-direction:column;align-items:flex-start;padding:1rem 1.25rem;}}
 </style>
+<script>
+(function(){
+  if(typeof window.clarity !== 'function') return;
+  window.clarity("set", "page_type", "insight");
+  window.clarity("set", "topic", "security");
+})();
+</script>
 </head>
 <body>
 
@@ -192,13 +199,13 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
     <li><a href="../insights.html" class="active">Insights</a></li>
     <li><a href="../enquiry.html">Contact Us</a></li>
   </ul>
-  <a href="https://outlook.office.com/book/AdjonaTechnologyLimited1@adjona.com/s/ElOd0P60CEiQxQcnIYWXWw2" target="_blank" rel="noopener noreferrer" class="nav-cta">Book an Introductory Conversation</a>
+  <a onclick="if(typeof window.clarity==='function')window.clarity('event','book_call_click')" href="https://outlook.office.com/book/AdjonaTechnologyLimited1@adjona.com/s/ElOd0P60CEiQxQcnIYWXWw2" target="_blank" rel="noopener noreferrer" class="nav-cta">Book an Introductory Conversation</a>
   <button class="nav-hamburger" aria-label="Menu" onclick="
     var nav=this.closest('nav');
     nav.querySelector('.nav-links').classList.toggle('nav-open');
     nav.querySelector('.nav-cta-mobile').classList.toggle('nav-open');
   ">&#9776;</button>
-  <a href="https://outlook.office.com/book/AdjonaTechnologyLimited1@adjona.com/s/ElOd0P60CEiQxQcnIYWXWw2" target="_blank" rel="noopener noreferrer" class="nav-cta-mobile">Book an Introductory Conversation</a>
+  <a onclick="if(typeof window.clarity==='function')window.clarity('event','book_call_click')" href="https://outlook.office.com/book/AdjonaTechnologyLimited1@adjona.com/s/ElOd0P60CEiQxQcnIYWXWw2" target="_blank" rel="noopener noreferrer" class="nav-cta-mobile">Book an Introductory Conversation</a>
 </nav>
 
 <section class="art-hero">
@@ -300,7 +307,7 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
     <div class="sidebar-block">
       <div class="sidebar-label">Free introductory conversation</div>
       <div class="sidebar-body">Book a free 30-minute call. Practical advice you can act on.</div>
-      <a href="https://outlook.office.com/book/AdjonaTechnologyLimited1@adjona.com/s/ElOd0P60CEiQxQcnIYWXWw2" target="_blank" rel="noopener noreferrer" class="sidebar-cta" style="margin-top:.5rem;background:#2F6B00;">Book a Free Call &rarr;</a>
+      <a onclick="if(typeof window.clarity==='function')window.clarity('event','book_call_click')" href="https://outlook.office.com/book/AdjonaTechnologyLimited1@adjona.com/s/ElOd0P60CEiQxQcnIYWXWw2" target="_blank" rel="noopener noreferrer" class="sidebar-cta" style="margin-top:.5rem;background:#2F6B00;">Book a Free Call &rarr;</a>
     </div>
     <hr class="sidebar-divider">
     <div class="sidebar-block">
@@ -321,8 +328,8 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
     <h2 class="cta-title">Ready to review <span class="serif">your Microsoft 365 security?</span></h2>
     <p class="cta-sub">Adjona Technology helps charities, care providers, CICs and SMEs build practical, governed Microsoft 365 environments. Book a free 30-minute conversation to start.</p>
     <div class="cta-actions">
-      <a href="https://outlook.office.com/book/AdjonaTechnologyLimited1@adjona.com/s/ElOd0P60CEiQxQcnIYWXWw2" target="_blank" rel="noopener noreferrer" class="cta-btn-solid">Book a Free Introductory Conversation</a>
-      <a href="../enquiry.html" class="cta-btn-outline">Send an Enquiry &rarr;</a>
+      <a onclick="if(typeof window.clarity==='function')window.clarity('event','book_call_click')" href="https://outlook.office.com/book/AdjonaTechnologyLimited1@adjona.com/s/ElOd0P60CEiQxQcnIYWXWw2" target="_blank" rel="noopener noreferrer" class="cta-btn-solid">Book a Free Introductory Conversation</a>
+      <a onclick="if(typeof window.clarity==='function')window.clarity('event','enquiry_click')" href="../enquiry.html" class="cta-btn-outline">Send an Enquiry &rarr;</a>
     </div>
   </div>
   <div class="cta-right">
@@ -362,7 +369,7 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
     <li><a href="https://www.tiktok.com/@adjonatechnology" target="_blank" rel="noopener noreferrer" style="display:flex;align-items:center;gap:.4rem;"><img src="https://adjona.com/images/tt-icon.png" width="16" height="16" alt="TikTok" style="display:block;border:0;vertical-align:middle;"> TikTok</a></li>
     <li><a href="https://www.instagram.com/adjonatechnology" target="_blank" rel="noopener noreferrer" style="display:flex;align-items:center;gap:.4rem;"><img src="https://adjona.com/images/ig-icon.png" width="16" height="16" alt="Instagram" style="display:block;border:0;vertical-align:middle;"> Instagram</a></li>
     <li><a href="../events.html">Events</a></li>
-    <li><a href="https://outlook.office.com/book/AdjonaTechnologyLimited1@adjona.com/s/ElOd0P60CEiQxQcnIYWXWw2" target="_blank" rel="noopener noreferrer">Book a Call</a></li>
+    <li><a onclick="if(typeof window.clarity==='function')window.clarity('event','book_call_click')" href="https://outlook.office.com/book/AdjonaTechnologyLimited1@adjona.com/s/ElOd0P60CEiQxQcnIYWXWw2" target="_blank" rel="noopener noreferrer">Book a Call</a></li>
     <li><a href="../adjona-privacy.html">Privacy Policy</a></li>
     <li><a href="../adjona-terms.html">Terms &amp; Conditions</a></li>
     <li><a href="mailto:info@adjona.com">info@adjona.com</a></li>

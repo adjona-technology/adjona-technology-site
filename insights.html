@@ -175,6 +175,12 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
 @media(max-width:600px){#cookie-bar{flex-direction:column;align-items:flex-start;padding:1rem 1.25rem;}}
 </style>
   <link rel="alternate" type="application/rss+xml" title="Adjona Insights" href="https://adjona.com/rss.xml">
+<script>
+(function(){
+  if(typeof window.clarity !== 'function') return;
+  window.clarity("set", "page_type", "insights-index");
+})();
+</script>
 </head>
 <body>
 
@@ -198,13 +204,13 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
     <li><a href="insights.html" class="active">Insights</a></li>
     <li><a href="enquiry.html">Contact Us</a></li>
   </ul>
-  <a href="https://outlook.office.com/book/AdjonaTechnologyLimited1@adjona.com/s/ElOd0P60CEiQxQcnIYWXWw2" target="_blank" rel="noopener noreferrer" class="nav-cta">Book a Free Introductory Conversation</a>
+  <a onclick="if(typeof window.clarity==='function')window.clarity('event','book_call_click')" href="https://outlook.office.com/book/AdjonaTechnologyLimited1@adjona.com/s/ElOd0P60CEiQxQcnIYWXWw2" target="_blank" rel="noopener noreferrer" class="nav-cta">Book a Free Introductory Conversation</a>
   <button class="nav-hamburger" aria-label="Menu" onclick="
     var nav=this.closest('nav');
     nav.querySelector('.nav-links').classList.toggle('nav-open');
     nav.querySelector('.nav-cta-mobile').classList.toggle('nav-open');
   ">&#9776;</button>
-  <a href="https://outlook.office.com/book/AdjonaTechnologyLimited1@adjona.com/s/ElOd0P60CEiQxQcnIYWXWw2" target="_blank" rel="noopener noreferrer" class="nav-cta-mobile">Book a Free Introductory Conversation</a>
+  <a onclick="if(typeof window.clarity==='function')window.clarity('event','book_call_click')" href="https://outlook.office.com/book/AdjonaTechnologyLimited1@adjona.com/s/ElOd0P60CEiQxQcnIYWXWw2" target="_blank" rel="noopener noreferrer" class="nav-cta-mobile">Book a Free Introductory Conversation</a>
 </nav>
 
 <section class="page-hero">
@@ -388,8 +394,8 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
     <h2 class="cta-title">Have a question <span class="serif">about your setup?</span></h2>
     <p class="cta-sub">Book a free 30-minute conversation. No obligation, no hard sell — just practical advice on what we find and what it means for your organisation.</p>
     <div class="cta-actions">
-      <a href="https://outlook.office.com/book/AdjonaTechnologyLimited1@adjona.com/s/ElOd0P60CEiQxQcnIYWXWw2" target="_blank" rel="noopener noreferrer" class="cta-btn-solid">Book a Free Introductory Conversation</a>
-      <a href="enquiry.html" class="cta-btn-outline">Send an Enquiry &rarr;</a>
+      <a onclick="if(typeof window.clarity==='function')window.clarity('event','book_call_click')" href="https://outlook.office.com/book/AdjonaTechnologyLimited1@adjona.com/s/ElOd0P60CEiQxQcnIYWXWw2" target="_blank" rel="noopener noreferrer" class="cta-btn-solid">Book a Free Introductory Conversation</a>
+      <a onclick="if(typeof window.clarity==='function')window.clarity('event','enquiry_click')" href="enquiry.html" class="cta-btn-outline">Send an Enquiry &rarr;</a>
     </div>
   </div>
   <div class="cta-right">

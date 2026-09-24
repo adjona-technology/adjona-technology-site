@@ -219,6 +219,12 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
 #cookie-bar-accept:hover{background:#0062b0;}
 @media(max-width:600px){#cookie-bar{flex-direction:column;align-items:flex-start;padding:1rem 1.25rem;}}
 </style>
+<script>
+(function(){
+  if(typeof window.clarity !== 'function') return;
+  window.clarity("set", "page_type", "home");
+})();
+</script>
 </head>
 <body>
 
@@ -242,9 +248,9 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
     <li><a href="insights.html">Insights</a></li>
     <li><a href="enquiry.html">Contact Us</a></li>
   </ul>
-  <a href="https://outlook.office.com/book/AdjonaTechnologyLimited1@adjona.com/s/ElOd0P60CEiQxQcnIYWXWw2" target="_blank" rel="noopener noreferrer" class="nav-cta">Book a Free Introductory Conversation</a>
+  <a onclick="if(typeof window.clarity==='function')window.clarity('event','book_call_click')" href="https://outlook.office.com/book/AdjonaTechnologyLimited1@adjona.com/s/ElOd0P60CEiQxQcnIYWXWw2" target="_blank" rel="noopener noreferrer" class="nav-cta">Book a Free Introductory Conversation</a>
   <button class="nav-hamburger" aria-label="Menu" onclick="var nav=this.closest('nav');nav.querySelector('.nav-links').classList.toggle('nav-open');nav.querySelector('.nav-cta-mobile').classList.toggle('nav-open');">&#9776;</button>
-  <a href="https://outlook.office.com/book/AdjonaTechnologyLimited1@adjona.com/s/ElOd0P60CEiQxQcnIYWXWw2" target="_blank" rel="noopener noreferrer" class="nav-cta-mobile">Book a Free Introductory Conversation</a>
+  <a onclick="if(typeof window.clarity==='function')window.clarity('event','book_call_click')" href="https://outlook.office.com/book/AdjonaTechnologyLimited1@adjona.com/s/ElOd0P60CEiQxQcnIYWXWw2" target="_blank" rel="noopener noreferrer" class="nav-cta-mobile">Book a Free Introductory Conversation</a>
 </nav>
 
 <main>
@@ -259,7 +265,7 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
       </h1>
       <p class="hero-body">Adjona helps charities, CICs, care providers, housing organisations and SMEs make Microsoft 365 safer, better governed and more useful — with practical reviews, scoped implementation, workflow improvement and AI readiness support.</p>
       <div class="hero-ctas">
-        <a href="https://outlook.office.com/book/AdjonaTechnologyLimited1@adjona.com/s/ElOd0P60CEiQxQcnIYWXWw2" target="_blank" rel="noopener noreferrer" class="btn-solid">Book a Free Introductory Conversation</a>
+        <a onclick="if(typeof window.clarity==='function')window.clarity('event','book_call_click')" href="https://outlook.office.com/book/AdjonaTechnologyLimited1@adjona.com/s/ElOd0P60CEiQxQcnIYWXWw2" target="_blank" rel="noopener noreferrer" class="btn-solid">Book a Free Introductory Conversation</a>
         <a href="packages.html" class="btn-outline">View Solution Packages</a>
       </div>
       <p class="hero-note">No obligation &nbsp;·&nbsp; No hard sell &nbsp;·&nbsp; Practical advice you can act on</p>
@@ -417,8 +423,8 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
     <div style="font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.8);margin-bottom:.4rem;">Typical engagement</div>
     <div style="font-size:.85rem;color:rgba(255,255,255,.85);line-height:1.6;margin-bottom:1.5rem;">Free &nbsp;·&nbsp; 30 minutes &nbsp;·&nbsp; No obligation &nbsp;·&nbsp; No hard sell</div>
     <div class="cta-actions">
-      <a href="https://outlook.office.com/book/AdjonaTechnologyLimited1@adjona.com/s/ElOd0P60CEiQxQcnIYWXWw2" target="_blank" rel="noopener noreferrer" class="cta-btn-solid">Book a Free Introductory Conversation</a>
-      <a href="enquiry.html" class="cta-btn-outline">Send an Enquiry instead</a>
+      <a onclick="if(typeof window.clarity==='function')window.clarity('event','book_call_click')" href="https://outlook.office.com/book/AdjonaTechnologyLimited1@adjona.com/s/ElOd0P60CEiQxQcnIYWXWw2" target="_blank" rel="noopener noreferrer" class="cta-btn-solid">Book a Free Introductory Conversation</a>
+      <a onclick="if(typeof window.clarity==='function')window.clarity('event','enquiry_click')" href="enquiry.html" class="cta-btn-outline">Send an Enquiry instead</a>
     </div>
   </div>
   <div class="cta-right" style="flex-direction:column;justify-content:center;gap:1.5rem;display:flex;">

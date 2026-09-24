@@ -131,6 +131,13 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
 @media(max-width:1000px){.nav-cta{display:none;}.art-body{grid-template-columns:1fr;}.art-content{border-right:none;border-bottom:2px solid var(--ink);padding:3rem 1.5rem;}.art-sidebar{padding:2.5rem 1.5rem;}.art-nav{padding:1.25rem 1.5rem;}.page-cta{grid-template-columns:1fr;}.cta-blue,.cta-right{padding:3rem 1.5rem;}}
 @media(max-width:768px){:root{--nav-h:58px;}nav{padding:0 1.25rem;flex-wrap:wrap;}.logo{padding:.85rem 0;}.nav-links{display:none;width:100%;flex-direction:column;border-top:1px solid var(--border);}.nav-links.nav-open{display:flex;background:#fff;}.nav-links a{border-left:none;border-bottom:1px solid var(--border);padding:1rem 0;}.nav-hamburger{display:block;background:none;border:none;font-size:1.4rem;cursor:pointer;padding:.5rem;color:var(--ink);margin-left:auto;}.nav-cta{display:none !important;}.nav-cta-mobile{display:none !important;}.nav-cta-mobile.nav-open{display:block !important;width:100%;font-family:'Epilogue',sans-serif;font-size:.82rem;font-weight:900;background:var(--ms-blue);color:#fff;text-decoration:none;text-align:center;padding:1rem 1.25rem;border-top:2px solid var(--ink);}.art-hero{padding:calc(var(--nav-h) + 2.5rem) 1.5rem 3rem;}footer{flex-direction:column;align-items:flex-start;gap:1.25rem;padding:1.5rem;}.f-links{flex-wrap:wrap;gap:1rem;}#cookie-bar{flex-direction:column;align-items:flex-start;padding:1rem 1.25rem;}}
 </style>
+<script>
+(function(){
+  if(typeof window.clarity !== 'function') return;
+  window.clarity("set", "page_type", "insight");
+  window.clarity("set", "topic", "safeguarding");
+})();
+</script>
 </head>
 <body>
 <nav>
@@ -153,9 +160,9 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
     <li><a href="../insights.html" class="active">Insights</a></li>
     <li><a href="../enquiry.html">Contact Us</a></li>
   </ul>
-  <a href="https://outlook.office.com/book/AdjonaTechnologyLimited1@adjona.com/s/ElOd0P60CEiQxQcnIYWXWw2" target="_blank" rel="noopener noreferrer" class="nav-cta">Book an Introductory Conversation</a>
+  <a onclick="if(typeof window.clarity==='function')window.clarity('event','book_call_click')" href="https://outlook.office.com/book/AdjonaTechnologyLimited1@adjona.com/s/ElOd0P60CEiQxQcnIYWXWw2" target="_blank" rel="noopener noreferrer" class="nav-cta">Book an Introductory Conversation</a>
   <button class="nav-hamburger" aria-label="Menu" onclick="var nav=this.closest('nav');nav.querySelector('.nav-links').classList.toggle('nav-open');nav.querySelector('.nav-cta-mobile').classList.toggle('nav-open');">&#9776;</button>
-  <a href="https://outlook.office.com/book/AdjonaTechnologyLimited1@adjona.com/s/ElOd0P60CEiQxQcnIYWXWw2" target="_blank" rel="noopener noreferrer" class="nav-cta-mobile">Book an Introductory Conversation</a>
+  <a onclick="if(typeof window.clarity==='function')window.clarity('event','book_call_click')" href="https://outlook.office.com/book/AdjonaTechnologyLimited1@adjona.com/s/ElOd0P60CEiQxQcnIYWXWw2" target="_blank" rel="noopener noreferrer" class="nav-cta-mobile">Book an Introductory Conversation</a>
 </nav>
 
 <section class="art-hero">
@@ -332,7 +339,7 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
     <div class="sidebar-block">
       <div class="sidebar-label">Free introductory conversation</div>
       <div class="sidebar-body">Book a free 30-minute call to discuss your volunteer records and safeguarding processes.</div>
-      <a href="https://outlook.office.com/book/AdjonaTechnologyLimited1@adjona.com/s/ElOd0P60CEiQxQcnIYWXWw2" target="_blank" rel="noopener noreferrer" class="sidebar-cta" style="margin-top:.5rem;background:#2F6B00;">Book a Free Call &rarr;</a>
+      <a onclick="if(typeof window.clarity==='function')window.clarity('event','book_call_click')" href="https://outlook.office.com/book/AdjonaTechnologyLimited1@adjona.com/s/ElOd0P60CEiQxQcnIYWXWw2" target="_blank" rel="noopener noreferrer" class="sidebar-cta" style="margin-top:.5rem;background:#2F6B00;">Book a Free Call &rarr;</a>
     </div>
     <hr class="sidebar-divider">
     <div class="sidebar-block">
@@ -354,7 +361,7 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
     <p class="cta-sub">Adjona Technology helps charities review volunteer records, map affected roles and build secure Microsoft 365 processes for safeguarding and DBS management. Contact us to discuss a practical readiness review.</p>
     <div class="cta-actions">
       <a href="../enquiry.html" class="cta-btn-solid">Request a Readiness Review</a>
-      <a href="https://outlook.office.com/book/AdjonaTechnologyLimited1@adjona.com/s/ElOd0P60CEiQxQcnIYWXWw2" target="_blank" rel="noopener noreferrer" class="cta-btn-outline">Book a Free Call &rarr;</a>
+      <a onclick="if(typeof window.clarity==='function')window.clarity('event','book_call_click')" href="https://outlook.office.com/book/AdjonaTechnologyLimited1@adjona.com/s/ElOd0P60CEiQxQcnIYWXWw2" target="_blank" rel="noopener noreferrer" class="cta-btn-outline">Book a Free Call &rarr;</a>
     </div>
   </div>
   <div class="cta-right">
@@ -384,7 +391,7 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
     <li><a href="https://www.tiktok.com/@adjonatechnology" target="_blank" rel="noopener noreferrer">TikTok</a></li>
     <li><a href="https://www.instagram.com/adjonatechnology" target="_blank" rel="noopener noreferrer">Instagram</a></li>
     <li><a href="../events.html">Events</a></li>
-    <li><a href="https://outlook.office.com/book/AdjonaTechnologyLimited1@adjona.com/s/ElOd0P60CEiQxQcnIYWXWw2" target="_blank" rel="noopener noreferrer">Book a Call</a></li>
+    <li><a onclick="if(typeof window.clarity==='function')window.clarity('event','book_call_click')" href="https://outlook.office.com/book/AdjonaTechnologyLimited1@adjona.com/s/ElOd0P60CEiQxQcnIYWXWw2" target="_blank" rel="noopener noreferrer">Book a Call</a></li>
     <li><a href="../adjona-privacy.html">Privacy Policy</a></li>
     <li><a href="../adjona-terms.html">Terms &amp; Conditions</a></li>
     <li><a href="mailto:info@adjona.com">info@adjona.com</a></li>

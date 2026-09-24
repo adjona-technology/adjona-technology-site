@@ -131,6 +131,13 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
 #cookie-bar-accept:hover{background:#0062b0;}
 @media(max-width:600px){#cookie-bar{flex-direction:column;align-items:flex-start;padding:1rem 1.25rem;}}
 </style>
+<script>
+(function(){
+  if(typeof window.clarity !== 'function') return;
+  window.clarity("set", "page_type", "legal");
+  window.clarity("set", "topic", "privacy");
+})();
+</script>
 </head>
 <body>
 
@@ -152,7 +159,7 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
     <li><a href="insights.html">Insights</a></li>
     <li><a href="index.html#contact">Contact</a></li>
   </ul>
-  <a href="https://outlook.office.com/book/AdjonaTechnologyLimited1@adjona.com/s/ElOd0P60CEiQxQcnIYWXWw2" target="_blank" rel="noopener noreferrer" class="nav-cta">Book a Free Introductory Conversation</a>
+  <a onclick="if(typeof window.clarity==='function')window.clarity('event','book_call_click')" href="https://outlook.office.com/book/AdjonaTechnologyLimited1@adjona.com/s/ElOd0P60CEiQxQcnIYWXWw2" target="_blank" rel="noopener noreferrer" class="nav-cta">Book a Free Introductory Conversation</a>
 </nav>
 
 <div class="four-stripe">
