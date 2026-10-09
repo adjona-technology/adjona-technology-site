@@ -175,10 +175,6 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
 }
 
 /* TECHNICAL PROJECTS */
-.td-disclosure{padding:2.5rem 4rem;border-bottom:2px solid var(--ink);background:#fffcf2;}
-.td-disclosure-inner{max-width:820px;border-left:3px solid var(--ms-yel);padding-left:1.5rem;}
-.td-disclosure-title{font-family:'JetBrains Mono',monospace;font-size:.65rem;letter-spacing:.16em;text-transform:uppercase;color:#6b4800;font-weight:500;margin-bottom:.6rem;}
-.td-disclosure p{font-size:.92rem;line-height:1.8;color:#4a3800;}
 .td-list{padding:5rem 4rem;display:flex;flex-direction:column;gap:3rem;border-bottom:2px solid var(--ink);}
 .td-card{border:2px solid var(--ink);}
 .td-card-head{padding:2.25rem 2.5rem 1.75rem;border-bottom:2px solid var(--ink);background:var(--off);}
@@ -206,8 +202,7 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
 .td-close-inner p{font-size:.95rem;color:var(--muted);line-height:1.85;margin-bottom:1rem;}
 a:focus-visible{outline:2px solid var(--ms-blue);outline-offset:3px;}
 @media(max-width:1000px){
-  .td-disclosure,.td-list,.td-close{padding-left:1.5rem;padding-right:1.5rem;}
-  .td-list{padding-top:3rem;padding-bottom:3rem;}
+    .td-list{padding-top:3rem;padding-bottom:3rem;}
   .td-close{padding-top:3rem;padding-bottom:3rem;}
   .td-card-head{padding:1.75rem 1.5rem 1.5rem;}
   .td-grid{grid-template-columns:1fr;}
@@ -274,13 +269,6 @@ a:focus-visible{outline:2px solid var(--ms-blue);outline-offset:3px;}
 <div class="four-stripe">
   <div class="fs b"></div><div class="fs r"></div><div class="fs g"></div><div class="fs y"></div>
 </div>
-
-<section class="td-disclosure" aria-labelledby="about-examples">
-  <div class="td-disclosure-inner">
-    <h2 class="td-disclosure-title" id="about-examples">About these examples</h2>
-    <p>The projects described here are internal Adjona engineering work. Where sample or test data is used, it is identified. Operational performance, security assurance and customer outcomes are not claimed unless they have been independently verified and documented.</p>
-  </div>
-</section>
 
 <section class="td-list" aria-label="Internal engineering projects">
 

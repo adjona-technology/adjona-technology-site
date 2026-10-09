@@ -26,7 +26,7 @@
   </url>
   <url>
     <loc>https://adjona.com/technical-projects.html</loc>
-    <lastmod>2026-10-08</lastmod>
+    <lastmod>2026-10-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -205,12 +205,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://adjona.com/insights/outsourced-it-supplier-governance.html</loc>
-    <lastmod>2026-08-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://adjona.com/insights/ai-policy-tool-discovery-governance.html</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
@@ -221,5 +215,11 @@
     <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://adjona.com/podcast.html</loc>
+    <lastmod>2026-10-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
 </urlset>
