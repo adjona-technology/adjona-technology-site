@@ -306,12 +306,10 @@ a:focus-visible{outline:2px solid var(--ms-blue);outline-offset:3px;}
       <div class="td-block">
         <h3>What has been built</h3>
         <p>The workflow has been developed for Adjona's own operations.</p>
-        <!-- EVIDENCE NEEDED before adding detail here: confirmed list of deployed components (flows, connectors, tables), current production configuration, and how personal data is handled and retained. -->
       </div>
       <div class="td-block">
         <h3>How it has been tested</h3>
         <p>Documented test scenarios are not yet published on this page.</p>
-        <!-- EVIDENCE NEEDED: documented workflow test scenarios and results (for example new enquiry, repeat enquiry, booking with and without an existing lead, flow failure). -->
       </div>
       <div class="td-block">
         <h3>Known limitations</h3>
@@ -322,62 +320,55 @@ a:focus-visible{outline:2px solid var(--ms-blue);outline-offset:3px;}
         <p>Connecting forms and bookings to a CRM is rarely just a connector problem. The work that makes it reliable is deciding how records are matched, who owns each step and what happens when something fails.</p>
       </div>
     </div>
-    <!-- EVIDENCE ASSETS TO ADD WHEN AVAILABLE (sanitised): Visio architecture diagram; example Power Automate flow structure; synthetic Dynamics lead/appointment example. Do not show real contact details, tenant IDs or secrets. -->
   </article>
 
   <!-- PROJECT 2 -->
-  <article class="td-card" id="charity-intelligence-mcp" aria-labelledby="demo-2-title" style="border-top:4px solid var(--ms-red);">
+  <article class="td-card" id="public-data-research" aria-labelledby="demo-2-title" style="border-top:4px solid var(--ms-red);">
     <header class="td-card-head">
       <div class="td-meta"><span class="td-badge">Internal Adjona project</span><span class="td-num">Project 02</span></div>
-      <h2 class="td-title" id="demo-2-title">Charity intelligence and <span class="serif">prospect research using MCP</span></h2>
-      <p class="td-category">API integration &nbsp;&middot;&nbsp; Python &nbsp;&middot;&nbsp; Model Context Protocol &nbsp;&middot;&nbsp; Dynamics 365</p>
+      <h2 class="td-title" id="demo-2-title">Public-data research and <span class="serif">CRM integration</span></h2>
+      <p class="td-category">Public data APIs &nbsp;&middot;&nbsp; Model Context Protocol &nbsp;&middot;&nbsp; Dynamics 365</p>
     </header>
     <div class="td-grid">
       <div class="td-block">
         <h3>The problem</h3>
-        <p>Identifying relevant charities and understanding their likely technology needs means drawing on several public sources. Manual research is repetitive and inconsistent, particularly when organisations need to be compared against defined eligibility or service criteria.</p>
+        <p>Researching organisations by hand from several public sources is slow and inconsistent. Findings end up in notes and spreadsheets, and it is hard to tell later what was actually observed and what was assumed.</p>
       </div>
       <div class="td-block">
         <h3>Technical approach</h3>
-        <p>Adjona's internal Charity Prospector is a Model Context Protocol (MCP) server written in Python. It combines public charity and company data, public website and DNS signals and a Dynamics 365 integration, so that research can be carried out in a structured, repeatable way with explainable classification and controlled CRM operations.</p>
+        <p>An internal tool, built on the Model Context Protocol, that lets an AI assistant gather information from public registers and websites in a structured way and pass agreed details into Dynamics 365. The assistant does the gathering. A person makes the decisions.</p>
       </div>
       <div class="td-block">
-        <h3>Design decisions</h3>
+        <h3>Design principles</h3>
         <ul>
-          <li>Integrating with public data APIs, including the Charity Commission and Companies House</li>
-          <li>Normalising organisation information from multiple sources</li>
-          <li>Keeping observed evidence separate from inference</li>
-          <li>Applying explicit, named scoring and eligibility profiles</li>
-          <li>Explaining the basis of each classification</li>
-          <li>Using the charity number as the matching key to reduce duplicate records</li>
-          <li>Previewing every CRM change before it is written</li>
-          <li>Separating customer contexts and enforcing security boundaries between them</li>
+          <li>Public sources only</li>
+          <li>Observed evidence kept separate from inference</li>
+          <li>The basis of every classification is shown, not just the result</li>
+          <li>A person confirms any classification before it is relied on</li>
+          <li>Duplicate records avoided rather than cleaned up afterwards</li>
         </ul>
       </div>
       <div class="td-block">
         <h3>Governance and security</h3>
-        <p>CRM writes are controlled rather than automatic: a proposed record is shown as a preview, a write needs explicit confirmation, and existing contact details are preserved by default. A separate development build is bound to a single customer context, runs read-only and refuses requests for scoring profiles that belong to another context, recording the refusal in an audit log.</p>
+        <p>Nothing is written to the CRM automatically. Every proposed change is shown as a preview first and needs explicit confirmation, and existing details are preserved unless a change is deliberately approved.</p>
       </div>
       <div class="td-block">
         <h3>What has been built</h3>
-        <p>A working internal tool that retrieves public charity records, checks public DNS and website signals for the likely email and identity platform, applies scoring profiles, summarises filing history and governance indicators, and can create or update Dynamics 365 lead records.</p>
+        <p>A working internal tool used for Adjona's own research, with a controlled connection to Dynamics 365.</p>
       </div>
       <div class="td-block">
         <h3>How it has been tested</h3>
-        <p>The solution has been through local development and automated testing, including work on multi-customer security controls. CRM writes have been checked by reading the record back after writing and confirming that an update keeps the same record rather than creating a duplicate. Boundary tests have confirmed that out-of-scope profile requests are refused with a structured response.</p>
-        <!-- VERIFY against latest repository and test evidence before publication: current version, test suite results, and status of multi-customer controls. Do not state release, security readiness or production suitability. -->
+        <p>Development has included automated testing. CRM changes are checked by reading the record back after it has been written.</p>
       </div>
       <div class="td-block">
         <h3>Known limitations</h3>
-        <p>The tool uses public information only. DNS and website signals suggest which platform an organisation probably uses. They do not show how its Microsoft 365 tenant is configured, and they say nothing about its security or compliance status.</p>
-        <p>Lookups are keyed to charities registered with the Charity Commission for England and Wales, so CICs and other company structures are not currently covered. Scores reflect the criteria in the selected profile and are read alongside the supporting evidence, with a person confirming any qualification.</p>
+        <p>Public signals, such as a website or DNS records, can suggest which email and identity platform an organisation probably uses. They do not show how its Microsoft 365 environment is configured, and they say nothing about its security or compliance.</p>
       </div>
       <div class="td-block td-takeaway">
         <h3>What you can take from it</h3>
-        <p>When AI tools are connected to business systems, the important design questions are about control: what the tool may read, what it may change, how changes are confirmed and how one customer's information is kept separate from another's.</p>
+        <p>When AI tools are connected to business systems, the important design questions are about control: what the tool may read, what it may change, and how changes are confirmed before they happen.</p>
       </div>
     </div>
-    <!-- EVIDENCE ASSETS TO ADD WHEN AVAILABLE (sanitised): Visio integration architecture; source-to-result data flow; synthetic charity comparison output; selected test results; security design note. Do not name real prospects, show lead IDs, application IDs or tenant identifiers. -->
   </article>
 
   <!-- PROJECT 3 -->
@@ -427,7 +418,6 @@ a:focus-visible{outline:2px solid var(--ms-blue);outline-offset:3px;}
         <p>A useful report starts with agreeing what each number means and where it comes from. Otherwise a dashboard can look authoritative while counting the same thing twice.</p>
       </div>
     </div>
-    <!-- EVIDENCE ASSETS TO ADD WHEN AVAILABLE: sanitised Power BI screenshot clearly labelled "Test data"; Visio data-flow diagram; description of source tables; example measures. -->
   </article>
 
 </section>
