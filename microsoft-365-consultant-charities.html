@@ -204,6 +204,27 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
   .link-cards{grid-template-columns:1fr;}
 }
 
+/* GOVERNANCE RISK SCENARIOS */
+.risk-intro{font-size:.95rem;color:var(--muted);line-height:1.85;max-width:760px;margin-bottom:1rem;}
+.risk-grid{display:grid;grid-template-columns:repeat(3,1fr);border:2px solid var(--ink);margin-top:2.5rem;}
+.risk-card{padding:2rem;border-right:1px solid var(--border);display:flex;flex-direction:column;gap:1rem;}
+.risk-card:last-child{border-right:none;}
+.risk-num{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);}
+.risk-card h3{font-family:'Epilogue',sans-serif;font-size:1.05rem;font-weight:800;letter-spacing:-.01em;line-height:1.25;}
+.risk-row-label{font-family:'JetBrains Mono',monospace;font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ms-blue);margin-bottom:.3rem;}
+.risk-row p{font-size:.86rem;color:var(--muted);line-height:1.7;}
+.risk-q{margin-top:auto;padding:1rem 1.1rem;background:var(--off);border-left:3px solid var(--ms-blue);}
+.risk-q p{color:var(--ink);font-weight:700;font-size:.86rem;line-height:1.6;}
+.risk-note{margin-top:2rem;font-size:.85rem;color:var(--muted);line-height:1.75;max-width:760px;border-left:3px solid var(--border);padding-left:1.25rem;}
+.risk-links{display:flex;flex-wrap:wrap;gap:1rem 2.5rem;margin-top:1.75rem;}
+.risk-links a{font-family:'Epilogue',sans-serif;font-size:.9rem;font-weight:900;color:var(--ms-blue);text-decoration:none;border-bottom:2px solid var(--ms-blue);padding-bottom:2px;}
+.risk-links a:hover,.risk-links a:focus-visible{color:#0062b0;}
+@media(max-width:1000px){
+  .risk-grid{grid-template-columns:1fr;}
+  .risk-card{border-right:none;border-bottom:1px solid var(--border);}
+  .risk-card:last-child{border-bottom:none;}
+}
+
 /* COOKIE NOTICE */
 #cookie-bar{position:fixed;bottom:0;left:0;right:0;z-index:9999;background:#0d0d0d;border-top:2px solid #0F4C81;padding:.85rem 2rem;display:flex;align-items:center;justify-content:space-between;gap:1.5rem;flex-wrap:wrap;font-family:'Epilogue',sans-serif;font-size:.82rem;color:#ccc;transition:transform .3s;}
 #cookie-bar.hidden{transform:translateY(100%);}
@@ -295,6 +316,44 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
       <h3>Copilot and AI readiness</h3>
       <p>Before adopting Microsoft Copilot or other AI tools, charities need to know where their data is and who can access it. We prepare your environment so AI surfaces the right information to the right people, and nothing else.</p>
     </div>
+  </div>
+</section>
+
+<section class="svc-section" id="governance-risks" aria-labelledby="governance-risks-title">
+  <div class="sec-label">Practical governance risks</div>
+  <h2 class="sec-title" id="governance-risks-title">When everyday Microsoft 365 decisions<br><span class="serif">become governance risks</span></h2>
+  <p class="risk-intro">Many Microsoft 365 risks come from ordinary operational decisions rather than sophisticated cyberattacks. A workspace created for convenience, a former volunteer's account left active or a shared document with overly broad access can eventually become a governance concern.</p>
+  <p class="risk-intro">The important question is not simply whether a technical setting is enabled. It is whether access, information handling and accountability remain appropriate.</p>
+  <div class="risk-grid">
+    <div class="risk-card">
+      <div class="risk-num">Scenario 01</div>
+      <h3>A trustee or volunteer leaves</h3>
+      <div class="risk-row"><div class="risk-row-label">The situation</div><p>A volunteer or trustee finishes their role, but their Microsoft 365 account, guest access or permissions remain in place.</p></div>
+      <div class="risk-row"><div class="risk-row-label">Why it matters</div><p>Former personnel may keep access to organisational information after their legitimate need has ended.</p></div>
+      <div class="risk-row"><div class="risk-row-label">What should be examined</div><p>Identity lifecycle procedures, guest accounts, group membership, shared links, access ownership and the process for removing permissions.</p></div>
+      <div class="risk-q"><div class="risk-row-label">The governance question</div><p>Who is responsible for confirming that access has been removed, and how is completion recorded?</p></div>
+    </div>
+    <div class="risk-card">
+      <div class="risk-num">Scenario 02</div>
+      <h3>Confidential information is shared too widely</h3>
+      <div class="risk-row"><div class="risk-row-label">The situation</div><p>Sensitive documents are stored in Teams, SharePoint or OneDrive locations with broader access than intended.</p></div>
+      <div class="risk-row"><div class="risk-row-label">Why it matters</div><p>Information can be exposed to staff, volunteers or external collaborators who do not need it.</p></div>
+      <div class="risk-row"><div class="risk-row-label">What should be examined</div><p>Workspace ownership, access groups, external sharing settings, document sensitivity, permissions inheritance and sharing practices.</p></div>
+      <div class="risk-q"><div class="risk-row-label">The governance question</div><p>Can the charity explain who should have access, and show that permissions reflect that decision?</p></div>
+    </div>
+    <div class="risk-card">
+      <div class="risk-num">Scenario 03</div>
+      <h3>A process depends on one person's inbox</h3>
+      <div class="risk-row"><div class="risk-row-label">The situation</div><p>Enquiries, approval requests or compliance reminders are managed through one person's email account or an informal spreadsheet.</p></div>
+      <div class="risk-row"><div class="risk-row-label">Why it matters</div><p>Actions can be missed when staff are absent or leave, and management may lack a reliable record of decisions and follow-up.</p></div>
+      <div class="risk-row"><div class="risk-row-label">What should be examined</div><p>Process ownership, shared mailbox arrangements, task assignment, escalation, record keeping and reporting.</p></div>
+      <div class="risk-q"><div class="risk-row-label">The governance question</div><p>Can the charity show that important requests are received, assigned, acted on and appropriately recorded?</p></div>
+    </div>
+  </div>
+  <p class="risk-note">These are illustrative situations, not customer case studies. The right response depends on the charity's circumstances, the sensitivity of its information and the controls already in place.</p>
+  <div class="risk-links">
+    <a href="services.html">Explore Microsoft 365 governance services &rarr;</a>
+    <a href="insights/microsoft-365-operational-resilience-blueprint.html">Read the operational resilience blueprint &rarr;</a>
   </div>
 </section>
 

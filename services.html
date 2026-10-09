@@ -101,6 +101,19 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .review-d-item{display:flex;align-items:center;gap:1rem;padding:.9rem 1.25rem;border-bottom:1px solid var(--border);font-size:.88rem;}
 .review-d-item:last-child{border-bottom:none;}
 
+/* REVIEW METHOD */
+.review-method{padding:5rem 4rem;border-bottom:2px solid var(--ink);}
+.rm-intro{font-size:.95rem;color:var(--muted);line-height:1.85;max-width:720px;margin-bottom:2.5rem;}
+.rm-grid{display:grid;grid-template-columns:repeat(2,1fr);border:2px solid var(--ink);}
+.rm-card{padding:2rem;border-bottom:1px solid var(--border);}
+.rm-card:nth-child(odd){border-right:1px solid var(--border);}
+.rm-card:last-child{grid-column:1 / -1;border-right:none;border-bottom:none;}
+.rm-num{font-family:'JetBrains Mono',monospace;font-size:.62rem;color:var(--muted);margin-bottom:.5rem;}
+.rm-card h3{font-family:'Epilogue',sans-serif;font-size:1.05rem;font-weight:800;letter-spacing:-.01em;margin-bottom:.6rem;}
+.rm-card p{font-size:.88rem;color:var(--muted);line-height:1.75;margin-bottom:.75rem;}
+.rm-card p:last-child{margin-bottom:0;}
+.rm-close{margin-top:2rem;padding:1.25rem 1.5rem;border-left:3px solid var(--ms-blue);background:#f0f5fb;font-size:.92rem;line-height:1.75;color:#1a3a5e;max-width:760px;}
+
 /* CTA */
 .page-cta{display:grid;grid-template-columns:1fr 1fr;border-top:2px solid var(--ink);}
 .cta-blue{background:var(--ms-blue);padding:5rem 4rem;display:flex;flex-direction:column;justify-content:center;}
@@ -137,6 +150,9 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
   .pb-right{padding:2.5rem 1.5rem;}
   .review-inner{grid-template-columns:1fr;}
   .review-section{padding:3rem 1.5rem;}
+  .review-method{padding:3rem 1.5rem;}
+  .rm-grid{grid-template-columns:1fr;}
+  .rm-card:nth-child(odd){border-right:none;}
   .page-cta{grid-template-columns:1fr;}
   .cta-blue,.cta-right{padding:3rem 1.5rem;}
 }
@@ -348,6 +364,44 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
       </div>
     </div>
   </div>
+</section>
+
+<!-- REVIEW METHOD -->
+<section class="review-method" id="review-method" aria-labelledby="review-method-title">
+  <div class="sec-label">Review methodology</div>
+  <h2 class="sec-title" id="review-method-title">What happens during a <span class="serif">governance review?</span></h2>
+  <p class="rm-intro">A useful review explains not only what is configured, but whether that configuration is appropriate for the organisation's responsibilities, working practices and exposure to risk.</p>
+  <div class="rm-grid">
+    <div class="rm-card">
+      <div class="rm-num">01</div>
+      <h3>Evidence gathering</h3>
+      <p>We examine relevant configuration and governance information within the agreed scope. Depending on access, licensing and requirements, this may include identity settings, authentication, privileged roles, external sharing, information protection, security policies and operational ownership.</p>
+      <p>Each finding records the supporting evidence available and any limitations that affect the assessment.</p>
+    </div>
+    <div class="rm-card">
+      <div class="rm-num">02</div>
+      <h3>Professional judgment</h3>
+      <p>Technical findings are considered in their operational context. An unused administrator account, a broad external sharing setting or an undocumented access process can carry different implications depending on the data involved, the privileges available and the controls already in place.</p>
+      <p>We separate urgent security exposure from longer-term governance improvements.</p>
+    </div>
+    <div class="rm-card">
+      <div class="rm-num">03</div>
+      <h3>Prioritised recommendations</h3>
+      <p>Technical observations are translated into actions that managers and technical staff can both understand. Each recommendation explains the concern, its potential consequences, the proposed treatment and any significant dependencies.</p>
+    </div>
+    <div class="rm-card">
+      <div class="rm-num">04</div>
+      <h3>Management decisions and implementation</h3>
+      <p>Some recommendations can be addressed through straightforward configuration changes. Others need licensing, policy, budget or operational decisions.</p>
+      <p>The report sets out recommendations. It does not mean implementation is included. Implementation can be agreed as a separate, appropriately scoped engagement.</p>
+    </div>
+    <div class="rm-card">
+      <div class="rm-num">05</div>
+      <h3>Verification and handover</h3>
+      <p>Where Adjona carries out remediation or implementation, the agreed work includes appropriate verification and documentation. Any remaining risks, unresolved decisions or operational follow-up are set out clearly at handover.</p>
+    </div>
+  </div>
+  <p class="rm-close">The aim is to give you a defensible basis for action, not simply a list of configuration recommendations.</p>
 </section>
 
 <!-- CTA -->

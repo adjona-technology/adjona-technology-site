@@ -103,6 +103,22 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .event-title{font-family:'Epilogue',sans-serif;font-size:1rem;font-weight:900;color:var(--ink);letter-spacing:-.02em;}
 .event-cta{font-family:'Epilogue',sans-serif;font-size:.88rem;font-weight:900;color:var(--ink);border:2px solid var(--ink);padding:.4rem 1.1rem;white-space:nowrap;}
 
+/* HOW WE WORK */
+.method{padding:5rem 4rem 4rem;border-top:2px solid var(--ink);}
+.method-intro{font-size:.95rem;line-height:1.85;color:var(--muted);max-width:760px;margin-bottom:1rem;}
+.routes.four{grid-template-columns:repeat(4,1fr);border:2px solid var(--ink);margin-top:2.5rem;}
+.routes.four .route{padding:2rem 1.75rem;gap:.75rem;}
+.routes.four .route-title{font-size:1.05rem;}
+.method-close{margin-top:2rem;padding:1.25rem 1.5rem;border-left:3px solid var(--ms-blue);background:#f0f5fb;font-size:.92rem;line-height:1.75;color:#1a3a5e;max-width:760px;}
+.method-links{display:flex;flex-wrap:wrap;gap:1.5rem 2.5rem;margin-top:1.75rem;align-items:center;}
+.method-link{font-family:'Epilogue',sans-serif;font-size:.9rem;font-weight:900;color:var(--ms-blue);text-decoration:none;border-bottom:2px solid var(--ms-blue);padding-bottom:2px;}
+.method-link.secondary{font-weight:700;border-bottom-width:1px;}
+.method-link:hover,.method-link:focus-visible{color:#0062b0;}
+/* TECHNICAL CAPABILITY */
+.capability{padding:4rem;border-top:2px solid var(--ink);}
+.capability-inner{max-width:760px;}
+.capability-inner p{font-size:.95rem;line-height:1.85;color:var(--muted);margin-bottom:1rem;}
+
 /* CREDIBILITY */
 .credibility{padding:5rem 4rem;border-top:2px solid var(--ink);background:var(--off);}
 .cred-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;margin-top:3rem;}
@@ -170,6 +186,9 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
   .hero-ctas{flex-direction:column;gap:.75rem;}
   .btn-solid,.btn-outline{display:block;text-align:center;border-left:2px solid var(--ink);}
   .routes{grid-template-columns:1fr;}
+  .routes.four{grid-template-columns:1fr;}
+  .method{padding:3rem 1.5rem;}
+  .capability{padding:3rem 1.5rem;}
   .route{border-right:none;border-bottom:2px solid var(--ink);}
   .route:last-child{border-bottom:none;}
   .credibility{padding:3rem 1.5rem;}
@@ -285,8 +304,8 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
 <a href="events.html" class="event-banner">
   <div class="event-banner-inner">
     <div style="display:flex;align-items:center;gap:1.5rem;">
-      <span class="event-meta">Free Online Event &nbsp;·&nbsp; 16 September 2026</span>
-      <span class="event-title">Who Still Has Access? Managing Leavers and Microsoft 365 Access</span>
+      <span class="event-meta">Free Online Event &nbsp;·&nbsp; 14 October 2026</span>
+      <span class="event-title">From Shared Inbox to Clear Ownership: Managing Enquiries with Microsoft 365</span>
     </div>
     <span class="event-cta">Register Free &rarr;</span>
   </div>
@@ -298,7 +317,7 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
     <div class="route-num">01</div>
     <div class="route-icon" style="background:var(--ms-blue);"></div>
     <div class="route-title">Microsoft 365 Security &amp; Governance Review</div>
-    <p class="route-desc">A structured review of your Microsoft 365 environment — identity, access, data protection and governance — with a plain-English report and prioritised action plan.</p>
+    <p class="route-desc">A structured assessment of your Microsoft 365 environment, covering identity, access, information protection and governance. Findings are supported by available evidence, assessed against operational risk and presented in a plain-English report with prioritised recommendations and clear next steps.</p>
     <a href="governance-snapshot.html" class="route-link" style="color:var(--ms-blue);">See the Governance Snapshot &rarr;</a>
   </div>
   <div class="route">
@@ -314,6 +333,45 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
     <div class="route-title">Projects, Automation &amp; Ongoing Support</div>
     <p class="route-desc">Work that does not fit a fixed package — fractional IT management, Microsoft 365 improvement, SharePoint and Teams housekeeping, email security, and workflow automation.</p>
     <a href="projects-support.html" class="route-link" style="color:var(--ms-grn);">See what's available &rarr;</a>
+  </div>
+</section>
+
+<!-- HOW WE WORK -->
+<section class="method" id="how-we-work" aria-labelledby="how-we-work-title">
+  <div class="sec-label">How we work</div>
+  <h2 class="sec-title" id="how-we-work-title">From assessment to <span class="serif">accountable improvement.</span></h2>
+  <p class="method-intro">Effective Microsoft 365 governance begins with understanding how an organisation operates, where its information is held, who can access it and which controls are actually working.</p>
+  <p class="method-intro">Adjona treats security, governance and operational improvement as connected responsibilities. Recommendations should be supported by evidence, proportionate to the risks identified and practical for the organisation to maintain.</p>
+  <div class="routes four">
+    <div class="route">
+      <div class="route-num">01</div>
+      <div class="route-icon" style="background:var(--ms-blue);"></div>
+      <h3 class="route-title">Assess the environment</h3>
+      <p class="route-desc">Review the relevant Microsoft 365 configuration, working practices, access arrangements and governance requirements within the agreed scope. Establish what is known, what needs verifying and where further investigation is needed.</p>
+    </div>
+    <div class="route">
+      <div class="route-num">02</div>
+      <div class="route-icon" style="background:var(--ms-red);"></div>
+      <h3 class="route-title">Evaluate the risks</h3>
+      <p class="route-desc">Separate technical weaknesses from their operational consequences. Consider likely impact, existing controls and the organisation's capacity to respond. Not every finding needs immediate remediation.</p>
+    </div>
+    <div class="route">
+      <div class="route-num">03</div>
+      <div class="route-icon" style="background:var(--ms-grn);"></div>
+      <h3 class="route-title">Define the actions</h3>
+      <p class="route-desc">Turn findings into clear recommendations, separating immediate priorities, planned improvements and matters that need a management decision. Identify dependencies and responsibilities before any implementation.</p>
+    </div>
+    <div class="route">
+      <div class="route-num">04</div>
+      <div class="route-icon" style="background:var(--ms-yel);"></div>
+      <h3 class="route-title">Implement and verify</h3>
+      <p class="route-desc">Where implementation is commissioned, carry out the agreed changes, test them and document the outcome, so the organisation can understand and maintain the resulting controls.</p>
+    </div>
+  </div>
+  <p class="method-close">A report identifies what needs attention. Accountable delivery establishes what will change, who is responsible and how completion can be verified.</p>
+  <div class="method-links">
+    <a href="services.html" class="method-link">Explore our services &rarr;</a>
+    <a href="insights/microsoft-365-operational-resilience-blueprint.html" class="method-link secondary">Read our operational resilience blueprint &rarr;</a>
   </div>
 </section>
 
@@ -351,6 +409,19 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
         <div class="cred-p-top"><div class="cred-p-sq" style="background:var(--ms-yel)"></div><div class="cred-p-name">SME-appropriate scope</div></div>
         <div class="cred-p-desc">Proportionate, cost-effective security and governance support shaped around your organisation's size, maturity and level of risk.</div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- TECHNICAL CAPABILITY -->
+<section class="capability" id="technical-capability" aria-labelledby="technical-capability-title">
+  <div class="capability-inner">
+    <div class="sec-label">Technical capability</div>
+    <h2 class="sec-title" id="technical-capability-title">See how we approach <span class="serif">technical delivery.</span></h2>
+    <p>Technical capability should be shown through more than product names and certifications.</p>
+    <p>Adjona develops and documents practical solutions using Microsoft 365, Power Platform, Dataverse, Dynamics 365 and automation. Selected internal engineering projects show the architecture, design choices and verification work behind this capability. They are identified as internal projects, not presented as customer case studies.</p>
+    <div class="method-links" style="margin-top:1.25rem;">
+      <a href="technical-projects.html" class="method-link">Explore technical projects &amp; engineering &rarr;</a>
     </div>
   </div>
 </section>
@@ -490,8 +561,6 @@ document.addEventListener('DOMContentLoaded',function(){
     });
   });
 });
-  });
-}
 </script>
 
 <!-- Cookie notice -->

@@ -106,6 +106,14 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .svc-block-note{font-size:.82rem;color:var(--muted);line-height:1.75;margin-top:1.25rem;padding:1rem 1.25rem;border-left:3px solid var(--ms-yel);background:#fffdf0;}
 .svc-block-link{display:inline-block;margin-top:1.25rem;font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;border-bottom:1px solid rgba(47,107,0,.3);}
 
+/* DELIVERY APPROACH */
+.svc-block-left h2.svc-block-title{margin-top:.5rem;}
+.da-item{padding:1rem 1.25rem;border-bottom:1px solid var(--border);}
+.da-item:last-child{border-bottom:none;}
+.da-item h3{font-family:'Epilogue',sans-serif;font-size:.95rem;font-weight:800;letter-spacing:-.01em;color:var(--ink);margin-bottom:.35rem;display:flex;align-items:center;gap:.6rem;}
+.da-item p{font-size:.86rem;color:#555;line-height:1.7;}
+.da-links{display:flex;flex-wrap:wrap;gap:1rem 2rem;margin-top:1.25rem;}
+
 /* CTA */
 .page-cta{display:grid;grid-template-columns:1fr 1fr;border-top:2px solid var(--ink);}
 .cta-blue{background:var(--ms-blue);padding:5rem 4rem;display:flex;flex-direction:column;justify-content:center;}
@@ -427,6 +435,40 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
       <div class="svc-block-list-item"><div class="svc-block-list-dot" style="background:var(--ms-yel);"></div>Governance controls before rollout</div>
     </div>
     <div class="svc-block-note">The starting point is simple: get the foundations right before introducing AI into everyday work.</div>
+  </div>
+</div>
+
+<!-- Delivery approach -->
+<div class="svc-block off" id="delivery-approach" style="border-bottom:2px solid var(--ink);">
+  <div class="svc-block-left">
+    <div class="svc-block-label" style="color:var(--ms-blue);">Delivery approach</div>
+    <h2 class="svc-block-title">Technical implementation with <span class="serif">clear responsibilities</span></h2>
+  </div>
+  <div class="svc-block-right">
+    <p class="svc-block-intro" style="color:#555;">Technical projects need more than a working configuration. They need an agreed scope, appropriate permissions, controlled changes, meaningful testing and a clear handover. Adjona structures projects around the technical outcome required and the operational responsibilities that come with it.</p>
+    <div class="svc-block-list">
+      <div class="svc-block-list-title">How projects are structured</div>
+      <div class="da-item">
+        <h3><span class="svc-block-list-dot" style="background:var(--ms-blue);margin-top:0;"></span>Scope and dependencies</h3>
+        <p>The intended outcome, systems affected, assumptions, licensing requirements, client responsibilities and material exclusions are defined before work starts.</p>
+      </div>
+      <div class="da-item">
+        <h3><span class="svc-block-list-dot" style="background:var(--ms-red);margin-top:0;"></span>Design and implementation</h3>
+        <p>The approach is chosen to suit the organisation's environment, operational needs and capacity. Significant design decisions are documented, especially where security, personal data or ongoing maintenance are involved.</p>
+      </div>
+      <div class="da-item">
+        <h3><span class="svc-block-list-dot" style="background:var(--ms-grn);margin-top:0;"></span>Testing and verification</h3>
+        <p>The agreed functionality and relevant controls are tested before handover. Where practical, this includes permissions, failure handling, notifications, data processing and expected user behaviour.</p>
+      </div>
+      <div class="da-item">
+        <h3><span class="svc-block-list-dot" style="background:var(--ms-yel);margin-top:0;"></span>Documentation and ownership</h3>
+        <p>You receive implementation notes, operational instructions and a record of any outstanding issues or dependencies. We also confirm whether any continuing monitoring, administration or support falls within the engagement.</p>
+      </div>
+    </div>
+    <div class="svc-block-note" style="color:#555;">The objective is a solution that works, can be understood by its owners and remains manageable after implementation.</div>
+    <div class="da-links">
+      <a href="technical-projects.html" class="svc-block-link" style="color:var(--ms-blue);border-bottom-color:rgba(15,76,129,.35);">See technical projects &amp; engineering &rarr;</a>
+    </div>
   </div>
 </div>
 
