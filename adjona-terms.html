@@ -1,6 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!-- Google Consent Mode v2 -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'granted'
+  });
+</script>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-BQNKT24TFT"></script>
 <script>
@@ -11,16 +22,30 @@
 </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="robots" content="noindex, nofollow">
-<title>Terms &amp; Conditions — Adjona Technology Limited</title>
-<meta name="description" content="Terms and conditions for Adjona Technology Limited.">
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 28'><polygon points='0,28 6,28 7,17 6,16 0,16' fill='%230F4C81'/><polygon points='9,28 15,28 16,12 15,11 9,11' fill='%23D83B01'/><polygon points='18,28 24,28 25,7 24,6 18,6' fill='%232F6B00'/><polygon points='27,28 33,28 34,1 33,0 27,0' fill='%23F2A900'/></svg>">
+<title>Professional Services Terms and Conditions | Adjona Technology</title>
+<meta name="description" content="Professional services terms and conditions for Adjona Technology Limited, version 1.0, effective 11 October 2026.">
+<meta name="robots" content="noindex, follow">
+<link rel="canonical" href="https://adjona.com/adjona-terms.html">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="192x192" href="favicon-192.png">
+<meta property="og:title" content="Professional Services Terms and Conditions | Adjona Technology">
+<meta property="og:description" content="Professional services terms and conditions for Adjona Technology Limited, version 1.0, effective 11 October 2026.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://adjona.com/adjona-terms.html">
+<meta property="og:image" content="https://adjona.com/adjona-social-preview.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://adjona.com/adjona-social-preview.png">
 <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;700;800;900&family=Lora:ital,wght@1,500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script>(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window,document,"clarity","script","wmyh9800tx");</script>
 <style>
 :root{
   --white:#ffffff;--off:#f5f5f0;--ink:#0d0d0d;
   --ms-blue:#0F4C81;--ms-red:#D83B01;--ms-grn:#2F6B00;--ms-yel:#F2A900;
-  --muted:#888;--border:rgba(13,13,13,0.1);
+  --muted:#444;--border:rgba(13,13,13,0.1);
+  --nav-h:62px;
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;}
@@ -28,54 +53,125 @@ body{background:var(--white);color:var(--ink);font-family:'Epilogue',sans-serif;
 
 nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:0 0 0 4rem;background:#fff;border-bottom:2px solid var(--ink);}
 .logo{display:flex;align-items:center;gap:.75rem;padding:1.1rem 0;text-decoration:none;}
-.logo-name{font-family:'Epilogue',sans-serif;font-size:1.1rem;font-weight:900;letter-spacing:-.02em;color:var(--ink);}
+.logo-name{font-family:'Epilogue',sans-serif;font-size:1.1rem;font-weight:900;letter-spacing:-.02em;white-space:nowrap;color:var(--ink);}
 .logo-name span{color:var(--ms-blue);}
 .nav-links{display:flex;list-style:none;}
-.nav-links a{font-family:'JetBrains Mono',monospace;font-size:.63rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);text-decoration:none;padding:1.5rem 1.4rem;border-left:2px solid var(--border);display:block;transition:color .2s,background .2s;}
-.nav-links a:hover{color:var(--ms-blue);background:rgba(0,120,212,.04);}
-.nav-cta{font-family:'Epilogue',sans-serif;font-size:.88rem;font-weight:900;background:var(--ms-blue);color:#fff;text-decoration:none;border-left:2px solid var(--ink);padding:1.5rem 2.2rem;cursor:pointer;transition:background .2s;display:block;}
+.nav-links a{font-family:'JetBrains Mono',monospace;font-size:.63rem;letter-spacing:.14em;text-transform:uppercase;color:#333;text-decoration:none;padding:1.5rem 1.4rem;border-left:2px solid var(--border);display:block;transition:color .2s,background .2s;}
+.nav-links a:hover,.nav-links a.active{color:var(--ms-blue);background:rgba(0,120,212,.04);}
+.nav-cta{font-family:'Epilogue',sans-serif;font-size:.88rem;font-weight:900;background:var(--ms-blue);color:#fff;text-decoration:none;border-left:2px solid var(--ink);padding:1.5rem 2.2rem;cursor:pointer;transition:background .2s;display:block;white-space:nowrap;}
 .nav-cta:hover{background:#0062b0;}
-.four-stripe{display:grid;grid-template-columns:repeat(4,1fr);height:5px;margin-top:calc(3.1rem + 2px);}
+.nav-hamburger{display:none;}
+.nav-cta-mobile{display:none;}
+
+.four-stripe{display:grid;grid-template-columns:repeat(4,1fr);height:6px;}
 .fs.b{background:var(--ms-blue);}.fs.r{background:var(--ms-red);}.fs.g{background:var(--ms-grn);}.fs.y{background:var(--ms-yel);}
-.page-header{padding:4rem 4rem 3rem;border-bottom:2px solid var(--ink);background:var(--off);display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:end;}
-.ph-eyebrow{font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ms-blue);margin-bottom:.75rem;display:flex;align-items:center;gap:.6rem;}
-.ph-eyebrow::before{content:'';width:24px;height:2px;background:var(--ms-blue);}
-.ph-title{font-family:'Epilogue',sans-serif;font-size:clamp(2.5rem,4vw,5rem);font-weight:900;letter-spacing:-.04em;line-height:.92;}
-.ph-title .serif{font-family:'Lora',serif;font-style:italic;font-weight:500;}
-.ph-meta{display:flex;flex-direction:column;gap:.75rem;}
-.ph-meta-item{padding:.9rem 1.1rem;border:1px solid var(--border);background:#fff;}
-.ph-meta-label{font-family:'JetBrains Mono',monospace;font-size:.57rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:.25rem;}
-.ph-meta-val{font-family:'Epilogue',sans-serif;font-size:.9rem;font-weight:700;}
-.content-wrap{display:grid;grid-template-columns:220px 1fr;border-bottom:2px solid var(--ink);}
-.sidebar{border-right:2px solid var(--ink);padding:2.5rem 1.75rem;position:sticky;top:calc(3.1rem + 2px + 5px);height:fit-content;align-self:start;}
-.toc-label{font-family:'JetBrains Mono',monospace;font-size:.57rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:1rem;}
-.toc{list-style:none;}
-.toc a{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);text-decoration:none;padding:.55rem .65rem;border-left:2px solid var(--border);display:block;transition:color .2s,border-color .2s,background .2s;line-height:1.5;}
-.toc a:hover{color:var(--ms-blue);border-color:var(--ms-blue);background:rgba(0,120,212,.03);}
-.main-content{padding:3.5rem 4.5rem 5rem;}
-.policy-section{margin-bottom:3.5rem;padding-bottom:3.5rem;border-bottom:1px solid var(--border);}
-.policy-section:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0;}
-.section-num{font-family:'JetBrains Mono',monospace;font-size:.58rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:.4rem;}
-.section-title{font-family:'Epilogue',sans-serif;font-size:1.4rem;font-weight:900;letter-spacing:-.02em;margin-bottom:1.25rem;}
-.section-body{font-size:.95rem;line-height:1.9;color:rgba(13,13,13,.75);}
-.section-body p{margin-bottom:1rem;}
-.section-body p:last-child{margin-bottom:0;}
-.section-body strong{color:var(--ink);font-weight:700;}
-.section-body a{color:var(--ms-blue);text-decoration:none;border-bottom:1px solid rgba(0,120,212,.3);}
-.section-body a:hover{border-color:var(--ms-blue);}
-.section-body ul{margin:1rem 0 1rem 1.5rem;}
-.section-body ul li{margin-bottom:.5rem;}
-.callout{background:var(--off);border-left:3px solid var(--ms-blue);padding:1.1rem 1.4rem;margin:1.25rem 0;font-size:.9rem;line-height:1.75;}
-.callout.red{border-color:var(--ms-red);}
+
+.page-hero{padding:calc(var(--nav-h) + 5rem) 4rem 5rem;border-bottom:2px solid var(--ink);}
+.page-breadcrumb{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:1.5rem;}
+.page-breadcrumb a{color:var(--muted);text-decoration:none;}
+.page-breadcrumb a:hover{color:var(--ms-blue);}
+.page-tag{font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.2em;color:var(--ms-blue);margin-bottom:1.5rem;display:block;padding-left:2.25rem;position:relative;}
+.page-tag::before{content:'';width:28px;height:2px;background:var(--ms-blue);position:absolute;left:0;top:50%;transform:translateY(-50%);}
+.page-hero h1{font-family:'Epilogue',sans-serif;font-size:clamp(2.8rem,5vw,5.5rem);font-weight:900;line-height:.92;letter-spacing:-.04em;margin-bottom:2rem;}
+.page-hero h1 .serif{font-family:'Lora',serif;font-style:italic;font-weight:500;letter-spacing:-.02em;}
+.page-hero-body{font-size:1.05rem;line-height:1.85;color:var(--muted);max-width:680px;}
+
+/* PILLAR BLOCKS */
+.pillar-block{display:grid;grid-template-columns:1fr 1.6fr;border-top:2px solid var(--ink);}
+.pillar-block:last-of-type{border-bottom:2px solid var(--ink);}
+.pb-left{padding:3rem;border-right:2px solid var(--ink);display:flex;flex-direction:column;gap:1rem;}
+.pb-right{padding:3rem;}
+.pb-num{font-family:'JetBrains Mono',monospace;font-size:.65rem;color:var(--muted);}
+.pb-label{font-family:'JetBrains Mono',monospace;font-size:.58rem;letter-spacing:.16em;text-transform:uppercase;}
+.pb-title{font-family:'Epilogue',sans-serif;font-size:clamp(1.6rem,2.5vw,2.2rem);font-weight:900;letter-spacing:-.03em;line-height:1;}
+.pb-title .serif{font-family:'Lora',serif;font-style:italic;font-weight:500;}
+.pb-tags{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:.5rem;}
+.pb-tag{font-family:'JetBrains Mono',monospace;font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;border:1.5px solid var(--border);padding:.3rem .65rem;color:var(--muted);}
+.pb-intro{font-size:.95rem;color:var(--muted);line-height:1.85;margin-bottom:1.5rem;}
+.pb-items{display:flex;flex-direction:column;gap:0;border:2px solid var(--ink);}
+.pb-items-title{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.15em;text-transform:uppercase;padding:.8rem 1.25rem;background:var(--ink);color:#fff;}
+.pb-item{display:flex;align-items:flex-start;gap:.9rem;padding:.85rem 1.25rem;border-bottom:1px solid var(--border);font-size:.88rem;color:var(--muted);line-height:1.65;}
+.pb-item:last-child{border-bottom:none;}
+.pb-dot{width:8px;height:8px;flex-shrink:0;margin-top:.35rem;}
+
+/* REVIEW SECTION */
+.review-section{background:var(--off);border-top:2px solid var(--ink);border-bottom:2px solid var(--ink);padding:5rem 4rem;}
+.review-inner{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;}
+.review-deliverables{border:2px solid var(--ink);}
+.review-d-title{font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.15em;text-transform:uppercase;padding:.9rem 1.25rem;background:var(--ink);color:#fff;}
+.review-d-item{display:flex;align-items:center;gap:1rem;padding:.9rem 1.25rem;border-bottom:1px solid var(--border);font-size:.88rem;}
+.review-d-item:last-child{border-bottom:none;}
+
+/* REVIEW METHOD */
+.review-method{padding:5rem 4rem;border-bottom:2px solid var(--ink);}
+.rm-intro{font-size:.95rem;color:var(--muted);line-height:1.85;max-width:720px;margin-bottom:2.5rem;}
+.rm-grid{display:grid;grid-template-columns:repeat(2,1fr);border:2px solid var(--ink);}
+.rm-card{padding:2rem;border-bottom:1px solid var(--border);}
+.rm-card:nth-child(odd){border-right:1px solid var(--border);}
+.rm-card:last-child{grid-column:1 / -1;border-right:none;border-bottom:none;}
+.rm-num{font-family:'JetBrains Mono',monospace;font-size:.62rem;color:var(--muted);margin-bottom:.5rem;}
+.rm-card h3{font-family:'Epilogue',sans-serif;font-size:1.05rem;font-weight:800;letter-spacing:-.01em;margin-bottom:.6rem;}
+.rm-card p{font-size:.88rem;color:var(--muted);line-height:1.75;margin-bottom:.75rem;}
+.rm-card p:last-child{margin-bottom:0;}
+.rm-close{margin-top:2rem;padding:1.25rem 1.5rem;border-left:3px solid var(--ms-blue);background:#f0f5fb;font-size:.92rem;line-height:1.75;color:#1a3a5e;max-width:760px;}
+
+/* CTA */
+.page-cta{display:grid;grid-template-columns:1fr 1fr;border-top:2px solid var(--ink);}
+.cta-blue{background:var(--ms-blue);padding:5rem 4rem;display:flex;flex-direction:column;justify-content:center;}
+.cta-tag{font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.9);margin-bottom:1rem;}
+.cta-title{font-family:'Epilogue',sans-serif;font-size:clamp(2rem,3.5vw,3.5rem);font-weight:900;letter-spacing:-.04em;line-height:.95;color:#fff;margin-bottom:1rem;}
+.cta-title .serif{font-family:'Lora',serif;font-style:italic;font-weight:500;}
+.cta-sub{font-size:.95rem;color:rgba(255,255,255,.85);line-height:1.8;max-width:400px;margin-bottom:2rem;}
+.cta-actions{display:flex;flex-direction:column;gap:.75rem;}
+.cta-btn-solid{font-family:'Epilogue',sans-serif;font-size:.9rem;font-weight:900;background:#fff;color:var(--ms-blue);border:2px solid #fff;padding:.85rem 2rem;text-decoration:none;display:inline-block;transition:all .2s;text-align:center;}
+.cta-btn-solid:hover{background:var(--ms-yel);border-color:var(--ms-yel);color:var(--ink);}
+.cta-btn-outline{font-family:'Epilogue',sans-serif;font-size:.9rem;font-weight:900;background:transparent;color:#fff;border:2px solid rgba(255,255,255,.4);padding:.85rem 2rem;text-decoration:none;display:inline-block;transition:all .2s;text-align:center;}
+.cta-btn-outline:hover{border-color:#fff;background:rgba(255,255,255,.1);}
+.cta-right{background:var(--off);padding:5rem 4rem;display:flex;flex-direction:column;justify-content:center;gap:1.5rem;}
+
+.sec-label{font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ms-blue);margin-bottom:.75rem;}
+.sec-title{font-family:'Epilogue',sans-serif;font-size:clamp(2rem,3.5vw,3.5rem);font-weight:900;letter-spacing:-.03em;line-height:.95;margin-bottom:.75rem;}
+.sec-title .serif{font-family:'Lora',serif;font-style:italic;font-weight:500;}
+
 footer{display:flex;align-items:center;justify-content:space-between;padding:1.5rem 4rem;border-top:2px solid var(--ink);}
 .f-copy-wrap{display:flex;flex-direction:column;gap:.2rem;}
-.f-copy{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.06em;color:var(--muted);}
-.f-logo{display:flex;align-items:center;gap:.65rem;text-decoration:none;}
-.f-name{font-family:'Epilogue',sans-serif;font-size:.9rem;font-weight:900;letter-spacing:-.02em;color:var(--ink);}
+.f-logo{display:flex;align-items:center;gap:.65rem;}
+.f-name{font-family:'Epilogue',sans-serif;font-size:1rem;font-weight:900;letter-spacing:-.02em;}
 .f-name span{color:var(--ms-blue);}
+.f-copy{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.06em;color:var(--muted);}
 .f-links{display:flex;gap:2rem;list-style:none;}
 .f-links a{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color .2s;}
 .f-links a:hover{color:var(--ms-blue);}
+
+
+@media(max-width:1000px){
+  .nav-cta{display:none;}
+  .pillar-block{grid-template-columns:1fr;}
+  .pb-left{border-right:none;border-bottom:2px solid var(--ink);padding:2.5rem 1.5rem;}
+  .pb-right{padding:2.5rem 1.5rem;}
+  .review-inner{grid-template-columns:1fr;}
+  .review-section{padding:3rem 1.5rem;}
+  .review-method{padding:3rem 1.5rem;}
+  .rm-grid{grid-template-columns:1fr;}
+  .rm-card:nth-child(odd){border-right:none;}
+  .page-cta{grid-template-columns:1fr;}
+  .cta-blue,.cta-right{padding:3rem 1.5rem;}
+}
+@media(max-width:768px){
+  :root{--nav-h:58px;}
+  nav{padding:0 1.25rem;flex-wrap:wrap;}
+  .logo{padding:.85rem 0;}
+  .nav-links{display:none;width:100%;flex-direction:column;border-top:1px solid var(--border);}
+  .nav-links.nav-open{display:flex;background:#fff;}
+  .nav-links a{border-left:none;border-bottom:1px solid var(--border);padding:1rem 0;}
+  .nav-hamburger{display:block;background:none;border:none;font-size:1.4rem;cursor:pointer;padding:.5rem;color:var(--ink);margin-left:auto;}
+  .nav-cta{display:none !important;}
+  .nav-cta-mobile{display:none !important;}
+  .nav-cta-mobile.nav-open{display:block !important;width:100%;font-family:'Epilogue',sans-serif;font-size:.82rem;font-weight:900;background:var(--ms-blue);color:#fff;text-decoration:none;text-align:center;padding:1rem 1.25rem;border-top:2px solid var(--ink);}
+  .page-hero{padding:calc(var(--nav-h) + 2.5rem) 1.5rem 3rem;}
+  footer{flex-direction:column;align-items:flex-start;gap:1.25rem;padding:1.5rem;}
+  .f-links{flex-wrap:wrap;gap:1rem;}
+}
 
 /* COOKIE NOTICE */
 #cookie-bar{position:fixed;bottom:0;left:0;right:0;z-index:9999;background:#0d0d0d;border-top:2px solid #0F4C81;padding:.85rem 2rem;display:flex;align-items:center;justify-content:space-between;gap:1.5rem;flex-wrap:wrap;font-family:'Epilogue',sans-serif;font-size:.82rem;color:#ccc;transition:transform .3s;}
@@ -85,6 +181,56 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
 #cookie-bar-accept{font-family:'Epilogue',sans-serif;font-size:.82rem;font-weight:900;background:#0F4C81;color:#fff;border:none;padding:.5rem 1.25rem;cursor:pointer;white-space:nowrap;transition:background .2s;}
 #cookie-bar-accept:hover{background:#0062b0;}
 @media(max-width:600px){#cookie-bar{flex-direction:column;align-items:flex-start;padding:1rem 1.25rem;}}
+
+/* LEGAL PAGE */
+.page-header{padding:calc(var(--nav-h) + 4rem) 4rem 3rem;border-bottom:2px solid var(--ink);background:var(--off);display:grid;grid-template-columns:1.2fr 1fr;gap:4rem;align-items:end;}
+.ph-eyebrow{font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ms-blue);margin-bottom:.75rem;display:flex;align-items:center;gap:.6rem;}
+.ph-eyebrow::before{content:'';width:24px;height:2px;background:var(--ms-blue);}
+.ph-title{font-family:'Epilogue',sans-serif;font-size:clamp(2.4rem,4vw,4.5rem);font-weight:900;letter-spacing:-.04em;line-height:.95;}
+.ph-title .serif{font-family:'Lora',serif;font-style:italic;font-weight:500;}
+.ph-intro{font-size:.95rem;line-height:1.8;color:var(--muted);margin-top:1.25rem;max-width:560px;}
+.ph-meta{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;}
+.ph-meta-item{padding:.9rem 1.1rem;border:1px solid var(--border);background:#fff;}
+.ph-meta-item.wide{grid-column:1 / -1;}
+.ph-meta-label{font-family:'JetBrains Mono',monospace;font-size:.57rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:.25rem;}
+.ph-meta-val{font-family:'Epilogue',sans-serif;font-size:.9rem;font-weight:700;}
+.content-wrap{display:grid;grid-template-columns:260px 1fr;border-bottom:2px solid var(--ink);}
+.sidebar{border-right:2px solid var(--ink);padding:2.5rem 1.5rem;position:sticky;top:var(--nav-h);max-height:calc(100vh - var(--nav-h));overflow-y:auto;align-self:start;}
+.toc-label{font-family:'JetBrains Mono',monospace;font-size:.57rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:1rem;}
+.toc{list-style:none;}
+.toc a{display:block;font-size:.8rem;line-height:1.35;color:#444;text-decoration:none;padding:.4rem .6rem;border-left:2px solid var(--border);}
+.toc a:hover,.toc a:focus-visible{color:var(--ms-blue);border-color:var(--ms-blue);background:rgba(15,76,129,.04);}
+.main-content{padding:3.5rem 4.5rem 5rem;max-width:960px;}
+.policy-section{margin-bottom:2.5rem;padding-bottom:2.5rem;border-bottom:1px solid var(--border);scroll-margin-top:calc(var(--nav-h) + 1rem);}
+.policy-section:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0;}
+.section-num{font-family:'JetBrains Mono',monospace;font-size:.58rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:.4rem;}
+.section-title{font-family:'Epilogue',sans-serif;font-size:1.3rem;font-weight:900;letter-spacing:-.02em;margin-bottom:1rem;}
+.section-body{font-size:.93rem;line-height:1.85;color:#333;}
+.section-body p{margin-bottom:.9rem;}
+.section-body p:last-child{margin-bottom:0;}
+.section-body strong{color:var(--ink);font-weight:700;}
+.section-body a{color:var(--ms-blue);text-decoration:none;border-bottom:1px solid rgba(15,76,129,.3);}
+.section-body ul{margin:.75rem 0 .9rem 1.25rem;}
+.section-body ul li{margin-bottom:.45rem;}
+.callout{background:var(--off);border-left:3px solid var(--ms-blue);padding:1.1rem 1.4rem;margin:0 0 2.5rem;font-size:.9rem;line-height:1.75;color:#333;}
+.callout a{color:var(--ms-blue);font-weight:700;text-decoration:none;}
+.doc-table{width:100%;border-collapse:collapse;font-size:.85rem;border:2px solid var(--ink);}
+.doc-table th{background:var(--ink);color:#fff;font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;text-align:left;padding:.6rem .8rem;font-weight:500;}
+.doc-table td{padding:.7rem .8rem;border-top:1px solid var(--border);vertical-align:top;color:#333;}
+@media(max-width:1000px){
+  .page-header{grid-template-columns:1fr;gap:2rem;padding:calc(var(--nav-h) + 2.5rem) 1.5rem 2.5rem;}
+  .content-wrap{grid-template-columns:minmax(0,1fr);}
+  .main-content,.sidebar{min-width:0;overflow-wrap:break-word;}
+  .sidebar{position:static;max-height:none;border-right:none;border-bottom:2px solid var(--ink);padding:2rem 1.5rem;}
+  .toc{columns:2;column-gap:1rem;}
+  .toc li{break-inside:avoid;}
+  .main-content{padding:2.5rem 1.5rem 3.5rem;}
+}
+@media(max-width:480px){
+  .toc{columns:1;}
+  .ph-meta{grid-template-columns:1fr;}
+  .doc-table{display:block;overflow-x:auto;}
+}
 </style>
 <script>
 (function(){
@@ -95,7 +241,6 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
 </script>
 </head>
 <body>
-
 <nav>
   <a href="index.html" class="logo">
     <svg width="36" height="28" viewBox="0 0 36 28" xmlns="http://www.w3.org/2000/svg">
@@ -107,187 +252,304 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
     <div class="logo-name">Adjona <span>Technology</span></div>
   </a>
   <ul class="nav-links">
+    <li><a href="index.html#about">About</a></li>
     <li><a href="services.html">Services</a></li>
-    <li><a href="index.html#approach">About</a></li>
+    <li><a href="projects-support.html">Projects &amp; Support</a></li>
+    <li><a href="packages.html">Solution Packages</a></li>
     <li><a href="index.html#credentials">Credentials</a></li>
     <li><a href="resources.html">Resources</a></li>
     <li><a href="insights.html">Insights</a></li>
-    <li><a href="index.html#contact">Contact</a></li>
+    <li><a href="enquiry.html">Contact Us</a></li>
   </ul>
   <a onclick="if(typeof window.clarity==='function')window.clarity('event','book_call_click')" href="https://outlook.office.com/book/AdjonaTechnologyLimited1@adjona.com/s/ElOd0P60CEiQxQcnIYWXWw2" target="_blank" rel="noopener noreferrer" class="nav-cta">Book a Free Introductory Conversation</a>
+  <button class="nav-hamburger" aria-label="Menu" onclick="var nav=this.closest('nav');nav.querySelector('.nav-links').classList.toggle('nav-open');nav.querySelector('.nav-cta-mobile').classList.toggle('nav-open');">&#9776;</button>
+  <a onclick="if(typeof window.clarity==='function')window.clarity('event','book_call_click')" href="https://outlook.office.com/book/AdjonaTechnologyLimited1@adjona.com/s/ElOd0P60CEiQxQcnIYWXWw2" target="_blank" rel="noopener noreferrer" class="nav-cta-mobile">Book a Free Introductory Conversation</a>
 </nav>
 
-<div class="four-stripe">
-  <div class="fs b"></div><div class="fs r"></div><div class="fs g"></div><div class="fs y"></div>
-</div>
-
+<main>
 <header class="page-header">
   <div>
     <div class="ph-eyebrow">Legal</div>
-    <h1 class="ph-title">Terms &amp;<br><span class="serif">Conditions.</span></h1>
+    <h1 class="ph-title">Professional Services <span class="serif">Terms and Conditions</span></h1>
+    <p class="ph-intro">These terms apply to professional services supplied by Adjona Technology Limited under a proposal, statement of work, quote or other written engagement document. Free introductory conversations are provided without charge or obligation and do not create an engagement.</p>
   </div>
   <div class="ph-meta">
-    <div class="ph-meta-item">
-      <div class="ph-meta-label">Company</div>
-      <div class="ph-meta-val">Adjona Technology Limited</div>
-    </div>
-    <div class="ph-meta-item">
-      <div class="ph-meta-label">Company Number</div>
-      <div class="ph-meta-val">05007410</div>
-    </div>
-    <div class="ph-meta-item">
-      <div class="ph-meta-label">Last Updated</div>
-      <div class="ph-meta-val">May 2026</div>
-    </div>
-    <div class="ph-meta-item">
-      <div class="ph-meta-label">Jurisdiction</div>
-      <div class="ph-meta-val">England &amp; Wales</div>
-    </div>
+    <div class="ph-meta-item"><div class="ph-meta-label">Version</div><div class="ph-meta-val">1.0</div></div>
+    <div class="ph-meta-item"><div class="ph-meta-label">Effective</div><div class="ph-meta-val">11 October 2026</div></div>
+    <div class="ph-meta-item"><div class="ph-meta-label">Company number</div><div class="ph-meta-val">05007410</div></div>
+    <div class="ph-meta-item"><div class="ph-meta-label">Jurisdiction</div><div class="ph-meta-val">England and Wales</div></div>
+    <div class="ph-meta-item wide"><div class="ph-meta-label">Registered office</div><div class="ph-meta-val">5th Floor, 167-169 Great Portland Street, London W1W 5PF</div></div>
   </div>
 </header>
 
+<div class="four-stripe"><div class="fs b"></div><div class="fs r"></div><div class="fs g"></div><div class="fs y"></div></div>
+
 <div class="content-wrap">
-  <aside class="sidebar">
+  <aside class="sidebar" aria-label="Contents">
     <div class="toc-label">Contents</div>
     <ul class="toc">
-      <li><a href="#about-us">About Us</a></li>
-      <li><a href="#services">Our Services</a></li>
-      <li><a href="#payment">Payment</a></li>
-      <li><a href="#ip">Intellectual Property</a></li>
-      <li><a href="#confidentiality">Confidentiality</a></li>
-      <li><a href="#liability">Liability</a></li>
-      <li><a href="#termination">Termination</a></li>
-      <li><a href="#data">Data Protection</a></li>
-      <li><a href="#general">General</a></li>
-      <li><a href="#contact-us">Contact Us</a></li>
+      <li><a href="#definitions-and-interpretation">1. Definitions and interpretation</a></li>
+      <li><a href="#contract-formation-and-order-of-precedence">2. Contract formation and order of precedence</a></li>
+      <li><a href="#scope-of-services">3. Scope of Services</a></li>
+      <li><a href="#client-responsibilities">4. Client responsibilities</a></li>
+      <li><a href="#access-credentials-and-least-privilege">5. Access, credentials and least privilege</a></li>
+      <li><a href="#fees-expenses-and-payment">6. Fees, expenses and payment</a></li>
+      <li><a href="#change-control">7. Change control</a></li>
+      <li><a href="#confidentiality">8. Confidentiality</a></li>
+      <li><a href="#data-protection-and-information-handling">9. Data protection and information handling</a></li>
+      <li><a href="#information-security">10. Information security</a></li>
+      <li><a href="#intellectual-property">11. Intellectual property</a></li>
+      <li><a href="#third-party-services-and-microsoft-products">12. Third-party services and Microsoft products</a></li>
+      <li><a href="#professional-boundaries-and-disclaimers">13. Professional boundaries and disclaimers</a></li>
+      <li><a href="#acceptance-of-deliverables">14. Acceptance of Deliverables</a></li>
+      <li><a href="#warranties">15. Warranties</a></li>
+      <li><a href="#liability">16. Liability</a></li>
+      <li><a href="#insurance">17. Insurance</a></li>
+      <li><a href="#suspension-and-termination">18. Suspension and termination</a></li>
+      <li><a href="#publicity-and-references">19. Publicity and references</a></li>
+      <li><a href="#subcontracting">20. Subcontracting</a></li>
+      <li><a href="#force-majeure">21. Force majeure</a></li>
+      <li><a href="#notices">22. Notices</a></li>
+      <li><a href="#general">23. General</a></li>
+      <li><a href="#governing-law-and-jurisdiction">24. Governing law and jurisdiction</a></li>
+      <li><a href="#electronic-acceptance">25. Electronic acceptance</a></li>
+      <li><a href="#document-control">Document control</a></li>
     </ul>
   </aside>
 
-  <main class="main-content">
+  <div class="main-content">
+    <div class="callout">The version of these terms that applies to an engagement is the version referenced in, or supplied with, the accepted proposal or engagement document. Where an engagement document expressly varies a provision, the engagement document takes precedence. Information about how we handle personal data collected through this website is in our <a href="adjona-privacy.html">Privacy &amp; Cookie Policy</a>.</div>
 
-    <div class="policy-section" id="about-us">
+    <section class="policy-section" id="definitions-and-interpretation" aria-labelledby="h-definitions-and-interpretation">
       <div class="section-num">01</div>
-      <h2 class="section-title">About Us</h2>
+      <h2 class="section-title" id="h-definitions-and-interpretation">Definitions and interpretation</h2>
       <div class="section-body">
-        <p>These terms and conditions govern the provision of services by Adjona Technology Limited ("Adjona Technology", "we", "us", "our"), a company registered in England and Wales (Company No. 05007410), to our clients and website visitors.</p>
-        <p>By engaging our services, booking a consultation, or using our website at <a href="https://adjona.com">adjona.com</a>, you agree to these terms. Please read them carefully.</p>
-        <p>These terms apply to all consultancy, implementation, and advisory services provided by Adjona Technology Limited.</p>
+        <p>In these Terms:</p>
+        <p><strong>Adjona: </strong>Adjona Technology Limited, a company registered in England and Wales with company number 05007410, whose registered office is at 5th Floor, 167-169 Great Portland Street, London W1W 5PF.</p>
+        <p><strong>Client: </strong>the person or organisation purchasing the Services.</p>
+        <p><strong>Engagement Document: </strong>the proposal, statement of work, quote, order form, email acceptance or other written document that describes the specific Services, Deliverables, fees, timetable and commercial conditions.</p>
+        <p><strong>Services: </strong>the professional services described in the Engagement Document.</p>
+        <p><strong>Deliverables: </strong>the reports, documents, configurations, designs, plans, templates, analyses or other outputs expressly identified as deliverables in the Engagement Document.</p>
+        <p><strong>Client Data: </strong>information, content, records, credentials, exports or other material supplied by or on behalf of the Client.</p>
+        <p><strong>Background Materials: </strong>Adjona's pre-existing or reusable methods, frameworks, checklists, templates, scripts, code, know-how, processes, training material and other intellectual property not created exclusively for the Client.</p>
+        <p>References to writing include email. Headings are for convenience only and do not affect interpretation.</p>
       </div>
-    </div>
+    </section>
 
-    <div class="policy-section" id="services">
+    <section class="policy-section" id="contract-formation-and-order-of-precedence" aria-labelledby="h-contract-formation-and-order-of-precedence">
       <div class="section-num">02</div>
-      <h2 class="section-title">Our Services</h2>
+      <h2 class="section-title" id="h-contract-formation-and-order-of-precedence">Contract formation and order of precedence</h2>
       <div class="section-body">
-        <p>Adjona Technology provides Microsoft 365 security, Azure, cloud governance, and AI adoption services to charities, care providers, and SMEs. The specific scope, deliverables, and timeline for any engagement will be agreed in writing before work commences.</p>
-        <p>We reserve the right to decline any engagement at our discretion. We will provide services with reasonable skill and care, in accordance with the agreed scope.</p>
-        <p>Any timelines or estimates provided are indicative. Where delays arise due to factors outside our control — including client availability, third-party systems, or Microsoft platform changes — we will not be held liable for resulting delays.</p>
-        <div class="callout">For initial consultations booked via our Bookings page, the 30-minute meeting is provided free of charge and without obligation.</div>
+        <ul><li>An Engagement Document together with these Terms forms the contract for the relevant engagement once accepted in writing by both parties or once Adjona begins work at the Client's written request.</li><li>If there is any conflict, the Engagement Document takes precedence over these Terms only to the extent that it expressly varies a particular provision.</li><li>Any Client purchase order, supplier portal terms or other standard terms do not amend the contract unless Adjona expressly agrees to the change in writing.</li><li>No production change, remediation, migration, configuration change or implementation is authorised by a review-only or assessment-only Engagement Document unless expressly stated.</li></ul>
       </div>
-    </div>
+    </section>
 
-    <div class="policy-section" id="payment">
+    <section class="policy-section" id="scope-of-services" aria-labelledby="h-scope-of-services">
       <div class="section-num">03</div>
-      <h2 class="section-title">Payment Terms</h2>
+      <h2 class="section-title" id="h-scope-of-services">Scope of Services</h2>
       <div class="section-body">
-        <p><strong>Payment is required in full prior to commencement of any work.</strong> No work will begin until cleared funds have been received.</p>
-        <p>Invoices are issued via Starling Bank and are payable within the period stated on the invoice. Our preferred payment method is bank transfer to the Adjona Technology Limited account.</p>
-        <p>For ongoing or retainer engagements, payment terms will be set out in the individual service agreement.</p>
-        <ul>
-          <li>All prices are quoted exclusive of VAT unless otherwise stated.</li>
-          <li>Late payment may result in suspension of services.</li>
-          <li>Expenses reasonably incurred in the delivery of services will be invoiced at cost with prior agreement.</li>
-        </ul>
-        <div class="callout red">Adjona Technology Limited reserves the right to withhold deliverables until payment is received in full.</div>
+        <ul><li>Adjona will perform the Services with reasonable skill and care and in accordance with the agreed scope.</li><li>The Services are limited to the activities, assumptions, dependencies and Deliverables stated in the Engagement Document.</li><li>Advice and recommendations are based on the information, access, configuration and evidence reasonably available during the engagement.</li><li>Where a recommendation depends on facts not available to Adjona, Adjona may qualify that recommendation or identify further work required before implementation.</li></ul>
       </div>
-    </div>
+    </section>
 
-    <div class="policy-section" id="ip">
+    <section class="policy-section" id="client-responsibilities" aria-labelledby="h-client-responsibilities">
       <div class="section-num">04</div>
-      <h2 class="section-title">Intellectual Property</h2>
+      <h2 class="section-title" id="h-client-responsibilities">Client responsibilities</h2>
       <div class="section-body">
-        <p>All intellectual property rights in work created by Adjona Technology during an engagement — including reports, configurations, scripts, documentation, and recommendations — remain the property of Adjona Technology Limited until full payment has been received.</p>
-        <p>Upon receipt of full payment, we grant the client a non-exclusive licence to use the deliverables for their own internal business purposes.</p>
-        <p>Nothing in these terms transfers ownership of any pre-existing intellectual property belonging to either party, including Microsoft products, third-party tools, or our proprietary methodologies.</p>
+        <p>The Client will:</p>
+        <ul><li>provide timely, accurate and complete information reasonably required for the Services;</li><li>provide appropriately authorised personnel for decisions, interviews, validation and approvals;</li><li>provide lawful and appropriately controlled access to relevant systems, accounts, data and premises where required;</li><li>maintain its own backups, business continuity measures and operational safeguards unless the Engagement Document expressly states otherwise;</li><li>ensure that it has authority to provide Adjona with any Client Data, credentials or third-party information supplied for the engagement;</li><li>notify Adjona promptly of incidents, access changes, material configuration changes or other facts likely to affect the Services;</li><li>review Deliverables and factual drafts within the agreed review period.</li></ul>
+        <p>Adjona is not responsible for delay, rework or additional cost caused by incomplete, inaccurate or late Client inputs. Any material impact may be handled through change control.</p>
       </div>
-    </div>
+    </section>
 
-    <div class="policy-section" id="confidentiality">
+    <section class="policy-section" id="access-credentials-and-least-privilege" aria-labelledby="h-access-credentials-and-least-privilege">
       <div class="section-num">05</div>
-      <h2 class="section-title">Confidentiality</h2>
+      <h2 class="section-title" id="h-access-credentials-and-least-privilege">Access, credentials and least privilege</h2>
       <div class="section-body">
-        <p>Both parties agree to keep confidential any information disclosed during the course of an engagement that is identified as confidential or that a reasonable person would consider confidential in nature.</p>
-        <p>This includes but is not limited to: technical configurations, security findings, organisational structure, staff information, and financial data.</p>
-        <p>We will not disclose client information to third parties without prior written consent, except where required by law or necessary to deliver the agreed services (for example, working with Microsoft support).</p>
+        <ul><li>Adjona will use the minimum level of access reasonably required for the agreed Services.</li><li>Read-only access will be used wherever practical for reviews and assessments.</li><li>Any additional role, elevated permission, supervised session, test account or temporary access required for a specific workload will be agreed with the Client before use.</li><li>The Client remains responsible for approving and provisioning accounts and roles within its environment.</li><li>Adjona will not share Client credentials between individuals and will use multi-factor authentication where supported and reasonably available.</li><li>Access granted specifically for an engagement should be removed or disabled when no longer required and, unless otherwise agreed, promptly after completion or termination.</li></ul>
       </div>
-    </div>
+    </section>
 
-    <div class="policy-section" id="liability">
+    <section class="policy-section" id="fees-expenses-and-payment" aria-labelledby="h-fees-expenses-and-payment">
       <div class="section-num">06</div>
-      <h2 class="section-title">Liability</h2>
+      <h2 class="section-title" id="h-fees-expenses-and-payment">Fees, expenses and payment</h2>
       <div class="section-body">
-        <p>Our total liability to you for any claim arising under or in connection with these terms or any engagement shall not exceed the fees paid by you for the specific services giving rise to the claim.</p>
-        <p>We shall not be liable for:</p>
-        <ul>
-          <li>Indirect, consequential, or incidental losses</li>
-          <li>Loss of data, revenue, or profit</li>
-          <li>Losses arising from your reliance on advice without implementing recommended controls</li>
-          <li>Failures or changes in third-party platforms including Microsoft 365, Azure, or related services</li>
-        </ul>
-        <p>Nothing in these terms limits liability for death or personal injury caused by negligence, fraud, or any other liability that cannot be excluded by law.</p>
-        <div class="callout">We recommend all clients maintain appropriate cyber insurance and backup procedures. Security advisory services reduce risk but cannot guarantee absolute protection.</div>
+        <ul><li>Fees are stated in the Engagement Document. Unless stated otherwise, third-party products, licences, hardware, travel and other external costs are excluded.</li><li>Invoices are payable in accordance with the payment schedule in the Engagement Document.</li><li>Where no payment schedule is stated, invoices are due within 14 calendar days of the invoice date.</li><li>Adjona may pause work on reasonable notice where an undisputed invoice is materially overdue.</li><li>Adjona Technology Limited is not currently registered for VAT, so no VAT is charged on its fees. If Adjona becomes VAT registered, it will give the Client written notice before charging VAT, and VAT will be added at the applicable rate only to invoices issued after the registration takes effect.</li><li>Approved out-of-scope work will be charged only where agreed in writing, either at an agreed fixed fee or time-and-materials rate.</li></ul>
       </div>
-    </div>
+    </section>
 
-    <div class="policy-section" id="termination">
+    <section class="policy-section" id="change-control" aria-labelledby="h-change-control">
       <div class="section-num">07</div>
-      <h2 class="section-title">Termination</h2>
+      <h2 class="section-title" id="h-change-control">Change control</h2>
       <div class="section-body">
-        <p>Either party may terminate an engagement by providing reasonable written notice. What constitutes reasonable notice will depend on the scope and stage of the engagement.</p>
-        <p>Where a client terminates after work has commenced, fees for work completed to the date of termination remain payable.</p>
-        <p>We reserve the right to terminate immediately if a client acts in breach of these terms, fails to pay, or behaves in a way that makes it unreasonable to continue the engagement.</p>
+        <ul><li>Either party may request a change to scope, assumptions, timetable, sample size, Deliverables or dependencies.</li><li>Adjona is not required to perform a material change until its effect on fees, timing, access, risk and Deliverables has been agreed in writing.</li><li>Minor clarifications that do not materially affect effort or risk may be handled without a formal change document.</li></ul>
       </div>
-    </div>
+    </section>
 
-    <div class="policy-section" id="data">
+    <section class="policy-section" id="confidentiality" aria-labelledby="h-confidentiality">
       <div class="section-num">08</div>
-      <h2 class="section-title">Data Protection</h2>
+      <h2 class="section-title" id="h-confidentiality">Confidentiality</h2>
       <div class="section-body">
-        <p>Both parties shall comply with their respective obligations under UK GDPR and the Data Protection Act 2018.</p>
-        <p>Where Adjona Technology processes personal data on behalf of a client in the course of delivering services, this will be governed by a separate Data Processing Agreement (DPA) which will form part of the engagement documentation.</p>
-        <p>For details of how we handle personal data collected through our website and booking system, please see our <a href="adjona-privacy.html">Privacy &amp; Cookie Policy</a>.</p>
+        <p>Each party will keep confidential information received from the other party confidential and will use it only for the purpose of performing or receiving the Services.</p>
+        <p>Confidentiality obligations do not apply to information that:</p>
+        <ul><li>is or becomes public other than through breach of the contract;</li><li>was lawfully known to the receiving party before disclosure;</li><li>is lawfully received from a third party without confidentiality restriction;</li><li>is independently developed without use of the other party's confidential information; or</li><li>must be disclosed by law, court order or competent authority, provided that lawful notice is given where permitted.</li></ul>
+        <p>Adjona may disclose confidential information to employees, contractors, professional advisers or approved subprocessors who need it for the engagement and are bound by appropriate confidentiality obligations.</p>
       </div>
-    </div>
+    </section>
 
-    <div class="policy-section" id="general">
+    <section class="policy-section" id="data-protection-and-information-handling" aria-labelledby="h-data-protection-and-information-handling">
       <div class="section-num">09</div>
-      <h2 class="section-title">General</h2>
+      <h2 class="section-title" id="h-data-protection-and-information-handling">Data protection and information handling</h2>
       <div class="section-body">
-        <p><strong>Entire agreement.</strong> These terms, together with any written engagement documentation, constitute the entire agreement between the parties and supersede all prior discussions and representations.</p>
-        <p><strong>Variation.</strong> These terms may be updated from time to time. The version published on our website at the time of engagement applies.</p>
-        <p><strong>Severability.</strong> If any provision of these terms is found to be unenforceable, the remaining provisions continue in full force.</p>
-        <p><strong>Governing law.</strong> These terms are governed by the laws of England and Wales. Any disputes shall be subject to the exclusive jurisdiction of the courts of England and Wales.</p>
-        <p><strong>No waiver.</strong> Failure to enforce any provision of these terms does not constitute a waiver of our right to enforce it in future.</p>
+        <ul><li>Each party will comply with applicable data protection law in relation to personal data processed under the engagement.</li><li>Where Adjona acts as an independent controller, each party is responsible for its own compliance obligations.</li><li>Where Adjona processes personal data solely on the Client's documented instructions as a processor, the parties will put appropriate controller-processor terms in place before that processing begins where required.</li><li>Adjona will avoid requesting or retaining production content or personal data where configuration evidence, metadata, anonymised samples, screenshots or supervised access are sufficient.</li><li>Client Data exported or copied by Adjona will be limited to what is reasonably necessary for the Services, stored using appropriate access controls and retained only for as long as reasonably necessary for delivery, quality assurance, legal or contractual purposes.</li><li>Unless a different retention period is agreed, working copies of Client exports and screenshots created solely for an assessment will be securely deleted within 90 days after final delivery, subject to legal, insurance or dispute-related retention requirements.</li><li>The Client must not provide special-category, criminal-offence, safeguarding, clinical or other highly sensitive personal data unless it is necessary for the agreed Services and the handling method has been agreed in advance.</li></ul>
       </div>
-    </div>
+    </section>
 
-    <div class="policy-section" id="contact-us">
+    <section class="policy-section" id="information-security" aria-labelledby="h-information-security">
       <div class="section-num">10</div>
-      <h2 class="section-title">Contact Us</h2>
+      <h2 class="section-title" id="h-information-security">Information security</h2>
       <div class="section-body">
-        <p>For any questions about these terms, please contact:</p>
-        <div class="callout">
-          <strong>Adjona Technology Limited</strong><br>
-          Company No. 05007410<br>
-          Registered in England &amp; Wales<br><br>
-          Email: <a href="mailto:info@adjona.com">info@adjona.com</a><br>
-          Website: <a href="https://adjona.com">adjona.com</a>
-        </div>
+        <ul><li>Adjona will take reasonable technical and organisational measures appropriate to the nature of the Services and information handled.</li><li>Adjona will notify the Client without undue delay after becoming aware of a confirmed security incident affecting Client Data held by Adjona for the engagement.</li><li>No security review, health check, configuration assessment or recommendation can guarantee that a system will be secure, free from compromise or compliant with every applicable requirement.</li></ul>
       </div>
-    </div>
+    </section>
 
-  </main>
+    <section class="policy-section" id="intellectual-property" aria-labelledby="h-intellectual-property">
+      <div class="section-num">11</div>
+      <h2 class="section-title" id="h-intellectual-property">Intellectual property</h2>
+      <div class="section-body">
+        <ul><li>Each party retains ownership of intellectual property it owned before the engagement.</li><li>Adjona retains ownership of its Background Materials, including reusable methodologies, checklists, frameworks, templates, scripts, code, processes and know-how, whether or not used in producing Deliverables.</li><li>Subject to full payment of the relevant fees, the Client receives a perpetual, non-exclusive, non-transferable licence to use the final Deliverables for its own internal business purposes.</li><li>The Client may share final Deliverables with its professional advisers, auditors, regulators, funders, trustees, directors or group entities where reasonably necessary for its operations, provided the materials are not resold, commercially exploited or represented as the Client's own methodology.</li><li>Where a Deliverable incorporates third-party materials, software or licence terms, use of those elements remains subject to the relevant third-party terms.</li><li>Adjona may reuse general skills, experience, ideas, techniques and know-how developed during an engagement provided it does not disclose the Client's confidential information.</li></ul>
+      </div>
+    </section>
+
+    <section class="policy-section" id="third-party-services-and-microsoft-products" aria-labelledby="h-third-party-services-and-microsoft-products">
+      <div class="section-num">12</div>
+      <h2 class="section-title" id="h-third-party-services-and-microsoft-products">Third-party services and Microsoft products</h2>
+      <div class="section-body">
+        <ul><li>The Client remains responsible for its contracts, licences and accounts with Microsoft and other third-party providers unless the Engagement Document expressly states otherwise.</li><li>Adjona does not control third-party service availability, product changes, licensing changes, API behaviour or supplier decisions.</li><li>Recommendations concerning Microsoft or third-party features may depend on the Client's licences, tenant configuration, product roadmap and availability at the relevant time.</li><li>Adjona is not responsible for failures caused by third-party outages, unsupported products, inaccurate third-party documentation or changes made by third parties after Adjona's work.</li></ul>
+      </div>
+    </section>
+
+    <section class="policy-section" id="professional-boundaries-and-disclaimers" aria-labelledby="h-professional-boundaries-and-disclaimers">
+      <div class="section-num">13</div>
+      <h2 class="section-title" id="h-professional-boundaries-and-disclaimers">Professional boundaries and disclaimers</h2>
+      <div class="section-body">
+        <ul><li>Unless expressly agreed, Adjona does not provide legal advice, tax advice, regulated financial advice, clinical advice, penetration testing, formal certification, forensic investigation or insurance advice.</li><li>Governance, security and compliance reviews identify observations, risks and practical recommendations; they do not guarantee legal compliance, regulatory approval, audit success, funding, certification or the prevention of incidents.</li><li>The Client remains responsible for management decisions, risk acceptance, policy approval, regulatory obligations and whether to implement recommendations.</li><li>Any indicative effort, timeline, saving or implementation estimate is an informed estimate, not a guaranteed outcome, unless expressly stated otherwise.</li></ul>
+      </div>
+    </section>
+
+    <section class="policy-section" id="acceptance-of-deliverables" aria-labelledby="h-acceptance-of-deliverables">
+      <div class="section-num">14</div>
+      <h2 class="section-title" id="h-acceptance-of-deliverables">Acceptance of Deliverables</h2>
+      <div class="section-body">
+        <ul><li>Where a factual-review stage is included, the Client must notify Adjona of material factual inaccuracies within the agreed review period.</li><li>If no review period is specified, the Client should raise material factual corrections within five business days of receiving the draft.</li><li>A factual-review stage is not an unlimited revision cycle and does not include expansion of scope.</li><li>Final Deliverables are treated as accepted when issued after completion of the agreed review process.</li></ul>
+      </div>
+    </section>
+
+    <section class="policy-section" id="warranties" aria-labelledby="h-warranties">
+      <div class="section-num">15</div>
+      <h2 class="section-title" id="h-warranties">Warranties</h2>
+      <div class="section-body">
+        <p>Adjona warrants that it will perform the Services with reasonable skill and care. Except as expressly stated in the contract, all other warranties, conditions and terms implied by law are excluded to the fullest extent permitted by law.</p>
+      </div>
+    </section>
+
+    <section class="policy-section" id="liability" aria-labelledby="h-liability">
+      <div class="section-num">16</div>
+      <h2 class="section-title" id="h-liability">Liability</h2>
+      <div class="section-body">
+        <p>Nothing in the contract limits or excludes liability to the extent that it cannot lawfully be limited or excluded, including liability for death or personal injury caused by negligence, fraud or fraudulent misrepresentation.</p>
+        <p>Subject to the paragraph above:</p>
+        <ul><li>Adjona's total aggregate liability arising out of or in connection with a particular engagement, whether in contract, tort (including negligence), breach of statutory duty or otherwise, will not exceed 100% of the fees paid or payable to Adjona under that engagement.</li><li>Adjona will not be liable for loss of profit, revenue, anticipated savings, goodwill, reputation, business opportunity or any indirect or consequential loss.</li><li>Adjona will not be liable for loss or corruption of data to the extent that the Client failed to maintain reasonable backups or where the loss resulted from Client instructions, third-party systems, unsupported configurations or changes not made by Adjona.</li><li>The parties acknowledge that the fees reflect the allocation of risk in these Terms.</li></ul>
+      </div>
+    </section>
+
+    <section class="policy-section" id="insurance" aria-labelledby="h-insurance">
+      <div class="section-num">17</div>
+      <h2 class="section-title" id="h-insurance">Insurance</h2>
+      <div class="section-body">
+        <p>Adjona will maintain such business insurance as it considers appropriate for the nature of its operations. Any specific insurance requirement, evidence of cover or minimum limit required by the Client must be agreed before the engagement starts and may affect scope, price or contract terms.</p>
+      </div>
+    </section>
+
+    <section class="policy-section" id="suspension-and-termination" aria-labelledby="h-suspension-and-termination">
+      <div class="section-num">18</div>
+      <h2 class="section-title" id="h-suspension-and-termination">Suspension and termination</h2>
+      <div class="section-body">
+        <ul><li>Either party may terminate an engagement for material breach if the breach is capable of remedy and is not remedied within 14 days after written notice.</li><li>Either party may terminate immediately if the other party becomes insolvent or ceases business, subject to applicable law.</li><li>The Client may terminate for convenience on written notice. The Client will pay for Services properly performed and committed non-cancellable costs up to the termination date, together with any cancellation charge expressly stated in the Engagement Document.</li><li>Adjona may suspend or terminate work where continuing would create a material security, legal, ethical or operational risk, or where required Client access, cooperation or payment is persistently unavailable after reasonable notice.</li></ul>
+        <p>On termination, each party will return or securely dispose of the other's confidential information where reasonably practicable, subject to lawful retention requirements. Clauses intended by their nature to survive termination continue in force.</p>
+      </div>
+    </section>
+
+    <section class="policy-section" id="publicity-and-references" aria-labelledby="h-publicity-and-references">
+      <div class="section-num">19</div>
+      <h2 class="section-title" id="h-publicity-and-references">Publicity and references</h2>
+      <div class="section-body">
+        <p>Adjona will not publish the Client's confidential information, logo, testimonial or detailed case study without permission. Unless the Client has expressly agreed otherwise, Adjona may keep an internal record of the engagement for administration, quality assurance and portfolio evidence that does not disclose confidential Client information.</p>
+      </div>
+    </section>
+
+    <section class="policy-section" id="subcontracting" aria-labelledby="h-subcontracting">
+      <div class="section-num">20</div>
+      <h2 class="section-title" id="h-subcontracting">Subcontracting</h2>
+      <div class="section-body">
+        <p>Adjona may use suitably qualified subcontractors or specialist providers where reasonably necessary, but remains responsible for its contractual obligations. Where a subcontractor will receive Client confidential information or process personal data, Adjona will ensure appropriate confidentiality and data protection arrangements are in place and will comply with any applicable approval requirement agreed with the Client.</p>
+      </div>
+    </section>
+
+    <section class="policy-section" id="force-majeure" aria-labelledby="h-force-majeure">
+      <div class="section-num">21</div>
+      <h2 class="section-title" id="h-force-majeure">Force majeure</h2>
+      <div class="section-body">
+        <p>Neither party is liable for delay or failure caused by circumstances beyond its reasonable control, including major service outages, widespread cyber incidents, telecommunications failure, industrial action, natural disaster, government action or failure of essential third-party infrastructure. The affected party will notify the other party and take reasonable steps to reduce the impact.</p>
+      </div>
+    </section>
+
+    <section class="policy-section" id="notices" aria-labelledby="h-notices">
+      <div class="section-num">22</div>
+      <h2 class="section-title" id="h-notices">Notices</h2>
+      <div class="section-body">
+        <p>Operational notices may be sent by email to the contacts used for the engagement. A formal notice of breach or termination should be clearly identified as a contractual notice and sent to the nominated business contact or registered-office/contact details stated in the Engagement Document.</p>
+      </div>
+    </section>
+
+    <section class="policy-section" id="general" aria-labelledby="h-general">
+      <div class="section-num">23</div>
+      <h2 class="section-title" id="h-general">General</h2>
+      <div class="section-body">
+        <ul><li>Neither party may transfer the contract without the other's written consent, except as part of a bona fide sale or transfer of substantially all of its relevant business, provided the assignee can perform the obligations.</li><li>Failure to exercise a right does not waive that right.</li><li>If a provision is found invalid or unenforceable, the remaining provisions continue in effect and the invalid provision will be treated as modified to the minimum extent necessary.</li><li>No person other than the parties has any right to enforce the contract under the Contracts (Rights of Third Parties) Act 1999.</li><li>The contract constitutes the entire agreement relating to the engagement and supersedes prior discussions or representations on the same subject, except in the case of fraud.</li></ul>
+      </div>
+    </section>
+
+    <section class="policy-section" id="governing-law-and-jurisdiction" aria-labelledby="h-governing-law-and-jurisdiction">
+      <div class="section-num">24</div>
+      <h2 class="section-title" id="h-governing-law-and-jurisdiction">Governing law and jurisdiction</h2>
+      <div class="section-body">
+        <p>The contract and any non-contractual obligations arising from it are governed by the laws of England and Wales. The courts of England and Wales have exclusive jurisdiction, subject to any alternative dispute-resolution process expressly agreed in the Engagement Document.</p>
+      </div>
+    </section>
+
+    <section class="policy-section" id="electronic-acceptance" aria-labelledby="h-electronic-acceptance">
+      <div class="section-num">25</div>
+      <h2 class="section-title" id="h-electronic-acceptance">Electronic acceptance</h2>
+      <div class="section-body">
+        <p>The parties may accept an Engagement Document and these Terms by electronic signature, email confirmation, approved purchase order referencing the engagement, or another written method agreed between them. Electronic records may be relied on as evidence of acceptance.</p>
+      </div>
+    </section>
+
+    <section class="policy-section" id="document-control" aria-labelledby="h-document-control">
+      <div class="section-num">Document control</div>
+      <h2 class="section-title" id="h-document-control">Version history</h2>
+      <div class="section-body">
+        <table class="doc-table">
+          <thead><tr><th scope="col">Version</th><th scope="col">Effective</th><th scope="col">Notes</th></tr></thead>
+          <tbody><tr><td>1.0</td><td>11 October 2026</td><td>Professional services terms for Adjona consulting engagements. Replaces the general terms and conditions last updated in May 2026 (<a href="legal/archive/adjona-terms-and-conditions-may-2026-superseded.html">archived copy</a>).</td></tr></tbody>
+        </table>
+        <p style="margin-top:1.25rem;">Questions about these terms: <a href="mailto:info@adjona.com">info@adjona.com</a></p>
+      </div>
+    </section>
+  </div>
 </div>
+</main>
 
 <footer style="padding-bottom:5rem;">
   <div class="f-logo">
@@ -304,11 +566,11 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
     <div style="margin-top:.4rem;">
       <a href="https://marketplace.microsoft.com/en-gb/partners/c4ead6cf-d6a0-4973-8bf7-f3e644e195ae/overview" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:.5rem;text-decoration:none;">
         <svg width="14" height="14" viewBox="0 0 23 23" xmlns="http://www.w3.org/2000/svg"><rect x="1" y="1" width="10" height="10" fill="#f25022"/><rect x="12" y="1" width="10" height="10" fill="#7fba00"/><rect x="1" y="12" width="10" height="10" fill="#00a4ef"/><rect x="12" y="12" width="10" height="10" fill="#ffb900"/></svg>
-        <span style="font-family:'JetBrains Mono',monospace;font-size:.58rem;letter-spacing:.08em;color:#444;">View Adjona's Microsoft partner profile</span>
+        <span style="font-family:'JetBrains Mono',monospace;font-size:.58rem;letter-spacing:.08em;color:var(--muted);">View Adjona's Microsoft partner profile</span>
       </a>
     </div>
   </div>
-  <ul class="f-links" style="align-items:center;">
+  <ul class="f-links">
     <li><a href="https://www.linkedin.com/company/adjona-technology-limited/" target="_blank" rel="noopener noreferrer" style="display:flex;align-items:center;gap:.4rem;"><img src="https://adjona.com/images/li-icon.png" width="16" height="16" alt="LinkedIn" style="display:block;border:0;vertical-align:middle;"> LinkedIn</a></li>
     <li><a href="https://www.youtube.com/@AdjonaTechnology" target="_blank" rel="noopener noreferrer" style="display:flex;align-items:center;gap:.4rem;"><img src="https://adjona.com/images/yt-icon.png" width="16" height="16" alt="YouTube" style="display:block;border:0;vertical-align:middle;"> YouTube</a></li>
     <li><a href="https://www.reddit.com/user/AdjonaTech/" target="_blank" rel="noopener noreferrer" style="display:flex;align-items:center;gap:.4rem;"><img src="https://adjona.com/images/rd-icon.png" width="16" height="16" alt="Reddit" style="display:block;border:0;vertical-align:middle;"> Reddit</a></li>
@@ -318,10 +580,21 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
     <li><a href="enquiry.html">Contact Us</a></li>
     <li><a href="adjona-privacy.html">Privacy Policy</a></li>
     <li><a href="adjona-terms.html">Terms &amp; Conditions</a></li>
-    <li><a href="mailto:info@adjona.com">info@adjona.com</a></li>
   </ul>
 </footer>
 
+
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+  document.querySelectorAll('.nav-links a,.nav-cta-mobile').forEach(function(link){
+    link.addEventListener('click',function(){
+      var nav=document.querySelector('nav');
+      nav.querySelector('.nav-links').classList.remove('nav-open');
+      nav.querySelector('.nav-cta-mobile').classList.remove('nav-open');
+    });
+  });
+});
+</script>
 
 <!-- Cookie notice -->
 <div id="cookie-bar" role="region" aria-label="Cookie notice">
