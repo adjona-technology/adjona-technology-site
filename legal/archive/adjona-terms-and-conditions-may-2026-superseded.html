@@ -1,14 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-BQNKT24TFT"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-BQNKT24TFT');
-</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow">
@@ -326,25 +318,6 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
   </ul>
 </footer>
 
-
-<!-- Cookie notice -->
-<div id="cookie-bar" role="region" aria-label="Cookie notice">
-  <span>This site uses analytics cookies to understand how visitors use it. See our <a href="/adjona-privacy.html">privacy policy</a>.</span>
-  <button id="cookie-bar-accept" aria-label="Accept cookies">Got it</button>
-</div>
-<script>
-(function(){
-  try{
-    if(localStorage.getItem('adjona_cookie_ok')==='1'){
-      document.getElementById('cookie-bar').classList.add('hidden');
-    }
-  }catch(e){}
-  document.getElementById('cookie-bar-accept').addEventListener('click',function(){
-    try{localStorage.setItem('adjona_cookie_ok','1');}catch(e){}
-    document.getElementById('cookie-bar').classList.add('hidden');
-  });
-})();
-</script>
 
 </body>
 </html>
