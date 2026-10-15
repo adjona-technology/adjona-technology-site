@@ -1,19 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Microsoft 365, Dynamics 365 or Business Central? | Adjona Technology</title>
-<meta name="description" content="Understand the different roles of Microsoft 365, Dynamics 365 Sales and Business Central, and decide which platform fits your organisation.">
-<link rel="icon" type="image/svg+xml" href="../favicon.svg">
-<link rel="icon" type="image/x-icon" href="../favicon.ico">
-<link rel="apple-touch-icon" sizes="192x192" href="../favicon-192.png">
-<meta property="og:title" content="Microsoft 365, Dynamics 365 or Business Central: Which System Solves What?">
-<meta property="og:description" content="Email, CRM and finance systems solve different problems. Learn where each Microsoft platform fits and when they should work together.">
-<meta property="og:type" content="article">
-<meta property="og:url" content="https://adjona.com/insights/microsoft-365-dynamics-365-business-central.html">
-<link rel="alternate" type="application/rss+xml" title="Adjona Insights" href="https://adjona.com/rss.xml">
-<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;700;800;900&family=Lora:ital,wght@1,500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <!-- Google Consent Mode v2 -->
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -22,8 +9,9 @@
     'ad_storage': 'denied',
     'ad_user_data': 'denied',
     'ad_personalization': 'denied',
-    'analytics_storage': 'granted'
+    'analytics_storage': 'denied'
   });
+  try{ if(localStorage.getItem('adjona_consent')==='granted'){ gtag('consent', 'update', {'analytics_storage': 'granted'}); } }catch(e){}
 </script>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-BQNKT24TFT"></script>
@@ -33,15 +21,38 @@
   gtag('js', new Date());
   gtag('config', 'G-BQNKT24TFT');
 </script>
-<!-- Microsoft Clarity -->
-<script type="text/javascript">
-  (function(c,l,a,r,i,t,y){
-    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-  })(window,document,"clarity","script","wmyh9800tx");
-  clarity("set","page_type","insight");
-  clarity("set","topic","business-systems");
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Microsoft 365, Dynamics 365 or Business Central? | Adjona Technology</title>
+<meta name="description" content="Understand the different roles of Microsoft 365, Dynamics 365 Sales and Business Central, and decide which platform fits your organisation.">
+<link rel="canonical" href="https://adjona.com/insights/microsoft-365-dynamics-365-business-central.html">
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<link rel="icon" type="image/x-icon" href="../favicon.ico">
+<link rel="apple-touch-icon" sizes="192x192" href="../favicon-192.png">
+<meta property="og:title" content="Microsoft 365, Dynamics 365 or Business Central: Which System Solves What?">
+<meta property="og:description" content="Email, CRM and finance systems solve different problems. Learn where each Microsoft platform fits and when they should work together.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://adjona.com/insights/microsoft-365-dynamics-365-business-central.html">
+<meta property="og:image" content="https://adjona.com/adjona-social-preview.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://adjona.com/adjona-social-preview.png">
+<link rel="alternate" type="application/rss+xml" title="Adjona Insights" href="https://adjona.com/rss.xml">
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;700;800;900&family=Lora:ital,wght@1,500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script>
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "wmyh9800tx");
+</script>
+<script>
+(function(){
+  if(typeof window.clarity !== 'function') return;
+  window.clarity("set", "page_type", "insight");
+  window.clarity("set", "topic", "business-systems");
+})();
 </script>
 <style>
 :root{
@@ -137,27 +148,31 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .contact-line-val a:hover{text-decoration:underline;}
 footer{display:flex;align-items:center;justify-content:space-between;padding:1.5rem 4rem;border-top:2px solid var(--ink);}
 .f-copy-wrap{display:flex;flex-direction:column;gap:.2rem;}
+.f-logo{display:flex;align-items:center;gap:.65rem;}
 .f-name{font-family:'Epilogue',sans-serif;font-size:1rem;font-weight:900;letter-spacing:-.02em;}
 .f-name span{color:var(--ms-blue);}
 .f-copy{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.06em;color:#333;}
 .f-links{display:flex;gap:2rem;list-style:none;align-items:center;}
 .f-links a{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:#333;text-decoration:none;transition:color .2s;}
 .f-links a:hover{color:var(--ms-blue);}
-#cookie-bar{position:fixed;bottom:0;left:0;right:0;z-index:9999;background:#0d0d0d;border-top:2px solid #0F4C81;padding:.85rem 2rem;display:flex;align-items:center;justify-content:space-between;gap:1.5rem;flex-wrap:wrap;font-family:'Epilogue',sans-serif;font-size:.82rem;color:#ccc;transition:transform .3s;}
-#cookie-bar.hidden{transform:translateY(100%);}
-#cookie-bar a{color:#0F4C81;text-decoration:none;}
-#cookie-bar-accept{font-family:'Epilogue',sans-serif;font-size:.82rem;font-weight:900;background:#0F4C81;color:#fff;border:none;padding:.5rem 1.25rem;cursor:pointer;white-space:nowrap;}
 @media(max-width:1000px){.nav-cta{display:none;}.art-body{grid-template-columns:1fr;}.art-content{border-right:none;border-bottom:2px solid var(--ink);padding:3rem 1.5rem;}.art-sidebar{padding:2.5rem 1.5rem;}.art-nav{padding:1.25rem 1.5rem;}.page-cta{grid-template-columns:1fr;}.cta-blue,.cta-right{padding:3rem 1.5rem;}.art-featured-img{padding:2rem 1.5rem;}}
-@media(max-width:768px){:root{--nav-h:58px;}nav{padding:0 1.25rem;flex-wrap:wrap;}.logo{padding:.85rem 0;}.nav-links{display:none;width:100%;flex-direction:column;border-top:1px solid var(--border);}.nav-links.nav-open{display:flex;background:#fff;}.nav-links a{border-left:none;border-bottom:1px solid var(--border);padding:1rem 0;}.nav-hamburger{display:block;background:none;border:none;font-size:1.4rem;cursor:pointer;padding:.5rem;color:var(--ink);margin-left:auto;}.nav-cta{display:none !important;}.nav-cta-mobile{display:none !important;}.nav-cta-mobile.nav-open{display:block !important;width:100%;font-family:'Epilogue',sans-serif;font-size:.82rem;font-weight:900;background:var(--ms-blue);color:#fff;text-decoration:none;text-align:center;padding:1rem 1.25rem;border-top:2px solid var(--ink);}.art-hero{padding:calc(var(--nav-h) + 2.5rem) 1.5rem 3rem;}footer{flex-direction:column;align-items:flex-start;gap:1.25rem;padding:1.5rem;}.f-links{flex-wrap:wrap;gap:1rem;}#cookie-bar{flex-direction:column;align-items:flex-start;padding:1rem 1.25rem;}.cmp-table{font-size:.8rem;}.cmp-table td,.cmp-table th{padding:.6rem .7rem;}}
+@media(max-width:768px){:root{--nav-h:58px;}nav{padding:0 1.25rem;flex-wrap:wrap;}.logo{padding:.85rem 0;}.nav-links{display:none;width:100%;flex-direction:column;border-top:1px solid var(--border);}.nav-links.nav-open{display:flex;background:#fff;}.nav-links a{border-left:none;border-bottom:1px solid var(--border);padding:1rem 0;}.nav-hamburger{display:block;background:none;border:none;font-size:1.4rem;cursor:pointer;padding:.5rem;color:var(--ink);margin-left:auto;}.nav-cta{display:none !important;}.nav-cta-mobile{display:none !important;}.nav-cta-mobile.nav-open{display:block !important;width:100%;font-family:'Epilogue',sans-serif;font-size:.82rem;font-weight:900;background:var(--ms-blue);color:#fff;text-decoration:none;text-align:center;padding:1rem 1.25rem;border-top:2px solid var(--ink);}.art-hero{padding:calc(var(--nav-h) + 2.5rem) 1.5rem 3rem;}footer{flex-direction:column;align-items:flex-start;gap:1.25rem;padding:1.5rem;}.f-links{flex-wrap:wrap;gap:1rem;}.cmp-table td:first-child{white-space:normal;}.art-body{grid-template-columns:minmax(0,1fr);}.art-content{min-width:0;}.cmp-table{font-size:.8rem;}.cmp-table td,.cmp-table th{padding:.6rem .7rem;}}
+</style>
+<style id="consent-css">
+#cookie-bar{position:fixed;bottom:0;left:0;right:0;z-index:9999;background:#0d0d0d;border-top:2px solid #0F4C81;padding:.85rem 2rem;display:flex;align-items:center;justify-content:space-between;gap:1rem 1.5rem;flex-wrap:wrap;font-family:'Epilogue',sans-serif;font-size:.82rem;line-height:1.5;color:#ddd;transform:none;}
+#cookie-bar.hidden{display:none;}
+#cookie-bar a{color:#9cc3ea;text-decoration:underline;}
+#cookie-bar .cb-actions{display:flex;gap:.6rem;flex-shrink:0;}
+#cookie-bar button{font-family:'Epilogue',sans-serif;font-size:.82rem;font-weight:900;border:2px solid #fff;padding:.5rem 1.25rem;cursor:pointer;white-space:nowrap;}
+#cookie-bar-reject{background:transparent;color:#fff;}
+#cookie-bar-accept{background:#fff;color:#0d0d0d;}
+#cookie-bar button:hover{background:#0F4C81;border-color:#0F4C81;color:#fff;}
+#cookie-bar button:focus-visible,#cookie-bar a:focus-visible{outline:2px solid #F2A900;outline-offset:2px;}
+@media(max-width:600px){#cookie-bar{padding:1rem 1.25rem;}#cookie-bar .cb-actions{width:100%;}#cookie-bar button{flex:1;}}
 </style>
 </head>
 <body>
 
-<div id="cookie-bar">
-  <span>This site uses analytics cookies to understand how visitors use it. <a href="../privacy.html">Privacy policy</a>.</span>
-  <button id="cookie-bar-accept" onclick="try{localStorage.setItem('adjona_cookie_ok','1');}catch(e){}document.getElementById('cookie-bar').classList.add('hidden');">Got it</button>
-</div>
-<script>try{if(localStorage.getItem('adjona_cookie_ok'))document.getElementById('cookie-bar').classList.add('hidden');}catch(e){}</script>
 
 <nav>
   <a class="logo" href="../index.html">
@@ -407,7 +422,7 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
     <div class="art-cta-block">
       <div class="cta-heading">Not sure whether you need better use of Microsoft 365, a CRM or a connected finance and operations platform?</div>
       <p>Adjona Technology can map your current process, identify duplicated work and recommend a proportionate starting point.</p>
-      <a href="../enquiry.html" onclick="clarity('event','enquiry_click')">Discuss your business process</a>
+      <a href="../enquiry.html" onclick="if(typeof window.clarity==='function')window.clarity('event','enquiry_click')">Discuss your business process</a>
     </div>
 
   </article>
@@ -417,7 +432,7 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
       <div class="sidebar-label">About Adjona Technology</div>
       <div class="sidebar-title">Microsoft 365 for small and purpose-led organisations</div>
       <div class="sidebar-body">Adjona helps charities, care providers, CICs and SMEs make better use of Microsoft 365 and the wider Microsoft ecosystem, from security and governance to automation and AI readiness.</div>
-      <a class="sidebar-cta" href="../enquiry.html" onclick="clarity('event','enquiry_click')">Get in touch</a>
+      <a class="sidebar-cta" href="../enquiry.html" onclick="if(typeof window.clarity==='function')window.clarity('event','enquiry_click')">Get in touch</a>
     </div>
     <hr class="sidebar-divider">
     <div class="sidebar-block">
@@ -430,7 +445,7 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
     <div class="sidebar-block">
       <div class="sidebar-label">Book a conversation</div>
       <div class="sidebar-body">A short introductory conversation can clarify which platform fits your situation and what a realistic starting point looks like.</div>
-      <a class="sidebar-cta" href="https://outlook.office.com/book/AdjonaTechnologyLimited1@adjona.com/s/ElOd0P60CEiQxQcnIYWXWw2" target="_blank" rel="noopener noreferrer" onclick="clarity('event','book_call_click')">Book a free conversation</a>
+      <a class="sidebar-cta" href="https://outlook.office.com/book/AdjonaTechnologyLimited1@adjona.com/s/ElOd0P60CEiQxQcnIYWXWw2" target="_blank" rel="noopener noreferrer" onclick="if(typeof window.clarity==='function')window.clarity('event','book_call_click')">Book a free conversation</a>
     </div>
   </aside>
 </div>
@@ -446,8 +461,8 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
     <div class="cta-title">Ready to <span class="serif">improve your Microsoft 365</span> environment?</div>
     <div class="cta-sub">A short conversation can help identify whether you need a focused review, a clean-up project or a more structured improvement plan.</div>
     <div class="cta-actions">
-      <a class="cta-btn-solid" href="https://outlook.office.com/book/AdjonaTechnologyLimited1@adjona.com/s/ElOd0P60CEiQxQcnIYWXWw2" target="_blank" rel="noopener noreferrer" onclick="clarity('event','book_call_click')">Book a free introductory conversation</a>
-      <a class="cta-btn-outline" href="../enquiry.html" onclick="clarity('event','enquiry_click')">Send an enquiry</a>
+      <a class="cta-btn-solid" href="https://outlook.office.com/book/AdjonaTechnologyLimited1@adjona.com/s/ElOd0P60CEiQxQcnIYWXWw2" target="_blank" rel="noopener noreferrer" onclick="if(typeof window.clarity==='function')window.clarity('event','book_call_click')">Book a free introductory conversation</a>
+      <a class="cta-btn-outline" href="../enquiry.html" onclick="if(typeof window.clarity==='function')window.clarity('event','enquiry_click')">Send an enquiry</a>
     </div>
   </div>
   <div class="cta-right">
@@ -469,21 +484,80 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
   </div>
 </div>
 
-<footer>
-  <div class="f-copy-wrap">
-    <div class="f-name">Adjona <span>Technology</span></div>
-    <div class="f-copy">Registered in England &amp; Wales &middot; Co. No. 05007410</div>
-    <div class="f-copy">5th Floor, 167&ndash;169 Great Portland Street, London W1W 5PF</div>
+<footer style="padding-bottom:5rem;">
+  <div class="f-logo">
+    <svg width="28" height="22" viewBox="0 0 36 28" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="0,28 6,28 7,17 6,16 0,16" fill="#0F4C81"/>
+      <polygon points="9,28 15,28 16,12 15,11 9,11" fill="#D83B01"/>
+      <polygon points="18,28 24,28 25,7 24,6 18,6" fill="#2F6B00"/>
+      <polygon points="27,28 33,28 34,1 33,0 27,0" fill="#F2A900"/>
+    </svg>
+    <div class="f-name">Adjona <span>Technology</span> Limited</div>
   </div>
-  <ul class="f-links">
-    <li><a href="../privacy.html">Privacy</a></li>
-    <li><a href="https://www.linkedin.com/company/adjona-technology" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-    <li><a href="https://www.youtube.com/@AdjonaTechnology" target="_blank" rel="noopener noreferrer">YouTube</a></li>
-    <li><a href="https://www.reddit.com/user/AdjonaTechnology/" target="_blank" rel="noopener noreferrer">Reddit</a></li>
-    <li><a href="https://www.tiktok.com/@adjonatechnology" target="_blank" rel="noopener noreferrer">TikTok</a></li>
-    <li><a href="https://www.instagram.com/adjonatechnology/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+  <div class="f-copy-wrap">
+    <div class="f-copy">© 2026 Adjona Technology Limited · Registered in England &amp; Wales · Co. No. 05007410 · 5th Floor, 167-169 Great Portland Street, London W1W 5PF</div>
+    <div style="margin-top:.4rem;">
+      <a href="https://marketplace.microsoft.com/en-gb/partners/c4ead6cf-d6a0-4973-8bf7-f3e644e195ae/overview" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:.5rem;text-decoration:none;">
+        <svg width="14" height="14" viewBox="0 0 23 23" xmlns="http://www.w3.org/2000/svg"><rect x="1" y="1" width="10" height="10" fill="#f25022"/><rect x="12" y="1" width="10" height="10" fill="#7fba00"/><rect x="1" y="12" width="10" height="10" fill="#00a4ef"/><rect x="12" y="12" width="10" height="10" fill="#ffb900"/></svg>
+        <span style="font-family:'JetBrains Mono',monospace;font-size:.58rem;letter-spacing:.08em;color:#444;">View Adjona's Microsoft partner profile</span>
+      </a>
+    </div>
+  </div>
+  <ul class="f-links" style="align-items:center;">
+    <li><a href="https://www.linkedin.com/company/adjona-technology-limited/" target="_blank" rel="noopener noreferrer" style="display:flex;align-items:center;gap:.4rem;"><img src="https://adjona.com/images/li-icon.png" width="16" height="16" alt="LinkedIn" style="display:block;border:0;vertical-align:middle;"> LinkedIn</a></li>
+    <li><a href="https://www.youtube.com/@AdjonaTechnology" target="_blank" rel="noopener noreferrer" style="display:flex;align-items:center;gap:.4rem;"><img src="https://adjona.com/images/yt-icon.png" width="16" height="16" alt="YouTube" style="display:block;border:0;vertical-align:middle;"> YouTube</a></li>
+    <li><a href="https://www.reddit.com/user/AdjonaTech/" target="_blank" rel="noopener noreferrer" style="display:flex;align-items:center;gap:.4rem;"><img src="https://adjona.com/images/rd-icon.png" width="16" height="16" alt="Reddit" style="display:block;border:0;vertical-align:middle;"> Reddit</a></li>
+    <li><a href="https://www.tiktok.com/@adjonatechnology" target="_blank" rel="noopener noreferrer" style="display:flex;align-items:center;gap:.4rem;"><img src="https://adjona.com/images/tt-icon.png" width="16" height="16" alt="TikTok" style="display:block;border:0;vertical-align:middle;"> TikTok</a></li>
+    <li><a href="https://www.instagram.com/adjonatechnology" target="_blank" rel="noopener noreferrer" style="display:flex;align-items:center;gap:.4rem;"><img src="https://adjona.com/images/ig-icon.png" width="16" height="16" alt="Instagram" style="display:block;border:0;vertical-align:middle;"> Instagram</a></li>
+    <li><a href="https://open.spotify.com/show/0342WnO8JbToOj0zyzxpsn" target="_blank" rel="noopener noreferrer" style="display:flex;align-items:center;gap:.4rem;"><img src="https://adjona.com/images/sp-icon.png" width="16" height="16" alt="Spotify" style="display:block;border:0;vertical-align:middle;"> Spotify</a></li>
+    <li><a href="../events.html">Events</a></li>
+    <li><a onclick="if(typeof window.clarity==='function')window.clarity('event','book_call_click')" href="https://outlook.office.com/book/AdjonaTechnologyLimited1@adjona.com/s/ElOd0P60CEiQxQcnIYWXWw2" target="_blank" rel="noopener noreferrer">Book a Call</a></li>
+    <li><a href="../adjona-privacy.html">Privacy Policy</a></li>
+    <li><a href="#" onclick="return adjonaCookieSettings();">Cookie settings</a></li>
+    <li><a href="../adjona-terms.html">Terms &amp; Conditions</a></li>
+    <li><a href="mailto:info@adjona.com">info@adjona.com</a></li>
   </ul>
 </footer>
+
+
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+  document.querySelectorAll('.nav-links a,.nav-cta-mobile').forEach(function(link){
+    link.addEventListener('click',function(){
+      var nav=document.querySelector('nav');
+      nav.querySelector('.nav-links').classList.remove('nav-open');
+      nav.querySelector('.nav-cta-mobile').classList.remove('nav-open');
+    });
+  });
+});
+</script>
+
+<!-- Cookie choices -->
+<div id="cookie-bar" class="hidden" role="region" aria-label="Cookie choices">
+  <span>We use optional analytics cookies (Google Analytics and Microsoft Clarity) to understand how visitors use this site. They are only set if you choose Accept. See our <a href="/adjona-privacy.html#cookies">privacy and cookie policy</a>.</span>
+  <div class="cb-actions">
+    <button type="button" id="cookie-bar-reject">Reject</button>
+    <button type="button" id="cookie-bar-accept">Accept</button>
+  </div>
+</div>
+<script>
+(function(){
+  var KEY='adjona_consent', bar=document.getElementById('cookie-bar');
+  function getChoice(){try{return localStorage.getItem(KEY);}catch(e){return null;}}
+  function saveChoice(v){try{localStorage.setItem(KEY,v);localStorage.removeItem('adjona_cookie_ok');}catch(e){}}
+  function applyChoice(v){
+    var state=(v==='granted')?'granted':'denied';
+    if(typeof window.gtag==='function'){window.gtag('consent','update',{'analytics_storage':state});}
+    if(typeof window.clarity==='function'){window.clarity('consentv2',{ad_Storage:'denied',analytics_Storage:state});}
+  }
+  function choose(v){saveChoice(v);applyChoice(v);bar.classList.add('hidden');}
+  var current=getChoice();
+  if(current==='granted'||current==='denied'){applyChoice(current);}else{bar.classList.remove('hidden');}
+  document.getElementById('cookie-bar-accept').addEventListener('click',function(){choose('granted');});
+  document.getElementById('cookie-bar-reject').addEventListener('click',function(){choose('denied');});
+  window.adjonaCookieSettings=function(){bar.classList.remove('hidden');document.getElementById('cookie-bar-accept').focus();return false;};
+})();
+</script>
 
 </body>
 </html>
