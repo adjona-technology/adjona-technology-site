@@ -18,12 +18,12 @@ permissions:
 jobs:
   indexnow:
     if: github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success'
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     env:
       KEY: 31167afe5e9742ac9fda8446724a5e9e
       HOST: adjona.com
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           ref: ${{ github.event.workflow_run.head_sha || github.sha }}
           fetch-depth: 2
