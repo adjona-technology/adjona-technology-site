@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Consent Mode v2 -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied'
+  });
+  try{ if(localStorage.getItem('adjona_consent')==='granted'){ gtag('consent', 'update', {'analytics_storage': 'granted'}); } }catch(e){}
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BQNKT24TFT"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-BQNKT24TFT');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Who Still Has Access? 5 Microsoft 365 Checks for Charities</title>
+<meta name="description" content="Former staff, old guests, Anyone links, Teams owners and admin roles. Five practical Microsoft 365 access checks a charity can run without a major IT project.">
+<link rel="canonical" href="https://adjona.com/insights/who-still-has-access-microsoft-365-checks.html">
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<link rel="icon" type="image/x-icon" href="../favicon.ico">
+<link rel="apple-touch-icon" sizes="192x192" href="../favicon-192.png">
+<meta property="og:title" content="Who Still Has Access? Five Microsoft 365 Checks for Charities">
+<meta property="og:description" content="Former staff, old guests, Anyone links, Teams owners and admin roles. Five practical Microsoft 365 access checks a charity can run without a major IT project.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://adjona.com/insights/who-still-has-access-microsoft-365-checks.html">
+<meta property="og:image" content="https://adjona.com/adjona-social-preview.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://adjona.com/adjona-social-preview.png">
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;700;800;900&family=Lora:ital,wght@1,500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<!-- Clarity tracking code for https://adjona.com/ -->
+<script>
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "wmyh9800tx");
+</script>
+<style>
+:root{
+  --white:#ffffff;--off:#f5f5f0;--ink:#0d0d0d;
+  --ms-blue:#0F4C81;--ms-red:#D83B01;--ms-grn:#2F6B00;--ms-yel:#F2A900;
+  --muted:#444;--border:rgba(13,13,13,0.1);
+  --nav-h:62px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--white);color:var(--ink);font-family:'Epilogue',sans-serif;font-weight:400;overflow-x:hidden;}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:0 0 0 4rem;background:#fff;border-bottom:2px solid var(--ink);}
+.logo{display:flex;align-items:center;gap:.75rem;padding:1.1rem 0;text-decoration:none;}
+.logo-name{font-family:'Epilogue',sans-serif;font-size:1.1rem;font-weight:900;letter-spacing:-.02em;white-space:nowrap;color:var(--ink);}
+.logo-name span{color:var(--ms-blue);}
+.nav-links{display:flex;list-style:none;}
+.nav-links a{font-family:'JetBrains Mono',monospace;font-size:.63rem;letter-spacing:.14em;text-transform:uppercase;color:#333;text-decoration:none;padding:1.5rem 1.4rem;border-left:2px solid var(--border);display:block;transition:color .2s,background .2s;}
+.nav-links a:hover{color:var(--ms-blue);background:rgba(0,120,212,.04);}
+.nav-links a.active{color:var(--ms-blue);}
+.nav-cta{font-family:'Epilogue',sans-serif;font-size:.88rem;font-weight:900;background:var(--ms-blue);color:#fff;text-decoration:none;border-left:2px solid var(--ink);padding:1.5rem 2.2rem;cursor:pointer;transition:background .2s;display:block;}
+.nav-cta:hover{background:#0062b0;}
+.nav-hamburger{display:none;}
+.nav-cta-mobile{display:none;}
+
+.four-stripe{display:grid;grid-template-columns:repeat(4,1fr);height:6px;}
+.fs.b{background:var(--ms-blue);}.fs.r{background:var(--ms-red);}.fs.g{background:var(--ms-grn);}.fs.y{background:var(--ms-yel);}
+
+.art-hero{padding:calc(var(--nav-h) + 5rem) 4rem 5rem;border-bottom:2px solid var(--ink);}
+.art-hero-inner{max-width:860px;}
+.page-breadcrumb{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:1.5rem;}
+.page-breadcrumb a{color:var(--muted);text-decoration:none;}
+.page-breadcrumb a:hover{color:var(--ms-blue);}
+.art-tag{font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.2em;color:var(--ms-blue);margin-bottom:1.5rem;display:block;padding-left:2.25rem;position:relative;}
+.art-tag::before{content:'';width:28px;height:2px;background:var(--ms-blue);position:absolute;left:0;top:50%;transform:translateY(-50%);}
+.art-hero h1{font-family:'Epilogue',sans-serif;font-size:clamp(2.4rem,4.5vw,5rem);font-weight:900;line-height:.92;letter-spacing:-.04em;margin-bottom:2rem;}
+.art-hero h1 .serif{font-family:'Lora',serif;font-style:italic;font-weight:500;letter-spacing:-.02em;}
+.art-meta{display:flex;gap:2rem;flex-wrap:wrap;}
+.art-meta-item{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);}
+
+.art-body{display:grid;grid-template-columns:1fr 280px;gap:0;border-bottom:2px solid var(--ink);}
+.art-content{padding:4rem;border-right:2px solid var(--ink);}
+.art-content p{font-size:.95rem;line-height:1.9;color:var(--muted);margin-bottom:1.5rem;}
+.art-content h2{font-family:'Epilogue',sans-serif;font-size:1.35rem;font-weight:900;letter-spacing:-.02em;margin:2.5rem 0 .75rem;}
+.art-content h3{font-family:'Epilogue',sans-serif;font-size:1.05rem;font-weight:800;letter-spacing:-.01em;margin:2rem 0 .5rem;}
+.art-content ul,.art-content ol{padding-left:1.5rem;margin-bottom:1.5rem;}
+.art-content li{font-size:.95rem;line-height:1.8;color:var(--muted);margin-bottom:.35rem;}
+.art-content strong{color:var(--ink);font-weight:700;}
+.art-content .callout{padding:1.25rem 1.5rem;border-left:3px solid var(--ms-blue);background:#f0f5fb;margin:2rem 0;font-size:.9rem;line-height:1.8;color:#1a3a5e;}
+.art-content .callout.grn{border-color:var(--ms-grn);background:#f7fbf5;color:#2a4e1a;}
+.art-content .callout.yel{border-color:var(--ms-yel);background:#fffcf0;color:#6b4800;}
+
+.art-sidebar{padding:3rem 2rem;background:var(--off);}
+.sidebar-block{margin-bottom:2.5rem;}
+.sidebar-label{font-family:'JetBrains Mono',monospace;font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:.75rem;}
+.sidebar-title{font-family:'Epilogue',sans-serif;font-size:1rem;font-weight:800;letter-spacing:-.02em;margin-bottom:.5rem;}
+.sidebar-body{font-size:.82rem;color:var(--muted);line-height:1.7;margin-bottom:1rem;}
+.sidebar-cta{font-family:'Epilogue',sans-serif;font-size:.82rem;font-weight:900;background:var(--ms-blue);color:#fff;border:none;padding:.75rem 1.25rem;text-decoration:none;display:block;text-align:center;transition:background .2s;}
+.sidebar-cta:hover{background:#0062b0;}
+.sidebar-divider{border:none;border-top:1px solid var(--border);margin:2rem 0;}
+
+.art-nav{display:flex;justify-content:space-between;align-items:center;padding:1.5rem 4rem;border-bottom:2px solid var(--ink);}
+.art-nav a{font-family:'Epilogue',sans-serif;font-size:.88rem;font-weight:900;color:var(--ms-blue);text-decoration:none;}
+.art-nav a:hover{text-decoration:underline;}
+
+.page-cta{display:grid;grid-template-columns:1fr 1fr;border-top:2px solid var(--ink);}
+.cta-blue{background:var(--ms-blue);padding:5rem 4rem;display:flex;flex-direction:column;justify-content:center;}
+.cta-tag{font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.9);margin-bottom:1rem;}
+.cta-title{font-family:'Epilogue',sans-serif;font-size:clamp(2rem,3.5vw,3.5rem);font-weight:900;letter-spacing:-.04em;line-height:.95;color:#fff;margin-bottom:1rem;}
+.cta-title .serif{font-family:'Lora',serif;font-style:italic;font-weight:500;}
+.cta-sub{font-size:.95rem;color:rgba(255,255,255,.85);line-height:1.8;max-width:400px;margin-bottom:2rem;}
+.cta-actions{display:flex;flex-direction:column;gap:.75rem;}
+.cta-btn-solid{font-family:'Epilogue',sans-serif;font-size:.9rem;font-weight:900;background:#fff;color:var(--ms-blue);border:2px solid #fff;padding:.85rem 2rem;text-decoration:none;display:inline-block;transition:all .2s;text-align:center;}
+.cta-btn-solid:hover{background:var(--ms-yel);border-color:var(--ms-yel);color:var(--ink);}
+.cta-btn-outline{font-family:'Epilogue',sans-serif;font-size:.9rem;font-weight:900;background:transparent;color:#fff;border:2px solid rgba(255,255,255,.4);padding:.85rem 2rem;text-decoration:none;display:inline-block;transition:all .2s;text-align:center;}
+.cta-btn-outline:hover{border-color:#fff;background:rgba(255,255,255,.1);}
+.cta-right{background:var(--off);padding:5rem 4rem;display:flex;flex-direction:column;justify-content:center;}
+.cta-right-label{font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:1.5rem;}
+.contact-block{display:flex;flex-direction:column;gap:1.25rem;}
+.contact-line{display:flex;flex-direction:column;gap:.25rem;}
+.contact-line-label{font-family:'JetBrains Mono',monospace;font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);}
+.contact-line-val{font-family:'Epilogue',sans-serif;font-size:1.1rem;font-weight:800;color:var(--ink);}
+.contact-line-val a{color:var(--ms-blue);text-decoration:none;}
+.contact-line-val a:hover{text-decoration:underline;}
+
+footer{display:flex;align-items:center;justify-content:space-between;padding:1.5rem 4rem;border-top:2px solid var(--ink);}
+.f-copy-wrap{display:flex;flex-direction:column;gap:.2rem;}
+.f-logo{display:flex;align-items:center;gap:.65rem;}
+.f-name{font-family:'Epilogue',sans-serif;font-size:1rem;font-weight:900;letter-spacing:-.02em;}
+.f-name span{color:var(--ms-blue);}
+.f-copy{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.06em;color:#333;}
+.f-links{display:flex;gap:2rem;list-style:none;align-items:center;}
+.f-links a{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:#333;text-decoration:none;transition:color .2s;}
+.f-links a:hover{color:var(--ms-blue);}
+
+
+@media(max-width:1000px){
+  .nav-cta{display:none;}
+  .art-body{grid-template-columns:1fr;}
+  .art-content{border-right:none;border-bottom:2px solid var(--ink);padding:3rem 1.5rem;}
+  .art-sidebar{padding:2.5rem 1.5rem;}
+  .art-nav{padding:1.25rem 1.5rem;}
+  .page-cta{grid-template-columns:1fr;}
+  .cta-blue{padding:3rem 1.5rem;}
+  .cta-right{padding:3rem 1.5rem;}
+}
+@media(max-width:768px){
+  :root{--nav-h:58px;}
+  nav{padding:0 1.25rem;flex-wrap:wrap;}
+  .logo{padding:.85rem 0;}
+  .nav-links{display:none;width:100%;flex-direction:column;border-top:1px solid var(--border);}
+  .nav-links.nav-open{display:flex;background:#fff;}
+  .nav-links a{border-left:none;border-bottom:1px solid var(--border);padding:1rem 0;}
+  .nav-hamburger{display:block;background:none;border:none;font-size:1.4rem;cursor:pointer;padding:.5rem;color:var(--ink);margin-left:auto;}
+  .nav-cta{display:none !important;}
+  .nav-cta-mobile{display:none !important;}
+  .nav-cta-mobile.nav-open{display:block !important;width:100%;font-family:'Epilogue',sans-serif;font-size:.82rem;font-weight:900;background:var(--ms-blue);color:#fff;text-decoration:none;text-align:center;padding:1rem 1.25rem;border-top:2px solid var(--ink);}
+  .art-hero{padding:calc(var(--nav-h) + 2.5rem) 1.5rem 3rem;}
+  footer{flex-direction:column;align-items:flex-start;gap:1.25rem;padding:1.5rem;}
+  .f-links{flex-wrap:wrap;gap:1rem;}
+}
+
+/* COOKIE NOTICE */
+#cookie-bar{position:fixed;bottom:0;left:0;right:0;z-index:9999;background:#0d0d0d;border-top:2px solid #0F4C81;padding:.85rem 2rem;display:flex;align-items:center;justify-content:space-between;gap:1.5rem;flex-wrap:wrap;font-family:'Epilogue',sans-serif;font-size:.82rem;color:#ccc;transition:transform .3s;}
+#cookie-bar.hidden{transform:translateY(100%);}
+#cookie-bar a{color:#0F4C81;text-decoration:none;}
+#cookie-bar a:hover{text-decoration:underline;}
+#cookie-bar-accept{font-family:'Epilogue',sans-serif;font-size:.82rem;font-weight:900;background:#0F4C81;color:#fff;border:none;padding:.5rem 1.25rem;cursor:pointer;white-space:nowrap;transition:background .2s;}
+#cookie-bar-accept:hover{background:#0062b0;}
+@media(max-width:600px){#cookie-bar{flex-direction:column;align-items:flex-start;padding:1rem 1.25rem;}}
+</style>
+  <link rel="alternate" type="application/rss+xml" title="Adjona Insights" href="https://adjona.com/rss.xml">
+<script>
+(function(){
+  if(typeof window.clarity !== 'function') return;
+  window.clarity("set", "page_type", "insight");
+  window.clarity("set", "topic", "access");
+})();
+</script>
+<style id="consent-css">
+#cookie-bar{position:fixed;bottom:0;left:0;right:0;z-index:9999;background:#0d0d0d;border-top:2px solid #0F4C81;padding:.85rem 2rem;display:flex;align-items:center;justify-content:space-between;gap:1rem 1.5rem;flex-wrap:wrap;font-family:'Epilogue',sans-serif;font-size:.82rem;line-height:1.5;color:#ddd;transform:none;}
+#cookie-bar.hidden{display:none;}
+#cookie-bar a{color:#9cc3ea;text-decoration:underline;}
+#cookie-bar .cb-actions{display:flex;gap:.6rem;flex-shrink:0;}
+#cookie-bar button{font-family:'Epilogue',sans-serif;font-size:.82rem;font-weight:900;border:2px solid #fff;padding:.5rem 1.25rem;cursor:pointer;white-space:nowrap;}
+#cookie-bar-reject{background:transparent;color:#fff;}
+#cookie-bar-accept{background:#fff;color:#0d0d0d;}
+#cookie-bar button:hover{background:#0F4C81;border-color:#0F4C81;color:#fff;}
+#cookie-bar button:focus-visible,#cookie-bar a:focus-visible{outline:2px solid #F2A900;outline-offset:2px;}
+@media(max-width:600px){#cookie-bar{padding:1rem 1.25rem;}#cookie-bar .cb-actions{width:100%;}#cookie-bar button{flex:1;}}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Who Still Has Access? Five Microsoft 365 Checks for Charities",
+  "url": "https://adjona.com/insights/who-still-has-access-microsoft-365-checks.html",
+  "datePublished": "2026-10-27",
+  "publisher": {
+    "@id": "https://adjona.com/#organization"
+  },
+  "author": {
+    "@id": "https://adjona.com/#organization"
+  },
+  "inLanguage": "en-GB",
+  "description": "Former staff, old guests, Anyone links, Teams owners and admin roles. Five practical Microsoft 365 access checks a charity can run without a major IT project."
+}
+</script>
+</head>
+<body>
+
+<nav>
+  <a class="logo" href="../index.html">
+    <svg width="36" height="28" viewBox="0 0 36 28" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="0,28 6,28 7,17 6,16 0,16" fill="#0F4C81"/>
+      <polygon points="9,28 15,28 16,12 15,11 9,11" fill="#D83B01"/>
+      <polygon points="18,28 24,28 25,7 24,6 18,6" fill="#2F6B00"/>
+      <polygon points="27,28 33,28 34,1 33,0 27,0" fill="#F2A900"/>
+    </svg>
+    <div class="logo-name">Adjona <span>Technology</span></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="../index.html#approach">About</a></li>
+    <li><a href="../index.html#services">Services</a></li>
+    <li><a href="../additional-services.html">Projects &amp; Support</a></li>
+    <li><a href="../packages.html">Solution Packages</a></li>
+    <li><a href="../index.html#certs">Credentials</a></li>
+    <li><a href="../insights.html" class="active">Insights</a></li>
+    <li><a href="../enquiry.html">Contact Us</a></li>
+  </ul>
+  <a onclick="if(typeof window.clarity==='function')window.clarity('event','book_call_click')" href="https://outlook.office.com/book/AdjonaTechnologyLimited1@adjona.com/s/ElOd0P60CEiQxQcnIYWXWw2" target="_blank" rel="noopener noreferrer" class="nav-cta">Book an Introductory Conversation</a>
+  <button class="nav-hamburger" aria-label="Menu" onclick="
+    var nav=this.closest('nav');
+    nav.querySelector('.nav-links').classList.toggle('nav-open');
+    nav.querySelector('.nav-cta-mobile').classList.toggle('nav-open');
+  ">&#9776;</button>
+  <a onclick="if(typeof window.clarity==='function')window.clarity('event','book_call_click')" href="https://outlook.office.com/book/AdjonaTechnologyLimited1@adjona.com/s/ElOd0P60CEiQxQcnIYWXWw2" target="_blank" rel="noopener noreferrer" class="nav-cta-mobile">Book an Introductory Conversation</a>
+</nav>
+
+<section class="art-hero">
+  <div class="art-hero-inner">
+    <div class="page-breadcrumb"><a href="../index.html">Adjona Technology</a> &nbsp;/&nbsp; <a href="../insights.html">Insights</a> &nbsp;/&nbsp; Who Still Has Access?</div>
+    <span class="art-tag">Microsoft 365 &nbsp;&middot;&nbsp; Charities &nbsp;&middot;&nbsp; Access &nbsp;&middot;&nbsp; Governance</span>
+    <h1>Who still has access?<br><span class="serif">Five Microsoft 365 checks for charities</span></h1>
+    <div class="art-meta">
+      <div class="art-meta-item">27 October 2026</div>
+      <div class="art-meta-item">8 min read</div>
+      <div class="art-meta-item">Adjona Technology</div>
+    </div>
+  </div>
+</section>
+
+<div class="four-stripe">
+  <div class="fs b"></div><div class="fs r"></div><div class="fs g"></div><div class="fs y"></div>
+</div>
+
+<div class="art-body">
+  <article class="art-content">
+
+    <p>People join charities, change roles, volunteer for a project and move on.</p>
+    <p>Microsoft 365 access does not always move with them.</p>
+    <p>A former employee may still have an active account. A volunteer invited into Teams two years ago may still be a guest. A SharePoint link created for convenience may still work for anyone who receives it.</p>
+    <p>None of these necessarily means something has gone wrong. But they are good reasons to periodically ask a simple question:</p>
+    <div class="callout"><strong>Who can still access our Microsoft 365 environment, and do they still need that access?</strong></div>
+    <p>Here are five checks a charity can make without beginning a major IT project.</p>
+    <h2>1. Check former staff accounts</h2>
+    <p>Start with the people who have left the organisation.</p>
+    <p>In the Microsoft 365 admin centre, review <strong>Users &gt; Active users</strong> and compare the list with your current staff and other authorised account holders.</p>
+    <h3>What to look for</h3>
+    <p>Look for:</p>
+    <ul>
+      <li>people who have left but still have an active account;</li>
+      <li>old temporary or project accounts;</li>
+      <li>accounts whose purpose nobody recognises;</li>
+      <li>staff who changed roles but may still have access associated with their previous responsibilities.</li>
+    </ul>
+    <p>Do not assume that simply removing a Microsoft 365 licence is the same as removing access.</p>
+    <p>Microsoft's leaver process begins by preventing the former employee from signing in. It also includes decisions about their mailbox, OneDrive data, devices and eventually the account itself.</p>
+    <h3>What good looks like</h3>
+    <p>When someone leaves, there should be a defined process covering:</p>
+    <ul>
+      <li>when their access is blocked;</li>
+      <li>who takes responsibility for their email or files;</li>
+      <li>whether information needs to be retained;</li>
+      <li>when licences are recovered;</li>
+      <li>when the account can finally be removed.</li>
+    </ul>
+    <p>The important point is that this should be a <strong>process</strong>, rather than somebody remembering to delete an account eventually.</p>
+    <h3>When to ask for help</h3>
+    <p>Get advice if you find former staff accounts but are unsure whether deleting them could remove important email, OneDrive files or records that need to be retained.</p>
+    <p>The priority is to stop inappropriate access without accidentally destroying information the charity still needs.</p>
+    <h2>2. Review guest users</h2>
+    <p>Microsoft 365 makes it easy to collaborate with trustees, contractors, partner organisations, consultants and volunteers outside your organisation.</p>
+    <p>Those people can appear as <strong>guest users</strong>.</p>
+    <p>The problem is not guest access itself. The problem is guest access that nobody reviews.</p>
+    <p>Microsoft notes that guests added through services such as Teams, SharePoint and Microsoft Entra can remain listed in the organisation until their access is removed.</p>
+    <h3>What to look for</h3>
+    <p>Review your guest-user list and ask:</p>
+    <ul>
+      <li>Do we recognise this person?</li>
+      <li>Which organisation are they from?</li>
+      <li>Why were they given access?</li>
+      <li>Are they still working with us?</li>
+      <li>What Teams, groups, sites or applications can they access?</li>
+      <li>Who inside the charity is responsible for that relationship?</li>
+    </ul>
+    <p>Pay particular attention to guests associated with projects or partnerships that ended some time ago.</p>
+    <h3>What good looks like</h3>
+    <p>Every guest should have a continuing reason to be there.</p>
+    <p>For a small charity, that might simply mean carrying out a periodic review and confirming the list with staff who work with external organisations.</p>
+    <p>Larger or more mature environments can use Microsoft Entra access reviews to periodically recertify guest access. Microsoft specifically supports reviews of guest membership in groups and applications.</p>
+    <h3>When to ask for help</h3>
+    <p>Ask for help when you have a long guest list and cannot establish what each person can access.</p>
+    <p>Removing a guest from one Team is not necessarily the same as understanding all the access that identity has acquired across Microsoft 365.</p>
+    <h2>3. Check whether you allow “Anyone” sharing links</h2>
+    <p>SharePoint and OneDrive make external sharing convenient.</p>
+    <p>One option is an <strong>“Anyone” link</strong>.</p>
+    <p>Someone receiving this type of link does not need to sign in. The link can also be forwarded to somebody else.</p>
+    <p>Microsoft describes an Anyone link as giving access to whoever possesses the link, without authentication, which also means the identity of the person using it cannot be audited in the normal way.</p>
+    <h3>What to look for</h3>
+    <p>In the SharePoint admin centre, review the organisation's external-sharing settings.</p>
+    <p>Ask:</p>
+    <ul>
+      <li>Are “Anyone” links enabled?</li>
+      <li>Do we actually need them?</li>
+      <li>Are they the default sharing method?</li>
+      <li>Can they provide edit access?</li>
+      <li>Do they expire?</li>
+      <li>Are particular sites more permissive than they should be?</li>
+    </ul>
+    <p>Do not assume that external sharing should always be disabled. Charities often need to work with trustees, funders, partners and external advisers.</p>
+    <p>The question is whether the sharing method matches the sensitivity of the information.</p>
+    <h3>What good looks like</h3>
+    <p>For many charities, authenticated sharing with <strong>specific people</strong> provides a better default because the recipient must prove who they are.</p>
+    <p>Where Anyone links genuinely have a business purpose, Microsoft allows organisations to control matters such as expiry and whether those links provide view or edit access.</p>
+    <p>A sensible policy might therefore be:</p>
+    <ul>
+      <li>use Specific people links for normal external collaboration;</li>
+      <li>allow anonymous links only where there is a genuine requirement;</li>
+      <li>apply expiry periods;</li>
+      <li>avoid edit access unless it is necessary.</li>
+    </ul>
+    <h3>When to ask for help</h3>
+    <p>Ask for help if nobody can explain the current sharing configuration, or if different sites have accumulated different settings over several years.</p>
+    <p>It is particularly worth reviewing before sharing confidential information relating to beneficiaries, staff, safeguarding, finance or governance.</p>
+    <h2>4. Check who owns your Teams</h2>
+    <p>A Microsoft Team needs someone to manage membership and settings.</p>
+    <p>That responsibility sits with the <strong>Team owner</strong>.</p>
+    <p>Problems arise when the only owner leaves the charity, changes role or simply stops being involved with that Team.</p>
+    <h3>What to look for</h3>
+    <p>In the Teams admin centre, review <strong>Teams &gt; Manage teams</strong>.</p>
+    <p>Look particularly for:</p>
+    <ul>
+      <li>Teams with only one owner;</li>
+      <li>owners who have left;</li>
+      <li>old project Teams whose owners are no longer involved;</li>
+      <li>Teams where nobody seems willing to take responsibility for membership;</li>
+      <li>Teams that no longer have an obvious organisational purpose.</li>
+    </ul>
+    <h3>What good looks like</h3>
+    <p>Microsoft recommends identifying <strong>at least two owners</strong> where practical so that responsibility does not depend on one person remaining available.</p>
+    <p>For an important Team, good ownership means more than simply putting two names against it.</p>
+    <p>The owners should know that they are responsible for it and should periodically consider:</p>
+    <ul>
+      <li>who is a member;</li>
+      <li>whether guests still need access;</li>
+      <li>whether the Team is still required;</li>
+      <li>whether sensitive information belongs there.</li>
+    </ul>
+    <h3>When to ask for help</h3>
+    <p>Ask for help if you have many Teams with unclear ownership, duplicate purposes or no obvious lifecycle.</p>
+    <p>At that point, the problem is no longer simply assigning another owner. It may be a wider Teams and SharePoint governance issue.</p>
+    <h2>5. Review administrator roles</h2>
+    <p>Administrator accounts deserve particular attention because they can change settings affecting the whole organisation.</p>
+    <p>The most powerful role is <strong>Global Administrator</strong>.</p>
+    <h3>What to look for</h3>
+    <p>Review who currently holds administrative roles and ask:</p>
+    <ul>
+      <li>Do we recognise every administrator?</li>
+      <li>Does each person still need that level of access?</li>
+      <li>Are normal day-to-day users Global Administrators unnecessarily?</li>
+      <li>Are former suppliers or consultants still administrators?</li>
+      <li>Are privileged accounts protected with multifactor authentication?</li>
+      <li>Could a more limited administrative role do the job instead?</li>
+    </ul>
+    <p>Microsoft recommends keeping the number of Global Administrators <strong>below five</strong> to reduce the attack surface.</p>
+    <p>That does not mean every charity should aim for four.</p>
+    <p>A small organisation may need far fewer.</p>
+    <h3>What good looks like</h3>
+    <p>Administrative access should follow the principle of <strong>least privilege</strong>: give people the permissions needed to perform their role rather than giving everybody the most powerful role.</p>
+    <p>Normal administrators should also be identifiable people whose access can be reviewed.</p>
+    <p>Microsoft additionally recommends two cloud-only emergency access, or “break-glass”, accounts. These are exceptional accounts intended for situations where normal administrative access is unavailable, rather than accounts used for everyday administration.</p>
+    <h3>When to ask for help</h3>
+    <p>Seek advice if:</p>
+    <ul>
+      <li>nobody knows why particular accounts are administrators;</li>
+      <li>the organisation depends entirely on one administrator;</li>
+      <li>an external supplier controls the tenant;</li>
+      <li>several people have Global Administrator because nobody knew which other role to give them;</li>
+      <li>changing the roles risks locking everybody out.</li>
+    </ul>
+    <p>Administrative access is one area where it is better to understand the existing configuration before removing permissions.</p>
+    <h2>Five checks, not a full security audit</h2>
+    <p>These five checks will not tell you everything about the security of your Microsoft 365 environment.</p>
+    <p>They will not, for example, fully assess Conditional Access, device management, email security, data protection or the configuration of Microsoft Defender.</p>
+    <p>But they can reveal something fundamental:</p>
+    <div class="callout"><strong>whether access has accumulated faster than it has been reviewed.</strong></div>
+    <p>For many small charities, that is a useful place to start.</p>
+    <p>A simple routine might be to review these areas every few months and whenever there is a significant change in staff, volunteers, suppliers or projects:</p>
+    <ol>
+      <li>Former staff</li>
+      <li>Guest users</li>
+      <li>External sharing</li>
+      <li>Team owners</li>
+      <li>Administrator roles</li>
+    </ol>
+    <p>The objective is not to eliminate collaboration.</p>
+    <p>It is to make sure that access continues because somebody has decided it is still needed, rather than simply because nobody has removed it.</p>
+    <h2>When a second pair of eyes helps</h2>
+    <p>If your organisation can work through these checks internally and understand what it finds, that is a good outcome.</p>
+    <p>You may need additional help when:</p>
+    <ul>
+      <li>nobody is sure why particular accounts or permissions exist;</li>
+      <li>changing access could affect important files or services;</li>
+      <li>different Microsoft 365 sites have evolved independently;</li>
+      <li>there is no documented joiner, mover and leaver process;</li>
+      <li>administrative access has accumulated over time;</li>
+      <li>the organisation wants to move from occasional manual checks to a more systematic governance approach.</li>
+    </ul>
+    <p>Adjona Technology helps UK charities review Microsoft 365 access, identity, Teams and SharePoint sharing, administrative privileges and wider governance controls.</p>
+    <p>The aim is not to add complexity.</p>
+    <p>It is to establish <strong>who has access, why they have it and whether they should still have it</strong>.</p>
+    <h2>Sources</h2>
+    <ul>
+      <li><a href="https://learn.microsoft.com/microsoft-365/admin/add-users/remove-former-employee" target="_blank" rel="noopener noreferrer" style="color:var(--ms-blue);">Remove a former employee and secure data</a> (Microsoft Learn)</li>
+      <li><a href="https://learn.microsoft.com/microsoft-365/admin/add-users/about-guest-users" target="_blank" rel="noopener noreferrer" style="color:var(--ms-blue);">Guests in the Microsoft 365 admin center</a> (Microsoft Learn)</li>
+      <li><a href="https://learn.microsoft.com/entra/id-governance/manage-guest-access-with-access-reviews" target="_blank" rel="noopener noreferrer" style="color:var(--ms-blue);">Manage guest access with access reviews</a> (Microsoft Learn)</li>
+      <li><a href="https://learn.microsoft.com/sharepoint/shareable-links-anyone-specific-people-organization" target="_blank" rel="noopener noreferrer" style="color:var(--ms-blue);">How shareable links work in OneDrive and SharePoint</a> (Microsoft Learn)</li>
+      <li><a href="https://learn.microsoft.com/sharepoint/turn-external-sharing-on-or-off" target="_blank" rel="noopener noreferrer" style="color:var(--ms-blue);">Manage sharing settings for SharePoint and OneDrive</a> (Microsoft Learn)</li>
+      <li><a href="https://learn.microsoft.com/graph/api/resources/groups-overview" target="_blank" rel="noopener noreferrer" style="color:var(--ms-blue);">Manage groups in Microsoft Graph: group ownership</a> (Microsoft Learn)</li>
+      <li><a href="https://learn.microsoft.com/entra/identity/role-based-access-control/best-practices" target="_blank" rel="noopener noreferrer" style="color:var(--ms-blue);">Best practices for Microsoft Entra roles</a> (Microsoft Learn)</li>
+      <li><a href="https://learn.microsoft.com/entra/identity/role-based-access-control/security-emergency-access" target="_blank" rel="noopener noreferrer" style="color:var(--ms-blue);">Manage emergency access accounts in Microsoft Entra ID</a> (Microsoft Learn)</li>
+    </ul>
+
+  </article>
+
+  <aside class="art-sidebar">
+    <div class="sidebar-block">
+      <div class="sidebar-label">About Adjona</div>
+      <div class="sidebar-body">Adjona Technology is a Microsoft AI Cloud Partner helping charities, care providers, and smaller organisations secure Microsoft 365, improve governance, and adopt AI responsibly.</div>
+    </div>
+    <hr class="sidebar-divider">
+    <div class="sidebar-block">
+      <div class="sidebar-label">Free introductory conversation</div>
+      <div class="sidebar-title">Have a question about your setup?</div>
+      <div class="sidebar-body">Book a free 30-minute call. No obligation. Practical advice you can act on.</div>
+      <a onclick="if(typeof window.clarity==='function')window.clarity('event','book_call_click')" href="https://outlook.office.com/book/AdjonaTechnologyLimited1@adjona.com/s/ElOd0P60CEiQxQcnIYWXWw2" target="_blank" rel="noopener noreferrer" class="sidebar-cta">Book a Free Call &rarr;</a>
+    </div>
+    <hr class="sidebar-divider">
+    <div class="sidebar-block">
+      <div class="sidebar-label">Related</div>
+      <div class="sidebar-body"><a href="fixing-teams-sharepoint-file-access.html" style="color:var(--ms-blue);text-decoration:none;font-weight:700;">Fixing messy Teams, SharePoint and file access &rarr;</a></div>
+      <div class="sidebar-body"><a href="../microsoft-365-consultant-charities.html" style="color:var(--ms-blue);text-decoration:none;font-weight:700;">Microsoft 365 consultant for charities &rarr;</a></div>
+      <div class="sidebar-body"><a href="../packages.html" style="color:var(--ms-blue);text-decoration:none;font-weight:700;">View our Microsoft 365 solution packages &rarr;</a></div>
+    </div>
+  </aside>
+</div>
+
+<div class="art-nav">
+  <a href="../insights.html">&larr; All Insights</a>
+  <span></span>
+</div>
+
+<div class="page-cta">
+  <div class="cta-blue">
+    <div class="cta-tag">Free Introductory Conversation</div>
+    <h2 class="cta-title">Want a second <span class="serif">pair of eyes?</span></h2>
+    <p class="cta-sub">Adjona Technology helps UK charities review who has access to Microsoft 365 and whether they still need it. Book a free 30-minute conversation. No obligation, no hard sell.</p>
+    <div class="cta-actions">
+      <a onclick="if(typeof window.clarity==='function')window.clarity('event','book_call_click')" href="https://outlook.office.com/book/AdjonaTechnologyLimited1@adjona.com/s/ElOd0P60CEiQxQcnIYWXWw2" target="_blank" rel="noopener noreferrer" class="cta-btn-solid">Book a Free Introductory Conversation</a>
+      <a onclick="if(typeof window.clarity==='function')window.clarity('event','enquiry_click')" href="../enquiry.html" class="cta-btn-outline">Send an Enquiry &rarr;</a>
+    </div>
+  </div>
+  <div class="cta-right">
+    <div class="cta-right-label">Get in touch</div>
+    <div class="contact-block">
+      <div class="contact-line">
+        <div class="contact-line-label">Email</div>
+        <div class="contact-line-val"><a href="mailto:info@adjona.com">info@adjona.com</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer style="padding-bottom:5rem;">
+  <div class="f-logo">
+    <svg width="28" height="22" viewBox="0 0 36 28" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="0,28 6,28 7,17 6,16 0,16" fill="#0F4C81"/>
+      <polygon points="9,28 15,28 16,12 15,11 9,11" fill="#D83B01"/>
+      <polygon points="18,28 24,28 25,7 24,6 18,6" fill="#2F6B00"/>
+      <polygon points="27,28 33,28 34,1 33,0 27,0" fill="#F2A900"/>
+    </svg>
+    <div class="f-name">Adjona <span>Technology</span> Limited</div>
+  </div>
+  <div class="f-copy-wrap">
+    <div class="f-copy">© 2026 Adjona Technology Limited · Registered in England &amp; Wales · Co. No. 05007410 · 5th Floor, 167-169 Great Portland Street, London W1W 5PF</div>
+    <div style="margin-top:.4rem;">
+      <a href="https://marketplace.microsoft.com/en-gb/partners/c4ead6cf-d6a0-4973-8bf7-f3e644e195ae/overview" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:.5rem;text-decoration:none;">
+        <svg width="14" height="14" viewBox="0 0 23 23" xmlns="http://www.w3.org/2000/svg"><rect x="1" y="1" width="10" height="10" fill="#f25022"/><rect x="12" y="1" width="10" height="10" fill="#7fba00"/><rect x="1" y="12" width="10" height="10" fill="#00a4ef"/><rect x="12" y="12" width="10" height="10" fill="#ffb900"/></svg>
+        <span style="font-family:'JetBrains Mono',monospace;font-size:.58rem;letter-spacing:.08em;color:#444;">View Adjona's Microsoft partner profile</span>
+      </a>
+    </div>
+  </div>
+  <ul class="f-links" style="align-items:center;">
+    <li><a href="https://www.linkedin.com/company/adjona-technology-limited/" target="_blank" rel="noopener noreferrer" style="display:flex;align-items:center;gap:.4rem;"><img src="https://adjona.com/images/li-icon.png" width="16" height="16" alt="LinkedIn" style="display:block;border:0;vertical-align:middle;"> LinkedIn</a></li>
+    <li><a href="https://www.youtube.com/@AdjonaTechnology" target="_blank" rel="noopener noreferrer" style="display:flex;align-items:center;gap:.4rem;"><img src="https://adjona.com/images/yt-icon.png" width="16" height="16" alt="YouTube" style="display:block;border:0;vertical-align:middle;"> YouTube</a></li>
+    <li><a href="https://www.reddit.com/user/AdjonaTech/" target="_blank" rel="noopener noreferrer" style="display:flex;align-items:center;gap:.4rem;"><img src="https://adjona.com/images/rd-icon.png" width="16" height="16" alt="Reddit" style="display:block;border:0;vertical-align:middle;"> Reddit</a></li>
+    <li><a href="https://www.tiktok.com/@adjonatechnology" target="_blank" rel="noopener noreferrer" style="display:flex;align-items:center;gap:.4rem;"><img src="https://adjona.com/images/tt-icon.png" width="16" height="16" alt="TikTok" style="display:block;border:0;vertical-align:middle;"> TikTok</a></li>
+    <li><a href="https://www.instagram.com/adjonatechnology" target="_blank" rel="noopener noreferrer" style="display:flex;align-items:center;gap:.4rem;"><img src="https://adjona.com/images/ig-icon.png" width="16" height="16" alt="Instagram" style="display:block;border:0;vertical-align:middle;"> Instagram</a></li>
+    <li><a href="https://open.spotify.com/show/0342WnO8JbToOj0zyzxpsn" target="_blank" rel="noopener noreferrer" style="display:flex;align-items:center;gap:.4rem;"><img src="https://adjona.com/images/sp-icon.png" width="16" height="16" alt="Spotify" style="display:block;border:0;vertical-align:middle;"> Spotify</a></li>
+    <li><a href="../events.html">Events</a></li>
+    <li><a onclick="if(typeof window.clarity==='function')window.clarity('event','book_call_click')" href="https://outlook.office.com/book/AdjonaTechnologyLimited1@adjona.com/s/ElOd0P60CEiQxQcnIYWXWw2" target="_blank" rel="noopener noreferrer">Book a Call</a></li>
+    <li><a href="../adjona-privacy.html">Privacy Policy</a></li>
+    <li><a href="#" onclick="return adjonaCookieSettings();">Cookie settings</a></li>
+    <li><a href="../adjona-terms.html">Terms &amp; Conditions</a></li>
+    <li><a href="mailto:info@adjona.com">info@adjona.com</a></li>
+  </ul>
+</footer>
+
+
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+  document.querySelectorAll('.nav-links a,.nav-cta-mobile').forEach(function(link){
+    link.addEventListener('click',function(){
+      var nav=document.querySelector('nav');
+      nav.querySelector('.nav-links').classList.remove('nav-open');
+      nav.querySelector('.nav-cta-mobile').classList.remove('nav-open');
+    });
+  });
+});
+</script>
+
+<!-- Cookie choices -->
+<div id="cookie-bar" class="hidden" role="region" aria-label="Cookie choices">
+  <span>We use optional analytics cookies (Google Analytics and Microsoft Clarity) to understand how visitors use this site. They are only set if you choose Accept. See our <a href="/adjona-privacy.html#cookies">privacy and cookie policy</a>.</span>
+  <div class="cb-actions">
+    <button type="button" id="cookie-bar-reject">Reject</button>
+    <button type="button" id="cookie-bar-accept">Accept</button>
+  </div>
+</div>
+<script>
+(function(){
+  var KEY='adjona_consent', bar=document.getElementById('cookie-bar');
+  function getChoice(){try{return localStorage.getItem(KEY);}catch(e){return null;}}
+  function saveChoice(v){try{localStorage.setItem(KEY,v);localStorage.removeItem('adjona_cookie_ok');}catch(e){}}
+  function applyChoice(v){
+    var state=(v==='granted')?'granted':'denied';
+    if(typeof window.gtag==='function'){window.gtag('consent','update',{'analytics_storage':state});}
+    if(typeof window.clarity==='function'){window.clarity('consentv2',{ad_Storage:'denied',analytics_Storage:state});}
+  }
+  function choose(v){saveChoice(v);applyChoice(v);bar.classList.add('hidden');}
+  var current=getChoice();
+  if(current==='granted'||current==='denied'){applyChoice(current);}else{bar.classList.remove('hidden');}
+  document.getElementById('cookie-bar-accept').addEventListener('click',function(){choose('granted');});
+  document.getElementById('cookie-bar-reject').addEventListener('click',function(){choose('denied');});
+  window.adjonaCookieSettings=function(){bar.classList.remove('hidden');document.getElementById('cookie-bar-accept').focus();return false;};
+})();
+</script>
+
+</body>
+</html>
