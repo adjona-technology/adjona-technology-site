@@ -158,6 +158,39 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
 #cookie-bar button:focus-visible,#cookie-bar a:focus-visible{outline:2px solid #F2A900;outline-offset:2px;}
 @media(max-width:600px){#cookie-bar{padding:1rem 1.25rem;}#cookie-bar .cb-actions{width:100%;}#cookie-bar button{flex:1;}}
 </style>
+<style id="nav-fit">
+/* Menu fit: compact spacing on laptops, tap-to-open menu on tablets */
+@media(min-width:1201px) and (max-width:1500px){
+  nav{padding-left:2rem;}
+  .nav-links a{padding:1.5rem .8rem;letter-spacing:.1em;}
+  .nav-cta{padding:.9rem 1.25rem;white-space:normal;max-width:14rem;line-height:1.25;align-self:stretch;display:flex;align-items:center;}
+}
+@media(min-width:769px) and (max-width:1200px){
+  nav{padding:0 1.25rem 0 2rem;flex-wrap:wrap;}
+  .nav-links{display:none;width:100%;flex-direction:column;border-top:1px solid var(--border);}
+  .nav-links.nav-open{display:flex;background:#fff;}
+  .nav-links a{border-left:none;border-bottom:1px solid var(--border);padding:1rem 0;}
+  .nav-hamburger{display:block;background:none;border:none;font-size:1.4rem;cursor:pointer;padding:.5rem;color:var(--ink);margin-left:auto;}
+  .nav-cta{display:none !important;}
+  .nav-cta-mobile{display:none !important;}
+  .nav-cta-mobile.nav-open{display:block !important;width:100%;font-family:'Epilogue',sans-serif;font-size:.82rem;font-weight:900;background:var(--ms-blue);color:#fff;text-decoration:none;text-align:center;padding:1rem 1.25rem;border-top:2px solid var(--ink);}
+}
+/* Footer: stack and wrap links below wide desktop so none are cut off */
+@media(min-width:769px) and (max-width:1500px){
+  footer{flex-direction:column;align-items:flex-start;gap:1.25rem;}
+  .f-links{flex-wrap:wrap;gap:.9rem 1.75rem;}
+}
+/* Article layout: stop wide content pushing the sidebar off screen */
+@media(min-width:1001px){
+  .art-body{grid-template-columns:minmax(0,1fr) 280px;}
+}
+/* Keep the menu button beside the logo when the menu is open */
+@media(max-width:1200px){
+  .nav-hamburger{order:1;}
+  .nav-links{order:2;}
+  .nav-cta-mobile{order:3;}
+}
+</style>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
