@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Consent Mode v2 -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied'
+  });
+  try{ if(localStorage.getItem('adjona_consent')==='granted'){ gtag('consent', 'update', {'analytics_storage': 'granted'}); } }catch(e){}
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BQNKT24TFT"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-BQNKT24TFT');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>When your technology supplier disappears: five continuity questions every organisation should ask | Adjona Technology</title>
+<meta name="description" content="A technology provider's collapse has disrupted online services at hundreds of GP practices. Five questions charities, care providers and smaller organisations should answer before a critical supplier fails.">
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<link rel="icon" type="image/x-icon" href="../favicon.ico">
+<link rel="apple-touch-icon" sizes="192x192" href="../favicon-192.png">
+<meta property="og:title" content="When your technology supplier disappears: five continuity questions every organisation should ask | Adjona Technology">
+<meta property="og:description" content="A technology provider's collapse has disrupted online services at hundreds of GP practices. Five questions charities, care providers and smaller organisations should answer before a critical supplier fails.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://adjona.com/insights/technology-supplier-failure-continuity.html">
+<meta property="og:image" content="https://adjona.com/adjona-social-preview.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;700;800;900&family=Lora:ital,wght@1,500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<!-- Clarity tracking code for https://adjona.com/ -->
+<script>
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "wmyh9800tx");
+</script>
+<style>
+:root{
+  --white:#ffffff;--off:#f5f5f0;--ink:#0d0d0d;
+  --ms-blue:#0F4C81;--ms-red:#D83B01;--ms-grn:#2F6B00;--ms-yel:#F2A900;
+  --muted:#444;--border:rgba(13,13,13,0.1);
+  --nav-h:62px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--white);color:var(--ink);font-family:'Epilogue',sans-serif;font-weight:400;overflow-x:hidden;}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:0 0 0 4rem;background:#fff;border-bottom:2px solid var(--ink);}
+.logo{display:flex;align-items:center;gap:.75rem;padding:1.1rem 0;text-decoration:none;}
+.logo-name{font-family:'Epilogue',sans-serif;font-size:1.1rem;font-weight:900;letter-spacing:-.02em;white-space:nowrap;color:var(--ink);}
+.logo-name span{color:var(--ms-blue);}
+.nav-links{display:flex;list-style:none;}
+.nav-links a{font-family:'JetBrains Mono',monospace;font-size:.63rem;letter-spacing:.14em;text-transform:uppercase;color:#333;text-decoration:none;padding:1.5rem 1.4rem;border-left:2px solid var(--border);display:block;transition:color .2s,background .2s;}
+.nav-links a:hover{color:var(--ms-blue);background:rgba(0,120,212,.04);}
+.nav-links a.active{color:var(--ms-blue);}
+.nav-cta{font-family:'Epilogue',sans-serif;font-size:.88rem;font-weight:900;background:var(--ms-blue);color:#fff;text-decoration:none;border-left:2px solid var(--ink);padding:1.5rem 2.2rem;cursor:pointer;transition:background .2s;display:block;}
+.nav-cta:hover{background:#0062b0;}
+.nav-hamburger{display:none;}
+.nav-cta-mobile{display:none;}
+
+.four-stripe{display:grid;grid-template-columns:repeat(4,1fr);height:6px;}
+.fs.b{background:var(--ms-blue);}.fs.r{background:var(--ms-red);}.fs.g{background:var(--ms-grn);}.fs.y{background:var(--ms-yel);}
+
+/* ARTICLE HERO */
+.art-hero{padding:calc(var(--nav-h) + 5rem) 4rem 5rem;border-bottom:2px solid var(--ink);}
+.art-hero-inner{max-width:860px;}
+.page-breadcrumb{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:1.5rem;}
+.page-breadcrumb a{color:var(--muted);text-decoration:none;}
+.page-breadcrumb a:hover{color:var(--ms-blue);}
+.art-tag{font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.2em;color:var(--ms-blue);margin-bottom:1.5rem;display:block;padding-left:2.25rem;position:relative;}
+.art-tag::before{content:'';width:28px;height:2px;background:var(--ms-blue);position:absolute;left:0;top:50%;transform:translateY(-50%);}
+.art-hero h1{font-family:'Epilogue',sans-serif;font-size:clamp(2.4rem,4.5vw,5rem);font-weight:900;line-height:.92;letter-spacing:-.04em;margin-bottom:2rem;}
+.art-hero h1 .serif{font-family:'Lora',serif;font-style:italic;font-weight:500;letter-spacing:-.02em;}
+.art-meta{display:flex;gap:2rem;flex-wrap:wrap;}
+.art-meta-item{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);}
+
+/* ARTICLE BODY */
+.art-body{display:grid;grid-template-columns:1fr 280px;gap:0;border-bottom:2px solid var(--ink);}
+.art-content{padding:4rem;border-right:2px solid var(--ink);}
+.art-content p{font-size:.95rem;line-height:1.9;color:var(--muted);margin-bottom:1.5rem;}
+.art-content h2{font-family:'Epilogue',sans-serif;font-size:1.35rem;font-weight:900;letter-spacing:-.02em;margin:2.5rem 0 .75rem;}
+.art-content h3{font-family:'Epilogue',sans-serif;font-size:1.05rem;font-weight:800;letter-spacing:-.01em;margin:2rem 0 .5rem;}
+.art-content ul,.art-content ol{padding-left:1.5rem;margin-bottom:1.5rem;}
+.art-content li{font-size:.95rem;line-height:1.8;color:var(--muted);margin-bottom:.35rem;}
+.art-content strong{color:var(--ink);font-weight:700;}
+.art-content .callout{padding:1.25rem 1.5rem;border-left:3px solid var(--ms-blue);background:#f0f5fb;margin:2rem 0;font-size:.9rem;line-height:1.8;color:#1a3a5e;}
+.art-content .callout.grn{border-color:var(--ms-grn);background:#f7fbf5;color:#2a4e1a;}
+.art-content .callout.yel{border-color:var(--ms-yel);background:#fffcf0;color:#6b4800;}
+.art-content .sources{margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--border);}
+.art-content .sources p{font-size:.82rem;line-height:1.7;color:#666;}
+.art-content .sources strong{color:#444;}
+
+/* SIDEBAR */
+.art-sidebar{padding:3rem 2rem;background:var(--off);}
+.sidebar-block{margin-bottom:2.5rem;}
+.sidebar-label{font-family:'JetBrains Mono',monospace;font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:.75rem;}
+.sidebar-title{font-family:'Epilogue',sans-serif;font-size:1rem;font-weight:800;letter-spacing:-.02em;margin-bottom:.5rem;}
+.sidebar-body{font-size:.82rem;color:var(--muted);line-height:1.7;margin-bottom:1rem;}
+.sidebar-cta{font-family:'Epilogue',sans-serif;font-size:.82rem;font-weight:900;background:var(--ms-blue);color:#fff;border:none;padding:.75rem 1.25rem;text-decoration:none;display:block;text-align:center;transition:background .2s;}
+.sidebar-cta:hover{background:#0062b0;}
+.sidebar-divider{border:none;border-top:1px solid var(--border);margin:2rem 0;}
+
+/* BOTTOM NAV */
+.art-nav{display:flex;justify-content:space-between;align-items:center;padding:1.5rem 4rem;border-bottom:2px solid var(--ink);}
+.art-nav a{font-family:'Epilogue',sans-serif;font-size:.88rem;font-weight:900;color:var(--ms-blue);text-decoration:none;}
+.art-nav a:hover{text-decoration:underline;}
+
+/* CTA STRIP */
+.page-cta{display:grid;grid-template-columns:1fr 1fr;border-top:2px solid var(--ink);}
+.cta-blue{background:var(--ms-blue);padding:5rem 4rem;display:flex;flex-direction:column;justify-content:center;}
+.cta-tag{font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.9);margin-bottom:1rem;}
+.cta-title{font-family:'Epilogue',sans-serif;font-size:clamp(2rem,3.5vw,3.5rem);font-weight:900;letter-spacing:-.04em;line-height:.95;color:#fff;margin-bottom:1rem;}
+.cta-title .serif{font-family:'Lora',serif;font-style:italic;font-weight:500;}
+.cta-sub{font-size:.95rem;color:rgba(255,255,255,.85);line-height:1.8;max-width:400px;margin-bottom:2rem;}
+.cta-actions{display:flex;flex-direction:column;gap:.75rem;}
+.cta-btn-solid{font-family:'Epilogue',sans-serif;font-size:.9rem;font-weight:900;background:#fff;color:var(--ms-blue);border:2px solid #fff;padding:.85rem 2rem;text-decoration:none;display:inline-block;transition:all .2s;text-align:center;}
+.cta-btn-solid:hover{background:var(--ms-yel);border-color:var(--ms-yel);color:var(--ink);}
+.cta-btn-outline{font-family:'Epilogue',sans-serif;font-size:.9rem;font-weight:900;background:transparent;color:#fff;border:2px solid rgba(255,255,255,.4);padding:.85rem 2rem;text-decoration:none;display:inline-block;transition:all .2s;text-align:center;}
+.cta-btn-outline:hover{border-color:#fff;background:rgba(255,255,255,.1);}
+.cta-right{background:var(--off);padding:5rem 4rem;display:flex;flex-direction:column;justify-content:center;}
+.cta-right-label{font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:1.5rem;}
+.contact-block{display:flex;flex-direction:column;gap:1.25rem;}
+.contact-line{display:flex;flex-direction:column;gap:.25rem;}
+.contact-line-label{font-family:'JetBrains Mono',monospace;font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);}
+.contact-line-val{font-family:'Epilogue',sans-serif;font-size:1.1rem;font-weight:800;color:var(--ink);}
+.contact-line-val a{color:var(--ms-blue);text-decoration:none;}
+.contact-line-val a:hover{text-decoration:underline;}
+
+footer{display:flex;align-items:center;justify-content:space-between;padding:1.5rem 4rem;border-top:2px solid var(--ink);}
+.f-copy-wrap{display:flex;flex-direction:column;gap:.2rem;}
+.f-logo{display:flex;align-items:center;gap:.65rem;}
+.f-name{font-family:'Epilogue',sans-serif;font-size:1rem;font-weight:900;letter-spacing:-.02em;}
+.f-name span{color:var(--ms-blue);}
+.f-copy{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.06em;color:#333;}
+.f-links{display:flex;gap:2rem;list-style:none;align-items:center;}
+.f-links a{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:#333;text-decoration:none;transition:color .2s;}
+.f-links a:hover{color:var(--ms-blue);}
+
+
+@media(max-width:1000px){
+  .nav-cta{display:none;}
+  .art-body{grid-template-columns:1fr;}
+  .art-content{border-right:none;border-bottom:2px solid var(--ink);padding:3rem 1.5rem;}
+  .art-sidebar{padding:2.5rem 1.5rem;}
+  .art-nav{padding:1.25rem 1.5rem;}
+  .page-cta{grid-template-columns:1fr;}
+  .cta-blue{padding:3rem 1.5rem;}
+  .cta-right{padding:3rem 1.5rem;}
+}
+@media(max-width:768px){
+  :root{--nav-h:58px;}
+  nav{padding:0 1.25rem;flex-wrap:wrap;}
+  .logo{padding:.85rem 0;}
+  .nav-links{display:none;width:100%;flex-direction:column;border-top:1px solid var(--border);}
+  .nav-links.nav-open{display:flex;background:#fff;}
+  .nav-links a{border-left:none;border-bottom:1px solid var(--border);padding:1rem 0;}
+  .nav-hamburger{display:block;background:none;border:none;font-size:1.4rem;cursor:pointer;padding:.5rem;color:var(--ink);margin-left:auto;}
+  .nav-cta{display:none !important;}
+  .nav-cta-mobile{display:none !important;}
+  .nav-cta-mobile.nav-open{display:block !important;width:100%;font-family:'Epilogue',sans-serif;font-size:.82rem;font-weight:900;background:var(--ms-blue);color:#fff;text-decoration:none;text-align:center;padding:1rem 1.25rem;border-top:2px solid var(--ink);}
+  .art-hero{padding:calc(var(--nav-h) + 2.5rem) 1.5rem 3rem;}
+  footer{flex-direction:column;align-items:flex-start;gap:1.25rem;padding:1.5rem;}
+  .f-links{flex-wrap:wrap;gap:1rem;}
+}
+
+/* COOKIE NOTICE */
+#cookie-bar{position:fixed;bottom:0;left:0;right:0;z-index:9999;background:#0d0d0d;border-top:2px solid #0F4C81;padding:.85rem 2rem;display:flex;align-items:center;justify-content:space-between;gap:1.5rem;flex-wrap:wrap;font-family:'Epilogue',sans-serif;font-size:.82rem;color:#ccc;transition:transform .3s;}
+#cookie-bar.hidden{transform:translateY(100%);}
+#cookie-bar a{color:#0F4C81;text-decoration:none;}
+#cookie-bar a:hover{text-decoration:underline;}
+#cookie-bar-accept{font-family:'Epilogue',sans-serif;font-size:.82rem;font-weight:900;background:#0F4C81;color:#fff;border:none;padding:.5rem 1.25rem;cursor:pointer;white-space:nowrap;transition:background .2s;}
+#cookie-bar-accept:hover{background:#0062b0;}
+@media(max-width:600px){#cookie-bar{flex-direction:column;align-items:flex-start;padding:1rem 1.25rem;}}
+</style>
+<style id="consent-css">
+#cookie-bar{position:fixed;bottom:0;left:0;right:0;z-index:9999;background:#0d0d0d;border-top:2px solid #0F4C81;padding:.85rem 2rem;display:flex;align-items:center;justify-content:space-between;gap:1rem 1.5rem;flex-wrap:wrap;font-family:'Epilogue',sans-serif;font-size:.82rem;line-height:1.5;color:#ddd;transform:none;}
+#cookie-bar.hidden{display:none;}
+#cookie-bar a{color:#9cc3ea;text-decoration:underline;}
+#cookie-bar .cb-actions{display:flex;gap:.6rem;flex-shrink:0;}
+#cookie-bar button{font-family:'Epilogue',sans-serif;font-size:.82rem;font-weight:900;border:2px solid #fff;padding:.5rem 1.25rem;cursor:pointer;white-space:nowrap;}
+#cookie-bar-reject{background:transparent;color:#fff;}
+#cookie-bar-accept{background:#fff;color:#0d0d0d;}
+#cookie-bar button:hover{background:#0F4C81;border-color:#0F4C81;color:#fff;}
+#cookie-bar button:focus-visible,#cookie-bar a:focus-visible{outline:2px solid #F2A900;outline-offset:2px;}
+@media(max-width:600px){#cookie-bar{padding:1rem 1.25rem;}#cookie-bar .cb-actions{width:100%;}#cookie-bar button{flex:1;}}
+</style>
+<style id="nav-fit">
+/* Menu fit: compact spacing on laptops, tap-to-open menu on tablets */
+@media(min-width:1201px) and (max-width:1500px){
+  nav{padding-left:2rem;}
+  .nav-links a{padding:1.5rem .8rem;letter-spacing:.1em;}
+  .nav-cta{padding:.9rem 1.25rem;white-space:normal;max-width:14rem;line-height:1.25;align-self:stretch;display:flex;align-items:center;}
+}
+@media(min-width:769px) and (max-width:1200px){
+  nav{padding:0 1.25rem 0 2rem;flex-wrap:wrap;}
+  .nav-links{display:none;width:100%;flex-direction:column;border-top:1px solid var(--border);}
+  .nav-links.nav-open{display:flex;background:#fff;}
+  .nav-links a{border-left:none;border-bottom:1px solid var(--border);padding:1rem 0;}
+  .nav-hamburger{display:block;background:none;border:none;font-size:1.4rem;cursor:pointer;padding:.5rem;color:var(--ink);margin-left:auto;}
+  .nav-cta{display:none !important;}
+  .nav-cta-mobile{display:none !important;}
+  .nav-cta-mobile.nav-open{display:block !important;width:100%;font-family:'Epilogue',sans-serif;font-size:.82rem;font-weight:900;background:var(--ms-blue);color:#fff;text-decoration:none;text-align:center;padding:1rem 1.25rem;border-top:2px solid var(--ink);}
+}
+/* Footer: stack and wrap links below wide desktop so none are cut off */
+@media(min-width:769px) and (max-width:1500px){
+  footer{flex-direction:column;align-items:flex-start;gap:1.25rem;}
+  .f-links{flex-wrap:wrap;gap:.9rem 1.75rem;}
+}
+/* Article layout: stop wide content pushing the sidebar off screen */
+@media(min-width:1001px){
+  .art-body{grid-template-columns:minmax(0,1fr) 280px;}
+}
+/* Keep the menu button beside the logo when the menu is open */
+@media(max-width:1200px){
+  .nav-hamburger{order:1;}
+  .nav-links{order:2;}
+  .nav-cta-mobile{order:3;}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="logo" href="../index.html">
+    <svg width="36" height="28" viewBox="0 0 36 28" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="0,28 6,28 7,17 6,16 0,16" fill="#0F4C81"/>
+      <polygon points="9,28 15,28 16,12 15,11 9,11" fill="#D83B01"/>
+      <polygon points="18,28 24,28 25,7 24,6 18,6" fill="#2F6B00"/>
+      <polygon points="27,28 33,28 34,1 33,0 27,0" fill="#F2A900"/>
+    </svg>
+    <div class="logo-name">Adjona <span>Technology</span></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="../index.html#approach">About</a></li>
+    <li><a href="../index.html#services">Services</a></li>
+    <li><a href="../projects-support.html">Projects &amp; Support</a></li>
+    <li><a href="../packages.html">Solution Packages</a></li>
+    <li><a href="../index.html#certs">Credentials</a></li>
+    <li><a href="../resources.html">Resources</a></li>
+    <li><a href="../insights.html" class="active">Insights</a></li>
+    <li><a href="../enquiry.html">Contact Us</a></li>
+  </ul>
+  <a href="https://outlook.office.com/book/AdjonaTechnologyLimited1@adjona.com/s/ElOd0P60CEiQxQcnIYWXWw2" target="_blank" rel="noopener noreferrer" class="nav-cta">Book an Introductory Conversation</a>
+  <button class="nav-hamburger" aria-label="Menu" onclick="
+    var nav=this.closest('nav');
+    nav.querySelector('.nav-links').classList.toggle('nav-open');
+    nav.querySelector('.nav-cta-mobile').classList.toggle('nav-open');
+  ">&#9776;</button>
+  <a href="https://outlook.office.com/book/AdjonaTechnologyLimited1@adjona.com/s/ElOd0P60CEiQxQcnIYWXWw2" target="_blank" rel="noopener noreferrer" class="nav-cta-mobile">Book an Introductory Conversation</a>
+</nav>
+
+<section class="art-hero">
+  <div class="art-hero-inner">
+    <div class="page-breadcrumb"><a href="../index.html">Adjona Technology</a> &nbsp;/&nbsp; <a href="../insights.html">Insights</a> &nbsp;/&nbsp; When your technology supplier disappears</div>
+    <span class="art-tag">Operational Resilience &middot; Charities &middot; Care Providers &middot; Governance</span>
+    <h1>When your technology supplier <span class="serif">disappears</span></h1>
+    <div class="art-meta">
+      <div class="art-meta-item">29 October 2026</div>
+      <div class="art-meta-item">6 min read</div>
+      <div class="art-meta-item">Adjona Technology</div>
+    </div>
+  </div>
+</section>
+
+<div class="four-stripe">
+  <div class="fs b"></div><div class="fs r"></div><div class="fs g"></div><div class="fs y"></div>
+</div>
+
+<div class="art-body">
+  <article class="art-content">
+
+    <p>A technology provider's collapse has disrupted online services at hundreds of GP practices across England and Wales. The incident highlights a risk that charities, care providers and smaller organisations cannot afford to overlook: what happens when a critical supplier can no longer deliver?</p>
+
+    <h2>When a supplier failure becomes a service failure</h2>
+
+    <p>In October 2026, hundreds of GP practices experienced disruption to their websites and online patient services after technology supplier Silicon Practice, operated by Schappit Ltd, entered administration. The affected services included practice websites, online consultation facilities and chatbot functions. Patients were directed to alternative contact arrangements, including telephone and in-person access, while practices worked to maintain services.</p>
+
+    <p>The incident is not being reported as a cyberattack. It demonstrates a different but equally important category of operational risk: dependence on an external technology provider whose services may become unavailable through business failure.</p>
+
+    <p>For organisations increasingly reliant on hosted websites, cloud platforms, booking systems, case management applications and outsourced IT services, the implications extend well beyond healthcare.</p>
+
+    <div class="callout yel">A system can be technically reliable and still represent a significant business continuity risk. The question is not simply whether a supplier operates securely and maintains backups. It is whether the organisation can continue delivering essential services if that supplier suddenly stops operating.</div>
+
+    <h2>Five questions worth answering before a supplier fails</h2>
+
+    <h3>1. Who actually controls your critical systems?</h3>
+
+    <p>An organisation may pay for a website, booking platform or managed service without controlling the infrastructure needed to keep it running.</p>
+
+    <p>Consider who holds administrative access to the domain registrar, DNS configuration, hosting environment, cloud tenant and associated service accounts. If a supplier becomes unavailable, can an authorised representative of the organisation access these systems independently?</p>
+
+    <p>Control should not depend entirely on the goodwill, availability or continued existence of one provider. For critical systems, organisations should establish clear ownership, maintain appropriately protected emergency administrative access and document how control could be transferred.</p>
+
+    <h3>2. Could you retrieve your data and move to another provider?</h3>
+
+    <p>Having a contractual right to your data is not the same as being able to retrieve and use it when necessary. An organisation may have access to reports or downloadable files but lack the configuration information, supporting records or documentation needed to reconstruct the service elsewhere.</p>
+
+    <p>It is worth establishing:</p>
+    <ul>
+      <li>What data can be exported, in which formats and how frequently?</li>
+      <li>Who is responsible for maintaining recoverable copies?</li>
+      <li>Would the exported information be usable by a replacement provider?</li>
+      <li>Are configuration settings, integrations and dependencies documented?</li>
+      <li>What happens to data access and retention if the supplier ceases trading?</li>
+    </ul>
+
+    <p>These questions are particularly important where systems hold personal information, case records, care documentation or other operationally sensitive data. A backup has limited value if nobody knows how to restore it into a working service.</p>
+
+    <h3>3. What happens to people who depend on the service?</h3>
+
+    <p>The consequences of a technology outage are not limited to unavailable software. When an online service fails, people may be unable to submit requests, obtain information or communicate with the organisation. Staff may need to manage additional telephone calls, process requests manually or explain delays.</p>
+
+    <p>For a charity, this could mean beneficiaries losing access to referral forms or support requests. For a care provider, it could affect staff access to operational information. For a small business, it could prevent customers from making enquiries or bookings.</p>
+
+    <p>A continuity plan should therefore identify the service being delivered, not just the technology supporting it. Can the organisation provide an alternative contact method? Is there a manual process? Who informs service users? How will additional work be managed? The objective is to preserve essential service delivery, even when the preferred technology is unavailable.</p>
+
+    <h3>4. Does your contract cover an orderly exit?</h3>
+
+    <p>Supplier contracts are often reviewed for costs, service levels, security obligations and renewal dates. Exit arrangements deserve similar attention.</p>
+
+    <p>Before relying on a supplier for an essential service, organisations should understand what assistance would be available if they needed to change providers, what data would be returned and whether migration support is included. Important considerations include notice periods, data export rights, subcontractor dependencies, termination arrangements and the ownership of technical assets.</p>
+
+    <p>However, contractual protections have limits. A supplier facing insolvency may not have the resources to provide the assistance originally promised. An effective exit plan should therefore avoid relying exclusively on the supplier's ability to cooperate at the point of failure.</p>
+
+    <h3>5. Have you tested the arrangements?</h3>
+
+    <p>A business continuity document may describe alternative processes without establishing whether they would work. A straightforward exercise can reveal significant gaps.</p>
+
+    <p>Ask the relevant staff to consider a scenario in which a critical supplier becomes unavailable tomorrow morning. Who would be contacted first? Could administrators access the necessary systems? Where are the backups? Could staff explain alternative arrangements to service users? What would be required to restore the service through another provider?</p>
+
+    <p>The exercise does not have to be elaborate. Even a short, structured review can identify undocumented dependencies, unclear responsibilities and unrealistic assumptions. The outcome should be a manageable action list, with named owners and agreed review dates.</p>
+
+    <h2>What trustees and managers should expect to see</h2>
+
+    <p>For charities and other organisations with limited internal IT resources, supplier resilience should form part of ordinary governance rather than becoming a separate technical exercise.</p>
+
+    <p>A useful starting point is a register of critical technology suppliers, identifying the services each provides, the organisation's dependency on them and the arrangements available if those services are disrupted. Trustees and senior managers do not need to understand every technical component. They should, however, be able to obtain clear answers about ownership, recoverability, alternative processes and accountability. For higher-risk services, those answers should be supported by evidence rather than informal assurances.</p>
+
+    <div class="callout grn">The aim is proportionate oversight. A small charity does not need the same continuity infrastructure as a large healthcare organisation, but it still needs to know whether essential services can continue.</div>
+
+    <h2>Business continuity is about retaining control</h2>
+
+    <p>The Silicon Practice incident is a timely reminder that operational resilience depends on more than cybersecurity or system availability. Supplier financial difficulties, commercial disputes, unexpected closures and loss of technical support can all threaten access to essential services.</p>
+
+    <p>Organisations cannot eliminate every supplier risk. They can, however, reduce their exposure by understanding their dependencies, retaining appropriate control over important assets, maintaining usable data and preparing alternative ways of working.</p>
+
+    <p>The most useful question to ask today may be a simple one: if this supplier disappeared tomorrow, what could we still operate ourselves? That is where a practical business continuity review should begin.</p>
+
+    <h2>How Adjona can help</h2>
+
+    <p>Adjona Technology helps charities, care providers and smaller organisations review Microsoft 365 governance, access arrangements, information management and operational processes. Where technology dependencies create risks, the starting point is to establish what the organisation controls, what evidence is available and which practical improvements should take priority.</p>
+
+    <p><a href="../enquiry.html" style="color:var(--ms-blue);font-weight:700;">Contact Adjona</a> to discuss a defined assessment, or <a href="../index.html#services" style="color:var(--ms-blue);font-weight:700;">explore Adjona's services</a>.</p>
+
+    <div class="sources">
+      <p><strong>Sources</strong></p>
+      <p>BBC News: Hundreds of GP practices lose online services after collapse of tech firm Silicon Practice, 29 October 2026.</p>
+      <p>NHS West and North London: Silicon Practice digital provider goes into administration, 28 October 2026.</p>
+      <p>Pulse Today: About 500 GP practices affected by website outage, NHS England confirms, 29 October 2026.</p>
+    </div>
+
+  </article>
+
+  <aside class="art-sidebar">
+    <div class="sidebar-block">
+      <div class="sidebar-label">About Adjona</div>
+      <div class="sidebar-body">Adjona Technology is a Microsoft AI Cloud Partner helping charities, care providers, and smaller organisations secure Microsoft 365, improve governance, and adopt AI responsibly.</div>
+    </div>
+    <hr class="sidebar-divider">
+    <div class="sidebar-block">
+      <div class="sidebar-label">Free introductory conversation</div>
+      <div class="sidebar-title">Have a question about your setup?</div>
+      <div class="sidebar-body">Book a free 30-minute call. No obligation. Practical advice you can act on.</div>
+      <a href="https://outlook.office.com/book/AdjonaTechnologyLimited1@adjona.com/s/ElOd0P60CEiQxQcnIYWXWw2" target="_blank" rel="noopener noreferrer" class="sidebar-cta">Book a Free Call &rarr;</a>
+    </div>
+    <hr class="sidebar-divider">
+    <div class="sidebar-block">
+      <div class="sidebar-label">Related</div>
+      <div class="sidebar-body"><a href="supplier-resilience-charity.html" style="color:var(--ms-blue);text-decoration:none;font-weight:700;">When a critical supplier goes offline: a charity's guide to operational resilience &rarr;</a></div>
+      <div class="sidebar-body"><a href="outsourced-it-supplier-governance.html" style="color:var(--ms-blue);text-decoration:none;font-weight:700;">Outsourced IT and supplier governance &rarr;</a></div>
+      <div class="sidebar-body"><a href="microsoft-365-operational-resilience-blueprint.html" style="color:var(--ms-blue);text-decoration:none;font-weight:700;">The Microsoft 365 operational resilience blueprint &rarr;</a></div>
+    </div>
+  </aside>
+</div>
+
+<div class="art-nav">
+  <a href="../insights.html">&larr; All Insights</a>
+  <span></span>
+</div>
+
+<div class="page-cta">
+  <div class="cta-blue">
+    <div class="cta-tag">Free Introductory Conversation</div>
+    <h2 class="cta-title">Have a question <span class="serif">about your setup?</span></h2>
+    <p class="cta-sub">Book a free 30-minute conversation. No obligation, no hard sell — just practical advice on what we find and what it means for your organisation.</p>
+    <div class="cta-actions">
+      <a href="https://outlook.office.com/book/AdjonaTechnologyLimited1@adjona.com/s/ElOd0P60CEiQxQcnIYWXWw2" target="_blank" rel="noopener noreferrer" class="cta-btn-solid">Book a Free Introductory Conversation</a>
+      <a href="../enquiry.html" class="cta-btn-outline">Send an Enquiry &rarr;</a>
+    </div>
+  </div>
+  <div class="cta-right">
+    <div class="cta-right-label">Get in touch</div>
+    <div class="contact-block">
+      <div class="contact-line">
+        <div class="contact-line-label">Email</div>
+        <div class="contact-line-val"><a href="mailto:info@adjona.com">info@adjona.com</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer style="padding-bottom:5rem;">
+  <div class="f-logo">
+    <svg width="28" height="22" viewBox="0 0 36 28" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="0,28 6,28 7,17 6,16 0,16" fill="#0F4C81"/>
+      <polygon points="9,28 15,28 16,12 15,11 9,11" fill="#D83B01"/>
+      <polygon points="18,28 24,28 25,7 24,6 18,6" fill="#2F6B00"/>
+      <polygon points="27,28 33,28 34,1 33,0 27,0" fill="#F2A900"/>
+    </svg>
+    <div class="f-name">Adjona <span>Technology</span> Limited</div>
+  </div>
+  <div class="f-copy-wrap">
+    <div class="f-copy">© 2026 Adjona Technology Limited · Registered in England &amp; Wales · Co. No. 05007410 · 5th Floor, 167-169 Great Portland Street, London W1W 5PF</div>
+    <div style="margin-top:.4rem;">
+      <a href="https://marketplace.microsoft.com/en-gb/partners/c4ead6cf-d6a0-4973-8bf7-f3e644e195ae/overview" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:.5rem;text-decoration:none;">
+        <svg width="14" height="14" viewBox="0 0 23 23" xmlns="http://www.w3.org/2000/svg"><rect x="1" y="1" width="10" height="10" fill="#f25022"/><rect x="12" y="1" width="10" height="10" fill="#7fba00"/><rect x="1" y="12" width="10" height="10" fill="#00a4ef"/><rect x="12" y="12" width="10" height="10" fill="#ffb900"/></svg>
+        <span style="font-family:'JetBrains Mono',monospace;font-size:.58rem;letter-spacing:.08em;color:#444;">View Adjona's Microsoft partner profile</span>
+      </a>
+    </div>
+  </div>
+  <ul class="f-links" style="align-items:center;">
+    <li><a href="https://www.linkedin.com/company/adjona-technology-limited/" target="_blank" rel="noopener noreferrer" style="display:flex;align-items:center;gap:.4rem;"><img src="https://adjona.com/images/li-icon.png" width="16" height="16" alt="LinkedIn" style="display:block;border:0;vertical-align:middle;"> LinkedIn</a></li>
+    <li><a href="https://www.youtube.com/@AdjonaTechnology" target="_blank" rel="noopener noreferrer" style="display:flex;align-items:center;gap:.4rem;"><img src="https://adjona.com/images/yt-icon.png" width="16" height="16" alt="YouTube" style="display:block;border:0;vertical-align:middle;"> YouTube</a></li>
+    <li><a href="https://www.reddit.com/user/AdjonaTech/" target="_blank" rel="noopener noreferrer" style="display:flex;align-items:center;gap:.4rem;"><img src="https://adjona.com/images/rd-icon.png" width="16" height="16" alt="Reddit" style="display:block;border:0;vertical-align:middle;"> Reddit</a></li>
+    <li><a href="https://www.tiktok.com/@adjonatechnology" target="_blank" rel="noopener noreferrer" style="display:flex;align-items:center;gap:.4rem;"><img src="https://adjona.com/images/tt-icon.png" width="16" height="16" alt="TikTok" style="display:block;border:0;vertical-align:middle;"> TikTok</a></li>
+    <li><a href="https://www.instagram.com/adjonatechnology" target="_blank" rel="noopener noreferrer" style="display:flex;align-items:center;gap:.4rem;"><img src="https://adjona.com/images/ig-icon.png" width="16" height="16" alt="Instagram" style="display:block;border:0;vertical-align:middle;"> Instagram</a></li>
+    <li><a href="https://open.spotify.com/show/0342WnO8JbToOj0zyzxpsn" target="_blank" rel="noopener noreferrer" style="display:flex;align-items:center;gap:.4rem;"><img src="https://adjona.com/images/sp-icon.png" width="16" height="16" alt="Spotify" style="display:block;border:0;vertical-align:middle;"> Spotify</a></li>
+    <li><a href="../events.html">Events</a></li>
+    <li><a href="https://outlook.office.com/book/AdjonaTechnologyLimited1@adjona.com/s/ElOd0P60CEiQxQcnIYWXWw2" target="_blank" rel="noopener noreferrer">Book a Call</a></li>
+    <li><a href="../adjona-privacy.html">Privacy Policy</a></li>
+    <li><a href="#" onclick="return adjonaCookieSettings();">Cookie settings</a></li>
+    <li><a href="../adjona-terms.html">Terms &amp; Conditions</a></li>
+    <li><a href="mailto:info@adjona.com">info@adjona.com</a></li>
+  </ul>
+</footer>
+
+
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+  document.querySelectorAll('.nav-links a,.nav-cta-mobile').forEach(function(link){
+    link.addEventListener('click',function(){
+      var nav=document.querySelector('nav');
+      nav.querySelector('.nav-links').classList.remove('nav-open');
+      nav.querySelector('.nav-cta-mobile').classList.remove('nav-open');
+    });
+  });
+});
+</script>
+
+<!-- Cookie choices -->
+<div id="cookie-bar" class="hidden" role="region" aria-label="Cookie choices">
+  <span>We use optional analytics cookies (Google Analytics and Microsoft Clarity) to understand how visitors use this site. They are only set if you choose Accept. See our <a href="/adjona-privacy.html#cookies">privacy and cookie policy</a>.</span>
+  <div class="cb-actions">
+    <button type="button" id="cookie-bar-reject">Reject</button>
+    <button type="button" id="cookie-bar-accept">Accept</button>
+  </div>
+</div>
+<script>
+(function(){
+  var KEY='adjona_consent', bar=document.getElementById('cookie-bar');
+  function getChoice(){try{return localStorage.getItem(KEY);}catch(e){return null;}}
+  function saveChoice(v){try{localStorage.setItem(KEY,v);localStorage.removeItem('adjona_cookie_ok');}catch(e){}}
+  function applyChoice(v){
+    var state=(v==='granted')?'granted':'denied';
+    if(typeof window.gtag==='function'){window.gtag('consent','update',{'analytics_storage':state});}
+    if(typeof window.clarity==='function'){window.clarity('consentv2',{ad_Storage:'denied',analytics_Storage:state});}
+  }
+  function choose(v){saveChoice(v);applyChoice(v);bar.classList.add('hidden');}
+  var current=getChoice();
+  if(current==='granted'||current==='denied'){applyChoice(current);}else{bar.classList.remove('hidden');}
+  document.getElementById('cookie-bar-accept').addEventListener('click',function(){choose('granted');});
+  document.getElementById('cookie-bar-reject').addEventListener('click',function(){choose('denied');});
+  window.adjonaCookieSettings=function(){bar.classList.remove('hidden');document.getElementById('cookie-bar-accept').focus();return false;};
+})();
+</script>
+
+</body>
+</html>
