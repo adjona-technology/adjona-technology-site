@@ -80,7 +80,7 @@
   </url>
   <url>
     <loc>https://adjona.com/insights.html</loc>
-    <lastmod>2026-06-12</lastmod>
+    <lastmod>2026-11-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -225,6 +225,18 @@
   <url>
     <loc>https://adjona.com/insights/microsoft-365-dynamics-365-business-central.html</loc>
     <lastmod>2026-10-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://adjona.com/insights/technology-supplier-failure-continuity.html</loc>
+    <lastmod>2026-10-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://adjona.com/insights/microsoft-365-charities-licences-security-2026.html</loc>
+    <lastmod>2026-11-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
