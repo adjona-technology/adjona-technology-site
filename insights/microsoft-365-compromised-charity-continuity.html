@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Consent Mode v2 -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied'
+  });
+  try{ if(localStorage.getItem('adjona_consent')==='granted'){ gtag('consent', 'update', {'analytics_storage': 'granted'}); } }catch(e){}
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BQNKT24TFT"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-BQNKT24TFT');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Microsoft 365 Compromised? Could Your Charity Keep Operating?</title>
+<meta name="description" content="Who decides, who reports, how administrators regain control, what can be recovered and how staff communicate. Six practical checks for charity trustees and managers.">
+<link rel="canonical" href="https://adjona.com/insights/X type="image/svg+xml" href="../favicon.svg">
+<link rel="icon" type="image/x-icon" href="../favicon.ico">
+<link rel="apple-touch-icon" sizes="192x192" href="../favicon-192.png">
+<meta property="og:title" content="If Your Microsoft 365 Account Were Compromised, Could Your Charity Keep Operating?">
+<meta property="og:description" content="Who decides, who reports, how administrators regain control, what can be recovered and how staff communicate. Six practical checks for charity trustees and managers.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://adjona.com/insights/microsoft-365-compromised-charity-continuity.html">
+<meta property="og:image" content="https://adjona.com/adjona-social-preview.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="If your Microsoft 365 account were compromised, could your charity keep operating?">
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;700;800;900&family=Lora:ital,wght@1,500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<!-- Clarity tracking code for https://adjona.com/ -->
+<script>
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "wmyh9800tx");
+</script>
+<style>
+:root{
+  --white:#ffffff;--off:#f5f5f0;--ink:#0d0d0d;
+  --ms-blue:#0F4C81;--ms-red:#D83B01;--ms-grn:#2F6B00;--ms-yel:#F2A900;
+  --muted:#444;--border:rgba(13,13,13,0.1);
+  --nav-h:62px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--white);color:var(--ink);font-family:'Epilogue',sans-serif;font-weight:400;overflow-x:hidden;}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:0 0 0 4rem;background:#fff;border-bottom:2px solid var(--ink);}
+.logo{display:flex;align-items:center;gap:.75rem;padding:1.1rem 0;text-decoration:none;}
+.logo-name{font-family:'Epilogue',sans-serif;font-size:1.1rem;font-weight:900;letter-spacing:-.02em;white-space:nowrap;color:var(--ink);}
+.logo-name span{color:var(--ms-blue);}
+.nav-links{display:flex;list-style:none;}
+.nav-links a{font-family:'JetBrains Mono',monospace;font-size:.63rem;letter-spacing:.14em;text-transform:uppercase;color:#333;text-decoration:none;padding:1.5rem 1.4rem;border-left:2px solid var(--border);display:block;transition:color .2s,background .2s;}
+.nav-links a:hover{color:var(--ms-blue);background:rgba(0,120,212,.04);}
+.nav-links a.active{color:var(--ms-blue);}
+.nav-cta{font-family:'Epilogue',sans-serif;font-size:.88rem;font-weight:900;background:var(--ms-blue);color:#fff;text-decoration:none;border-left:2px solid var(--ink);padding:1.5rem 2.2rem;cursor:pointer;transition:background .2s;display:block;}
+.nav-cta:hover{background:#0062b0;}
+.nav-hamburger{display:none;}
+.nav-cta-mobile{display:none;}
+
+.four-stripe{display:grid;grid-template-columns:repeat(4,1fr);height:6px;}
+.fs.b{background:var(--ms-blue);}.fs.r{background:var(--ms-red);}.fs.g{background:var(--ms-grn);}.fs.y{background:var(--ms-yel);}
+
+.art-hero{padding:calc(var(--nav-h) + 5rem) 4rem 5rem;border-bottom:2px solid var(--ink);}
+.art-hero-inner{max-width:860px;}
+.page-breadcrumb{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:1.5rem;}
+.page-breadcrumb a{color:var(--muted);text-decoration:none;}
+.page-breadcrumb a:hover{color:var(--ms-blue);}
+.art-tag{font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.2em;color:var(--ms-blue);margin-bottom:1.5rem;display:block;padding-left:2.25rem;position:relative;}
+.art-tag::before{content:'';width:28px;height:2px;background:var(--ms-blue);position:absolute;left:0;top:50%;transform:translateY(-50%);}
+.art-hero h1{font-family:'Epilogue',sans-serif;font-size:clamp(2.4rem,4.5vw,5rem);font-weight:900;line-height:.92;letter-spacing:-.04em;margin-bottom:2rem;}
+.art-hero h1 .serif{font-family:'Lora',serif;font-style:italic;font-weight:500;letter-spacing:-.02em;}
+.art-meta{display:flex;gap:2rem;flex-wrap:wrap;}
+.art-meta-item{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);}
+
+.art-body{display:grid;grid-template-columns:1fr 280px;gap:0;border-bottom:2px solid var(--ink);}
+.art-content{padding:4rem;border-right:2px solid var(--ink);}
+.art-content p{font-size:.95rem;line-height:1.9;color:var(--muted);margin-bottom:1.5rem;}
+.art-content h2{font-family:'Epilogue',sans-serif;font-size:1.35rem;font-weight:900;letter-spacing:-.02em;margin:2.5rem 0 .75rem;}
+.art-content h3{font-family:'Epilogue',sans-serif;font-size:1.05rem;font-weight:800;letter-spacing:-.01em;margin:2rem 0 .5rem;}
+.art-content ul,.art-content ol{padding-left:1.5rem;margin-bottom:1.5rem;}
+.art-content li{font-size:.95rem;line-height:1.8;color:var(--muted);margin-bottom:.35rem;}
+.art-content strong{color:var(--ink);font-weight:700;}
+.art-content .callout{padding:1.25rem 1.5rem;border-left:3px solid var(--ms-blue);background:#f0f5fb;margin:2rem 0;font-size:.9rem;line-height:1.8;color:#1a3a5e;}
+.art-content .callout.grn{border-color:var(--ms-grn);background:#f7fbf5;color:#2a4e1a;}
+.art-content .callout.yel{border-color:var(--ms-yel);background:#fffcf0;color:#6b4800;}
+
+.art-content .table-wrap{overflow-x:auto;margin:1.5rem 0 .75rem;border:2px solid var(--ink);}
+.art-content table{width:100%;border-collapse:collapse;font-size:.88rem;line-height:1.6;}
+.art-content th{font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;text-align:left;background:var(--off);color:var(--ink);padding:.75rem 1rem;border-bottom:2px solid var(--ink);}
+.art-content td{padding:.75rem 1rem;border-bottom:1px solid var(--border);color:var(--muted);vertical-align:top;}
+.art-content tr:last-child td{border-bottom:none;}
+.art-content td:first-child{color:var(--ink);font-weight:700;}
+.art-content .table-note{font-size:.8rem;font-style:italic;line-height:1.7;}
+.art-sidebar{padding:3rem 2rem;background:var(--off);}
+.sidebar-block{margin-bottom:2.5rem;}
+.sidebar-label{font-family:'JetBrains Mono',monospace;font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:.75rem;}
+.sidebar-title{font-family:'Epilogue',sans-serif;font-size:1rem;font-weight:800;letter-spacing:-.02em;margin-bottom:.5rem;}
+.sidebar-body{font-size:.82rem;color:var(--muted);line-height:1.7;margin-bottom:1rem;}
+.sidebar-cta{font-family:'Epilogue',sans-serif;font-size:.82rem;font-weight:900;background:var(--ms-blue);color:#fff;border:none;padding:.75rem 1.25rem;text-decoration:none;display:block;text-align:center;transition:background .2s;}
+.sidebar-cta:hover{background:#0062b0;}
+.sidebar-divider{border:none;border-top:1px solid var(--border);margin:2rem 0;}
+
+.art-nav{display:flex;justify-content:space-between;align-items:center;padding:1.5rem 4rem;border-bottom:2px solid var(--ink);}
+.art-nav a{font-family:'Epilogue',sans-serif;font-size:.88rem;font-weight:900;color:var(--ms-blue);text-decoration:none;}
+.art-nav a:hover{text-decoration:underline;}
+
+.page-cta{display:grid;grid-template-columns:1fr 1fr;border-top:2px solid var(--ink);}
+.cta-blue{background:var(--ms-blue);padding:5rem 4rem;display:flex;flex-direction:column;justify-content:center;}
+.cta-tag{font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.9);margin-bottom:1rem;}
+.cta-title{font-family:'Epilogue',sans-serif;font-size:clamp(2rem,3.5vw,3.5rem);font-weight:900;letter-spacing:-.04em;line-height:.95;color:#fff;margin-bottom:1rem;}
+.cta-title .serif{font-family:'Lora',serif;font-style:italic;font-weight:500;}
+.cta-sub{font-size:.95rem;color:rgba(255,255,255,.85);line-height:1.8;max-width:400px;margin-bottom:2rem;}
+.cta-actions{display:flex;flex-direction:column;gap:.75rem;}
+.cta-btn-solid{font-family:'Epilogue',sans-serif;font-size:.9rem;font-weight:900;background:#fff;color:var(--ms-blue);border:2px solid #fff;padding:.85rem 2rem;text-decoration:none;display:inline-block;transition:all .2s;text-align:center;}
+.cta-btn-solid:hover{background:var(--ms-yel);border-color:var(--ms-yel);color:var(--ink);}
+.cta-btn-outline{font-family:'Epilogue',sans-serif;font-size:.9rem;font-weight:900;background:transparent;color:#fff;border:2px solid rgba(255,255,255,.4);padding:.85rem 2rem;text-decoration:none;display:inline-block;transition:all .2s;text-align:center;}
+.cta-btn-outline:hover{border-color:#fff;background:rgba(255,255,255,.1);}
+.cta-right{background:var(--off);padding:5rem 4rem;display:flex;flex-direction:column;justify-content:center;}
+.cta-right-label{font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:1.5rem;}
+.contact-block{display:flex;flex-direction:column;gap:1.25rem;}
+.contact-line{display:flex;flex-direction:column;gap:.25rem;}
+.contact-line-label{font-family:'JetBrains Mono',monospace;font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);}
+.contact-line-val{font-family:'Epilogue',sans-serif;font-size:1.1rem;font-weight:800;color:var(--ink);}
+.contact-line-val a{color:var(--ms-blue);text-decoration:none;}
+.contact-line-val a:hover{text-decoration:underline;}
+
+footer{display:flex;align-items:center;justify-content:space-between;padding:1.5rem 4rem;border-top:2px solid var(--ink);}
+.f-copy-wrap{display:flex;flex-direction:column;gap:.2rem;}
+.f-logo{display:flex;align-items:center;gap:.65rem;}
+.f-name{font-family:'Epilogue',sans-serif;font-size:1rem;font-weight:900;letter-spacing:-.02em;}
+.f-name span{color:var(--ms-blue);}
+.f-copy{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.06em;color:#333;}
+.f-links{display:flex;gap:2rem;list-style:none;align-items:center;}
+.f-links a{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:#333;text-decoration:none;transition:color .2s;}
+.f-links a:hover{color:var(--ms-blue);}
+
+
+@media(max-width:1000px){
+  .nav-cta{display:none;}
+  .art-body{grid-template-columns:1fr;}
+  .art-content{border-right:none;border-bottom:2px solid var(--ink);padding:3rem 1.5rem;}
+  .art-sidebar{padding:2.5rem 1.5rem;}
+  .art-nav{padding:1.25rem 1.5rem;}
+  .page-cta{grid-template-columns:1fr;}
+  .cta-blue{padding:3rem 1.5rem;}
+  .cta-right{padding:3rem 1.5rem;}
+}
+@media(max-width:768px){
+  :root{--nav-h:58px;}
+  nav{padding:0 1.25rem;flex-wrap:wrap;}
+  .logo{padding:.85rem 0;}
+  .nav-links{display:none;width:100%;flex-direction:column;border-top:1px solid var(--border);}
+  .nav-links.nav-open{display:flex;background:#fff;}
+  .nav-links a{border-left:none;border-bottom:1px solid var(--border);padding:1rem 0;}
+  .nav-hamburger{display:block;background:none;border:none;font-size:1.4rem;cursor:pointer;padding:.5rem;color:var(--ink);margin-left:auto;}
+  .nav-cta{display:none !important;}
+  .nav-cta-mobile{display:none !important;}
+  .nav-cta-mobile.nav-open{display:block !important;width:100%;font-family:'Epilogue',sans-serif;font-size:.82rem;font-weight:900;background:var(--ms-blue);color:#fff;text-decoration:none;text-align:center;padding:1rem 1.25rem;border-top:2px solid var(--ink);}
+  .art-hero{padding:calc(var(--nav-h) + 2.5rem) 1.5rem 3rem;}
+  footer{flex-direction:column;align-items:flex-start;gap:1.25rem;padding:1.5rem;}
+  .f-links{flex-wrap:wrap;gap:1rem;}
+}
+
+/* COOKIE NOTICE */
+#cookie-bar{position:fixed;bottom:0;left:0;right:0;z-index:9999;background:#0d0d0d;border-top:2px solid #0F4C81;padding:.85rem 2rem;display:flex;align-items:center;justify-content:space-between;gap:1.5rem;flex-wrap:wrap;font-family:'Epilogue',sans-serif;font-size:.82rem;color:#ccc;transition:transform .3s;}
+#cookie-bar.hidden{transform:translateY(100%);}
+#cookie-bar a{color:#0F4C81;text-decoration:none;}
+#cookie-bar a:hover{text-decoration:underline;}
+#cookie-bar-accept{font-family:'Epilogue',sans-serif;font-size:.82rem;font-weight:900;background:#0F4C81;color:#fff;border:none;padding:.5rem 1.25rem;cursor:pointer;white-space:nowrap;transition:background .2s;}
+#cookie-bar-accept:hover{background:#0062b0;}
+@media(max-width:600px){#cookie-bar{flex-direction:column;align-items:flex-start;padding:1rem 1.25rem;}}
+</style>
+  <link rel="alternate" type="application/rss+xml" title="Adjona Insights" href="https://adjona.com/rss.xml">
+<script>
+(function(){
+  if(typeof window.clarity !== 'function') return;
+  window.clarity("set", "page_type", "insight");
+  window.clarity("set", "topic", "resilience");
+})();
+</script>
+<style id="consent-css">
+#cookie-bar{position:fixed;bottom:0;left:0;right:0;z-index:9999;background:#0d0d0d;border-top:2px solid #0F4C81;padding:.85rem 2rem;display:flex;align-items:center;justify-content:space-between;gap:1rem 1.5rem;flex-wrap:wrap;font-family:'Epilogue',sans-serif;font-size:.82rem;line-height:1.5;color:#ddd;transform:none;}
+#cookie-bar.hidden{display:none;}
+#cookie-bar a{color:#9cc3ea;text-decoration:underline;}
+#cookie-bar .cb-actions{display:flex;gap:.6rem;flex-shrink:0;}
+#cookie-bar button{font-family:'Epilogue',sans-serif;font-size:.82rem;font-weight:900;border:2px solid #fff;padding:.5rem 1.25rem;cursor:pointer;white-space:nowrap;}
+#cookie-bar-reject{background:transparent;color:#fff;}
+#cookie-bar-accept{background:#fff;color:#0d0d0d;}
+#cookie-bar button:hover{background:#0F4C81;border-color:#0F4C81;color:#fff;}
+#cookie-bar button:focus-visible,#cookie-bar a:focus-visible{outline:2px solid #F2A900;outline-offset:2px;}
+@media(max-width:600px){#cookie-bar{padding:1rem 1.25rem;}#cookie-bar .cb-actions{width:100%;}#cookie-bar button{flex:1;}}
+</style>
+<style id="nav-fit">
+/* Menu fit: compact spacing on laptops, tap-to-open menu on tablets */
+@media(min-width:1201px) and (max-width:1500px){
+  nav{padding-left:2rem;}
+  .nav-links a{padding:1.5rem .8rem;letter-spacing:.1em;}
+  .nav-cta{padding:.9rem 1.25rem;white-space:normal;max-width:14rem;line-height:1.25;align-self:stretch;display:flex;align-items:center;}
+}
+@media(min-width:769px) and (max-width:1200px){
+  nav{padding:0 1.25rem 0 2rem;flex-wrap:wrap;}
+  .nav-links{display:none;width:100%;flex-direction:column;border-top:1px solid var(--border);}
+  .nav-links.nav-open{display:flex;background:#fff;}
+  .nav-links a{border-left:none;border-bottom:1px solid var(--border);padding:1rem 0;}
+  .nav-hamburger{display:block;background:none;border:none;font-size:1.4rem;cursor:pointer;padding:.5rem;color:var(--ink);margin-left:auto;}
+  .nav-cta{display:none !important;}
+  .nav-cta-mobile{display:none !important;}
+  .nav-cta-mobile.nav-open{display:block !important;width:100%;font-family:'Epilogue',sans-serif;font-size:.82rem;font-weight:900;background:var(--ms-blue);color:#fff;text-decoration:none;text-align:center;padding:1rem 1.25rem;border-top:2px solid var(--ink);}
+}
+/* Footer: stack and wrap links below wide desktop so none are cut off */
+@media(min-width:769px) and (max-width:1500px){
+  footer{flex-direction:column;align-items:flex-start;gap:1.25rem;}
+  .f-links{flex-wrap:wrap;gap:.9rem 1.75rem;}
+}
+/* Article layout: stop wide content pushing the sidebar off screen */
+@media(min-width:1001px){
+  .art-body{grid-template-columns:minmax(0,1fr) 280px;}
+}
+/* Keep the menu button beside the logo when the menu is open */
+@media(max-width:1200px){
+  .nav-hamburger{order:1;}
+  .nav-links{order:2;}
+  .nav-cta-mobile{order:3;}
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "If Your Microsoft 365 Account Were Compromised, Could Your Charity Keep Operating?",
+  "url": "https://adjona.com/insights/microsoft-365-compromised-charity-continuity.html",
+  "datePublished": "2026-11-09",
+  "publisher": {
+    "@id": "https://adjona.com/#organization"
+  },
+  "author": {
+    "@id": "https://adjona.com/#organization"
+  },
+  "inLanguage": "en-GB",
+  "description": "Who decides, who reports, how administrators regain control, what can be recovered and how staff communicate. Six practical checks for charity trustees and managers.",
+  "dateModified": "2026-11-09",
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://adjona.com/adjona-social-preview.png",
+    "width": 1200,
+    "height": 630
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://adjona.com/insights/microsoft-365-compromised-charity-continuity.html"
+  }
+}
+</script>
+</head>
+<body>
+
+<nav>
+  <a class="logo" href="../index.html">
+    <svg width="36" height="28" viewBox="0 0 36 28" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="0,28 6,28 7,17 6,16 0,16" fill="#0F4C81"/>
+      <polygon points="9,28 15,28 16,12 15,11 9,11" fill="#D83B01"/>
+      <polygon points="18,28 24,28 25,7 24,6 18,6" fill="#2F6B00"/>
+      <polygon points="27,28 33,28 34,1 33,0 27,0" fill="#F2A900"/>
+    </svg>
+    <div class="logo-name">Adjona <span>Technology</span></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="../index.html#approach">About</a></li>
+    <li><a href="../index.html#services">Services</a></li>
+    <li><a href="../additional-services.html">Projects &amp; Support</a></li>
+    <li><a href="../packages.html">Solution Packages</a></li>
+    <li><a href="../index.html#certs">Credentials</a></li>
+    <li><a href="../resources.html">Resources</a></li>
+    <li><a href="../insights.html" class="active">Insights</a></li>
+    <li><a href="../enquiry.html">Contact Us</a></li>
+  </ul>
+  <a onclick="if(typeof window.clarity==='function')window.clarity('event','book_call_click')" href="https://outlook.office.com/book/AdjonaTechnologyLimited1@adjona.com/s/ElOd0P60CEiQxQcnIYWXWw2" target="_blank" rel="noopener noreferrer" class="nav-cta">Book an Introductory Conversation</a>
+  <button class="nav-hamburger" aria-label="Menu" onclick="
+    var nav=this.closest('nav');
+    nav.querySelector('.nav-links').classList.toggle('nav-open');
+    nav.querySelector('.nav-cta-mobile').classList.toggle('nav-open');
+  ">&#9776;</button>
+  <a onclick="if(typeof window.clarity==='function')window.clarity('event','book_call_click')" href="https://outlook.office.com/book/AdjonaTechnologyLimited1@adjona.com/s/ElOd0P60CEiQxQcnIYWXWw2" target="_blank" rel="noopener noreferrer" class="nav-cta-mobile">Book an Introductory Conversation</a>
+</nav>
+
+<section class="art-hero">
+  <div class="art-hero-inner">
+    <div class="page-breadcrumb"><a href="../index.html">Adjona Technology</a> &nbsp;/&nbsp; <a href="../insights.html">Insights</a> &nbsp;/&nbsp; Could Your Charity Keep Operating?</div>
+    <span class="art-tag">Microsoft 365 &nbsp;&middot;&nbsp; Cyber Resilience &nbsp;&middot;&nbsp; Charity Governance</span>
+    <h1>If your Microsoft 365 account were compromised,<br><span class="serif">could your charity keep operating?</span></h1>
+    <div class="art-meta">
+      <div class="art-meta-item"><time datetime="2026-11">November 2026</time></div>
+      <div class="art-meta-item">10 min read</div>
+      <div class="art-meta-item">Adjona Technology</div>
+    </div>
+  </div>
+</section>
+
+<div class="four-stripe">
+  <div class="fs b"></div><div class="fs r"></div><div class="fs g"></div><div class="fs y"></div>
+</div>
+
+<div class="art-body">
+  <article class="art-content">
+
+    <p><strong>Cybersecurity is not just about preventing an attack. It is also about ensuring that essential services, information and decisions remain accessible when something goes wrong.</strong></p>
+    <p>For many charities and small organisations, Microsoft 365 has become central to daily operations. Outlook handles communication, Teams supports collaboration, SharePoint stores documents and OneDrive provides access to working files.</p>
+    <p>These services are convenient, interconnected and increasingly essential. But that dependence creates an important governance question:</p>
+    <p><strong>What would happen if your organisation suddenly lost access to Microsoft 365?</strong></p>
+    <p>A compromised administrator account, ransomware incident, malicious configuration change or serious service disruption could affect more than email. Staff might be unable to access essential records, communicate with colleagues, approve payments or coordinate services.</p>
+    <p>Having multi-factor authentication and security policies in place reduces risk. It does not remove the need to plan for disruption.</p>
+    <p>The UK's National Cyber Security Centre (NCSC) emphasises the importance of preparing for incidents, responding effectively and restoring services safely.</p>
+    <p>For charity trustees and senior managers, this is an operational resilience issue as much as a technical one.</p>
+
+    <h2>1. Who makes decisions during a cyber incident?</h2>
+    <p>Imagine that an administrator discovers suspicious activity in the organisation's Microsoft 365 environment.</p>
+    <p>An account may have been compromised. Files may have been accessed without authorisation. Email forwarding rules may have been created without approval.</p>
+    <p>Who decides whether accounts should be disabled, access restricted or systems temporarily taken offline?</p>
+    <p>In smaller organisations, these decisions may fall informally to whoever manages IT. That person may be a staff member with several other responsibilities or an external IT provider.</p>
+    <p>But technical responsibility and organisational accountability are not the same thing.</p>
+    <p>Management should establish:</p>
+    <ul>
+      <li>Who leads the response to a serious incident.</li>
+      <li>Who can authorise urgent containment measures.</li>
+      <li>Who contacts the IT provider, insurer or external specialists.</li>
+      <li>Who determines whether a personal data breach must be reported to the Information Commissioner's Office.</li>
+      <li>Who decides whether the incident must be reported to the Charity Commission as a serious incident.</li>
+      <li>Who reports cyber crime to Report Fraud and records the crime reference number.</li>
+      <li>Who communicates with trustees, staff and affected service users.</li>
+    </ul>
+    <p>Reporting obligations depend on the nature and seriousness of the incident. A personal data breach may require notification to the ICO within 72 hours, while serious incidents affecting a charity may also require reporting to the Charity Commission. Suspected cybercrime should be reported through the appropriate police reporting channel.</p>
+    <p>These responsibilities should be documented and accessible even when normal systems are unavailable.</p>
+    <p>Containment also needs to be thorough. Resetting a password does not, by itself, remove an attacker's active sessions, forwarding rules or app permissions. Microsoft's guidance on responding to a compromised account covers revoking sessions, reviewing registered multi-factor authentication methods, removing unapproved app permissions and administrator roles, and removing suspicious forwarding.</p>
+
+    <h2>2. Could administrators regain control?</h2>
+    <p>Microsoft 365 relies on Microsoft Entra ID for identity and access management.</p>
+    <p>If privileged accounts are compromised or inaccessible, an organisation may struggle to administer its environment precisely when urgent action is required.</p>
+    <p>Emergency access accounts, sometimes called <em>break-glass accounts</em>, can provide an alternative administrative route.</p>
+    <p>However, creating an emergency account is not enough on its own.</p>
+    <p>Microsoft's guidance for emergency access accounts includes:</p>
+    <ul>
+      <li>Maintaining at least two emergency access accounts, created as cloud-only accounts on the organisation's .onmicrosoft.com domain.</li>
+      <li>Using FIDO2 security keys or other supported phishing-resistant methods, independent of normal administrator sign-in arrangements.</li>
+      <li>Excluding these accounts from Conditional Access policies that block or restrict sign-in, so they remain usable in an emergency.</li>
+      <li>Storing credentials securely, where more than one authorised person can reach them.</li>
+      <li>Alerting on every sign-in, so any use is noticed and reviewed.</li>
+      <li>Testing the accounts at least every 90 days.</li>
+    </ul>
+    <p>Emergency access arrangements should be designed around the organisation's licensing, authentication configuration and operational circumstances.</p>
+    <p>The objective is not to weaken security for convenience. It is to avoid a single point of administrative failure.</p>
+
+    <h2>3. Can essential information be recovered?</h2>
+    <p>SharePoint and OneDrive offer version history, recycle bins and other recovery capabilities.</p>
+    <p>These are valuable features, but they should not automatically be treated as a complete backup and disaster recovery strategy.</p>
+    <p>SharePoint and OneDrive normally retain deleted items in their recycle bins for up to 93 days, subject to deletion and retention conditions. Microsoft also maintains limited SharePoint backups that may support site-level recovery through Microsoft Support. These facilities do not guarantee recovery of every deleted file and should not be confused with a comprehensive backup strategy.</p>
+    <p>Microsoft 365 Backup is a separate, chargeable service and is not automatically included with Business Premium. It offers longer recovery windows and is designed for situations such as ransomware or large-scale deletion.</p>
+    <p>An organisation needs to understand what information can be recovered, under which circumstances and within what timescale.</p>
+    <p>For example, recovering an accidentally deleted document is different from recovering after a privileged account has been compromised or large quantities of information have been altered.</p>
+    <p>A practical review should establish:</p>
+    <ul>
+      <li>Which records are essential to continuing services.</li>
+      <li>Where those records are stored.</li>
+      <li>What retention and recovery capabilities are configured.</li>
+      <li>Whether additional independent backups are necessary.</li>
+      <li>Who can initiate recovery and how long restoration is likely to take.</li>
+    </ul>
+    <p>The organisation should also understand the difference between retention, version history, backup and business continuity. These controls serve related but different purposes.</p>
+    <p>If an account is compromised, the organisation will also need to establish what was accessed or changed. That depends on the Microsoft 365 audit log. Microsoft does not turn auditing on by default for Business Basic, Business Standard or Business Premium subscriptions, so it is worth confirming that it is enabled before it is needed. When enabled, Microsoft Purview Audit (Standard) generally retains audit records for 180 days, subject to applicable licensing and retention policies.</p>
+    <p>For charities handling sensitive information, the consequences of prolonged inaccessibility may extend beyond inconvenience to safeguarding, contractual obligations and service delivery.</p>
+
+    <h2>4. How would staff communicate without Outlook or Teams?</h2>
+    <p>Many organisations store their emergency contact details, supplier information and incident procedures in the very Microsoft 365 environment they may need to recover.</p>
+    <p>If Outlook and Teams become unavailable, how would staff receive instructions?</p>
+    <p>Would managers know how to contact one another? Could the organisation reach its external IT provider? Would trustees be informed promptly?</p>
+    <p>A proportionate continuity plan might include:</p>
+    <ul>
+      <li>An independently accessible emergency contact list.</li>
+      <li>An agreed alternative communication method.</li>
+      <li>Contact details for key suppliers and incident-response support.</li>
+      <li>A process for communicating with service users where necessary.</li>
+      <li>Secure offline or separately accessible copies of essential procedures.</li>
+    </ul>
+    <p>Any alternative communication arrangement must also protect confidential and personal information.</p>
+    <p>The important point is that the organisation should not depend entirely on the affected environment to coordinate its recovery. Our article <a href="technology-supplier-failure-continuity.html" style="color:var(--ms-blue);">When your technology supplier disappears</a> looks at the same question from the point of view of supplier failure.</p>
+
+    <h2>5. Has the recovery plan actually been tested?</h2>
+    <p>A written incident-response plan is useful. An untested plan may provide false reassurance.</p>
+    <p>Testing does not always require a complex technical exercise or expensive external consultancy.</p>
+    <p>A small charity could begin with a structured discussion involving its chief executive, operations lead, IT contact and an appropriate trustee.</p>
+    <p>Consider a scenario:</p>
+    <div class="callout"><em>It is Monday morning. Staff cannot access Outlook or Teams. An administrator suspects that an account with elevated privileges has been compromised. The organisation cannot yet establish whether information has been accessed or altered.</em></div>
+    <p>Ask participants what they would do during the first hour.</p>
+    <p>Who would be contacted? Where would they find the necessary information? Who would authorise decisions? Which services must be restored first? Does the incident need to be reported to the ICO, the Charity Commission or Report Fraud?</p>
+    <p>The exercise should identify missing information, unclear responsibilities and assumptions that need checking.</p>
+    <p>The NCSC's free Exercise in a Box tool provides ready-made scenarios and guidance for organisations that want a structured starting point.</p>
+    <p>Technical recovery procedures should then be tested separately, using controlled methods that do not put production services or information at unnecessary risk.</p>
+
+    <h2>Cyber resilience is a governance responsibility</h2>
+    <p>Trustees do not need to become Microsoft 365 administrators.</p>
+    <p>They do, however, need sufficient assurance that significant technology risks are understood, responsibilities are allocated and appropriate arrangements exist to respond to disruption.</p>
+    <p>The same applies to directors and senior managers in small businesses.</p>
+    <p>A useful board-level discussion should establish three things:</p>
+    <p><strong>Prevention:</strong> Are appropriate identity, access, security and monitoring controls in place?</p>
+    <p><strong>Response:</strong> Does the organisation know how to recognise, escalate, contain and report a serious incident?</p>
+    <p><strong>Recovery:</strong> Can essential information, communication and services be restored within an acceptable period?</p>
+    <p>These questions are connected. Strong preventive controls are valuable, but they cannot substitute for operational preparedness.</p>
+
+    <h2>Six checks to make this month</h2>
+    <p>Before commissioning new technology or purchasing additional security products, start with six practical checks:</p>
+    <ol>
+      <li><strong>Confirm ownership.</strong> Identify who is responsible for coordinating a serious Microsoft 365 incident, who can make urgent decisions and who decides on reporting to the ICO, the Charity Commission and Report Fraud.</li>
+      <li><strong>Review emergency administration.</strong> Confirm that at least two emergency access accounts exist, are protected with phishing-resistant sign-in, are monitored and have been tested in the last 90 days.</li>
+      <li><strong>Identify critical information.</strong> Establish which SharePoint, OneDrive and other records must remain recoverable, and whether recycle bins and version history are enough.</li>
+      <li><strong>Verify audit logging.</strong> Confirm that Microsoft 365 auditing is enabled, so the organisation can establish what happened if an account is compromised.</li>
+      <li><strong>Check alternative communications.</strong> Ensure essential contacts and instructions remain accessible if Outlook and Teams are unavailable.</li>
+      <li><strong>Run a short scenario exercise.</strong> Test the organisation's understanding of its response and recovery responsibilities, then record the gaps.</li>
+    </ol>
+    <p>These checks will not eliminate cyber risk. They can, however, reveal weaknesses before an incident makes them urgent.</p>
+
+    <h2>How Adjona Technology can help</h2>
+    <p><a href="../microsoft-365-consultant-charities.html" style="color:var(--ms-blue);">Adjona Technology supports UK charities</a> and small organisations with Microsoft 365 security, governance and operational controls.</p>
+    <p>Our work focuses on understanding the existing environment, identifying practical risks and providing proportionate recommendations that organisations can act on.</p>
+    <p>This can include reviewing identity and administrative access, emergency access arrangements, audit logging, information management arrangements, security configuration and the responsibilities surrounding critical Microsoft 365 services.</p>
+    <p><strong>The starting point is not another product. It is understanding what your organisation depends on, what could fail and what needs to be in place to recover.</strong></p>
+    <p><strong>To discuss Microsoft 365 security and governance, <a href="../enquiry.html" style="color:var(--ms-blue);">make an enquiry</a>.</strong></p>
+
+    <h2>Sources and further reading</h2>
+    <ul>
+      <li><a href="https://www.ncsc.gov.uk/collection/incident-management" target="_blank" rel="noopener noreferrer" style="color:var(--ms-blue);">Incident management</a> (National Cyber Security Centre)</li>
+      <li><a href="https://www.ncsc.gov.uk/collection/small-business-guidance--response-and-recovery" target="_blank" rel="noopener noreferrer" style="color:var(--ms-blue);">Small Business Guide: Response and Recovery</a> (National Cyber Security Centre)</li>
+      <li><a href="https://www.ncsc.gov.uk/section/exercise-in-a-box/overview" target="_blank" rel="noopener noreferrer" style="color:var(--ms-blue);">Exercise in a Box</a> (National Cyber Security Centre)</li>
+      <li><a href="https://www.gov.uk/guidance/how-to-report-a-serious-incident-in-your-charity" target="_blank" rel="noopener noreferrer" style="color:var(--ms-blue);">How to report a serious incident in your charity</a> (Charity Commission)</li>
+      <li><a href="https://ico.org.uk/for-organisations/report-a-breach/personal-data-breach/" target="_blank" rel="noopener noreferrer" style="color:var(--ms-blue);">Personal data breaches</a> (Information Commissioner's Office)</li>
+      <li><a href="https://learn.microsoft.com/en-us/entra/identity/role-based-access-control/security-emergency-access" target="_blank" rel="noopener noreferrer" style="color:var(--ms-blue);">Manage emergency access accounts in Microsoft Entra ID</a> (Microsoft Learn)</li>
+      <li><a href="https://learn.microsoft.com/en-us/defender-office-365/responding-to-a-compromised-email-account" target="_blank" rel="noopener noreferrer" style="color:var(--ms-blue);">Respond to a compromised cloud email account</a> (Microsoft Learn)</li>
+      <li><a href="https://learn.microsoft.com/en-us/purview/audit-log-enable-disable" target="_blank" rel="noopener noreferrer" style="color:var(--ms-blue);">Turn auditing on or off</a> (Microsoft Learn)</li>
+      <li><a href="https://learn.microsoft.com/en-us/sharepoint/restore-deleted-items-from-the-site-collection-recycle-bin" target="_blank" rel="noopener noreferrer" style="color:var(--ms-blue);">Restore deleted items from the site collection recycle bin</a> (Microsoft Learn)</li>
+      <li><a href="https://learn.microsoft.com/en-us/microsoft-365/backup/backup-overview" target="_blank" rel="noopener noreferrer" style="color:var(--ms-blue);">Overview of Microsoft 365 Backup</a> (Microsoft Learn)</li>
+    </ul>
+
+
+  </article>
+
+  <aside class="art-sidebar">
+    <div class="sidebar-block">
+      <div class="sidebar-label">About Adjona</div>
+      <div class="sidebar-body">Adjona Technology is a Microsoft AI Cloud Partner helping charities, care providers, and smaller organisations secure Microsoft 365, improve governance, and adopt AI responsibly.</div>
+    </div>
+    <hr class="sidebar-divider">
+    <div class="sidebar-block">
+      <div class="sidebar-label">Free introductory conversation</div>
+      <div class="sidebar-title">Have a question about your setup?</div>
+      <div class="sidebar-body">Book a free 30-minute call. No obligation. Practical advice you can act on.</div>
+      <a onclick="if(typeof window.clarity==='function')window.clarity('event','book_call_click')" href="https://outlook.office.com/book/AdjonaTechnologyLimited1@adjona.com/s/ElOd0P60CEiQxQcnIYWXWw2" target="_blank" rel="noopener noreferrer" class="sidebar-cta">Book a Free Call &rarr;</a>
+    </div>
+    <hr class="sidebar-divider">
+    <div class="sidebar-block">
+      <div class="sidebar-label">Related</div>
+      <div class="sidebar-body"><a href="technology-supplier-failure-continuity.html" style="color:var(--ms-blue);text-decoration:none;font-weight:700;">When your technology supplier disappears &rarr;</a></div>
+      <div class="sidebar-body"><a href="../microsoft-365-consultant-charities.html" style="color:var(--ms-blue);text-decoration:none;font-weight:700;">Microsoft 365 consultant for charities &rarr;</a></div>
+      <div class="sidebar-body"><a href="../packages.html" style="color:var(--ms-blue);text-decoration:none;font-weight:700;">View our Microsoft 365 solution packages &rarr;</a></div>
+    </div>
+  </aside>
+</div>
+
+<div class="art-nav">
+  <a href="../insights.html">&larr; All Insights</a>
+  <span></span>
+</div>
+
+<div class="page-cta">
+  <div class="cta-blue">
+    <div class="cta-tag">Free Introductory Conversation</div>
+    <h2 class="cta-title">Want a second <span class="serif">pair of eyes?</span></h2>
+    <p class="cta-sub">Adjona Technology helps UK charities review Microsoft 365 administrative access, recovery and incident responsibilities. Book a free 30-minute conversation. No obligation, no hard sell.</p>
+    <div class="cta-actions">
+      <a onclick="if(typeof window.clarity==='function')window.clarity('event','book_call_click')" href="https://outlook.office.com/book/AdjonaTechnologyLimited1@adjona.com/s/ElOd0P60CEiQxQcnIYWXWw2" target="_blank" rel="noopener noreferrer" class="cta-btn-solid">Book a Free Introductory Conversation</a>
+      <a onclick="if(typeof window.clarity==='function')window.clarity('event','enquiry_click')" href="../enquiry.html" class="cta-btn-outline">Send an Enquiry &rarr;</a>
+    </div>
+  </div>
+  <div class="cta-right">
+    <div class="cta-right-label">Get in touch</div>
+    <div class="contact-block">
+      <div class="contact-line">
+        <div class="contact-line-label">Email</div>
+        <div class="contact-line-val"><a href="mailto:info@adjona.com">info@adjona.com</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer style="padding-bottom:5rem;">
+  <div class="f-logo">
+    <svg width="28" height="22" viewBox="0 0 36 28" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="0,28 6,28 7,17 6,16 0,16" fill="#0F4C81"/>
+      <polygon points="9,28 15,28 16,12 15,11 9,11" fill="#D83B01"/>
+      <polygon points="18,28 24,28 25,7 24,6 18,6" fill="#2F6B00"/>
+      <polygon points="27,28 33,28 34,1 33,0 27,0" fill="#F2A900"/>
+    </svg>
+    <div class="f-name">Adjona <span>Technology</span> Limited</div>
+  </div>
+  <div class="f-copy-wrap">
+    <div class="f-copy">© 2026 Adjona Technology Limited · Registered in England &amp; Wales · Co. No. 05007410 · 5th Floor, 167-169 Great Portland Street, London W1W 5PF</div>
+    <div style="margin-top:.4rem;">
+      <a href="https://marketplace.microsoft.com/en-gb/partners/c4ead6cf-d6a0-4973-8bf7-f3e644e195ae/overview" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:.5rem;text-decoration:none;">
+        <svg width="14" height="14" viewBox="0 0 23 23" xmlns="http://www.w3.org/2000/svg"><rect x="1" y="1" width="10" height="10" fill="#f25022"/><rect x="12" y="1" width="10" height="10" fill="#7fba00"/><rect x="1" y="12" width="10" height="10" fill="#00a4ef"/><rect x="12" y="12" width="10" height="10" fill="#ffb900"/></svg>
+        <span style="font-family:'JetBrains Mono',monospace;font-size:.58rem;letter-spacing:.08em;color:#444;">View Adjona's Microsoft partner profile</span>
+      </a>
+    </div>
+  </div>
+  <ul class="f-links" style="align-items:center;">
+    <li><a href="https://www.linkedin.com/company/adjona-technology-limited/" target="_blank" rel="noopener noreferrer" style="display:flex;align-items:center;gap:.4rem;"><img src="https://adjona.com/images/li-icon.png" width="16" height="16" alt="LinkedIn" style="display:block;border:0;vertical-align:middle;"> LinkedIn</a></li>
+    <li><a href="https://www.youtube.com/@AdjonaTechnology" target="_blank" rel="noopener noreferrer" style="display:flex;align-items:center;gap:.4rem;"><img src="https://adjona.com/images/yt-icon.png" width="16" height="16" alt="YouTube" style="display:block;border:0;vertical-align:middle;"> YouTube</a></li>
+    <li><a href="https://www.reddit.com/user/AdjonaTech/" target="_blank" rel="noopener noreferrer" style="display:flex;align-items:center;gap:.4rem;"><img src="https://adjona.com/images/rd-icon.png" width="16" height="16" alt="Reddit" style="display:block;border:0;vertical-align:middle;"> Reddit</a></li>
+    <li><a href="https://www.tiktok.com/@adjonatechnology" target="_blank" rel="noopener noreferrer" style="display:flex;align-items:center;gap:.4rem;"><img src="https://adjona.com/images/tt-icon.png" width="16" height="16" alt="TikTok" style="display:block;border:0;vertical-align:middle;"> TikTok</a></li>
+    <li><a href="https://www.instagram.com/adjonatechnology" target="_blank" rel="noopener noreferrer" style="display:flex;align-items:center;gap:.4rem;"><img src="https://adjona.com/images/ig-icon.png" width="16" height="16" alt="Instagram" style="display:block;border:0;vertical-align:middle;"> Instagram</a></li>
+    <li><a href="https://open.spotify.com/show/0342WnO8JbToOj0zyzxpsn" target="_blank" rel="noopener noreferrer" style="display:flex;align-items:center;gap:.4rem;"><img src="https://adjona.com/images/sp-icon.png" width="16" height="16" alt="Spotify" style="display:block;border:0;vertical-align:middle;"> Spotify</a></li>
+    <li><a href="https://businessapps.adjona.com/">Business Applications</a></li><li><a href="../events.html">Events</a></li>
+    <li><a onclick="if(typeof window.clarity==='function')window.clarity('event','book_call_click')" href="https://outlook.office.com/book/AdjonaTechnologyLimited1@adjona.com/s/ElOd0P60CEiQxQcnIYWXWw2" target="_blank" rel="noopener noreferrer">Book a Call</a></li>
+    <li><a href="../adjona-privacy.html">Privacy Policy</a></li>
+    <li><a href="#" onclick="return adjonaCookieSettings();">Cookie settings</a></li>
+    <li><a href="../adjona-terms.html">Terms &amp; Conditions</a></li>
+    <li><a href="mailto:info@adjona.com">info@adjona.com</a></li>
+  </ul>
+</footer>
+
+
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+  document.querySelectorAll('.nav-links a,.nav-cta-mobile').forEach(function(link){
+    link.addEventListener('click',function(){
+      var nav=document.querySelector('nav');
+      nav.querySelector('.nav-links').classList.remove('nav-open');
+      nav.querySelector('.nav-cta-mobile').classList.remove('nav-open');
+    });
+  });
+});
+</script>
+
+<!-- Cookie choices -->
+<div id="cookie-bar" class="hidden" role="region" aria-label="Cookie choices">
+  <span>We use optional analytics cookies (Google Analytics and Microsoft Clarity) to understand how visitors use this site. They are only set if you choose Accept. See our <a href="/adjona-privacy.html#cookies">privacy and cookie policy</a>.</span>
+  <div class="cb-actions">
+    <button type="button" id="cookie-bar-reject">Reject</button>
+    <button type="button" id="cookie-bar-accept">Accept</button>
+  </div>
+</div>
+<script>
+(function(){
+  var KEY='adjona_consent', bar=document.getElementById('cookie-bar');
+  function getChoice(){try{return localStorage.getItem(KEY);}catch(e){return null;}}
+  function saveChoice(v){try{localStorage.setItem(KEY,v);localStorage.removeItem('adjona_cookie_ok');}catch(e){}}
+  function applyChoice(v){
+    var state=(v==='granted')?'granted':'denied';
+    if(typeof window.gtag==='function'){window.gtag('consent','update',{'analytics_storage':state});}
+    if(typeof window.clarity==='function'){window.clarity('consentv2',{ad_Storage:'denied',analytics_Storage:state});}
+  }
+  function choose(v){saveChoice(v);applyChoice(v);bar.classList.add('hidden');}
+  var current=getChoice();
+  if(current==='granted'||current==='denied'){applyChoice(current);}else{bar.classList.remove('hidden');}
+  document.getElementById('cookie-bar-accept').addEventListener('click',function(){choose('granted');});
+  document.getElementById('cookie-bar-reject').addEventListener('click',function(){choose('denied');});
+  window.adjonaCookieSettings=function(){bar.classList.remove('hidden');document.getElementById('cookie-bar-accept').focus();return false;};
+})();
+</script>
+
+</body>
+</html>
