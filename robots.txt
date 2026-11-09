@@ -2,6 +2,7 @@
 
 User-agent: *
 Allow: /
+Disallow: /insights/article-template.html
 
 Sitemap: https://adjona.com/sitemap.xml
 
