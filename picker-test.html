@@ -144,6 +144,18 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
 
 
 /* PICKER */
+.pk-start{margin-top:2rem;max-width:860px;}
+.pk-start-label{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:.75rem;}
+.pk-start-links{display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem;}
+.pk-start-links a{display:flex;flex-direction:column;gap:.3rem;padding:1rem 1.15rem;border:2px solid var(--ink);text-decoration:none;color:var(--ink);transition:background .2s,border-color .2s;}
+.pk-start-links a:hover{border-color:var(--ms-blue);background:#f0f5fb;}
+.pk-start-links span{font-family:'Epilogue',sans-serif;font-weight:800;font-size:.95rem;line-height:1.35;}
+.pk-start-links span::after{content:' \2192';color:var(--ms-blue);}
+.pk-start-links small{font-size:.8rem;color:var(--muted);line-height:1.5;}
+.pk-card{scroll-margin-top:calc(var(--nav-h) + 1.5rem);}
+.pk-card:target{outline:3px solid var(--ms-yel);outline-offset:4px;}
+@media(max-width:768px){.pk-start-links{grid-template-columns:1fr;}}
+
 .pk-how{display:flex;flex-wrap:wrap;gap:0;margin-top:2.25rem;border:2px solid var(--ink);max-width:860px;}
 .pk-how div{flex:1 1 200px;padding:1rem 1.25rem;border-right:1px solid var(--border);font-size:.9rem;color:var(--muted);line-height:1.6;}
 .pk-how div:last-child{border-right:none;}
@@ -346,6 +358,14 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
       <div><b>Step 2</b>Tell us who you are</div>
       <div><b>Step 3</b>We review your request and email your proposal</div>
     </div>
+    <div class="pk-start">
+      <div class="pk-start-label">Common starting points</div>
+      <div class="pk-start-links">
+        <a href="#svc-SP-ESS"><span>Staff struggle to find documents</span><small>SharePoint Health &amp; Findability Review</small></a>
+        <a href="#svc-HC-M365"><span>Not sure how secure our Microsoft 365 is</span><small>Microsoft 365 Health Check</small></a>
+        <a href="#svc-AI-READY"><span>Thinking about Copilot or AI</span><small>Copilot &amp; AI Readiness Assessment</small></a>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -362,7 +382,7 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
   <div class="pk-req-left">
     <div class="cta-tag">Your request</div>
     <h2 class="cta-title">Request your<br><span class="serif">proposal.</span></h2>
-    <p class="cta-sub">Your proposal is reviewed by Larry Osei-Kwaku before it is sent, normally within one working day.</p>
+    <p class="cta-sub">We review every proposal before sending it and usually email it within one working day. If we need more information, we’ll get in touch.</p>
     <ul class="pk-chosen" id="chosen"></ul>
     <p class="pk-total" id="total"></p>
   </div>
@@ -456,7 +476,7 @@ function render() {
       <h2 class="sec-title">${esc(g.title)}</h2>
       <p class="pk-group-intro">${esc(g.sub)}</p>
       <div class="pk-grid">${g.codes.map(c => byCode[c]).filter(Boolean).map(s => `
-        <article class="pk-card" data-code="${s.code}">
+        <article class="pk-card" id="svc-${s.code}" data-code="${s.code}">
           <div class="pk-card-top" style="background:${g.colour};"></div>
           <div class="pk-card-body">
             <h3>${esc(s.name)}</h3>
