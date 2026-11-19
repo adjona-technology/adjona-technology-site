@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Prices &amp; proposals (TEST) | Adjona Technology</title>
+<style>
+  :root { --blue:#104C7E; --red:#D83B01; --green:#2F6900; --amber:#F2AB00; --ink:#1f2328; --muted:#5b6470; --line:#dde3ea; --bg:#f6f8fa; }
+  * { box-sizing: border-box; }
+  body { margin:0; font-family: Arial, Helvetica, sans-serif; color:var(--ink); background:#fff; line-height:1.5; }
+  .test { background:var(--amber); color:#000; text-align:center; font-size:14px; padding:6px 12px; font-weight:bold; }
+  header { border-bottom:1px solid var(--line); }
+  .wrap { max-width:1100px; margin:0 auto; padding:0 20px; }
+  .brand { display:flex; align-items:center; gap:10px; padding:16px 0; font-weight:bold; color:var(--blue); letter-spacing:.04em; }
+  .bars { display:flex; gap:3px; align-items:flex-end; height:22px; }
+  .bars span { width:5px; border-radius:1px; } .bars span:nth-child(1){height:12px;background:var(--blue)} .bars span:nth-child(2){height:16px;background:var(--red)} .bars span:nth-child(3){height:19px;background:var(--green)} .bars span:nth-child(4){height:22px;background:var(--amber)}
+  .band { display:flex; height:4px; } .band span{flex:1} .band span:nth-child(1){background:var(--blue)} .band span:nth-child(2){background:var(--red)} .band span:nth-child(3){background:var(--green)} .band span:nth-child(4){background:var(--amber)}
+  h1 { color:var(--blue); font-size:34px; margin:32px 0 8px; }
+  .lead { color:var(--muted); max-width:760px; margin:0 0 8px; font-size:17px; }
+  .how { display:flex; flex-wrap:wrap; gap:8px 24px; margin:18px 0 8px; padding:0; list-style:none; color:var(--muted); font-size:15px; }
+  .how b { color:var(--blue); }
+  nav.jump { display:flex; flex-wrap:wrap; gap:8px; margin:20px 0 4px; }
+  nav.jump a { text-decoration:none; color:var(--blue); border:1px solid var(--line); border-radius:999px; padding:6px 14px; font-size:14px; }
+  nav.jump a:hover { border-color:var(--blue); }
+  section { margin:36px 0; }
+  h2 { font-size:22px; color:var(--blue); margin:0 0 4px; }
+  .sub { color:var(--muted); margin:0 0 16px; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(310px,1fr)); gap:16px; }
+  .card { border:1px solid var(--line); border-radius:8px; padding:18px; display:flex; flex-direction:column; background:#fff; transition:border-color .15s, box-shadow .15s; }
+  .card.sel { border-color:var(--blue); box-shadow:0 0 0 2px rgba(16,76,126,.15); }
+  .card h3 { font-size:17px; margin:0 0 6px; }
+  .price { font-size:22px; font-weight:bold; color:var(--blue); margin:0 0 12px; }
+  .price small { font-size:14px; font-weight:normal; color:var(--muted); }
+  dl { margin:0 0 14px; font-size:14px; }
+  dt { font-weight:bold; color:var(--blue); margin-top:8px; }
+  dd { margin:2px 0 0; color:var(--ink); }
+  .card button { margin-top:auto; border:1px solid var(--blue); background:#fff; color:var(--blue); padding:10px 14px; border-radius:6px; font-size:15px; font-weight:bold; cursor:pointer; }
+  .card.sel button { background:var(--blue); color:#fff; }
+  .bar { position:sticky; bottom:0; background:var(--blue); color:#fff; padding:12px 0; display:none; }
+  .bar.show { display:block; }
+  .bar .wrap { display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap; }
+  .bar button { background:#fff; color:var(--blue); border:0; padding:10px 18px; border-radius:6px; font-weight:bold; font-size:15px; cursor:pointer; }
+  #request { background:var(--bg); border-top:1px solid var(--line); padding:32px 0 48px; margin-top:40px; }
+  #request h2 { margin-bottom:6px; }
+  .chosen { margin:0 0 18px; padding:0; list-style:none; }
+  .chosen li { display:flex; justify-content:space-between; gap:12px; border-bottom:1px solid var(--line); padding:8px 0; }
+  .chosen li button { border:0; background:none; color:var(--red); cursor:pointer; font-size:14px; }
+  .total { font-weight:bold; text-align:right; margin:-8px 0 18px; }
+  form { display:grid; grid-template-columns:1fr 1fr; gap:14px 18px; max-width:760px; }
+  label { display:flex; flex-direction:column; font-size:14px; font-weight:bold; gap:4px; }
+  label.full { grid-column:1 / -1; }
+  input, textarea { font:inherit; font-weight:normal; padding:10px; border:1px solid #b9c3cf; border-radius:6px; background:#fff; }
+  textarea { min-height:96px; }
+  .hp { position:absolute; left:-9999px; }
+  .consent { grid-column:1 / -1; font-weight:normal; flex-direction:row; align-items:flex-start; gap:8px; }
+  .consent input { margin-top:3px; }
+  .submit { grid-column:1 / -1; }
+  .submit button { background:var(--red); color:#fff; border:0; padding:12px 22px; border-radius:6px; font-size:16px; font-weight:bold; cursor:pointer; }
+  .submit button:disabled { opacity:.6; cursor:wait; }
+  .msg { grid-column:1 / -1; padding:12px 14px; border-radius:6px; display:none; }
+  .msg.ok { display:block; background:#e8f3e1; color:var(--green); }
+  .msg.err { display:block; background:#fdecea; color:#a52a00; }
+  .note { color:var(--muted); font-size:14px; max-width:760px; }
+  footer { border-top:1px solid var(--line); color:var(--muted); font-size:13px; padding:20px 0; }
+  @media (max-width:640px) { form { grid-template-columns:1fr; } h1 { font-size:28px; } }
+</style>
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+</head>
+<body>
+<div class="test">TEST PAGE: requests go to the test flow and create real records in Dynamics 365 Sales</div>
+<header><div class="wrap brand"><span class="bars"><span></span><span></span><span></span><span></span></span>ADJONA TECHNOLOGY</div><div class="band"><span></span><span></span><span></span><span></span></div></header>
+
+<main class="wrap">
+  <h1>Prices &amp; proposals</h1>
+  <p class="lead">Choose one or more fixed-price services and we will send you a written proposal setting out what is included, what is not, and the fee.</p>
+  <ul class="how">
+    <li><b>1.</b> Choose your services</li>
+    <li><b>2.</b> Tell us who you are</li>
+    <li><b>3.</b> We review your request and email your proposal</li>
+  </ul>
+  <nav class="jump" id="jump"></nav>
+  <div id="sections"></div>
+</main>
+
+<div class="bar" id="bar"><div class="wrap"><span id="barText"></span><button type="button" id="barBtn">Continue to your details</button></div></div>
+
+<div id="request"><div class="wrap">
+  <h2>Request your proposal</h2>
+  <p class="sub">Your proposal is reviewed by Larry Osei-Kwaku before it is sent, normally within one working day.</p>
+  <ul class="chosen" id="chosen"></ul>
+  <p class="total" id="total"></p>
+  <form id="form" novalidate>
+    <label>Organisation<input name="org" required autocomplete="organization"></label>
+    <label>Your name<input name="name" required autocomplete="name"></label>
+    <label>Your role<input name="role" autocomplete="organization-title"></label>
+    <label>Email<input name="email" type="email" required autocomplete="email"></label>
+    <label>Phone (optional)<input name="phone" type="tel" autocomplete="tel"></label>
+    <label class="hp" aria-hidden="true">Website<input name="website" tabindex="-1" autocomplete="off"></label>
+    <label class="full">Anything we should know? (optional)<textarea name="message" placeholder="For example, number of users, deadlines or what prompted the request"></textarea></label>
+    <label class="consent"><input type="checkbox" name="consent" required> I agree that Adjona Technology may use these details to prepare and send my proposal, as described in the privacy policy.</label>
+    <div class="full cf-turnstile" data-sitekey="0x4AAAAAAGIdTIhwRZ0l87pS" data-theme="light" data-size="flexible"></div>
+    <div class="submit"><button type="submit" id="send">Request my proposal</button></div>
+    <div class="msg" id="msg" role="status"></div>
+  </form>
+  <p class="note">Fees are fixed for the scope shown. Microsoft licences and third-party costs are not included. Adjona Technology Limited is not VAT registered. Proposals are subject to our Professional Services Terms and Conditions.</p>
+</div></div>
+
+<footer><div class="wrap">Adjona Technology Limited · Registered in England and Wales · Company No. 05007410</div></footer>
+
+<script>
+const ENDPOINT = "https://f6b6e910b36debfc908df4d757672a.a1.environment.api.powerplatform.com:443/powerautomate/automations/direct/cu/05/workflows/631295b7208c4903ad9f9be3b3a872bb/triggers/manual/paths/invoke?api-version=1&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=bDW4khQrmoe-pLqnWsiWu4l7q_GjQ0S3oHAfyCKh-lg";
+
+const SERVICES = [{"code":"RET-ADV","name":"Microsoft 365 Support Retainer: Advisory","price":295,"pd":"Monthly","del":"Up to 3 hours a month of advice, admin changes and quarterly Secure Score check","scope":"3 hours a month; unused hours do not roll over; 3-month minimum","excl":"Projects, out-of-hours response, licences"},{"code":"RET-PLUS","name":"Microsoft 365 Support Retainer: Plus","price":1150,"pd":"Monthly","del":"Up to 12 hours a month, monthly health report, change management, quarterly roadmap session","scope":"12 hours a month; unused hours do not roll over; 3-month minimum","excl":"Projects, out-of-hours response, licences"},{"code":"RET-STD","name":"Microsoft 365 Support Retainer: Standard","price":595,"pd":"Monthly","del":"Up to 6 hours a month, monthly health report, joiner/leaver changes, quarterly review call","scope":"6 hours a month; unused hours do not roll over; 3-month minimum","excl":"Projects, out-of-hours response, licences"},{"code":"AI-READY","name":"Copilot & AI Readiness Assessment","price":1950,"pd":"Fixed","del":"Oversharing and permissions review, sensitivity labelling position, licensing options, AI use policy gaps, pilot plan","scope":"One tenant; up to 10 representative sites/Teams","excl":"Copilot licences, remediation, agent build"},{"code":"BRIEF-BOARD","name":"Trustee & Board Briefing: Cyber Security and AI Governance","price":495,"pd":"Fixed","del":"Plain-English briefing on risk, responsibilities and questions to ask; one-page summary","scope":"Up to 60 minutes, remote or at a board meeting within 25 miles","excl":"Travel beyond 25 miles"},{"code":"CA-IMP","name":"Conditional Access & MFA Implementation","price":1250,"pd":"Fixed","del":"Policy design, report-only testing, staged enforcement, break-glass exclusions, policy register","scope":"Up to 8 policies; Entra ID P1 or Business Premium required","excl":"Licences, device enrolment"},{"code":"CE-READY","name":"Cyber Essentials Readiness Review","price":850,"pd":"Fixed","del":"Gap review against the Cyber Essentials controls across M365 and devices; remediation list; question set walkthrough","scope":"Up to 50 users and devices","excl":"Certification body fees, device remediation, the assessment itself"},{"code":"DEV-ONB","name":"Device Management Setup (Intune / Defender for Business)","price":950,"pd":"Fixed","del":"Intune enrolment configuration, compliance and configuration baselines, Defender for Business onboarding, pilot group","scope":"Set-up and pilot of up to 5 devices","excl":"Licences, hardware, on-site visits"},{"code":"DSPT-SUP","name":"DSPT Evidence Support (care providers)","price":850,"pd":"Fixed","del":"Mapping of Microsoft 365 controls to Data Security and Protection Toolkit evidence items; evidence pack for technical sections","scope":"One organisation; technical evidence only","excl":"Policy writing, training records, submission on the client's behalf"},{"code":"EMAIL-AUTH","name":"Email Authentication Hardening (SPF, DKIM, DMARC)","price":395,"pd":"Fixed","del":"SPF, DKIM and DMARC configuration and testing; DMARC reporting set-up; short guidance note","scope":"One mail domain (additional domains quoted)","excl":"Domain and hosting fees, third-party mail services"},{"code":"EMAIL-MIG-STD","name":"Exchange Online Migration & Domain Hardening","price":950,"pd":"Fixed","del":"User and shared mailbox migration, aliases, MX/SPF/DKIM/DMARC, cutover test log","scope":"Up to 5 user mailboxes and 2 shared mailboxes/aliases","excl":"Licences, domain fees and third-party tools"},{"code":"GOV-STD","name":"Microsoft 365 Governance Assessment","price":2250,"pd":"Fixed","del":"Cross-workload governance evaluation, findings, prioritised roadmap and 60-minute walkthrough","scope":"One tenant; up to 8 representative workspaces","excl":"Remediation and licences"},{"code":"HC-M365","name":"Microsoft 365 Health Check","price":595,"pd":"Fixed","del":"Baseline review of MFA, admin roles, sharing settings, licensing fit and backup position; one-page RAG summary; 30-minute call","scope":"One tenant; read-only; up to 50 users","excl":"Remediation, Microsoft licences and subscriptions"},{"code":"M365-SET-ESS","name":"Microsoft 365 Tenant Setup & Security Hardening (Essential)","price":450,"pd":"Fixed","del":"Tenant setup; licence advice and assignment; basic MFA and admin hardening","scope":"Up to 10 users","excl":"Microsoft licences and subscriptions and third-party charges"},{"code":"M365-SET-STD","name":"Microsoft 365 Tenant Setup & Security Hardening (Standard)","price":750,"pd":"Fixed","del":"Essential plus administrator register, break-glass access process and tenant handover","scope":"Up to 25 users","excl":"Microsoft licences and subscriptions and third-party charges"},{"code":"M365-WORK-ESS","name":"Teams & SharePoint Workplace Setup","price":650,"pd":"Fixed","del":"Foundational Teams and sites, agreed permissions and short handover","scope":"Up to 3 Teams/sites","excl":"M365 subscriptions; bulk historical migration"},{"code":"M365-WORK-STD","name":"Teams, SharePoint & Governance Implementation","price":1050,"pd":"Fixed","del":"Teams/SharePoint structure; permission matrix; priority files; governance evidence pack; 60-minute handover","scope":"Up to 6 Teams/sites; priority files only","excl":"Licences, major data migration"},{"code":"SEC-STD","name":"Microsoft 365 Security Review (Standard)","price":1750,"pd":"Fixed","del":"MFA, privileged roles, Conditional Access, Defender posture and device policy review where licensed; findings and roadmap","scope":"One tenant; up to 100 users","excl":"Endpoint implementation, ongoing monitoring, penetration testing"},{"code":"SP-ESS","name":"SharePoint Health & Findability Review","price":1250,"pd":"Fixed","del":"Site and library health, permissions sprawl and findability assessment; short findings report","scope":"Up to 4 representative sites/libraries","excl":"Migration, implementation"},{"code":"SP-STD","name":"SharePoint Modernisation Assessment","price":2500,"pd":"Fixed","del":"Findings; information architecture roadmap; 60-minute debrief","scope":"Up to 10 representative sites/libraries; 2 to 3 weeks","excl":"Implementation, remediation and licences"},{"code":"TRAIN-ADM","name":"Microsoft 365 Administrator Training Session","price":395,"pd":"Fixed","del":"Admin and governance-focused session with runbook","scope":"Up to 2 hours, remote, up to 6 attendees","excl":"Licences, travel"},{"code":"TRAIN-USR","name":"Microsoft 365 User Training Session","price":295,"pd":"Fixed","del":"Practical staff session with handout, tailored to the client's set-up","scope":"Up to 90 minutes, remote, up to 20 attendees","excl":"Software subscriptions, travel"}];
+
+const GROUPS = [
+  { id:"reviews", title:"Reviews & assessments", sub:"An independent look at where you are now, with prioritised findings.", codes:["HC-M365","SEC-STD","SP-ESS","SP-STD","GOV-STD","AI-READY","CE-READY","DSPT-SUP"] },
+  { id:"setup", title:"Setup & implementation", sub:"Fixed-scope technical work, tested and handed over with documentation.", codes:["M365-SET-ESS","M365-SET-STD","M365-WORK-ESS","M365-WORK-STD","CA-IMP","DEV-ONB","EMAIL-AUTH","EMAIL-MIG-STD"] },
+  { id:"training", title:"Training & briefings", sub:"Practical sessions for staff, administrators and trustees.", codes:["TRAIN-USR","TRAIN-ADM","BRIEF-BOARD"] },
+  { id:"support", title:"Ongoing support", sub:"A monthly retainer for advice and changes as you need them.", codes:["RET-ADV","RET-STD","RET-PLUS"] }
+];
+
+const byCode = Object.fromEntries(SERVICES.map(s => [s.code, s]));
+const chosen = new Set();
+const gbp = n => "£" + Number(n).toLocaleString("en-GB", { minimumFractionDigits: 0, maximumFractionDigits: 2 });
+const priceText = s => s.pd === "Monthly" ? `${gbp(s.price)} <small>a month</small>` : gbp(s.price);
+const esc = t => String(t ?? "").replace(/[&<>"]/g, c => ({ "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;" }[c]));
+
+function render() {
+  document.getElementById("jump").innerHTML = GROUPS.map(g => `<a href="#${g.id}">${esc(g.title)}</a>`).join("");
+  document.getElementById("sections").innerHTML = GROUPS.map(g => `
+    <section id="${g.id}">
+      <h2>${esc(g.title)}</h2><p class="sub">${esc(g.sub)}</p>
+      <div class="grid">${g.codes.map(c => byCode[c]).filter(Boolean).map(s => `
+        <article class="card" data-code="${s.code}">
+          <h3>${esc(s.name)}</h3>
+          <p class="price">${priceText(s)}</p>
+          <dl><dt>What you receive</dt><dd>${esc(s.del)}</dd><dt>Scope</dt><dd>${esc(s.scope)}</dd><dt>Not included</dt><dd>${esc(s.excl)}</dd></dl>
+          <button type="button" aria-pressed="false">Add to proposal</button>
+        </article>`).join("")}</div>
+    </section>`).join("");
+  document.querySelectorAll(".card button").forEach(b => b.addEventListener("click", e => toggle(e.target.closest(".card").dataset.code)));
+  refresh();
+}
+
+function toggle(code) { chosen.has(code) ? chosen.delete(code) : chosen.add(code); refresh(); }
+
+function refresh() {
+  document.querySelectorAll(".card").forEach(c => {
+    const on = chosen.has(c.dataset.code);
+    c.classList.toggle("sel", on);
+    const b = c.querySelector("button"); b.textContent = on ? "Added ✓ (remove)" : "Add to proposal"; b.setAttribute("aria-pressed", on);
+  });
+  const list = [...chosen].map(c => byCode[c]);
+  const oneOff = list.filter(s => s.pd !== "Monthly").reduce((a, s) => a + s.price, 0);
+  const monthly = list.filter(s => s.pd === "Monthly").reduce((a, s) => a + s.price, 0);
+  const parts = []; if (oneOff) parts.push(gbp(oneOff)); if (monthly) parts.push(gbp(monthly) + " a month");
+  document.getElementById("bar").classList.toggle("show", list.length > 0);
+  document.getElementById("barText").textContent = `${list.length} service${list.length === 1 ? "" : "s"} chosen · ${parts.join(" + ")}`;
+  document.getElementById("chosen").innerHTML = list.length
+    ? list.map(s => `<li><span>${esc(s.name)}</span><span>${s.pd === "Monthly" ? gbp(s.price) + " a month" : gbp(s.price)} <button type="button" data-rm="${s.code}">Remove</button></span></li>`).join("")
+    : `<li><span>No services chosen yet. Use "Add to proposal" on any service above.</span></li>`;
+  document.querySelectorAll("[data-rm]").forEach(b => b.addEventListener("click", () => toggle(b.dataset.rm)));
+  document.getElementById("total").textContent = list.length ? "Total: " + parts.join(" + ") : "";
+}
+
+document.getElementById("barBtn").addEventListener("click", () => document.getElementById("request").scrollIntoView({ behavior: "smooth" }));
+
+document.getElementById("form").addEventListener("submit", async e => {
+  e.preventDefault();
+  const f = e.target, msg = document.getElementById("msg"), btn = document.getElementById("send");
+  msg.className = "msg"; msg.textContent = "";
+  const data = Object.fromEntries(new FormData(f));
+  const problems = [];
+  if (!chosen.size) problems.push("choose at least one service");
+  if (!data.org.trim()) problems.push("enter your organisation");
+  if (!data.name.trim()) problems.push("enter your name");
+  if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(data.email.trim())) problems.push("enter a valid email address");
+  if (!f.consent.checked) problems.push("tick the consent box");
+  const token = (data["cf-turnstile-response"] || "").trim();
+  if (!token) problems.push("wait for the security check to finish");
+  if (problems.length) { msg.className = "msg err"; msg.textContent = "Please " + problems.join(", ") + "."; return; }
+  btn.disabled = true; btn.textContent = "Sending…";
+  const payload = { org: data.org.trim(), name: data.name.trim(), role: data.role.trim(), email: data.email.trim(), phone: data.phone.trim(), message: data.message.trim(), website: data.website, turnstile: token, services: [...chosen] };
+  try {
+    const r = await fetch(ENDPOINT, { method: "POST", headers: { "Content-Type": "text/plain" }, body: JSON.stringify(payload) });
+    const j = await r.json().catch(() => ({}));
+    if (!r.ok || j.ok === false) throw new Error(j.message || "The request was not accepted.");
+    msg.className = "msg ok";
+    msg.textContent = "Thank you. Your request has been received. Your proposal will be reviewed and emailed to " + payload.email + ", normally within one working day.";
+    f.reset(); chosen.clear(); refresh(); if (window.turnstile) turnstile.reset();
+  } catch (err) {
+    if (window.turnstile) turnstile.reset();
+    msg.className = "msg err";
+    msg.textContent = "Sorry, something went wrong sending your request. Please try again, or email info@adjona.com. (" + err.message + ")";
+  } finally { btn.disabled = false; btn.textContent = "Request my proposal"; }
+});
+
+render();
+</script>
+</body>
+</html>
