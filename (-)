@@ -1,0 +1,51 @@
+warning: in the working copy of 'adjona-privacy.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'adjona-terms.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'ai.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'assisted-inbox-triage-package.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'case-assessment-workflow-package.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'enquiry.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'event-teams-sharepoint.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'events.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'evidence-workspace.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'five-free-charity-reviews.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'governance-snapshot.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'index.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'insights.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'microsoft-365-consultant-charities.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'microsoft-365-consultant.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'packages.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'picker-test.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'podcast.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'projects-support.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'property-compliance-visibility-package.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'resources.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'secure-operations-hub-package.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'services.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'sitemap.xml', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'technical-projects.html', LF will be replaced by CRLF the next time Git touches it
+ adjona-privacy.html                         |   1 [32m+[m
+ adjona-terms.html                           |   1 [32m+[m
+ ai.html                                     |   1 [32m+[m
+ assisted-inbox-triage-package.html          |   1 [32m+[m
+ case-assessment-workflow-package.html       |   1 [32m+[m
+ enquiry.html                                |   1 [32m+[m
+ event-teams-sharepoint.html                 |   1 [32m+[m
+ events.html                                 |   1 [32m+[m
+ evidence-workspace.html                     |   1 [32m+[m
+ five-free-charity-reviews.html              |   1 [32m+[m
+ governance-snapshot.html                    |   1 [32m+[m
+ index.html                                  |   1 [32m+[m
+ insights.html                               |   1 [32m+[m
+ microsoft-365-consultant-charities.html     |   1 [32m+[m
+ microsoft-365-consultant.html               |   1 [32m+[m
+ packages.html                               |   1 [32m+[m
+ picker-test.html                            | 619 [32m+[m[31m---------------------------[m
+ podcast.html                                |   1 [32m+[m
+ projects-support.html                       |   1 [32m+[m
+ property-compliance-visibility-package.html |   1 [32m+[m
+ resources.html                              |   1 [32m+[m
+ secure-operations-hub-package.html          |   1 [32m+[m
+ services.html                               |   1 [32m+[m
+ sitemap.xml                                 |   1 [32m+[m
+ technical-projects.html                     |   1 [32m+[m
+ 25 files changed, 32 insertions(+), 611 deletions(-)
