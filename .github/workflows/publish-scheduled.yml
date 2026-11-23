@@ -1,0 +1,90 @@
+# Publishes insight articles on their planned dates.
+#
+# Each article waits in _scheduled/YYYY-MM-DD/ (folders starting with an
+# underscore are not published by GitHub Pages). Every morning this workflow
+# moves anything dated today or earlier into the site, adds it to the Insights
+# page, RSS feed and sitemap, commits the change, asks GitHub Pages to rebuild,
+# and tells Bing about the new page once it is live.
+#
+# To publish something early, open the Actions tab, choose
+# "Publish scheduled insights" and click "Run workflow" (it still only
+# publishes folders whose date has arrived; rename a folder to move its date).
+
+name: Publish scheduled insights
+
+on:
+  schedule:
+    - cron: "17 6 * * *"   # 06:17 UTC daily (GitHub can run scheduled jobs a little late)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+
+concurrency:
+  group: publish-scheduled
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-24.04
+    env:
+      INDEXNOW_KEY: 31167afe5e9742ac9fda8446724a5e9e
+      HOST: adjona.com
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Move articles that are due into the site
+        id: pub
+        run: python3 .github/scripts/publish_scheduled.py
+
+      - name: Commit and push
+        if: steps.pub.outputs.count != '0'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Publish scheduled insight: ${{ steps.pub.outputs.dates }}"
+          git push
+
+      # A push made by this workflow does not start a GitHub Pages build on its
+      # own, so ask for one.
+      - name: Ask GitHub Pages to rebuild
+        if: steps.pub.outputs.count != '0'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api -X POST "repos/${{ github.repository }}/pages/builds"
+
+      - name: Wait until the new article is live
+        if: steps.pub.outputs.count != '0'
+        run: |
+          first=$(echo "${{ steps.pub.outputs.urls }}" | cut -d' ' -f1)
+          for i in $(seq 1 40); do
+            code=$(curl -s -o /dev/null -w '%{http_code}' "$first?check=$(date +%s)")
+            echo "Attempt $i: $first returned $code"
+            if [ "$code" = "200" ]; then exit 0; fi
+            sleep 30
+          done
+          echo "The article is not live after 20 minutes. Check the Pages build in the Actions tab."
+          exit 1
+
+      - name: Tell Bing (IndexNow) about the new pages
+        if: steps.pub.outputs.count != '0'
+        env:
+          URLS: ${{ steps.pub.outputs.urls }}
+        run: |
+          python3 - <<'PY'
+          import json, os, urllib.request
+          urls = os.environ["URLS"].split()
+          body = json.dumps({
+              "host": os.environ["HOST"],
+              "key": os.environ["INDEXNOW_KEY"],
+              "keyLocation": f"https://{os.environ['HOST']}/{os.environ['INDEXNOW_KEY']}.txt",
+              "urlList": urls,
+          }).encode()
+          req = urllib.request.Request(
+              "https://api.indexnow.org/indexnow", data=body,
+              headers={"Content-Type": "application/json; charset=utf-8"})
+          with urllib.request.urlopen(req, timeout=30) as r:
+              print("IndexNow response:", r.status, "for", len(urls), "page(s)")
+          PY

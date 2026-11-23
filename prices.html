@@ -471,13 +471,15 @@ const NOTES = {
 NOTES["BA-REVIEW"] = "If you accept our proposal to implement the process reviewed within 30 days of receiving the report, we’ll deduct £625 from the implementation fee.";
 NOTES["D365-CONFIG"] = "Final fee confirmed after scoping. Not sure what you need? Start with the Sales Process Review.";
 NOTES["D365-BCINT"] = "Final fee confirmed after scoping. Not sure what you need? Start with the Sales Process Review.";
+for (const c of ["RET-ADV","RET-STD","RET-PLUS"]) NOTES[c] = "Billed monthly in advance on the same date each month as your start date. Three-month minimum, then one month’s notice to end. Hours are for planned advice and changes during working hours, not an emergency helpdesk.";
 const EXCLUSIVE = { "SEC-STD": "HC-M365" };
 
 const GROUPS = [
   { id:"reviews", colour:"var(--ms-blue)", title:"Reviews & assessments", sub:"An independent look at where you are now, with prioritised findings.", codes:["HC-M365","SEC-STD","SP-ESS","SP-STD","GOV-STD","AI-READY","CE-READY","DSPT-SUP"] },
   { id:"setup", colour:"var(--ms-red)", title:"Setup & implementation", sub:"Fixed-scope technical work, tested and handed over with documentation.", codes:["M365-SET-ESS","M365-SET-STD","M365-WORK-ESS","M365-WORK-STD","CA-IMP","DEV-ONB","EMAIL-AUTH"] },
   { id:"training", colour:"var(--ms-grn)", title:"Training & briefings", sub:"Practical sessions for staff, administrators and trustees.", codes:["TRAIN-USR","TRAIN-ADM","BRIEF-BOARD"] },
-  { id:"business-apps", colour:"var(--ms-yel)", title:"Business Applications & Automation", sub:"Dynamics 365 Sales, Business Central and Power Automate. Start with a fixed-fee Sales Process Review, or request a scoped proposal if you already know what you need. Larger configuration work is quoted after a review.", codes:["BA-REVIEW","D365-CONFIG","D365-BCINT","AUTO-ESS","AUTO-STD"] }
+  { id:"business-apps", colour:"var(--ms-yel)", title:"Business Applications & Automation", sub:"Dynamics 365 Sales, Business Central and Power Automate. Start with a fixed-fee Sales Process Review, or request a scoped proposal if you already know what you need. Larger configuration work is quoted after a review.", codes:["BA-REVIEW","D365-CONFIG","D365-BCINT","AUTO-ESS","AUTO-STD"] },
+  { id:"support", colour:"var(--ms-blue)", title:"Ongoing support", sub:"A set number of hours each month for Microsoft 365 advice and administration, with regular reviews. Billed monthly in advance from your start date, with payment due on receipt. Unused hours do not roll over.", codes:["RET-ADV","RET-STD","RET-PLUS"] }
 ];
 
 const byCode = Object.fromEntries(SERVICES.map(s => [s.code, s]));
