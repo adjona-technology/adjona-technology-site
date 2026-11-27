@@ -102,6 +102,14 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .svc-block-list-item{display:flex;align-items:flex-start;gap:.9rem;padding:.85rem 1.25rem;border-bottom:1px solid var(--border);font-size:.86rem;color:var(--muted);line-height:1.6;}
 .svc-block-list-item:last-child{border-bottom:none;}
 .svc-block-list-dot{width:6px;height:6px;flex-shrink:0;margin-top:.45rem;}
+.ps-pricing{margin-top:1.25rem;display:flex;flex-direction:column;gap:.5rem;}
+.ps-pricing-title{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);}
+.ps-price-link{font-family:'Epilogue',sans-serif;font-size:.86rem;font-weight:800;color:var(--ms-blue);text-decoration:none;line-height:1.5;}
+.ps-price-link:hover,.ps-price-link:focus-visible{text-decoration:underline;}
+.ps-pricing-section{padding:5rem 4rem;border-bottom:2px solid var(--ink);}
+.ps-pricing-inner{max-width:760px;}
+.ps-pricing-inner p{font-size:.95rem;color:var(--muted);line-height:1.85;margin-bottom:1.25rem;}
+@media(max-width:1000px){.ps-pricing-section{padding:3rem 1.5rem;}}
 .svc-block-note{font-size:.82rem;color:var(--muted);line-height:1.75;margin-top:1.25rem;padding:1rem 1.25rem;border-left:3px solid var(--ms-yel);background:#fffdf0;}
 .svc-block-link{display:inline-block;margin-top:1.25rem;font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;border-bottom:1px solid rgba(47,107,0,.3);}
 
@@ -307,6 +315,12 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
       <div class="svc-block-list-item"><div class="svc-block-list-dot" style="background:var(--ms-blue);"></div>Helping keep IT decisions aligned with governance, compliance and service delivery needs</div>
     </div>
     <div class="svc-block-note">This is designed for charities, care providers, CICs and smaller businesses that need steady IT oversight without the cost or commitment of a full-time IT management role. Available as a monthly arrangement following an initial review or discovery call. If you need regular hands-on help rather than leadership, our <a href="prices.html#support" style="color:var(--ms-blue);font-weight:700;">Microsoft 365 support retainers</a> give you a set number of hours each month.</div>
+    <div class="ps-pricing">
+      <div class="ps-pricing-title">Published pricing</div>
+      <a class="ps-price-link" href="prices.html?service=RET-ADV#svc-RET-ADV">View Microsoft 365 Support Retainer: Advisory pricing &rarr;</a>
+      <a class="ps-price-link" href="prices.html?service=RET-STD#svc-RET-STD">View Microsoft 365 Support Retainer: Standard pricing &rarr;</a>
+      <a class="ps-price-link" href="prices.html?service=RET-PLUS#svc-RET-PLUS">View Microsoft 365 Support Retainer: Plus pricing &rarr;</a>
+    </div>
   </div>
 </div>
 
@@ -336,6 +350,11 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
     </div>
     <div class="svc-block-note">The aim is to make Microsoft 365 easier to manage, safer to use and better aligned with how your organisation actually works.</div>
     <div style="margin-top:1.25rem;padding:1rem 1.25rem;border-left:3px solid var(--ms-blue);background:#f0f5fb;font-size:.85rem;line-height:1.7;color:#1a3a5e;">Not sure where the risks are? <a href="governance-snapshot.html" style="color:var(--ms-blue);font-weight:700;text-decoration:none;">Start with a Microsoft 365 Governance Snapshot</a> before planning cleanup or remediation work.</div>
+    <div class="ps-pricing">
+      <div class="ps-pricing-title">Published pricing</div>
+      <a class="ps-price-link" href="prices.html?service=HC-M365#svc-HC-M365">View Microsoft 365 Health Check pricing &rarr;</a>
+      <a class="ps-price-link" href="prices.html?service=M365-WORK-STD#svc-M365-WORK-STD">View Teams, SharePoint &amp; Governance Implementation pricing &rarr;</a>
+    </div>
   </div>
 </div>
 
@@ -366,6 +385,11 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
     </div>
     <div class="svc-block-note">Our approach is not automation for its own sake. The goal is better control, clearer accountability and more reliable evidence of what happened, when and who needed to act. For sensitive workflows involving service-user, clinical, safeguarding or personal information, the design would need appropriate review by the organisation's own responsible leads before live use.</div>
     <a href="case-assessment-workflow-package.html" class="svc-block-link" style="color:var(--ms-grn);">See a worked example: Case &amp; Assessment Workflow Package &rarr;</a>
+    <div class="ps-pricing">
+      <div class="ps-pricing-title">Published pricing</div>
+      <a class="ps-price-link" href="prices.html?service=AUTO-ESS#svc-AUTO-ESS">View Power Automate Workflow pricing &rarr;</a>
+      <a class="ps-price-link" href="prices.html?service=AUTO-STD#svc-AUTO-STD">View Power Platform Process Automation pricing &rarr;</a>
+    </div>
   </div>
 </div>
 
@@ -394,6 +418,12 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
       <div class="svc-block-list-item"><div class="svc-block-list-dot" style="background:var(--ms-blue);"></div>Supporting migration from ad hoc folders or legacy storage</div>
       <div class="svc-block-list-item"><div class="svc-block-list-dot" style="background:var(--ms-blue);"></div>Producing simple staff guidance</div>
     </div>
+    <div class="ps-pricing">
+      <div class="ps-pricing-title">Published pricing</div>
+      <a class="ps-price-link" href="prices.html?service=SP-ESS#svc-SP-ESS">View SharePoint Health &amp; Findability Review pricing &rarr;</a>
+      <a class="ps-price-link" href="prices.html?service=SP-STD#svc-SP-STD">View SharePoint Modernisation Assessment pricing &rarr;</a>
+      <a class="ps-price-link" href="sharepoint-consultancy-for-charities.html">SharePoint consultancy for charities &rarr;</a>
+    </div>
   </div>
 </div>
 
@@ -421,6 +451,11 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
       <div class="svc-block-list-item"><div class="svc-block-list-dot" style="background:var(--ms-red);"></div>Microsoft 365 mailbox security settings</div>
       <div class="svc-block-list-item"><div class="svc-block-list-dot" style="background:var(--ms-red);"></div>Junk folder and delivery issues</div>
       <div class="svc-block-list-item"><div class="svc-block-list-dot" style="background:var(--ms-red);"></div>Practical email security guidance for staff</div>
+    </div>
+    <div class="ps-pricing">
+      <div class="ps-pricing-title">Published pricing</div>
+      <a class="ps-price-link" href="prices.html?service=EMAIL-AUTH#svc-EMAIL-AUTH">View Email Authentication Hardening (SPF, DKIM, DMARC) pricing &rarr;</a>
+      <a class="ps-price-link" href="prices.html?service=EMAIL-MIG-STD#svc-EMAIL-MIG-STD">View Exchange Online Migration &amp; Domain Hardening pricing &rarr;</a>
     </div>
   </div>
 </div>
@@ -451,6 +486,11 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
       <div class="svc-block-list-item"><div class="svc-block-list-dot" style="background:var(--ms-grn);"></div>Incident readiness</div>
       <div class="svc-block-list-item"><div class="svc-block-list-dot" style="background:var(--ms-grn);"></div>Staff and volunteer processes</div>
     </div>
+    <div class="ps-pricing">
+      <div class="ps-pricing-title">Published pricing</div>
+      <a class="ps-price-link" href="prices.html?service=CE-READY#svc-CE-READY">View Cyber Essentials Readiness Review pricing &rarr;</a>
+      <a class="ps-price-link" href="prices.html?service=DSPT-SUP#svc-DSPT-SUP">View DSPT Evidence Support (care providers) pricing &rarr;</a>
+    </div>
   </div>
 </div>
 
@@ -480,6 +520,10 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
       <div class="svc-block-list-item"><div class="svc-block-list-dot" style="background:var(--ms-yel);"></div>Governance controls before rollout</div>
     </div>
     <div class="svc-block-note">The starting point is simple: get the foundations right before introducing AI into everyday work.</div>
+    <div class="ps-pricing">
+      <div class="ps-pricing-title">Published pricing</div>
+      <a class="ps-price-link" href="prices.html?service=AI-READY#svc-AI-READY">View Copilot &amp; AI Readiness Assessment pricing &rarr;</a>
+    </div>
   </div>
 </div>
 
@@ -516,6 +560,16 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
     </div>
   </div>
 </div>
+
+<section class="ps-pricing-section" id="pricing" aria-labelledby="ps-pricing-title">
+  <div class="ps-pricing-inner">
+    <div class="svc-block-label" style="color:var(--ms-blue);">Pricing</div>
+    <h2 class="svc-block-title" id="ps-pricing-title" style="margin-bottom:1.5rem;">Project and ongoing<br><span class="serif">support pricing</span></h2>
+    <p>Implementation projects are priced according to their agreed scope and deliverables. Ongoing support arrangements are defined separately, with clear responsibilities and service boundaries.</p>
+    <p>You do not need to commit to an ongoing support arrangement to commission an assessment or implementation project.</p>
+    <a href="prices.html" class="ps-price-link" style="font-size:.95rem;font-weight:900;border-bottom:2px solid var(--ms-blue);padding-bottom:2px;">Explore pricing and proposals &rarr;</a>
+  </div>
+</section>
 
 <div class="page-cta">
   <div class="cta-blue">

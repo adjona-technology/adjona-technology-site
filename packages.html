@@ -101,6 +101,10 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .pkg-link:hover{color:#0062b0;}
 
 /* PRICING TABLE */
+.pkg-request{display:block;text-align:center;font-family:'Epilogue',sans-serif;font-size:.9rem;font-weight:900;background:var(--ms-blue);color:#fff;border:2px solid var(--ms-blue);padding:.8rem 1.25rem;text-decoration:none;transition:all .2s;}
+.pkg-request:hover,.pkg-request:focus-visible{background:var(--ink);border-color:var(--ink);}
+.pkg-card{scroll-margin-top:calc(var(--nav-h, 62px) + 1rem);}
+.pkg-card-right{justify-content:flex-start;}
 .pkg-pricing{border:2px solid var(--ink);margin-bottom:1.5rem;}
 .pkg-pricing-title{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;padding:.75rem 1.25rem;background:var(--ink);color:#fff;}
 .pkg-pricing-row{display:flex;justify-content:space-between;align-items:center;padding:.75rem 1.25rem;border-bottom:1px solid var(--border);font-size:.85rem;}
@@ -300,7 +304,7 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
 <section class="packages">
 
   <!-- Package 1: Secure Operations Hub -->
-  <div class="pkg-card">
+  <div class="pkg-card" id="secure-operations-hub">
     <div class="pkg-card-left">
       <div class="pkg-num">Package 01</div>
       <div class="pkg-label" style="color:var(--ms-blue);">Operations &amp; Governance</div>
@@ -319,11 +323,12 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
         <div class="pkg-pricing-row"><span class="pkg-pricing-label">Typical delivery</span><span class="pkg-pricing-val">1–3 weeks</span></div>
         <div class="pkg-pricing-row"><span class="pkg-pricing-label">Optional monthly support</span><span class="pkg-pricing-val">from £295/month</span></div>
       </div>
+      <a href="enquiry.html?re=secure-operations-hub" class="pkg-request">Request a proposal for this package &rarr;</a>
       </div>
   </div>
 
   <!-- Package 2: Assisted Inbox Triage -->
-  <div class="pkg-card">
+  <div class="pkg-card" id="assisted-inbox-triage">
     <div class="pkg-card-left">
       <div class="pkg-num">Package 02</div>
       <div class="pkg-label" style="color:var(--ms-red);">Inbox &amp; Workflow</div>
@@ -342,11 +347,12 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
         <div class="pkg-pricing-row"><span class="pkg-pricing-label">Typical delivery</span><span class="pkg-pricing-val">5–10 working days</span></div>
         <div class="pkg-pricing-row"><span class="pkg-pricing-label">Optional monthly support</span><span class="pkg-pricing-val">from £295/month</span></div>
       </div>
+      <a href="enquiry.html?re=assisted-inbox-triage" class="pkg-request">Request a proposal for this package &rarr;</a>
       </div>
   </div>
 
   <!-- Package 3: Case & Assessment Workflow -->
-  <div class="pkg-card">
+  <div class="pkg-card" id="case-assessment-workflow">
     <div class="pkg-card-left">
       <div class="pkg-num">Package 03</div>
       <div class="pkg-label" style="color:var(--ms-grn);">Case Management &amp; Assessment</div>
@@ -365,6 +371,7 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
         <div class="pkg-pricing-row"><span class="pkg-pricing-label">Typical delivery</span><span class="pkg-pricing-val">2–6 weeks</span></div>
         <div class="pkg-pricing-row"><span class="pkg-pricing-label">Optional monthly support</span><span class="pkg-pricing-val">from £595/month</span></div>
       </div>
+      <a href="enquiry.html?re=case-assessment-workflow" class="pkg-request">Request a proposal for this package &rarr;</a>
       </div>
   </div>
 
@@ -372,7 +379,7 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
 
 
   <!-- Package 4: Property Compliance Visibility -->
-  <div class="pkg-card">
+  <div class="pkg-card" id="property-compliance-visibility">
     <div class="pkg-card-left">
       <div class="pkg-num">Package 04</div>
       <div class="pkg-label" style="color:var(--ms-blue);">Housing &amp; Property Compliance</div>
@@ -391,10 +398,11 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
         <div class="pkg-pricing-row"><span class="pkg-pricing-label">Optional monthly support</span><span class="pkg-pricing-val">from £295/month</span></div>
         <div class="pkg-pricing-row"><span class="pkg-pricing-label">Best for</span><span class="pkg-pricing-val">Smaller housing providers using spreadsheets or manual records</span></div>
       </div>
+      <a href="enquiry.html?re=property-compliance-visibility" class="pkg-request">Request a proposal for this package &rarr;</a>
     </div>
   </div>
   <!-- Package 5: Evidence Workspace -->
-  <div class="pkg-card">
+  <div class="pkg-card" id="evidence-workspace">
     <div class="pkg-card-left">
       <div class="pkg-num">Package 05</div>
       <div class="pkg-label" style="color:var(--ms-blue);">Compliance &amp; Governance Evidence</div>
@@ -414,6 +422,7 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
         <div class="pkg-pricing-row"><span class="pkg-pricing-label">Compliance workspace</span><span class="pkg-pricing-val">from £2,950</span></div>
         <div class="pkg-pricing-row"><span class="pkg-pricing-label">Optional monthly support</span><span class="pkg-pricing-val">from £295/month</span></div>
       </div>
+      <a href="enquiry.html?re=evidence-workspace" class="pkg-request">Request a proposal for this package &rarr;</a>
     </div>
   </div>
 

@@ -190,6 +190,22 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
 .svc-bar{width:28px;height:4px;margin-bottom:1rem;}
 .svc-card h3{font-family:'Epilogue',sans-serif;font-size:1.05rem;font-weight:800;letter-spacing:-.01em;margin-bottom:.5rem;}
 .svc-card p{font-size:.88rem;color:var(--muted);line-height:1.75;}
+.price-link{display:inline-block;margin-top:1rem;font-family:'Epilogue',sans-serif;font-weight:800;font-size:.88rem;color:var(--ms-blue);text-decoration:none;}
+.price-link:hover,.price-link:focus-visible{text-decoration:underline;}
+.svc-card p + p{margin-top:.75rem;}
+.faq{border-top:2px solid var(--ink);margin-top:1.5rem;}
+.faq details{border-bottom:1px solid var(--border);padding:1rem 0;}
+.faq summary{font-family:'Epilogue',sans-serif;font-weight:800;font-size:1rem;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:1rem;}
+.faq summary::-webkit-details-marker{display:none;}
+.faq summary::after{content:'+';font-family:'JetBrains Mono',monospace;color:var(--ms-blue);}
+.faq details[open] summary::after{content:'\2212';}
+.faq summary:focus-visible{outline:2px solid var(--ms-blue);outline-offset:4px;}
+.faq details p{font-size:.92rem;color:var(--muted);line-height:1.75;margin-top:.6rem;margin-bottom:0;}
+.reading-list{list-style:none;margin-top:1rem;}
+.reading-list li{border-top:1px solid var(--border);padding:.85rem 0;}
+.reading-list li:last-child{border-bottom:1px solid var(--border);}
+.reading-list a{font-family:'Epilogue',sans-serif;font-weight:800;font-size:.95rem;color:var(--ink);text-decoration:none;}
+.reading-list a:hover,.reading-list a:focus-visible{color:var(--ms-blue);text-decoration:underline;}
 .plain-section{padding:5rem 4rem;border-bottom:2px solid var(--ink);}
 .plain-section.off{background:var(--off);}
 .plain-inner{max-width:820px;}
@@ -326,6 +342,7 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
     <span class="page-tag">Charities &nbsp;&middot;&nbsp; Microsoft 365 &nbsp;&middot;&nbsp; Security &nbsp;&middot;&nbsp; Governance &nbsp;&middot;&nbsp; AI Readiness</span>
     <h1>Microsoft 365 consultancy<br><span class="serif">for charities</span></h1>
     <p class="page-hero-body">Adjona Technology is a Microsoft 365 consultant for charities in the UK. We help trustees, managers and small teams make Microsoft 365 secure, well governed and genuinely useful, with fixed-scope reviews and packages sized for charity budgets.</p>
+    <p class="page-hero-body" style="margin-top:1rem;">Based in London, we support charities and community organisations across the UK. Reviews, workshops and agreed implementation work can be delivered remotely.</p>
   </div>
 </section>
 
@@ -341,11 +358,14 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
       <div class="svc-bar" style="background:var(--ms-blue);"></div>
       <h3>Microsoft 365 security and governance reviews</h3>
       <p>A structured review of identity, access, sharing and configuration across Microsoft 365 and Entra, with findings written for trustees and managers, not just IT. Prioritised actions your charity can act on straight away.</p>
+      <a class="price-link" href="prices.html?service=HC-M365#svc-HC-M365">View Microsoft 365 Health Check pricing &rarr;</a>
     </div>
     <div class="svc-card">
       <div class="svc-bar" style="background:var(--ms-red);"></div>
       <h3>SharePoint and Teams organisation</h3>
       <p>Fewer, clearer Teams and SharePoint sites with named owners and structures that match how your charity actually works. Staff and volunteers know where documents live and which version is current.</p>
+      <p>If staff struggle to find documents or you need clearer site ownership, explore our <a href="sharepoint-consultancy-for-charities.html" style="color:var(--ms-blue);">SharePoint consultancy for charities</a>.</p>
+      <a class="price-link" href="prices.html?service=SP-ESS#svc-SP-ESS">View SharePoint Health &amp; Findability Review pricing &rarr;</a>
     </div>
     <div class="svc-card">
       <div class="svc-bar" style="background:var(--ms-grn);"></div>
@@ -366,7 +386,19 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
       <div class="svc-bar" style="background:var(--ms-red);"></div>
       <h3>Copilot and AI readiness</h3>
       <p>Before adopting Microsoft Copilot or other AI tools, charities need to know where their data is and who can access it. We prepare your environment so AI surfaces the right information to the right people, and nothing else.</p>
+      <a class="price-link" href="prices.html?service=AI-READY#svc-AI-READY">View Copilot &amp; AI Readiness Assessment pricing &rarr;</a>
     </div>
+  </div>
+</section>
+
+<section class="plain-section off" id="independent-expertise" aria-labelledby="independent-expertise-title">
+  <div class="plain-inner">
+    <div class="sec-label">Working with your IT provider</div>
+    <h2 class="sec-title" id="independent-expertise-title">Independent expertise,<br><span class="serif">without replacing your IT provider</span></h2>
+    <p>Having an IT support provider does not necessarily give your charity an independent view of its Microsoft 365 governance, security and operational risks.</p>
+    <p>Adjona can work alongside your existing IT provider, internal team or operational management to assess how Microsoft 365 is configured, identify areas requiring attention and establish clear priorities.</p>
+    <p>Where improvements are needed, we can provide recommendations for your existing provider to implement or undertake separately agreed implementation work. Your organisation remains in control of its technology, information and decisions.</p>
+    <p><a class="price-link" style="margin-top:0;" href="governance-snapshot.html">Explore the Governance Snapshot &rarr;</a></p>
   </div>
 </section>
 
@@ -412,7 +444,7 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
   <div class="plain-inner">
     <div class="sec-label">Nonprofit licensing</div>
     <h2 class="sec-title">Microsoft nonprofit licensing,<br><span class="serif">without the confusion</span></h2>
-    <p>Microsoft's nonprofit licensing changed significantly in July 2025, when the free grants of Microsoft 365 Business Premium and Office 365 E1 were discontinued. Eligible charities still receive up to 300 free Microsoft 365 Business Basic licences, and discounts of up to 75 per cent remain available on many plans, including Business Premium.</p>
+    <p>Microsoft discontinued the Business Premium and Office 365 E1 nonprofit grants at affected customers' renewals on or after 1 July 2025. Eligible organisations may still qualify for Business Basic grants and discounted nonprofit licences, subject to Microsoft's current eligibility and offer terms. We can help you understand your existing entitlements, review licence allocation and identify options before renewal. Microsoft determines eligibility and approves grants; Adjona does not guarantee approval.</p>
     <p>In practice, many charities are now paying for security and compliance features they are not using, or relying on free licences that no longer cover what their work requires. We help charities map roles to the right mix of licences, make full use of the entitlements they already pay for, and avoid surprises at renewal.</p>
   </div>
 </section>
@@ -439,6 +471,27 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
   </div>
 </section>
 
+<section class="plain-section off" id="sample-governance-snapshot" aria-labelledby="sample-title">
+  <div class="plain-inner">
+    <div class="sec-label">Illustrative example</div>
+    <h2 class="sec-title" id="sample-title">See what a governance review<br><span class="serif">can deliver</span></h2>
+    <p>Our illustrative Governance Snapshot shows how technical observations can be translated into practical decisions for trustees and managers. It uses synthetic information and is not a customer assessment. The scope and format of an actual review are agreed before work begins.</p>
+    <p><a class="price-link" style="margin-top:0;" href="governance-snapshot-sample.html">View sample Governance Snapshot &rarr;</a></p>
+  </div>
+</section>
+
+<section class="plain-section" id="further-reading" aria-labelledby="further-reading-title">
+  <div class="plain-inner">
+    <div class="sec-label">Further reading</div>
+    <h2 class="sec-title" id="further-reading-title">Practical guidance<br><span class="serif">for charity leaders</span></h2>
+    <ul class="reading-list">
+      <li><a href="insights/trustee-confidence-governance-gaps-2026.html">Trustee confidence is high, but governance gaps remain &rarr;</a></li>
+      <li><a href="insights/microsoft-365-charities-licences-security-2026.html">Microsoft 365 for UK charities in 2026: licences and security &rarr;</a></li>
+      <li><a href="insights/outsourced-it-supplier-governance.html">Your IT is outsourced. Your responsibility is not. &rarr;</a></li>
+    </ul>
+  </div>
+</section>
+
 <section class="plain-section off">
   <div class="plain-inner">
     <div class="sec-label">Why Adjona</div>
@@ -446,6 +499,23 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
     <p>Adjona Technology is a Microsoft AI Cloud Partner led by a consultant with genuine charity governance and leadership experience, not just technical certifications. We understand trustee responsibilities, funder expectations and the realities of running services on a small team, because we have sat on that side of the table.</p>
     <p>That matters, because most Microsoft 365 problems in charities are governance problems first and technology problems second. Our recommendations are written for boards and managers, framed around accountability and risk, and implemented in ways a small organisation can actually sustain.</p>
     <p><a href="index.html#credentials" style="font-family:'Epilogue',sans-serif;font-weight:900;color:var(--ms-blue);text-decoration:none;">View Adjona's credentials &rarr;</a></p>
+  </div>
+</section>
+
+<section class="plain-section" id="faq" aria-labelledby="faq-title">
+  <div class="plain-inner">
+    <div class="sec-label">Frequently asked questions</div>
+    <h2 class="sec-title" id="faq-title">Questions charities<br><span class="serif">often ask us</span></h2>
+    <div class="faq">
+      <details><summary>Do you work with charities outside London?</summary><p>Yes. Adjona supports charities and community organisations across the UK. Reviews, workshops and agreed implementation work can be delivered remotely, with delivery arrangements confirmed when work is scoped.</p></details>
+      <details><summary>Can you work alongside our existing IT provider?</summary><p>Yes. We can provide an independent assessment or work alongside your provider on agreed improvements. You do not need to change your IT support arrangements.</p></details>
+      <details><summary>Can you help us make better use of Microsoft nonprofit licences?</summary><p>Yes. We can review licence allocation, identify underused capabilities and assess whether your current licensing arrangements meet operational, security and governance requirements. Microsoft determines nonprofit eligibility.</p></details>
+      <details><summary>Can you help trustees understand Microsoft 365 risks?</summary><p>Yes. We explain technical findings in terms of organisational risk, accountability and practical next steps so trustees and managers can make informed decisions.</p><p><a class="price-link" style="margin-top:0;" href="prices.html?service=BRIEF-BOARD#svc-BRIEF-BOARD">View Trustee &amp; Board Briefing pricing &rarr;</a></p></details>
+      <details><summary>Will changes be made during a review?</summary><p>Our review-first approach separates assessment from implementation. Changes are only made where separately agreed and authorised.</p></details>
+      <details><summary>Can you help us prepare for Cyber Essentials?</summary><p>We can review relevant Microsoft 365 security controls and identify improvements that may support preparation. This is not a certification assessment, does not cover every aspect of Cyber Essentials and does not guarantee certification.</p></details>
+      <details><summary>Do we need an ongoing support contract?</summary><p>No. Standalone assessments and agreed implementation projects are available, with ongoing support optional.</p></details>
+      <details><summary>How much does consultancy cost?</summary><p>Costs depend on the service, scope and complexity. Our <a href="prices.html" style="color:var(--ms-blue);">Pricing &amp; Proposals</a> page explains how to request a written proposal, with scope and fees agreed before work begins.</p></details>
+    </div>
   </div>
 </section>
 

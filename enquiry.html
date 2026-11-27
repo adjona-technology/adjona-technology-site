@@ -303,6 +303,29 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:1.5
     <div class="sec-label">Enquiry Form</div>
     <h2 class="sec-title" style="margin-bottom:1.5rem;">Send us an <span class="serif">enquiry.</span></h2>
     <p class="body-text" style="margin-bottom:1.5rem;">The form below is connected to our intake system. Your enquiry will be logged, reviewed and followed up personally.</p>
+    <p class="body-text" id="enquiry-topic" role="status" hidden style="margin-bottom:1.5rem;padding:1rem 1.25rem;border-left:4px solid var(--ms-blue);background:#fff;"></p>
+    <script>
+    (function () {
+      // Display-only note for links such as enquiry.html?re=secure-operations-hub.
+      // It does not change the form, its fields or how enquiries are processed.
+      var topics = {
+        "secure-operations-hub": "the Secure Operations Hub package",
+        "assisted-inbox-triage": "the Assisted Inbox Triage package",
+        "case-assessment-workflow": "the Case & Assessment Workflow package",
+        "property-compliance-visibility": "the Property Compliance Visibility package",
+        "evidence-workspace": "the Evidence Workspace package",
+        "sharepoint-consultancy": "SharePoint consultancy",
+        "projects-support": "project or ongoing support work",
+        "governance-snapshot": "the Governance Snapshot"
+      };
+      var key = new URLSearchParams(location.search).get("re");
+      var el = document.getElementById("enquiry-topic");
+      if (key && topics[key] && el) {
+        el.textContent = "You are asking about " + topics[key] + ". Please mention it in your message so we can prepare the right proposal.";
+        el.hidden = false;
+      }
+    })();
+    </script>
     <div class="form-wrap">
       <iframe src="https://forms.office.com/Pages/ResponsePage.aspx?id=z9bqxKDWc0mL9_PmROGVrshI0Fi3teFPvW6mpagZELJUNVI0MDNBNzJMUVFDMFdBOUFKOFREOEdZOC4u&embed=true" frameborder="0" marginwidth="0" marginheight="0" style="border:none;width:100%;min-height:700px;" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen title="Adjona Technology Enquiry Form"></iframe>
     </div>

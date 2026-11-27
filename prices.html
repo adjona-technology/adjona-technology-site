@@ -584,6 +584,20 @@ document.getElementById("form").addEventListener("submit", async e => {
 });
 
 render();
+
+// Pre-select services from links such as prices.html?service=SP-ESS#svc-SP-ESS.
+// Uses the same toggle() as the Add buttons, so customers can still remove or add services before sending.
+(function preselect() {
+  const raw = new URLSearchParams(location.search).get("service");
+  if (!raw) return;
+  const codes = raw.split(",").map(c => c.trim().toUpperCase()).filter(c => byCode[c]);
+  codes.forEach(c => { if (!chosen.has(c)) toggle(c); });
+  const first = codes.find(c => chosen.has(c));
+  if (!first) return;
+  if (!document.querySelector("#svc-" + first + " .pk-tip")) showTip(first, "Added to your proposal. You can remove it, or add other services, before you send your request.");
+  const target = document.getElementById("svc-" + first);
+  if (target) requestAnimationFrame(() => target.scrollIntoView({ block: "start" }));
+})();
 </script>
 
 <!-- Cookie choices -->
